@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta property="og:url" content="https://insurance-101.github.io/reports/r20260617-7o2v21an.html"><meta property="og:description" content="토스인슈어런스 + 보험전문가 "이용준" 레포트 검수 완료!"><meta name="twitter:description" content="토스인슈어런스 + 보험전문가 "이용준" 레포트 검수 완료!"><meta property="og:image" content="https://insurance-101.github.io/reports/og-thumb.png?v=2"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="토스인슈어런스 보장리포트"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://insurance-101.github.io/reports/og-thumb.png?v=2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>한신애고객님 보장 분석 리포트</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="한신애고객님 보장 분석 리포트">
+  
+  
+  
+  <style>
+    @font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Light.woff2') format('woff2'); font-weight: 300; }
+    @font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Regular.woff2') format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Medium.woff2') format('woff2'); font-weight: 500; }
+    @font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Semibold.woff2') format('woff2'); font-weight: 600; }
+    @font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Bold.woff2') format('woff2'); font-weight: 700; }
+    @font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Extrabold.woff2') format('woff2'); font-weight: 800; }
+    @font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Heavy.woff2') format('woff2'); font-weight: 900; }
+
+    :root {
+      --toss-blue:   #0064FF;
+      --toss-blue-l: #EBF3FF;
+      --danger:      #F04452;
+      --warning:     #FF9500;
+      --success:     #00B386;
+      --bg:          #FFFFFF;
+      --bg2:         #F2F4F6;
+      --text1:       #191F28;
+      --text2:       #4E5968;
+      --border:      #E8ECF0;
+      --radius-sm:   12px;
+      --radius:      16px;
+      --radius-lg:   20px;
+      --shadow:      0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md:   0 4px 12px rgba(0,0,0,0.06);
+      --shadow-lg:   0 8px 24px rgba(0,0,0,0.10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'TossProductSans', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px; line-height: 1.7;
+      color: var(--text1); background: var(--bg2);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 480px; margin: 0 auto; background: var(--bg); min-height: 100vh; padding-bottom: env(safe-area-inset-bottom, 24px); }
+
+    .section-divider { height: 8px; background: var(--bg2); }
+    .section { padding: 28px 20px; }
+    .sec-label { font-size: 12px; font-weight: 700; color: var(--toss-blue); letter-spacing: 0.3px; margin-bottom: 4px; }
+    .sec-title { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; color: var(--text1); margin-bottom: 6px; }
+    .sec-desc { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 20px; }
+    .divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes barGrow { from { width:0%; } to { width:var(--bar-width); } }
+    @keyframes progressFill { from { width:0; } to { width:var(--progress-width); } }
+
+    .fade-up { opacity:0; animation: fadeUp 0.5s ease forwards; }
+    .fade-up:nth-child(1) { animation-delay:0.05s; }
+    .fade-up:nth-child(2) { animation-delay:0.10s; }
+    .fade-up:nth-child(3) { animation-delay:0.15s; }
+    .fade-up:nth-child(4) { animation-delay:0.20s; }
+    .fade-up:nth-child(5) { animation-delay:0.25s; }
+    .fade-up:nth-child(6) { animation-delay:0.30s; }
+
+    /* ── HEADER ── */
+    .report-header { background: #191F28; padding: 24px 20px 28px; }
+    .header-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+    .header-logo { font-size:16px; font-weight:800; color:#fff; letter-spacing:-0.3px; }
+    .header-date { background:#1A2B42; border:1px solid rgba(255,255,255,0.07); border-radius:8px; padding:4px 10px; font-size:11px; font-weight:600; color:rgba(255,255,255,0.55); }
+    .header-name-row { display:flex; align-items:baseline; gap:12px; margin-bottom:4px; }
+    .header-customer-name { font-size:32px; font-weight:900; color:#fff; letter-spacing:-1.1px; line-height:1; }
+    .header-greet-1 { font-size:15px; font-weight:400; color:rgba(255,255,255,0.55); }
+    .header-report-title { font-size:22px; font-weight:700; color:#fff; letter-spacing:-0.5px; line-height:1.25; margin-bottom:6px; }
+    .header-sub { font-size:12px; color:rgba(255,255,255,0.4); margin-bottom:20px; line-height:1.6; }
+    .header-cards { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:20px; }
+    .hcard { background:#21232A; border:1px solid rgba(255,255,255,0.07); border-radius:14px; padding:14px 12px; animation:fadeUp 0.5s ease forwards; opacity:0; }
+    .hcard:nth-child(1){animation-delay:0.08s;} .hcard:nth-child(2){animation-delay:0.14s;} .hcard:nth-child(3){animation-delay:0.20s;} .hcard:nth-child(4){animation-delay:0.26s;}
+    .hcard-label { font-size:11px; color:rgba(255,255,255,0.45); font-weight:500; margin-bottom:6px; }
+    .hcard-value { font-size:17px; font-weight:700; color:#fff; line-height:1.3; letter-spacing:-0.3px; }
+    .hcard-value.hcard-danger { color:var(--danger); }
+    .hcard-value.hcard-warning { color:var(--warning); }
+    .hcard-note { font-size:10px; color:rgba(255,255,255,0.35); margin-top:5px; line-height:1.5; }
+    .hcard-note .danger-text { color:var(--danger); font-weight:700; }
+    .hcard-note .warning-text { color:var(--warning); font-weight:700; }
+    .header-divider { height:1px; background:rgba(255,255,255,0.08); margin:20px 0; }
+    .fc-row { display:flex; align-items:center; gap:10px; }
+    .fc-avatar { width:36px; height:36px; border-radius:50%; background:#1A2B42; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; }
+    .fc-info { flex:1; }
+    .fc-name { font-size:13px; font-weight:700; color:#fff; }
+    .fc-sub { font-size:11px; color:rgba(255,255,255,0.4); margin-top:1px; }
+    .fc-tel { display:inline-flex; align-items:center; background:var(--toss-blue); color:#fff; font-size:12px; font-weight:700; letter-spacing:-0.2px; padding:7px 13px; border-radius:9999px; text-decoration:none; white-space:nowrap; }
+
+    /* ── BADGES ── */
+    .badge { display:inline-flex; align-items:center; gap:3px; border-radius:9999px; font-size:11px; font-weight:700; padding:3px 10px; white-space:nowrap; }
+    .badge-danger  { background:#FFF0F1; color:var(--danger); }
+    .badge-warning { background:#FFF6E8; color:var(--warning); }
+    .badge-success { background:#E8FAF5; color:var(--success); }
+    .badge-blue    { background:var(--toss-blue-l); color:var(--toss-blue); }
+    .badge-gray    { background:var(--bg2); color:var(--text2); }
+
+    /* ── ALERT BOX ── */
+    .alert { display:flex; gap:12px; align-items:flex-start; border-radius:var(--radius-sm); padding:14px 16px; margin-bottom:12px; border-left:3px solid transparent; }
+    .alert-danger  { background:#FFF0F1; border-left-color:var(--danger); }
+    .alert-warning { background:#FFF6E8; border-left-color:var(--warning); }
+    .alert-info    { background:var(--toss-blue-l); border-left-color:var(--toss-blue); }
+    .alert-success { background:#E8FAF5; border-left-color:var(--success); }
+    .alert-icon { font-size:16px; flex-shrink:0; margin-top:1px; }
+    .alert-title { font-size:13px; font-weight:700; color:var(--text1); margin-bottom:2px; }
+    .alert-desc { font-size:12px; color:var(--text2); line-height:1.6; }
+
+    /* ── SUMMARY CARDS ── */
+    .summary-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:20px; }
+    .scard { background:var(--bg); border:1px solid var(--border); border-radius:var(--radius); padding:16px 12px; text-align:center; box-shadow:var(--shadow); }
+    .scard-icon { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:16px; margin:0 auto 10px; }
+    .scard-label { font-size:11px; color:var(--text2); font-weight:500; margin-bottom:6px; }
+    .scard-value { font-size:20px; font-weight:800; letter-spacing:-0.5px; line-height:1.1; }
+    .scard-sub { font-size:10px; color:var(--text2); margin-top:4px; line-height:1.5; }
+
+    /* ── PROGRESS ── */
+    .progress-wrap { margin-bottom:14px; }
+    .progress-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+    .progress-label { font-size:13px; font-weight:600; color:var(--text1); }
+    .progress-value { font-size:13px; font-weight:700; }
+    .progress-track { height:6px; background:var(--bg2); border-radius:3px; overflow:hidden; }
+    .progress-fill { height:100%; width:var(--progress-width,0%); background:var(--fill-color,var(--toss-blue)); border-radius:3px; animation:progressFill 1s cubic-bezier(.4,0,.2,1) forwards; }
+    .progress-sub { font-size:11px; color:var(--text2); margin-top:4px; }
+
+    /* ── DETAIL GROUP ── */
+    .detail-group { background:var(--bg); border:1px solid var(--border); border-radius:var(--radius); margin-bottom:12px; overflow:hidden; box-shadow:var(--shadow); }
+    .detail-header { display:flex; align-items:center; gap:8px; padding:12px 16px; background:var(--bg2); border-bottom:1px solid var(--border); }
+    .detail-icon { font-size:16px; }
+    .detail-cat { font-size:13px; font-weight:700; color:var(--text1); }
+    .detail-row { display:flex; justify-content:space-between; align-items:flex-start; padding:14px 16px; border-bottom:1px solid var(--border); }
+    .detail-row:last-child { border-bottom:none; }
+    .detail-left { flex:1; padding-right:12px; }
+    .detail-name { font-size:13px; font-weight:600; color:var(--text1); margin-bottom:3px; }
+    .detail-sub { font-size:11px; color:var(--text2); line-height:1.5; }
+    .detail-right { display:flex; flex-direction:column; align-items:flex-end; gap:5px; flex-shrink:0; }
+    .detail-amount { font-size:14px; font-weight:700; color:var(--text1); white-space:nowrap; }
+
+    /* ── INS CARD ── */
+    .ins-card { background:var(--bg); border:1px solid var(--border); border-radius:var(--radius); padding:16px; margin-bottom:12px; box-shadow:var(--shadow); }
+    .ins-card-top { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+    .ins-company { font-size:12px; color:var(--text2); font-weight:500; }
+    .ins-name { font-size:15px; font-weight:700; color:var(--text1); letter-spacing:-0.2px; margin-bottom:8px; }
+    .ins-meta-row { display:flex; gap:8px; flex-wrap:wrap; }
+    .ins-meta { font-size:11px; color:var(--text2); background:var(--bg2); border-radius:6px; padding:2px 8px; }
+    .ins-premium-row { display:flex; justify-content:space-between; align-items:center; }
+    .ins-premium-label { font-size:12px; color:var(--text2); }
+    .ins-premium-value { font-size:16px; font-weight:800; color:var(--toss-blue); letter-spacing:-0.3px; }
+
+    /* ── BADGE GUIDE ── */
+    .badge-guide { font-size:12px; color:var(--text2); padding:10px 16px; background:var(--bg2); border-radius:var(--radius-sm); margin-bottom:16px; line-height:1.8; }
+
+    /* ── BAR CHART ── */
+    .bar-chart { margin-bottom:20px; }
+    .bar-row { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+    .bar-label { font-size:11px; color:var(--text2); width:70px; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .bar-track { flex:1; height:6px; background:var(--bg2); border-radius:3px; overflow:hidden; }
+    .bar-fill { height:100%; width:var(--bar-width,0%); background:var(--fill-color,var(--toss-blue)); border-radius:3px; animation:barGrow 1s cubic-bezier(.4,0,.2,1) forwards; }
+    .bar-amount { font-size:11px; font-weight:600; color:var(--text1); width:60px; text-align:right; white-space:nowrap; }
+    .peer-compare { background:var(--bg2); border-radius:var(--radius-sm); padding:14px 16px; }
+    .peer-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+    .peer-label { font-size:13px; color:var(--text2); }
+    .peer-value { font-size:15px; font-weight:700; color:var(--text1); }
+    .peer-note { font-size:11px; color:var(--text2); margin-top:10px; padding-top:10px; border-top:1px solid var(--border); }
+
+    /* ── REMODEL CARD ── */
+    .remodel-card { background:var(--bg); border:1px solid var(--border); border-radius:var(--radius); padding:18px 16px; margin-bottom:10px; box-shadow:var(--shadow); position:relative; overflow:hidden; }
+    .remodel-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--toss-blue); }
+    .remodel-card.priority-1::before { background:var(--danger); }
+    .remodel-rank { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+    .remodel-order { width:22px; height:22px; border-radius:50%; background:var(--bg2); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:var(--text2); }
+    .remodel-title { font-size:14px; font-weight:700; color:var(--text1); letter-spacing:-0.2px; margin-bottom:6px; }
+    .remodel-desc { font-size:12px; color:var(--text2); line-height:1.6; }
+
+    /* ── FOOTER ── */
+    .report-footer { background:#191F28; padding:24px 20px 40px; }
+    .footer-date { font-size:12px; color:rgba(255,255,255,0.75); margin-bottom:8px; font-weight:700; }
+    .footer-notice { font-size:11px; color:rgba(255,255,255,0.5); line-height:1.7; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ───── HEADER ───── -->
+  <header class="report-header">
+    <div class="header-top">
+      <span class="header-logo">토스인슈어런스</span>
+      <div class="header-date">2026. 06. 17</div>
+    </div>
+    <div class="header-name-row">
+      <h1 class="header-customer-name">한신애</h1>
+      <div class="header-greet-1">고객님을 위한</div>
+    </div>
+    <div class="header-report-title">보장 분석 리포트</div>
+    <div class="header-sub">토스앱 '내 보험 연결하기'를 통해 조회되는 가입내역 기준입니다</div>
+
+    <div class="header-cards">
+      <div class="hcard">
+        <div class="hcard-label">가입나이 / 성별</div>
+        <div class="hcard-value">43세 / 여</div>
+        <div class="hcard-note">1983. 11. 10 생<br><span class="danger-text">상령일 2027-05-10</span></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-label">월 보험료</div>
+        <div class="hcard-value">154,581원</div>
+        <div class="hcard-note">납입중 2건 합산</div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-label">보장 갭</div>
+        <div class="hcard-value hcard-danger">3개</div>
+        <div class="hcard-note"><span class="danger-text">위험 1개</span> · <span class="warning-text">부족 2개</span></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-label">보장달성률</div>
+        <div class="hcard-value hcard-warning">72%</div>
+        <div class="hcard-note">질적 가중치 기준<br>6.5 / 9점</div>
+      </div>
+    </div>
+
+    <div class="header-divider"></div>
+
+    <div class="fc-row">
+      <div class="fc-avatar">IA</div>
+      <div class="fc-info">
+        <div class="fc-name">이용준 팀장</div>
+        <div class="fc-sub">토스인슈어런스 · Insurance Advisor</div>
+      </div>
+      <a class="fc-tel" href="tel:01095102222">010-9510-2222</a>
+    </div>
+  </header>
+
+  <!-- ───── SECTION 0 — 요약 ───── -->
+  <div class="section-divider"></div>
+  <div class="section">
+    <div class="sec-label">SUMMARY</div>
+    <div class="sec-title">보장 현황 요약</div>
+
+    <div class="alert alert-danger">
+      <div class="alert-icon">🚨</div>
+      <div class="alert-body">
+        <div class="alert-title">긴급 — 실손보험 만기 D-104일</div>
+        <div class="alert-desc">메리츠화재 2세대 실손이 2026년 9월 29일 만기됩니다. 갱신 또는 4세대 전환 즉시 확인 필요합니다.</div>
+      </div>
+    </div>
+
+    <div class="summary-cards">
+      <div class="scard fade-up">
+        <div class="scard-icon" style="background:#EBF3FF;">💰</div>
+        <div class="scard-label">월 보험료</div>
+        <div class="scard-value" style="color:var(--toss-blue);">154,581</div>
+        <div class="scard-sub">원 / 납입중 2건</div>
+      </div>
+      <div class="scard fade-up">
+        <div class="scard-icon" style="background:#FFF0F1;">⚠️</div>
+        <div class="scard-label">보장 갭</div>
+        <div class="scard-value" style="color:var(--danger);">3개</div>
+        <div class="scard-sub">위험 1 · 부족 2</div>
+      </div>
+      <div class="scard fade-up">
+        <div class="scard-icon" style="background:#FFF6E8;">📊</div>
+        <div class="scard-label">보장달성률</div>
+        <div class="scard-value" style="color:var(--warning);">72%</div>
+        <div class="scard-sub">보통 (9항목 기준)</div>
+      </div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-header">
+        <span class="progress-label">보장달성률</span>
+        <span class="progress-value" style="color:var(--warning);">72%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" style="--progress-width:72%; --fill-color:var(--warning);"></div>
+      </div>
+      <div class="progress-sub">질적 가중치 반영 기준 · 80% 이상 양호 / 60~79% 보통 / 60% 미만 위험</div>
+    </div>
+  </div>
+
+  <!-- ───── SECTION 1 — 가입보험 현황 ───── -->
+  <div class="section-divider"></div>
+  <div class="section">
+    <div class="sec-label">SECTION 1</div>
+    <div class="sec-title">가입보험 현황</div>
+    <div class="sec-desc">납입중 2건 · 납입완료 0건</div>
+
+    <!-- 롯데손보 -->
+    <div class="ins-card fade-up">
+      <div class="ins-card-top">
+        <span class="badge badge-blue">납입중</span>
+        <span class="ins-company">롯데손해보험</span>
+      </div>
+      <div class="ins-name">무배당 롯데 더끌림 건강보험(2007)무해지형</div>
+      <div class="ins-meta-row">
+        <span class="ins-meta">20년납</span>
+        <span class="ins-meta">90세만기 (2073-07-16)</span>
+        <span class="ins-meta">비갱신형</span>
+        <span class="ins-meta">납입종료 2040-07-16</span>
+      </div>
+      <div class="divider"></div>
+      <div class="ins-premium-row">
+        <span class="ins-premium-label">월 보험료</span>
+        <span class="ins-premium-value">104,581원</span>
+      </div>
+      <div class="alert alert-info" style="margin-top:12px; margin-bottom:0;">
+        <div class="alert-icon">💡</div>
+        <div class="alert-body">
+          <div class="alert-desc">2020년 가입 · 비갱신 구조로 안정적. 질병사망 보장 2040년 납입종료(57세) 후 보장 만료 여부 확인 필요.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 메리츠화재 -->
+    <div class="ins-card fade-up">
+      <div class="ins-card-top">
+        <span class="badge badge-blue">납입중</span>
+        <span class="ins-company">메리츠화재해상보험</span>
+      </div>
+      <div class="ins-name">무배당 Ready 라이프케어보험0604</div>
+      <div class="ins-meta-row">
+        <span class="ins-meta">37년납</span>
+        <span class="ins-meta">80세만기 (2063-09-29)</span>
+        <span class="ins-meta">비갱신형</span>
+        <span class="ins-meta">납입종료 2043-09-29</span>
+      </div>
+      <div class="divider"></div>
+      <div class="ins-premium-row">
+        <span class="ins-premium-label">월 보험료</span>
+        <span class="ins-premium-value">50,000원</span>
+      </div>
+      <div class="alert alert-danger" style="margin-top:12px; margin-bottom:0;">
+        <div class="alert-icon">🚨</div>
+        <div class="alert-body">
+          <div class="alert-desc">실손(질병·상해 입원·통원) 만기 2026-09-29 — D-104일. 즉시 갱신·전환 확인 필요.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───── SECTION 2 — 보장내용 상세 ───── -->
+  <div class="section-divider"></div>
+  <div class="section">
+    <div class="sec-label">SECTION 2</div>
+    <div class="sec-title">보장내용 상세</div>
+
+    <div class="badge-guide">
+      🔴 <strong>위험</strong> · 🟡 <strong>부족</strong> · 🟢 <strong>적정</strong> · 🔵 <strong>과잉</strong>
+      — 목표 기준 대비 현재 보장 수준을 표시합니다.
+    </div>
+
+    <!-- 실손 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header">
+        <span class="detail-icon">🏥</span>
+        <span class="detail-cat">실손보험</span>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">질병·상해 입원 / 통원</div>
+          <div class="detail-sub">메리츠 2세대 실손 보유. 보장 조건 유리하나 <strong style="color:var(--danger);">2026-09-29 만기 D-104일</strong> — 4세대 전환 즉시 확인 필요.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">입원 3,000만</div>
+          <span class="badge badge-warning">⚠️ 만기임박</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 암 진단비 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header">
+        <span class="detail-icon">🎗️</span>
+        <span class="detail-cat">암 진단비</span>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">일반암 진단비</div>
+          <div class="detail-sub">권장 5,000만원 보유(롯데 4,000만 + 메리츠 1,000만). 2020년 가입 · 비갱신. 갑상선암이 소액암으로 분리 처리 가능성 있어 구조 양호.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">5,000만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">소액암(유사암) 진단비</div>
+          <div class="detail-sub">갑상선암·기타피부암·제자리암 등 1,000만원 보유. 권장 기준 충족.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">1,000만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">고액암 진단비</div>
+          <div class="detail-sub">백혈병·뇌종양 등 고액암 2,000만원 보유.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">2,000만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 암 치료비 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header">
+        <span class="detail-icon">🔬</span>
+        <span class="detail-cat">암 치료비</span>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">항암방사선·약물치료비</div>
+          <div class="detail-sub">500만원 보유. 단, <strong style="color:var(--warning);">표적항암·CAR-T·중입자·양성자 특약 미보유</strong>. 표적항암 치료비 연 2,000~8,000만원 자부담 위험.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">500만원</div>
+          <span class="badge badge-warning">🟡 부족</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 심·뇌혈관 진단비 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header">
+        <span class="detail-icon">❤️‍🩹</span>
+        <span class="detail-cat">심·뇌혈관 진단비</span>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">뇌혈관 진단비</div>
+          <div class="detail-sub">뇌혈관질환 1,000만 + 뇌졸중 3,000만 보유. 뇌졸중(중간범위) 보유로 부분 달성. 권장 3,000만원 대비 뇌혈관질환 1,000만원 부족.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">1,000만+3,000만</div>
+          <span class="badge badge-warning">🟡 부족</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">심장질환 진단비</div>
+          <div class="detail-sub">허혈성심장질환 1,000만 + 급성심근경색 3,000만 보유. 급성심근경색(좁은범위)만 3,000만 — 협심증·스텐트 단계 미보장. 허혈성 기준 1,000만원으로 부족.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">1,000만+3,000만</div>
+          <span class="badge badge-warning">🟡 부족</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 심·뇌혈관 수술비 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header">
+        <span class="detail-icon">🦽</span>
+        <span class="detail-cat">심·뇌혈관 치료비·수술비</span>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">뇌혈관질환 수술비</div>
+          <div class="detail-sub">1,700만원 보유 + 64대질병수술비 100만원. 재발 대비 수술비 구성 양호.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">1,800만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">허혈심장질환 수술비</div>
+          <div class="detail-sub">1,700만원 보유. 관상동맥우회수술비 3,000만원 포함 — 심장 수술 대비 구성 양호.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">1,700만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 수술비 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header">
+        <span class="detail-icon">🔪</span>
+        <span class="detail-cat">수술비</span>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">질병 1~5종 수술비</div>
+          <div class="detail-sub">1종 20만·2종 60만·3종 200만·4종 400만·5종 1,000만원. 권장 1,000만원(5종) 충족.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">5종 1,000만</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">상해 1~5종 수술비</div>
+          <div class="detail-sub">5종 800만원 보유 + 상해수술비 100만원. 권장 기준 충족.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">5종 800만</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 사망·후유장해 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header">
+        <span class="detail-icon">🛡️</span>
+        <span class="detail-cat">사망·후유장해, 상해</span>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">질병사망</div>
+          <div class="detail-sub">5,000만원 보유(롯데). 납입종료일 2040-07-16(57세) 이후 보장 만료 — 만기 도래 전 종신 또는 재가입 검토 필요.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">5,000만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">상해사망</div>
+          <div class="detail-sub">롯데 100만 + 메리츠 15,000만 = 15,100만원. 상해 사망 대비 충분히 보유.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">15,100만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">상해 후유장해 3~100%</div>
+          <div class="detail-sub">메리츠 15,000만 + 롯데 100만. 20,000만원(소득보상) 포함. 권장 1억원 대비 충분.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">20,100만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 운전자 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header">
+        <span class="detail-icon">🚗</span>
+        <span class="detail-cat">운전자보험</span>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">교통사고처리지원금 / 벌금</div>
+          <div class="detail-sub">운전자보험 미보유. 12대 중과실 사고 시 형사처벌 대응 불가 — 즉시 가입 권장.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">—</div>
+          <span class="badge badge-danger">🔴 미보유</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───── SECTION 3 — 보험료 적정성 분석 ───── -->
+  <div class="section-divider"></div>
+  <div class="section">
+    <div class="sec-label">SECTION 3</div>
+    <div class="sec-title">보험료 적정성 분석</div>
+    <div class="sec-desc">월소득의 10% 이하(미혼 5%)로 유지하는 것을 권장합니다.</div>
+
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">롯데 더끌림</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="--bar-width:68%; --fill-color:var(--toss-blue);"></div>
+        </div>
+        <div class="bar-amount">104,581원</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">메리츠 케어</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="--bar-width:32%; --fill-color:#5BA4FF;"></div>
+        </div>
+        <div class="bar-amount">50,000원</div>
+      </div>
+    </div>
+
+    <div class="peer-compare">
+      <div class="peer-row">
+        <span class="peer-label">한신애 고객님 보험료</span>
+        <span class="peer-value" style="color:var(--toss-blue);">154,581원</span>
+      </div>
+      <div class="peer-row">
+        <span class="peer-label">40대 동년배 평균</span>
+        <span class="peer-value">23,000원</span>
+      </div>
+      <div class="peer-note">마이데이터 기준 40~44세 평균 보험료 · 고객님은 동년배 대비 보험료가 높은 편입니다. 보장 구성 대비 효율성 점검을 권장드립니다.</div>
+    </div>
+
+    <div class="alert alert-info" style="margin-top:14px;">
+      <div class="alert-icon">💡</div>
+      <div class="alert-body">
+        <div class="alert-title">비갱신형 중심 구성</div>
+        <div class="alert-desc">납입중 2건 모두 비갱신형으로 보험료 인상 위험 낮음. 실손 갱신 후에도 비갱신 비중 유지가 이상적입니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───── SECTION 4 — 리모델링 제안 ───── -->
+  <div class="section-divider"></div>
+  <div class="section">
+    <div class="sec-label">SECTION 4</div>
+    <div class="sec-title">리모델링 제안</div>
+    <div class="sec-desc">갭 우선순위 기준 보완 순서입니다.</div>
+
+    <div class="remodel-card priority-1 fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">1</span>
+        <span class="badge badge-danger">[최우선]</span>
+      </div>
+      <div class="remodel-title">실손보험 갱신·전환 즉시 처리</div>
+      <div class="remodel-desc">메리츠 2세대 실손이 2026년 9월 29일 만기됩니다(D-104일). 만기 이후 미갱신 시 입원·통원 의료비를 전액 자부담해야 합니다. 4세대 실손 전환 또는 갱신 처리를 최우선으로 진행해야 합니다.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">2</span>
+      </div>
+      <div class="remodel-title">운전자보험 신규 가입</div>
+      <div class="remodel-desc">운전자보험이 전혀 없어 12대 중과실 교통사고 시 형사처벌 대응이 불가능합니다. 교통사고처리지원금 2억, 벌금(대인·대물·스쿨존) 포함 현행 기준 상품으로 설계를 권장합니다. 월 2~3만원대 납입 가능.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">3</span>
+      </div>
+      <div class="remodel-title">표적항암·첨단치료 특약 보완</div>
+      <div class="remodel-desc">항암방사선·약물치료비 500만원만 보유 중입니다. 표적항암 치료비 연 2,000~8,000만원, CAR-T 치료비 1회 1~5억원 수준으로 미보유 시 자부담이 매우 큽니다. 기존 계약 추가 또는 신계약으로 보완을 권장합니다.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">4</span>
+      </div>
+      <div class="remodel-title">뇌혈관질환 진단비 증액</div>
+      <div class="remodel-desc">현재 뇌혈관질환 진단비 1,000만원으로 권장 3,000만원 대비 2,000만원 부족합니다. 뇌졸중(3,000만)은 있으나 보장 범위가 협소해 뇌혈관질환으로 확대 설계 시 보장 완성도가 높아집니다.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">5</span>
+      </div>
+      <div class="remodel-title">허혈성심장질환 진단비 보완</div>
+      <div class="remodel-desc">허혈성심장질환 진단비 1,000만원 보유로 권장 3,000만원 대비 부족합니다. 급성심근경색(3,000만)은 있으나 협심증·스텐트 삽입 단계는 미보장 — 허혈성심장질환 특약으로 보장 범위 확대를 권장합니다.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">6</span>
+      </div>
+      <div class="remodel-title">질병사망 보장 만기(57세) 대비 검토</div>
+      <div class="remodel-desc">롯데 질병사망 5,000만원이 납입종료일(2040-07-16, 57세)에 보장 종료됩니다. 57세 이후 사망보장 공백을 막기 위해 정기보험 추가 또는 종신보험 전환 여부를 미리 검토하는 것이 좋습니다.</div>
+    </div>
+  </div>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="report-footer">
+    <div class="footer-date">기준일: 2026. 06. 17</div>
+    <div class="footer-notice">
+      본 자료는 고객님의 이해를 돕기 위한 보장 분석 참고 자료이며,<br>
+      정확한 보장 내용은 기존 가입된 보험증권 및 약관을 확인하시기 바랍니다.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

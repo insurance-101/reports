@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta property="og:url" content="https://insurance-101.github.io/reports/r20260619-9mn7l8u8.html"><meta property="og:description" content="토스인슈어런스 + 보험전문가 "이용준" 레포트 검수 완료!"><meta name="twitter:description" content="토스인슈어런스 + 보험전문가 "이용준" 레포트 검수 완료!"><meta property="og:image" content="https://insurance-101.github.io/reports/og-thumb.png?v=2"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="토스인슈어런스 보장리포트"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://insurance-101.github.io/reports/og-thumb.png?v=2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="양수진고객님 보장 분석 리포트">
+  <title>양수진 고객님 보장 분석 리포트</title>
+  <style>
+@font-face{font-family:'TossProductSans';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Light.woff2')format('woff2');font-weight:300}
+@font-face{font-family:'TossProductSans';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Regular.woff2')format('woff2');font-weight:400}
+@font-face{font-family:'TossProductSans';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Medium.woff2')format('woff2');font-weight:500}
+@font-face{font-family:'TossProductSans';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Semibold.woff2')format('woff2');font-weight:600}
+@font-face{font-family:'TossProductSans';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Bold.woff2')format('woff2');font-weight:700}
+@font-face{font-family:'TossProductSans';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Extrabold.woff2')format('woff2');font-weight:800}
+@font-face{font-family:'TossProductSans';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Heavy.woff2')format('woff2');font-weight:900}
+:root{--toss-blue:#0064FF;--toss-blue-l:#EBF3FF;--danger:#F04452;--warning:#FF9500;--success:#00B386;--bg:#FFFFFF;--bg2:#F2F4F6;--text1:#191F28;--text2:#4E5968;--border:#E8ECF0;--radius-sm:12px;--radius:16px;--shadow:0 1px 2px rgba(0,0,0,0.04)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'TossProductSans','Pretendard',-apple-system,sans-serif;font-size:14px;line-height:1.7;color:var(--text1);background:var(--bg2);-webkit-font-smoothing:antialiased}
+.wrap{max-width:480px;margin:0 auto;background:var(--bg);min-height:100vh;padding-bottom:env(safe-area-inset-bottom,24px)}
+.section-divider{height:8px;background:var(--bg2)}
+.section{padding:28px 20px}
+.sec-label{font-size:12px;font-weight:700;color:var(--toss-blue);letter-spacing:0.3px;margin-bottom:4px}
+.sec-title{font-size:20px;font-weight:700;letter-spacing:-0.3px;color:var(--text1);margin-bottom:6px}
+.sec-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:20px}
+.divider{height:1px;background:var(--border);margin:16px 0}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes barGrow{from{width:0%}to{width:var(--bar-width)}}
+@keyframes progressFill{from{width:0}to{width:var(--progress-width)}}
+.fade-up{opacity:0;animation:fadeUp 0.5s ease forwards}
+.fade-up:nth-child(1){animation-delay:0.05s}.fade-up:nth-child(2){animation-delay:0.10s}
+.fade-up:nth-child(3){animation-delay:0.15s}.fade-up:nth-child(4){animation-delay:0.20s}
+.report-header{background:#191F28;padding:24px 20px 28px}
+.header-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.header-logo{font-size:16px;font-weight:800;color:#FFF;letter-spacing:-0.3px}
+.header-date{background:#1A2B42;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:4px 10px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.55)}
+.header-name-row{display:flex;align-items:baseline;gap:12px;margin-bottom:4px;flex-wrap:nowrap}
+.header-customer-name{font-size:32px;font-weight:900;color:#fff;letter-spacing:-1.1px;line-height:1;flex-shrink:0;white-space:nowrap}
+.header-greet-1{font-size:15px;font-weight:400;color:rgba(255,255,255,0.55);white-space:nowrap}
+.header-report-title{font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.5px;line-height:1.25;margin-bottom:6px}
+.header-sub{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:20px;line-height:1.6}
+.header-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.hcard{background:#21232A;border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:14px 12px;animation:fadeUp 0.5s ease forwards;opacity:0}
+.hcard:nth-child(1){animation-delay:0.1s}.hcard:nth-child(2){animation-delay:0.15s}
+.hcard:nth-child(3){animation-delay:0.2s}.hcard:nth-child(4){animation-delay:0.25s}
+.hcard-label{font-size:11px;color:rgba(255,255,255,0.45);font-weight:500;margin-bottom:6px}
+.hcard-value{font-size:18px;font-weight:700;color:#fff;line-height:1.3;letter-spacing:-0.3px}
+.hcard-value.hcard-danger{color:var(--danger)}.hcard-value.hcard-warning{color:var(--warning)}
+.hcard-note{font-size:10px;color:rgba(255,255,255,0.35);margin-top:5px;line-height:1.5}
+.hcard-note .danger-text{color:var(--danger);font-weight:700}
+.hcard-note .warning-text{color:var(--warning);font-weight:700}
+.header-divider{height:1px;background:rgba(255,255,255,0.08);margin:20px 0}
+.fc-row{display:flex;align-items:center;gap:10px}
+.fc-avatar{width:36px;height:36px;border-radius:50%;background:#1A2B42;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0}
+.fc-info{flex:1}.fc-name{font-size:14px;font-weight:700;color:#fff}
+.fc-sub{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
+.fc-tel{font-size:13px;font-weight:600;color:#5BA4FF;background:rgba(91,164,255,0.15);border-radius:20px;padding:4px 12px;text-decoration:none;white-space:nowrap}
+.badge{display:inline-flex;align-items:center;gap:3px;border-radius:9999px;font-size:11px;font-weight:700;padding:3px 10px;white-space:nowrap}
+.badge-danger{background:#FFF0F1;color:var(--danger)}
+.badge-warning{background:#FFF6E8;color:var(--warning)}
+.badge-success{background:#E8FAF5;color:var(--success)}
+.badge-blue{background:var(--toss-blue-l);color:var(--toss-blue)}
+.badge-over{background:#F0F0FF;color:#6C63FF}
+.alert{display:flex;gap:12px;align-items:flex-start;border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:12px;border-left:3px solid transparent}
+.alert-danger{background:#FFF0F1;border-left-color:var(--danger)}
+.alert-warning{background:#FFF6E8;border-left-color:var(--warning)}
+.alert-info{background:var(--toss-blue-l);border-left-color:var(--toss-blue)}
+.alert-success{background:#E8FAF5;border-left-color:var(--success)}
+.alert-purple{background:#F0F0FF;border-left-color:#6C63FF}
+.alert-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.alert-title{font-size:13px;font-weight:700;color:var(--text1);margin-bottom:2px}
+.alert-desc{font-size:12px;color:var(--text2);line-height:1.6}
+.summary-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.scard{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px 12px;text-align:center;box-shadow:var(--shadow)}
+.scard-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;margin:0 auto 10px}
+.scard-label{font-size:11px;color:var(--text2);font-weight:500;margin-bottom:6px}
+.scard-value{font-size:20px;font-weight:800;letter-spacing:-0.5px;line-height:1.1}
+.scard-sub{font-size:10px;color:var(--text2);margin-top:4px;line-height:1.5}
+.progress-wrap{margin-bottom:14px}
+.progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.progress-label{font-size:13px;font-weight:600;color:var(--text1)}
+.progress-value{font-size:13px;font-weight:700}
+.progress-track{height:6px;background:var(--bg2);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;width:var(--progress-width,0%);background:var(--fill-color,var(--toss-blue));border-radius:3px;animation:progressFill 1s cubic-bezier(.4,0,.2,1) forwards}
+.progress-sub{font-size:11px;color:var(--text2);margin-top:4px}
+.badge-guide{font-size:12px;color:var(--text2);padding:10px 16px;background:var(--bg2);border-radius:var(--radius-sm);margin-bottom:16px;line-height:1.8}
+.detail-group{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)}
+.detail-header{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--bg2);border-bottom:1px solid var(--border)}
+.detail-icon{font-size:16px}.detail-cat{font-size:13px;font-weight:700;color:var(--text1)}
+.detail-row{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 16px;border-bottom:1px solid var(--border)}
+.detail-row:last-child{border-bottom:none}
+.detail-left{flex:1;padding-right:12px}
+.detail-name{font-size:13px;font-weight:600;color:var(--text1);margin-bottom:3px}
+.detail-sub{font-size:11px;color:var(--text2);line-height:1.5}
+.detail-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0}
+.detail-amount{font-size:14px;font-weight:700;color:var(--text1);white-space:nowrap}
+.ins-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;box-shadow:var(--shadow)}
+.ins-card-top{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.ins-company{font-size:12px;color:var(--text2);font-weight:500}
+.ins-name{font-size:15px;font-weight:700;color:var(--text1);letter-spacing:-0.2px;margin-bottom:8px}
+.ins-meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.ins-meta{font-size:11px;color:var(--text2);background:var(--bg2);border-radius:6px;padding:2px 8px}
+.ins-premium-row{display:flex;justify-content:space-between;align-items:center}
+.ins-premium-label{font-size:12px;color:var(--text2)}
+.ins-premium-value{font-size:16px;font-weight:800;color:var(--toss-blue);letter-spacing:-0.3px}
+.bar-chart{margin-bottom:20px}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bar-label{font-size:11px;color:var(--text2);width:68px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{flex:1;height:6px;background:var(--bg2);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;width:var(--bar-width,0%);background:var(--fill-color,var(--toss-blue));border-radius:3px;animation:barGrow 1s cubic-bezier(.4,0,.2,1) forwards}
+.bar-amount{font-size:11px;font-weight:600;color:var(--text1);width:62px;text-align:right;white-space:nowrap}
+.peer-compare{background:var(--bg2);border-radius:var(--radius-sm);padding:14px 16px}
+.peer-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.peer-row:last-of-type{margin-bottom:0}
+.peer-label{font-size:13px;color:var(--text2)}
+.peer-value{font-size:15px;font-weight:700;color:var(--text1)}
+.peer-note{font-size:11px;color:var(--text2);margin-top:10px}
+.remodel-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;margin-bottom:10px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.remodel-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--toss-blue)}
+.remodel-card.priority-1::before{background:var(--danger)}
+.remodel-rank{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.remodel-order{width:22px;height:22px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--text2)}
+.remodel-title{font-size:14px;font-weight:700;color:var(--text1);letter-spacing:-0.2px;margin-bottom:6px}
+.remodel-desc{font-size:12px;color:var(--text2);line-height:1.6}
+.report-footer{background:#191F28;padding:24px 20px 40px}
+.footer-date{font-size:12px;color:rgba(255,255,255,0.75);margin-bottom:8px;font-weight:700}
+.footer-notice{font-size:11px;color:rgba(255,255,255,0.5);line-height:1.7}
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="report-header">
+    <div class="header-top">
+      <span class="header-logo">토스인슈어런스</span>
+      <div class="header-date">2026. 06. 17</div>
+    </div>
+    <div class="header-name-row">
+      <h1 class="header-customer-name">양수진</h1>
+      <div class="header-greet-1">고객님을 위한</div>
+    </div>
+    <div class="header-report-title">보장 분석 리포트</div>
+    <div class="header-sub">토스앱 '내 보험 연결하기'를 통해 조회되는 가입내역 기준입니다</div>
+    <div class="header-cards">
+      <div class="hcard">
+        <div class="hcard-label">가입나이 / 성별</div>
+        <div class="hcard-value">36세 / 여</div>
+        <div class="hcard-note"><span class="danger-text">상령일 2026-10-07 (D-112)</span></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-label">월 보험료</div>
+        <div class="hcard-value">188,080원</div>
+        <div class="hcard-note">전체 8건 합산 추정<br><span class="warning-text">보험료 대비 보장 비효율</span></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-label">보장 갭</div>
+        <div class="hcard-value hcard-danger">7개</div>
+        <div class="hcard-note"><span class="danger-text">위험 5개</span> · <span class="warning-text">부족 2개</span></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-label">보장달성률</div>
+        <div class="hcard-value hcard-danger">35%</div>
+        <div class="hcard-note">9개 항목 질적 기준<br>권장 80% 이상</div>
+      </div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="fc-row">
+      <div class="fc-avatar">IA</div>
+      <div class="fc-info">
+        <div class="fc-name">이용준 팀장</div>
+        <div class="fc-sub">토스인슈어런스 · Insurance Advisor</div>
+      </div>
+      <a class="fc-tel" href="tel:01095102222">010-9510-2222</a>
+    </div>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 0 -->
+  <div class="section">
+    <div class="sec-label">종합 현황</div>
+    <div class="sec-title">보장 진단 요약</div>
+
+    <div class="alert alert-danger">
+      <div class="alert-icon">🚨</div>
+      <div class="alert-body">
+        <div class="alert-title">위험 항목 5개 + 상령일 D-112 동시 긴급</div>
+        <div class="alert-desc">수술비·뇌혈관질환·허혈성심장질환·첨단항암·운전자보험 전무. 36세 기준 비갱신형 설계 마감까지 4개월 남았습니다.</div>
+      </div>
+    </div>
+
+    <div class="alert alert-purple">
+      <div class="alert-icon">📋</div>
+      <div class="alert-body">
+        <div class="alert-title">NH암보험 해지 검토 (IA 의견)</div>
+        <div class="alert-desc">농협 NH암보험(갱신형, 월 30,850원)은 만기 45세이며 암진단비 4,000만원 중복 구조입니다. 해지 후 비갱신형 종합설계로 보험료를 효율화할 수 있습니다. 단, 메리츠 알파Plus(납입 3년 잔여)는 2세대 실손·고액암·사망 등 핵심 보장 포함으로 유지 권장.</div>
+      </div>
+    </div>
+
+    <div class="summary-cards">
+      <div class="scard fade-up">
+        <div class="scard-icon" style="background:#EBF3FF;">💰</div>
+        <div class="scard-label">월 보험료</div>
+        <div class="scard-value" style="color:var(--warning);">188,080</div>
+        <div class="scard-sub">원/월 · 36세 평균 초과</div>
+      </div>
+      <div class="scard fade-up">
+        <div class="scard-icon" style="background:#FFF0F1;">⚠️</div>
+        <div class="scard-label">보장 갭</div>
+        <div class="scard-value" style="color:var(--danger);">7개</div>
+        <div class="scard-sub">위험 5 · 부족 2</div>
+      </div>
+      <div class="scard fade-up">
+        <div class="scard-icon" style="background:#FFF0F1;">📊</div>
+        <div class="scard-label">보장달성률</div>
+        <div class="scard-value" style="color:var(--danger);">35%</div>
+        <div class="scard-sub">질적 가중치 기준</div>
+      </div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-header">
+        <span class="progress-label">보장달성률</span>
+        <span class="progress-value" style="color:var(--danger);">35%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" style="--progress-width:35%;--fill-color:var(--danger);"></div>
+      </div>
+      <div class="progress-sub">권장 기준 80% 이상 · 188만원 보험료 대비 보장 효율 낮음</div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 1 가입 현황 -->
+  <div class="section">
+    <div class="sec-label">가입 현황</div>
+    <div class="sec-title">가입보험 현황</div>
+    <div class="sec-desc">납입중 정상 계약 2건 기준 (전체 8건 중).</div>
+
+    <!-- NH암보험 해지 검토 -->
+    <div class="ins-card fade-up">
+      <div class="ins-card-top">
+        <span class="badge badge-warning">⚠️ 해지검토</span>
+        <span class="badge badge-warning" style="margin-left:4px;">갱신형</span>
+        <span class="ins-company" style="margin-left:4px;">농협생명</span>
+      </div>
+      <div class="ins-name">무병장수 NH암보험 (갱신형, 무배당) 1504</div>
+      <div class="ins-meta-row">
+        <span class="ins-meta">20년납 / 45세만기</span>
+        <span class="ins-meta">갱신형</span>
+        <span class="ins-meta">2015.09 ~</span>
+      </div>
+      <div class="divider"></div>
+      <div class="ins-premium-row">
+        <span class="ins-premium-label">월 보험료</span>
+        <span class="ins-premium-value">30,850원</span>
+      </div>
+      <div class="alert alert-warning" style="margin-top:12px;margin-bottom:0;">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-body">
+          <div class="alert-desc">갱신형 단기 암보험(만기 45세). 주요 담보: 암진단 4,000만원(중복) + 암사망 8,000만원 + 뇌출혈·급성심근경색 각 1,000만원. 갱신 시 보험료 인상 예정. IA 해지 검토 의견 — 비갱신형 종합 재설계 시 효율화 가능.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 메리츠 알파Plus -->
+    <div class="ins-card fade-up">
+      <div class="ins-card-top">
+        <span class="badge badge-blue">납입중</span>
+        <span class="badge badge-success" style="margin-left:4px;">✅ 2세대 실손</span>
+        <span class="ins-company" style="margin-left:4px;">메리츠화재</span>
+      </div>
+      <div class="ins-name">무배당 알파Plus보장보험 0908</div>
+      <div class="ins-meta-row">
+        <span class="ins-meta">20년납 (잔여 3년)</span>
+        <span class="ins-meta">100세만기</span>
+        <span class="ins-meta">2009.09 ~ 유지 권장</span>
+      </div>
+      <div class="divider"></div>
+      <div class="ins-premium-row">
+        <span class="ins-premium-label">월 보험료</span>
+        <span class="ins-premium-value">86,990원</span>
+      </div>
+      <div class="alert alert-success" style="margin-top:12px;margin-bottom:0;">
+        <div class="alert-icon">✅</div>
+        <div class="alert-body">
+          <div class="alert-desc">2009년 가입 2세대 실손 포함 핵심 자산. 납입 잔여 3년 — 유지 후 납입 완료 강력 권장. 고액암 3,000만원·뇌졸중 3,000만원·급성심근경색 3,000만원·상해후유장해 1억·일상배상책임 1억 포함.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-info">
+      <div class="alert-icon">💡</div>
+      <div class="alert-body">
+        <div class="alert-title">전체 8건 중 6건 미조회</div>
+        <div class="alert-desc">나머지 6건의 보장 내용 확인이 필요합니다. 통화 시 전체 가입 내역을 함께 검토하겠습니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 2 보장 진단 -->
+  <div class="section">
+    <div class="sec-label">보장 진단</div>
+    <div class="sec-title">보장내용 상세</div>
+
+    <div class="badge-guide">
+      🔴 <strong>위험</strong> · 🟡 <strong>부족</strong> · 🟢 <strong>적정</strong> · 🔵 <strong>과잉/중복</strong> — 목표 기준 대비 현재 보장 수준을 표시합니다.
+    </div>
+
+    <!-- 실손 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header"><span class="detail-icon">🏥</span><span class="detail-cat">실손보험</span></div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">2세대 실손의료비 (메리츠 알파Plus)</div>
+          <div class="detail-sub">2009년 가입 2세대 — 본인부담금이 적어 의료비 보호 우수.<br>현재 가입할 수 없는 구 세대 실손. 납입 잔여 3년 후 100세까지 보장 유지.<br>60대 이후 보험료 인상 시 5세대 전환 고려 가능 — 지금은 유지 권장.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">보유</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 암 진단비 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header"><span class="detail-icon">🎗️</span><span class="detail-cat">암 진단비</span></div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">일반암 진단비</div>
+          <div class="detail-sub">총 7,000만원 (메리츠 3,000만원 + NH 4,000만원).<br>NH 해지 시 3,000만원으로 감소 — 해지 후 신규 2,000만원 추가 확보 계획 필요.<br>메리츠 단독 유지 시 5,000만원 목표 맞춤 설계 권장.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">7,000만원</div>
+          <span class="badge-over badge">🔵 중복</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">소액암(유사암) 진단비</div>
+          <div class="detail-sub">갑상선암·제자리암 보장 전무.<br>갑상선암은 여성 발병률 1위 — 1,000만원 이상 확보 필요.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">미보유</div>
+          <span class="badge badge-danger">🔴 위험</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">고액암 진단비</div>
+          <div class="detail-sub">3,000만원 보유 (메리츠). 혈액암·췌장암 등 5대 고액암 포함. 구성 양호.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">3,000만원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 암 치료비 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header"><span class="detail-icon">🔬</span><span class="detail-cat">암 치료비 (첨단항암)</span></div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">표적항암 / CAR-T / 중입자 등</div>
+          <div class="detail-sub">첨단항암 특약 전무. 2009년 메리츠·2015년 NH 모두 해당 특약 없는 구 세대.<br>표적항암 연 2,000~8,000만원, CAR-T 1회 1~5억원 전액 본인 부담.<br>36세 기준 비갱신형으로 확보 시 보험료 가장 유리합니다.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">미보유</div>
+          <span class="badge badge-danger">🔴 위험</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 심뇌혈관 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header"><span class="detail-icon">❤️‍🩹</span><span class="detail-cat">심·뇌혈관 진단비</span></div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">뇌혈관 진단비</div>
+          <div class="detail-sub">뇌졸중(뇌경색) 3,000만원 + 뇌출혈 1,000만원 보유. 그러나 뇌혈관질환(I60~I69) 미보유.<br>뇌경색 발생 빈도 60.8%이지만 I69 후유증·뇌혈관질환 전반은 미보장.<br>뇌혈관질환 진단비 추가 확보 필요 (권장 3,000만원).</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">3,000만원</div>
+          <span class="badge badge-warning">🟡 부족</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">심장질환 진단비</div>
+          <div class="detail-sub">급성심근경색 4,000만원 보유. 그러나 허혈성심장질환 미보유.<br>협심증·스텐트 삽입 단계는 완전 폐색 확정 전까지 지급 불가.<br>허혈성심장질환 진단비 추가 확보 필요 (권장 3,000만원).</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">4,000만원</div>
+          <span class="badge badge-warning">🟡 부족</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 수술비 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header"><span class="detail-icon">🔪</span><span class="detail-cat">수술비</span></div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">질병·상해·종수술비 / 뇌심혈관 수술비</div>
+          <div class="detail-sub">질병·상해·종수술비 전무. 뇌혈관·심장 수술비 전무.<br>비급여 수술 발생 시 전액 본인 부담. 위·대장 내시경 용종 제거도 수술비로 청구 가능하지만 현재 보장 없음.<br>1~5종 수술비 + 뇌심혈관 수술비 신규 확보가 시급합니다.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">미보유</div>
+          <span class="badge badge-danger">🔴 위험</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 사망·후유장해 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header"><span class="detail-icon">🛡️</span><span class="detail-cat">사망 · 후유장해</span></div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">사망보험금</div>
+          <div class="detail-sub">질병사망 3,000만원 (메리츠, 만기 2029년!) + 상해사망 3,000만원.<br>⚠️ 질병사망이 2029년 만기 — 39세 이후 질병사망 보장 소멸.<br>부양가족 유무 확인 후 장기 사망 보장 재설계 필요.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">3,000만원</div>
+          <span class="badge badge-warning">🟡 부족</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">상해후유장해 (80%이상·미만)</div>
+          <div class="detail-sub">상해 80%이상 1억원 + 80%미만 3,000만원 보유. 구성 양호.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">1억원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 운전자 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header"><span class="detail-icon">🚗</span><span class="detail-cat">운전자보험</span></div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">교통사고처리지원금 / 벌금 / 변호사선임</div>
+          <div class="detail-sub">운전자보험 전무. 12대 중과실 사고 시 형사처벌 대응 불가.<br>현행 기준 처리지원금 2억원 + 변호사선임 5,000만원 + 벌금.<br>월 1~2만원대 — 36세 상령일 전 가입 시 보험료 최저.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">미보유</div>
+          <span class="badge badge-danger">🔴 위험</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 배상책임 -->
+    <div class="detail-group fade-up">
+      <div class="detail-header"><span class="detail-icon">🏠</span><span class="detail-cat">배상책임</span></div>
+      <div class="detail-row">
+        <div class="detail-left">
+          <div class="detail-name">일상생활배상책임 1억원</div>
+          <div class="detail-sub">메리츠 알파Plus에 일상생활배상책임 1억원 포함. 적정 구성.<br>이사 시 보험사 주소 변경 필수 — 주소 변경 확인 권장.</div>
+        </div>
+        <div class="detail-right">
+          <div class="detail-amount">1억원</div>
+          <span class="badge badge-success">🟢 적정</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 3 보험료 -->
+  <div class="section">
+    <div class="sec-label">보험료 진단</div>
+    <div class="sec-title">보험료 적정성 분석</div>
+    <div class="sec-desc">월납 188,080원 (전체 8건 추정) · 36세 평균 대비 과다</div>
+
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">메리츠알파Plus</div>
+        <div class="bar-track"><div class="bar-fill" style="--bar-width:46%;--fill-color:var(--toss-blue);"></div></div>
+        <div class="bar-amount">86,990원</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">NH암보험</div>
+        <div class="bar-track"><div class="bar-fill" style="--bar-width:16%;--fill-color:var(--warning);"></div></div>
+        <div class="bar-amount">30,850원</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">미조회 6건</div>
+        <div class="bar-track"><div class="bar-fill" style="--bar-width:38%;--fill-color:var(--bg2);"></div></div>
+        <div class="bar-amount">~70,240원</div>
+      </div>
+    </div>
+
+    <div class="peer-compare">
+      <div class="peer-row">
+        <span class="peer-label">내 보험료</span>
+        <span class="peer-value" style="color:var(--warning);">188,080원</span>
+      </div>
+      <div class="peer-row">
+        <span class="peer-label">동년배 평균 (30대 중반)</span>
+        <span class="peer-value">18만원</span>
+      </div>
+      <div class="peer-note">36세 평균 대비 소폭 초과. 단 보장 공백(수술비·뇌심혈관·첨단항암)이 크고 NH 갱신형 중복 구조로 보험료 효율이 낮습니다. NH 해지 + 비갱신형 재설계 시 보험료 절감과 보장 강화를 동시에 달성할 수 있습니다.</div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 4 리모델링 -->
+  <div class="section">
+    <div class="sec-label">리모델링 제안</div>
+    <div class="sec-title">보장 개선 우선순위</div>
+    <div class="sec-desc">위험·부족 항목 기준 + 상령일 D-112 + IA 해지 검토 의견 반영.</div>
+
+    <div class="remodel-card priority-1 fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">1</span>
+        <span class="badge badge-danger">[최우선 · 상령일 전]</span>
+      </div>
+      <div class="remodel-title">NH암보험 해지 + 비갱신형 종합건강보험 36세 기준 설계</div>
+      <div class="remodel-desc">NH 갱신형 암보험(월 30,850원)을 해지하고, 첨단항암 7대 특약·소액암·뇌혈관질환·허혈성심장질환·수술비를 포함한 비갱신형 종합건강보험으로 재설계합니다. 36세 기준 설계하면 37세 이후 대비 보험료가 낮게 고정됩니다. 상령일 2026-10-07 전 완료 필수.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">2</span>
+      </div>
+      <div class="remodel-title">수술비(1~5종 + 뇌심혈관) 신규 확보</div>
+      <div class="remodel-desc">질병·상해·종수술비 전무, 뇌혈관·심장 수술비 전무입니다. 위·대장 용종 제거, 관절 수술, 비급여 수술 발생 시 전액 본인 부담. 1종 50만원~5종 2,000만원 + 뇌심혈관 수술비 반복 지급 구조 확보. 상령일 전 비갱신형으로 처리하세요.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">3</span>
+      </div>
+      <div class="remodel-title">첨단항암 7대 특약 + 소액암 동시 확보</div>
+      <div class="remodel-desc">표적항암·CAR-T·중입자·양성자·IMRT·항암호르몬·로봇수술 전무. 소액암(갑상선암) 전무. 여성 발병률 1위 갑상선암과 항암치료 비용 보장이 하나도 없습니다. 비갱신형 종합 설계에 포함하여 동시 해결을 권장합니다.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">4</span>
+      </div>
+      <div class="remodel-title">운전자보험 즉시 가입</div>
+      <div class="remodel-desc">운전자보험 전무. 12대 중과실 사고 시 형사처벌 대응 불가. 처리지원금 2억원 + 변호사선임 5,000만원(경찰조사·6주미만 포함) + 대인·대물 벌금. 월 1~2만원대 — 상령일 전 가입 시 36세 보험료로 고정.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">5</span>
+      </div>
+      <div class="remodel-title">질병사망 만기(2029년) 대비 장기 사망 재설계</div>
+      <div class="remodel-desc">메리츠 알파Plus 질병사망 3,000만원이 2029년 만기로 39세에 소멸합니다. 부양가족이 있다면 지금 새 상품에서 질병사망 보장을 추가해야 합니다. NH 해지 후 신규 설계 시 포함하는 것이 가장 효율적입니다.</div>
+    </div>
+
+    <div class="remodel-card fade-up">
+      <div class="remodel-rank">
+        <span class="remodel-order">6</span>
+      </div>
+      <div class="remodel-title">메리츠 알파Plus 납입 완주 (잔여 3년)</div>
+      <div class="remodel-desc">납입 잔여 3년이며 2세대 실손·고액암·뇌졸중·급성심근경색·후유장해·일상배상책임이 포함된 핵심 자산입니다. 납입 완료 후 100세까지 보장 유지 — 절대 해지하지 마세요.</div>
+    </div>
+  </div>
+
+  <footer class="report-footer">
+    <div class="footer-date">기준일: 2026. 06. 17</div>
+    <div class="footer-notice">본 자료는 고객님의 이해를 돕기 위한 보장 분석 참고 자료이며,<br>정확한 보장 내용은 기존 가입된 보험증권 및 약관을 확인하시기 바랍니다.</div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta property="og:url" content="https://insurance-101.github.io/reports/r20260625-olun26ed.html"><meta property="og:description" content="토스인슈어런스 + 보험전문가 "정차수" 레포트 검수 완료!"><meta name="twitter:description" content="토스인슈어런스 + 보험전문가 "정차수" 레포트 검수 완료!"><meta property="og:image" content="https://insurance-101.github.io/reports/og-thumb.png?v=2"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="토스인슈어런스 보장리포트"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://insurance-101.github.io/reports/og-thumb.png?v=2">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>비과세 통장 하나, 만들어두셨나요?</title>
+<style>
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Light.woff2') format('woff2'); font-weight: 300; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Regular.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Medium.woff2') format('woff2'); font-weight: 500; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Semibold.woff2') format('woff2'); font-weight: 600; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Bold.woff2') format('woff2'); font-weight: 700; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Extrabold.woff2') format('woff2'); font-weight: 800; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Heavy.woff2') format('woff2'); font-weight: 900; }
+
+:root {
+  --toss-blue:   #0064FF;
+  --toss-blue-l: #EBF3FF;
+  --danger:      #F04452;
+  --warning:     #FF9500;
+  --success:     #00B386;
+  --bg:          #FFFFFF;
+  --bg2:         #F2F4F6;
+  --text1:       #191F28;
+  --text2:       #4E5968;
+  --border:      #E8ECF0;
+  --radius-sm:   12px;
+  --radius:      16px;
+  --radius-lg:   20px;
+  --shadow:      0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.06);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'TossProductSans', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text1);
+  background: var(--bg2);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--bg);
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
+}
+.fade-up:nth-child(1) { animation-delay: 0.05s; }
+.fade-up:nth-child(2) { animation-delay: 0.10s; }
+.fade-up:nth-child(3) { animation-delay: 0.15s; }
+.fade-up:nth-child(4) { animation-delay: 0.20s; }
+.fade-up:nth-child(5) { animation-delay: 0.25s; }
+
+/* ── HEADER ── */
+.report-header {
+  background: #191F28;
+  padding: 24px 20px 28px;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.header-logo {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+.header-date {
+  background: #1A2B42;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+}
+.header-eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 6px;
+  letter-spacing: -0.1px;
+}
+.header-main-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.8px;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+.header-main-title em {
+  font-style: normal;
+  color: #FFD84D;
+}
+.header-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+/* 세금 비교 카드 2×2 */
+.header-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.hcard {
+  background: #21232A;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 14px 12px;
+  animation: fadeUp 0.5s ease forwards;
+  opacity: 0;
+}
+.hcard-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.hcard-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+.hcard-value.danger { color: #F04452; }
+.hcard-value.success { color: #00B386; }
+.hcard-note {
+  font-size: 10px;
+  color: rgba(255,255,255,0.35);
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.header-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 20px 0;
+}
+.fc-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.fc-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1A2B42;
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+.fc-info { flex: 1; }
+.fc-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.2px;
+}
+.fc-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 1px;
+}
+.fc-tel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--toss-blue);
+  border-radius: 9999px;
+  padding: 8px 14px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── 구분선 ── */
+.section-divider { height: 8px; background: var(--bg2); }
+.section { padding: 28px 20px; }
+.sec-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--toss-blue);
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+.sec-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--text1);
+  margin-bottom: 6px;
+}
+.sec-desc {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 16px 0;
+}
+
+/* ── SECTION 1: 세금 비교 ── */
+.tax-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.tax-card {
+  border-radius: var(--radius-sm);
+  padding: 16px 12px;
+  text-align: center;
+}
+.tax-card.bad {
+  background: #FFF4F5;
+  border: 1px solid rgba(240,68,82,0.2);
+}
+.tax-card.warn {
+  background: #FFF8EE;
+  border: 1px solid rgba(255,149,0,0.2);
+}
+.tax-card.good {
+  background: #F0FBF7;
+  border: 1px solid rgba(0,179,134,0.2);
+}
+.tax-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text2);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.tax-card-rate {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.tax-card-rate.bad { color: var(--danger); }
+.tax-card-rate.warn { color: var(--warning); }
+.tax-card-rate.good { color: var(--success); }
+.tax-card-sub {
+  font-size: 10px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.insight-box {
+  background: var(--toss-blue-l);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text1);
+  font-weight: 500;
+  line-height: 1.65;
+}
+.insight-box strong {
+  color: var(--toss-blue);
+  font-weight: 700;
+}
+
+/* ── SECTION 2: 금융소득 종합과세 ── */
+.alert-box {
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.alert-box.warning {
+  background: #FFF8EE;
+  border: 1px solid rgba(255,149,0,0.25);
+}
+.alert-box.danger {
+  background: #FFF4F5;
+  border: 1px solid rgba(240,68,82,0.2);
+}
+.alert-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text1);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.alert-title .icon { font-size: 16px; }
+.alert-body {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.65;
+}
+.alert-body strong { color: var(--text1); font-weight: 700; }
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 16px 0;
+}
+.tl-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  position: relative;
+}
+.tl-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.tl-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--toss-blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.tl-dot.grey {
+  background: var(--bg2);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.tl-dot.green {
+  background: var(--success);
+}
+.tl-content { flex: 1; padding-top: 4px; }
+.tl-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text1);
+  margin-bottom: 2px;
+  letter-spacing: -0.2px;
+}
+.tl-desc {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+/* ── SECTION 3: 직접투자 비교 ── */
+.compare-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.compare-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+.compare-item.highlight {
+  background: var(--toss-blue-l);
+  border-color: rgba(0,100,255,0.2);
+}
+.compare-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.compare-info { flex: 1; }
+.compare-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text1);
+  margin-bottom: 2px;
+}
+.compare-detail {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.55;
+}
+.compare-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.compare-tag.bad { background: #FFF0F1; color: var(--danger); }
+.compare-tag.good { background: #F0FBF7; color: var(--success); }
+.compare-tag.mid { background: #FFF8EE; color: var(--warning); }
+
+/* ── SECTION 4: 변액연금 소개 ── */
+.product-hero {
+  background: linear-gradient(135deg, #0064FF 0%, #1A3AFF 100%);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.product-hero::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+.product-hero-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.product-hero-name {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.product-hero-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 18px;
+}
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.product-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 9999px;
+  padding: 4px 12px;
+}
+
+.benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.benefit-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+.benefit-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--toss-blue);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.benefit-text { flex: 1; }
+.benefit-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text1);
+  margin-bottom: 3px;
+  letter-spacing: -0.2px;
+}
+.benefit-desc {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+.benefit-desc strong { color: var(--text1); font-weight: 700; }
+
+/* ── SECTION 5: 통화 약속 ── */
+.closer-lead {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text1);
+  line-height: 1.75;
+  letter-spacing: -0.1px;
+  margin-bottom: 20px;
+}
+.closer-lead em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--toss-blue);
+}
+.slot-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text2);
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.slot {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--toss-blue);
+  background: var(--toss-blue-l);
+  padding: 9px 16px;
+  border-radius: 9999px;
+  letter-spacing: -0.1px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+.slot:hover, .slot.active {
+  background: var(--toss-blue);
+  color: #fff;
+}
+.slot-confirm {
+  display: none;
+  font-size: 13px;
+  color: var(--success);
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.closer-hint {
+  font-size: 12px;
+  color: var(--text2);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* ── FOOTER ── */
+.report-footer {
+  background: #191F28;
+  padding: 24px 20px 40px;
+}
+.footer-date {
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.footer-notice {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ── HEADER ── -->
+  <header class="report-header">
+    <div class="header-top">
+      <span class="header-logo">토스인슈어런스</span>
+      <div class="header-date">2026. 06. 25</div>
+    </div>
+    <div class="header-eyebrow">금융 절세 솔루션 안내</div>
+    <div class="header-main-title">비과세 통장 하나,<br><em>만들어두셨나요?</em></div>
+    <div class="header-sub">은행·주식과 다른 방식으로 자산을 불리는 방법이 있습니다</div>
+
+    <div class="header-cards">
+      <div class="hcard" style="animation-delay:0.05s">
+        <div class="hcard-label">은행 예금 이자</div>
+        <div class="hcard-value danger">15.4% 과세</div>
+        <div class="hcard-note">이자소득세 + 지방세<br>100만원 이자 → 154,000원 세금</div>
+      </div>
+      <div class="hcard" style="animation-delay:0.10s">
+        <div class="hcard-label">변액연금보험 수익</div>
+        <div class="hcard-value success">비과세</div>
+        <div class="hcard-note">5년 납입 + 10년 유지 시<br>이자소득세 0원</div>
+      </div>
+    </div>
+
+    <div class="header-divider"></div>
+
+    <div class="fc-row">
+      <div class="fc-avatar">IA</div>
+      <div class="fc-info">
+        <div class="fc-name">정차수 팀장</div>
+        <div class="fc-sub">토스인슈어런스 · Insurance Advisor</div>
+      </div>
+      <a class="fc-tel" href="tel:01055426849">010-5542-6849</a>
+    </div>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <!-- ── SECTION 1: 세금 비교 ── -->
+  <section class="section">
+    <div class="sec-label">왜 지금 절세 통장인가요</div>
+    <div class="sec-title">금융상품, 세금부터 따져보세요</div>
+    <div class="sec-desc">똑같이 수익이 나도, 어디에 넣었느냐에 따라 세금이 달라집니다.</div>
+
+    <div class="tax-compare-grid fade-up">
+      <div class="tax-card bad">
+        <div class="tax-card-label">은행<br>예금·적금</div>
+        <div class="tax-card-rate bad">15.4%</div>
+        <div class="tax-card-sub">이자소득세<br>매년 원천징수</div>
+      </div>
+      <div class="tax-card warn">
+        <div class="tax-card-label">해외주식<br>직접투자</div>
+        <div class="tax-card-rate warn">22%</div>
+        <div class="tax-card-sub">양도소득세<br>250만원 초과분</div>
+      </div>
+      <div class="tax-card good">
+        <div class="tax-card-label">변액연금<br>보험</div>
+        <div class="tax-card-rate good">0%</div>
+        <div class="tax-card-sub">비과세<br>요건 충족 시</div>
+      </div>
+    </div>
+
+    <div class="insight-box fade-up">
+      💡 은행에 1억 넣고 연 3.5% 이자를 받으면 이자 350만원 중 <strong>53만 9천원</strong>을 세금으로 냅니다.<br>같은 수익이 변액연금에서 발생하면 <strong>세금 0원</strong>.
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── SECTION 2: 금융소득 종합과세 ── -->
+  <section class="section">
+    <div class="sec-label">목돈이 있다면 더 중요한 이야기</div>
+    <div class="sec-title">금융소득 2천만원 넘으면<br>종합과세 대상입니다</div>
+    <div class="sec-desc">은행 정기예금에 목돈을 두면, 생각보다 세금이 훨씬 커질 수 있어요.</div>
+
+    <div class="alert-box warning fade-up">
+      <div class="alert-title"><span class="icon">⚠️</span> 금융소득종합과세란?</div>
+      <div class="alert-body">
+        이자·배당 등 금융소득이 연간 <strong>2,000만원 초과</strong> 시,
+        초과분은 다른 소득(근로·사업소득)과 합산해 <strong>최고 세율 45%</strong>까지 과세됩니다.
+      </div>
+    </div>
+
+    <div class="alert-box danger fade-up">
+      <div class="alert-title"><span class="icon">📌</span> 목돈 3억, 금리 3.5% 예금 시나리오</div>
+      <div class="alert-body">
+        연 이자 약 1,050만원 → 15.4% 원천징수로 끝<br>
+        <strong>목돈 6억+</strong> 시 연 이자 2,100만원 → 초과분 <strong>종합과세 대상</strong><br>
+        다른 소득 있으면 실효세율이 크게 높아질 수 있음
+      </div>
+    </div>
+
+    <div class="insight-box fade-up">
+      💡 변액연금보험은 요건 충족 시 <strong>금융소득종합과세 대상에서 제외</strong>됩니다.<br>
+      목돈을 은행에서 변액연금으로 일부 이동하는 것만으로 절세 효과를 볼 수 있어요.
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── SECTION 3: 투자 수단 비교 ── -->
+  <section class="section">
+    <div class="sec-label">직접 투자와 뭐가 다른가요</div>
+    <div class="sec-title">수익보다 세금이 먼저입니다</div>
+    <div class="sec-desc">직접 투자도 좋은 방법이지만, 세금 구조를 먼저 이해하고 시작해야 합니다.</div>
+
+    <div class="compare-list">
+      <div class="compare-item fade-up">
+        <div class="compare-icon">🏦</div>
+        <div class="compare-info">
+          <div class="compare-name">은행 예금·적금</div>
+          <div class="compare-detail">안전하지만 이자에 <strong>15.4% 이자소득세</strong> 자동 징수</div>
+        </div>
+        <span class="compare-tag bad">과세</span>
+      </div>
+      <div class="compare-item fade-up">
+        <div class="compare-icon">🇺🇸</div>
+        <div class="compare-info">
+          <div class="compare-name">해외주식 직접투자</div>
+          <div class="compare-detail">수익 250만원 초과분에 <strong>양도소득세 22%</strong> 부과</div>
+        </div>
+        <span class="compare-tag bad">과세</span>
+      </div>
+      <div class="compare-item fade-up">
+        <div class="compare-icon">🇰🇷</div>
+        <div class="compare-info">
+          <div class="compare-name">국내주식 직접투자</div>
+          <div class="compare-detail">배당소득은 과세, 매매차익은 현재 비과세 (제도 변동 주의)</div>
+        </div>
+        <span class="compare-tag mid">부분 과세</span>
+      </div>
+      <div class="compare-item highlight fade-up">
+        <div class="compare-icon">🛡️</div>
+        <div class="compare-info">
+          <div class="compare-name">변액연금보험</div>
+          <div class="compare-detail">펀드 수익을 보험 안에서 운용 → 요건 충족 시 <strong>비과세</strong></div>
+        </div>
+        <span class="compare-tag good">비과세</span>
+      </div>
+    </div>
+
+    <div class="insight-box fade-up">
+      💡 <strong>비과세 통장 하나를 별도로 만들어두는 것</strong>, 그게 변액연금보험입니다.<br>
+      직접 투자는 계속하되, 절세 공간을 하나 확보하는 전략입니다.
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── SECTION 4: 카디프 변액연금 소개 ── -->
+  <section class="section">
+    <div class="sec-label">추천 상품</div>
+    <div class="sec-title">카디프 변액연금보험</div>
+    <div class="sec-desc">글로벌 보험 그룹 BNP 파리바 카디프의 변액연금 상품입니다.</div>
+
+    <div class="product-hero fade-up">
+      <div class="product-hero-label">BNP PARIBAS CARDIF</div>
+      <div class="product-hero-name">카디프 변액연금보험</div>
+      <div class="product-hero-sub">글로벌 운용 역량 × 국내 절세 구조</div>
+      <div class="product-tags">
+        <span class="product-tag">비과세</span>
+        <span class="product-tag">펀드 선택</span>
+        <span class="product-tag">글로벌 분산투자</span>
+        <span class="product-tag">종합과세 제외</span>
+      </div>
+    </div>
+
+    <div class="benefit-list">
+      <div class="benefit-item fade-up">
+        <div class="benefit-num">1</div>
+        <div class="benefit-text">
+          <div class="benefit-title">이자소득세 비과세</div>
+          <div class="benefit-desc"><strong>5년 이상 납입 후 10년 유지</strong> 시, 수익 전액 비과세.<br>은행 이자 15.4% 세금을 내지 않아도 됩니다.</div>
+        </div>
+      </div>
+      <div class="benefit-item fade-up">
+        <div class="benefit-num">2</div>
+        <div class="benefit-text">
+          <div class="benefit-title">금융소득종합과세 제외</div>
+          <div class="benefit-desc">목돈 운용 시 <strong>종합과세 대상에서 제외</strong>.<br>이미 금융소득이 많은 분일수록 절세 효과가 큽니다.</div>
+        </div>
+      </div>
+      <div class="benefit-item fade-up">
+        <div class="benefit-num">3</div>
+        <div class="benefit-text">
+          <div class="benefit-title">글로벌 펀드 자유 선택</div>
+          <div class="benefit-desc">미국·유럽·국내 등 다양한 펀드를 <strong>보험 안에서 운용</strong>.<br>수익이 나도 세금 없이 복리로 재투자됩니다.</div>
+        </div>
+      </div>
+      <div class="benefit-item fade-up">
+        <div class="benefit-num">4</div>
+        <div class="benefit-text">
+          <div class="benefit-title">보험이지만 투자 상품</div>
+          <div class="benefit-desc">기존 보험의 보장 구조 + 펀드 수익 구조를 결합.<br><strong>납입 유연성</strong>이 높아 자금 상황에 따라 조정 가능.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline fade-up">
+      <div class="tl-item">
+        <div class="tl-dot">납입</div>
+        <div class="tl-content">
+          <div class="tl-title">5년 이상 납입</div>
+          <div class="tl-desc">월납 또는 일시납으로 시작 가능. 납입 기간 중 펀드 운용.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot grey">유지</div>
+        <div class="tl-content">
+          <div class="tl-title">10년 유지 시점</div>
+          <div class="tl-desc">비과세 요건 충족. 이때부터 해지·수령해도 세금 없음.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot green">✓</div>
+        <div class="tl-content">
+          <div class="tl-title">비과세 수령</div>
+          <div class="tl-desc">수익 전액 비과세. 금융소득종합과세 대상에서도 제외.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── SECTION 5: 통화 약속 ── -->
+  <section class="section">
+    <div class="sec-label">다음 단계</div>
+    <div class="sec-title">순차적으로 전화드리고<br>도움드리겠습니다</div>
+
+    <div class="closer-lead">
+      <em>직접 통화</em>로 고객님 상황에 맞는 납입 구조와 펀드 구성을 함께 잡아드릴게요.<br>
+      통화 후엔 <em>맞춤 설계 제안서</em>도 함께 보내드립니다.<br>
+      편안한 시간대를 알려주시면 보다 원활하게 상담받으실 수 있습니다.
+    </div>
+
+    <div class="slot-label">통화 가능한 시간대</div>
+    <div class="time-slots" id="slots">
+      <span class="slot" onclick="selectSlot(this)">오늘 저녁에 전화주세요</span>
+      <span class="slot" onclick="selectSlot(this)">내일 오전</span>
+      <span class="slot" onclick="selectSlot(this)">점심시간</span>
+      <span class="slot" onclick="selectSlot(this)">퇴근 후</span>
+    </div>
+    <div class="slot-confirm" id="slotConfirm">선택해주셔서 감사합니다 🙂 그 시간대에 맞춰 연락드릴게요.</div>
+
+    <div class="closer-hint">간단히 톡 주셔도 맞춰 연락드릴게요 🙂</div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="report-footer">
+    <div class="footer-date">기준일: 2026. 06. 25</div>
+    <div class="footer-notice">
+      본 자료는 고객님의 이해를 돕기 위한 금융 절세 안내 참고 자료이며, 세금 관련 사항은 개인 상황에 따라 달라질 수 있습니다.
+      정확한 상품 내용은 가입설계서 및 약관을 반드시 확인하시기 바랍니다.
+      변액보험은 원금 손실이 발생할 수 있으며, 투자에 따른 손익은 고객님께 귀속됩니다.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function selectSlot(el) {
+  document.querySelectorAll('.slot').forEach(s => s.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('slotConfirm').style.display = 'block';
+}
+</script>
+</body>
+</html>

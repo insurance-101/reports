@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta property="og:url" content="https://insurance-101.github.io/reports/c20260628-gibfk4zk.html"><meta property="og:description" content="적금이나 예금 직접투자로 인한 이자소득세 확인해보셨나요?"><meta name="twitter:description" content="적금이나 예금 직접투자로 인한 이자소득세 확인해보셨나요?"><meta property="og:image" content="https://insurance-101.github.io/reports/ogc-20260628-ceehy7.png?v=1782618240855"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="매년 이자소득 그냥 버리고 계세요?"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://insurance-101.github.io/reports/ogc-20260628-ceehy7.png?v=1782618240855">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>매년 이자소득 비과세 만드는 방법</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+@font-face{font-family:'TP';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Regular.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'TP';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Medium.woff2') format('woff2');font-weight:500}
+@font-face{font-family:'TP';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Bold.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'TP';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Extrabold.woff2') format('woff2');font-weight:800}
+@font-face{font-family:'TP';src:url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Heavy.woff2') format('woff2');font-weight:900}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'TP','Noto Sans KR',sans-serif;background:#E8ECF0;-webkit-font-smoothing:antialiased;padding:0}
+
+.wrap{max-width:420px;margin:0 auto;background:#E8ECF0;padding-bottom:40px}
+
+/* ── 공통 카드 ── */
+.card{background:#fff;border-radius:24px;overflow:hidden;margin:0 12px 12px;box-shadow:0 2px 16px rgba(0,0,0,0.07)}
+.sdiv{height:12px}
+
+/* ── 공통 헤더 ── */
+.ch{background:#0064FF;padding:26px 24px 26px}
+.ch-eyebrow{font-size:11px;font-weight:700;color:rgba(255,255,255,0.65);letter-spacing:0.5px;margin-bottom:10px}
+.ch-title{font-size:24px;font-weight:900;color:#fff;line-height:1.3;letter-spacing:-0.5px}
+.ch-title em{font-style:normal;color:#FFD84D}
+.ch-desc{font-size:13px;color:rgba(255,255,255,0.75);line-height:1.65;margin-top:8px}
+
+/* 담당자 바 */
+.fc-bar{background:rgba(0,0,0,0.15);margin-top:18px;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px}
+.fc-av{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;flex-shrink:0}
+.fc-nm{font-size:13px;font-weight:700;color:#fff}
+.fc-sb{font-size:10px;color:rgba(255,255,255,0.6);margin-top:3px;line-height:1.6}
+.fc-tel{margin-left:auto;font-size:12px;font-weight:700;color:#0064FF;background:#fff;border-radius:9999px;padding:6px 13px;text-decoration:none;flex-shrink:0}
+
+/* ── 바디 공통 ── */
+.cb{padding:22px 22px 24px}
+.sec-label{font-size:11px;font-weight:700;color:#8B95A1;letter-spacing:0.4px;margin-bottom:12px}
+.insight{background:#EBF3FF;border-radius:14px;padding:14px 16px;display:flex;align-items:flex-start;gap:10px}
+.ins-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.ins-text{font-size:12px;color:#0C447C;line-height:1.7;font-weight:500}
+.ins-text b{color:#0064FF;font-weight:700}
+
+/* ── 플로우 ── */
+.flow{display:grid;grid-template-columns:1fr 20px 1fr 20px 1fr;align-items:center;background:#F4F6F8;border-radius:14px;padding:16px 12px;margin-bottom:16px}
+.flow-step{text-align:center}
+.flow-icon{font-size:26px;display:block;margin-bottom:6px}
+.flow-name{font-size:12px;font-weight:700;color:#191F28;line-height:1.3}
+.flow-sub{font-size:10px;color:#8B95A1;margin-top:3px}
+.flow-arr{text-align:center;font-size:18px;color:#C0C7D0;font-weight:700}
+
+/* ── 문제 박스 ── */
+.prob-box{background:#FFF0F1;border-radius:14px;padding:16px 18px;margin-bottom:14px;border:1px solid #F7C1C1}
+.prob-title{font-size:13px;font-weight:700;color:#791F1F;margin-bottom:12px}
+.prob-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(240,68,82,0.1)}
+.prob-row:last-child{border-bottom:none;padding-bottom:0}
+.prob-left{font-size:12px;color:#791F1F;font-weight:500}
+.prob-right{font-size:14px;font-weight:900;color:#E24B4A}
+
+/* ── 스탯 ── */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.stat-card{background:#EBF3FF;border-radius:14px;padding:16px 14px;text-align:center}
+.stat-label{font-size:11px;font-weight:700;color:#185FA5;line-height:1.4;margin-bottom:8px}
+.stat-num{font-size:30px;font-weight:900;letter-spacing:-1px;line-height:1;margin-bottom:4px}
+.stat-sub{font-size:10px;color:#4D7DB8;line-height:1.4}
+
+/* ── 수익률 CSS 바 ── */
+.rate-bars{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.rbar-row{display:flex;align-items:center;gap:10px}
+.rbar-label{font-size:12px;font-weight:700;color:#191F28;width:90px;flex-shrink:0}
+.rbar-track{flex:1;background:#F4F6F8;border-radius:9999px;height:36px;overflow:hidden}
+.rbar-fill{height:100%;border-radius:9999px;display:flex;align-items:center;padding:0 12px;min-width:52px}
+.rbar-val{font-size:13px;font-weight:900;white-space:nowrap}
+
+/* ── 포트폴리오 바 ── */
+.port-title{font-size:14px;font-weight:700;color:#191F28;margin-bottom:12px}
+.port-bars{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.pbar-row{display:flex;align-items:center;gap:10px}
+.pbar-label{font-size:12px;font-weight:700;width:60px;flex-shrink:0}
+.pbar-track{flex:1;background:#F4F6F8;border-radius:9999px;height:32px;overflow:hidden}
+.pbar-fill{height:100%;border-radius:9999px;display:flex;align-items:center;padding-left:10px;min-width:52px}
+.pbar-val{font-size:11px;font-weight:900;color:#fff;white-space:nowrap}
+.pbar-note{font-size:10px;color:#8B95A1;width:70px;flex-shrink:0;text-align:right;line-height:1.35}
+
+/* ── 결론 블록 ── */
+.concl-box{background:#0064FF;border-radius:16px;padding:18px 18px;margin-bottom:14px}
+.concl-eyebrow{font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:0.4px;margin-bottom:8px}
+.concl-title{font-size:18px;font-weight:900;color:#fff;line-height:1.35;letter-spacing:-0.4px;margin-bottom:14px}
+.concl-title em{font-style:normal;color:#FFD84D}
+.concl-items{display:flex;flex-direction:column;gap:7px}
+.concl-item{display:flex;align-items:flex-start;gap:10px;background:rgba(255,255,255,0.13);border-radius:10px;padding:10px 13px}
+.concl-item-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.concl-item-text{font-size:12px;color:#fff;font-weight:500;line-height:1.6}
+.concl-item-text b{color:#FFD84D;font-weight:700}
+
+/* ── 투자 비교 ── */
+.inv-list{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.inv-item{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:13px;border:1px solid #E8ECF0}
+.inv-item.best{background:#EBF3FF;border-color:rgba(0,100,255,0.2)}
+.inv-bar-wrap{flex:1;display:flex;flex-direction:column;gap:5px}
+.inv-name{font-size:13px;font-weight:700;color:#191F28}
+.inv-item.best .inv-name{color:#0064FF}
+.inv-track{width:100%;background:#F4F6F8;border-radius:9999px;height:8px;overflow:hidden}
+.inv-tag{font-size:11px;font-weight:700;padding:5px 11px;border-radius:9999px;white-space:nowrap;flex-shrink:0}
+
+/* ── 임팩트 섹션 ── */
+.impact-wrap{background:#0064FF;padding:26px 22px 24px;margin:0 12px 12px;border-radius:24px;box-shadow:0 2px 16px rgba(0,100,255,0.25)}
+.impact-cond{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.impact-chip{background:rgba(255,255,255,0.15);border-radius:9999px;padding:5px 12px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.85)}
+.impact-title{font-size:13px;font-weight:700;color:rgba(255,255,255,0.65);letter-spacing:0.3px;margin-bottom:6px}
+.impact-subtitle{font-size:22px;font-weight:900;color:#fff;line-height:1.3;letter-spacing:-0.5px;margin-bottom:20px}
+.impact-subtitle em{font-style:normal;color:#FFD84D}
+.impact-div{height:1px;background:rgba(255,255,255,0.15);margin-bottom:20px}
+.impact-stats{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+.imp-stat{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.1);border-radius:16px;padding:16px 18px;position:relative;overflow:hidden}
+.imp-stat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px 0 0 4px}
+.imp-stat.s1::before{background:rgba(255,255,255,0.4)}
+.imp-stat.s2::before{background:#FFD84D}
+.imp-stat.s3::before{background:#5BDBAD}
+.imp-step{font-size:10px;font-weight:700;color:rgba(255,255,255,0.5);letter-spacing:0.3px;margin-bottom:4px}
+.imp-label{font-size:13px;font-weight:700;color:rgba(255,255,255,0.85);line-height:1.35}
+.imp-label span{display:block;font-size:10px;font-weight:500;color:rgba(255,255,255,0.5);margin-top:2px}
+.imp-num{font-size:26px;font-weight:900;letter-spacing:-0.8px;line-height:1;text-align:right}
+.imp-stat.s1 .imp-num{color:#fff}
+.imp-stat.s2 .imp-num{color:#FFD84D}
+.imp-stat.s3 .imp-num{color:#5BDBAD}
+.imp-unit{font-size:10px;font-weight:600;color:rgba(255,255,255,0.5);text-align:right;margin-top:2px}
+.imp-badge{display:inline-block;background:rgba(255,255,255,0.15);border-radius:6px;padding:3px 8px;font-size:10px;font-weight:700;color:rgba(255,255,255,0.65);margin-top:4px}
+
+/* 월 연금 하이라이트 */
+.pension-hl{background:#fff;border-radius:16px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.ph-label{font-size:12px;font-weight:700;color:#4E5968;margin-bottom:6px}
+.ph-label span{display:block;font-size:10px;font-weight:500;color:#8B95A1;margin-top:2px}
+.ph-num{font-size:36px;font-weight:900;color:#0064FF;letter-spacing:-1.5px;line-height:1}
+.ph-unit{font-size:14px;font-weight:700;color:#0064FF;margin-left:2px}
+.ph-badges{display:flex;flex-direction:column;gap:5px;align-items:flex-end}
+.ph-badge{display:inline-block;border-radius:9999px;padding:5px 12px;font-size:11px;font-weight:700}
+.ph-badge.gr{background:#F0FBF7;color:#0A5C45}
+.ph-badge.bl{background:#EBF3FF;color:#185FA5}
+.impact-memo{text-align:center;font-size:10px;color:rgba(255,255,255,0.4);line-height:1.7}
+
+/* ── 시뮬레이터 ── */
+.sim-card{background:#0064FF;border-radius:24px;padding:22px 22px 26px;margin:0 12px 12px;box-shadow:0 2px 16px rgba(0,100,255,0.25)}
+.sim-title{font-size:14px;font-weight:900;color:#fff;margin-bottom:18px}
+.ctrl-row{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.ctrl-top{display:flex;justify-content:space-between;align-items:baseline}
+.ctrl-label{font-size:11px;color:rgba(255,255,255,0.7);font-weight:600}
+.ctrl-disp{font-size:16px;font-weight:900;color:#fff;letter-spacing:-0.3px}
+.ctrl-unit-t{font-size:10px;color:rgba(255,255,255,0.55)}
+input[type=range]{width:100%;height:5px;border-radius:9999px;appearance:none;-webkit-appearance:none;background:rgba(255,255,255,0.25);outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid #0050CC;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+.ctrl-ticks{display:flex;justify-content:space-between;margin-top:3px}
+.ctrl-ticks span{font-size:9px;color:rgba(255,255,255,0.35)}
+.ctrl-div{height:1px;background:rgba(255,255,255,0.15);margin:14px 0}
+.total-bar{background:rgba(255,255,255,0.12);border-radius:10px;padding:10px 13px;display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.total-label{font-size:11px;color:rgba(255,255,255,0.6)}
+.total-val{font-size:17px;font-weight:900;color:#FFD84D;letter-spacing:-0.3px}
+.total-unit-s{font-size:10px;color:rgba(255,255,255,0.45)}
+.warn-el{background:rgba(240,68,82,0.2);border-radius:8px;padding:8px 12px;font-size:11px;color:#FFB3B8;font-weight:600;margin-bottom:8px;display:none}
+.err-el{background:rgba(255,149,0,0.2);border-radius:8px;padding:8px 12px;font-size:11px;color:#FFD084;font-weight:600;margin-bottom:8px;display:none}
+.res-hero{background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:10px}
+.rh-label{font-size:10px;color:#4E5968;font-weight:600;margin-bottom:4px}
+.rh-val{font-size:26px;font-weight:900;color:#0064FF;letter-spacing:-0.8px;line-height:1;margin-bottom:3px}
+.rh-sub{font-size:11px;color:#4E5968;line-height:1.5}
+.res4{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}
+.r4{border-radius:12px;padding:11px 12px;background:rgba(255,255,255,0.12)}
+.r4-label{font-size:9px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.2px;margin-bottom:4px;text-transform:uppercase}
+.r4-val{font-size:15px;font-weight:900;color:#fff;letter-spacing:-0.3px;line-height:1.2}
+.r4-sub{font-size:9px;color:rgba(255,255,255,0.45);margin-top:2px}
+.r4.yellow .r4-val{color:#FFD84D}
+.r4.green .r4-val{color:#5BDBAD}
+.ms{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-bottom:10px}
+.ms-step{position:relative;display:flex;flex-direction:column;align-items:center}
+.ms-step:not(:last-child)::after{content:'';position:absolute;top:17px;left:50%;width:100%;height:2px;background:rgba(255,255,255,0.15);z-index:0}
+.ms-dot{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;z-index:1;margin-bottom:5px;flex-shrink:0}
+.ms-dot.d1{background:rgba(255,255,255,0.25);color:#fff;border:2px solid rgba(255,255,255,0.4)}
+.ms-dot.d2{background:rgba(255,255,255,0.25);color:#fff;border:2px solid rgba(255,255,255,0.4)}
+.ms-dot.d3{background:#FFD84D;color:#0050CC}
+.ms-name{font-size:9px;color:rgba(255,255,255,0.55);text-align:center;line-height:1.3;margin-bottom:2px}
+.ms-val{font-size:11px;font-weight:800;text-align:center;line-height:1.2;color:#fff}
+.ms-val.yellow{color:#FFD84D}
+.chart-lbl{font-size:10px;color:rgba(255,255,255,0.5);font-weight:600;margin-bottom:6px}
+.sim-note{font-size:9px;color:rgba(255,255,255,0.3);text-align:center;margin-top:6px}
+
+/* ── 카카오 CTA ── */
+.kakao-card{background:#FEE500;border-radius:24px;padding:26px 24px;margin:0 12px 12px;box-shadow:0 2px 12px rgba(0,0,0,0.08)}
+.kakao-title{font-size:20px;font-weight:900;color:#3C1E1E;line-height:1.35;letter-spacing:-0.4px;margin-bottom:10px}
+.kakao-title em{font-style:normal;color:#1A6A00}
+.kakao-desc{font-size:13px;color:#7A5C00;line-height:1.7;margin-bottom:18px}
+.kakao-row{display:flex;align-items:center;gap:12px;background:rgba(0,0,0,0.08);border-radius:14px;padding:14px 16px}
+.kakao-icon{width:44px;height:44px;background:#3C1E1E;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.kakao-name{font-size:15px;font-weight:900;color:#3C1E1E}
+.kakao-tel{font-size:12px;color:#7A5C00;margin-top:3px}
+.kakao-arr{margin-left:auto;font-size:22px;color:#3C1E1E;font-weight:900}
+
+/* ── FOOTER ── */
+.ft{background:#191F28;padding:22px 20px 36px;margin-top:4px}
+.ft-date{font-size:11px;color:rgba(255,255,255,0.7);margin-bottom:8px;font-weight:700}
+.ft-notice{font-size:10px;color:rgba(255,255,255,0.35);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══ CARD 1: 스토리 ═══ -->
+<div style="height:12px"></div>
+<div class="card">
+  <div class="ch">
+    <div class="ch-title">지금 저축,<br><em>이렇게 하고 계시죠?</em></div>
+    <div class="ch-desc">대부분 월급을 은행에 넣습니다.<br>근데 이 방법, 매년 세금이 조용히 빠집니다.</div>
+    <div class="fc-bar">
+      <div class="fc-av">IA</div>
+      <div>
+        <div class="fc-nm">정차수 팀장</div>
+        <div class="fc-sb">토스인슈어런스<br>Insurance Advisor</div>
+      </div>
+      <a class="fc-tel" href="tel:01055426849">010-5542-6849</a>
+    </div>
+  </div>
+  <div class="cb">
+    <div class="sec-label">대부분의 저축 방법</div>
+    <div class="flow">
+      <div class="flow-step"><span class="flow-icon">💵</span><div class="flow-name">월급</div></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-step"><span class="flow-icon">🏦</span><div class="flow-name">은행 예·적금</div><div class="flow-sub">CMA · 파킹통장</div></div>
+      <div class="flow-arr">→</div>
+      <div class="flow-step"><span class="flow-icon">📉</span><div class="flow-name">이자 수령</div><div class="flow-sub">세금 자동 차감</div></div>
+    </div>
+    <div class="prob-box">
+      <div class="prob-title">💸 이렇게 세금이 빠져나갑니다</div>
+      <div class="prob-row"><span class="prob-left">이자 100만원 받으면</span><span class="prob-right">세금 15.4만원</span></div>
+      <div class="prob-row"><span class="prob-left">1억 예금, 연 3.5% 이자</span><span class="prob-right">세금 53.9만원</span></div>
+      <div class="prob-row"><span class="prob-left">금융소득 2천만원 초과 시</span><span class="prob-right">최고 45%</span></div>
+    </div>
+    <div class="insight">
+      <div class="ins-icon">🏦</div>
+      <div class="ins-text">은행이 따로 알려주지 않는 부분이에요.<br>내 돈이 은행에 묶여있을수록<br><b>이자 차익은 은행 수익</b>이 되거든요 🥲</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CARD 2: 국민연금 ═══ -->
+<div class="card">
+  <div class="ch">
+    <div class="ch-eyebrow">국민연금 공식 발표 · 1988~2025</div>
+    <div class="ch-title">보수적으로 운용해도<br><em>연평균 8%를 냅니다</em></div>
+    <div class="ch-desc">국민연금은 어떻게 이게 가능할까요?<br>비결은 은행이 아닌 곳에 두기 때문입니다.</div>
+  </div>
+  <div class="cb">
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-label">기금설치 후 연평균 수익률</div><div class="stat-num" style="color:#0064FF">8.04%</div><div class="stat-sub">37년간 보수적 운용</div></div>
+      <div class="stat-card"><div class="stat-label">최근 3년 (2023~2025)</div><div class="stat-num" style="color:#00B386">16.05%</div><div class="stat-sub">518.1조원 수익</div></div>
+    </div>
+    <div class="sec-label">수익률 비교</div>
+    <div class="rate-bars" style="margin-bottom:20px">
+      <div class="rbar-row">
+        <div class="rbar-label">은행 예금</div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:32%;background:#E8ECF0"><span class="rbar-val" style="color:#8B95A1">3.5%</span></div></div>
+      </div>
+      <div class="rbar-row">
+        <div class="rbar-label">변액연금 목표</div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:68%;background:#0064FF"><span class="rbar-val" style="color:#fff">7~8%</span></div></div>
+      </div>
+      <div class="rbar-row">
+        <div class="rbar-label">국민연금 연평균</div>
+        <div class="rbar-track"><div class="rbar-fill" style="width:73%;background:#FFD84D"><span class="rbar-val" style="color:#3C1E1E">8.04%</span></div></div>
+      </div>
+    </div>
+    <div class="port-title">국민연금 포트폴리오 · 2026년 3월</div>
+    <div class="port-bars">
+      <div class="pbar-row"><div class="pbar-label" style="color:#0064FF">주식</div><div class="pbar-track"><div class="pbar-fill" style="width:57.5%;background:#0064FF"><span class="pbar-val">57.5%</span></div></div><div class="pbar-note">국내+해외</div></div>
+      <div class="pbar-row"><div class="pbar-label" style="color:#00B386">채권</div><div class="pbar-track"><div class="pbar-fill" style="width:26.1%;background:#00B386"><span class="pbar-val">26.1%</span></div></div><div class="pbar-note">국내+해외</div></div>
+      <div class="pbar-row"><div class="pbar-label" style="color:#FF9500">대체투자</div><div class="pbar-track"><div class="pbar-fill" style="width:16.2%;background:#FF9500"><span class="pbar-val">16.2%</span></div></div><div class="pbar-note">부동산·인프라</div></div>
+    </div>
+    <div class="insight">
+      <div class="ins-icon">📌</div>
+      <div class="ins-text">국민연금은 은행예금에 두지 않습니다.<br><b>주식·채권·대체투자에 분산</b>하기 때문에<br>37년간 연평균 8%가 가능한 겁니다.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CARD 3: 결론 ═══ -->
+<div class="card">
+  <div class="ch">
+    <div class="ch-eyebrow">결론</div>
+    <div class="ch-title">은행 저축은<br><em>정답이 아닙니다</em></div>
+    <div class="ch-desc">비과세 통장 하나를 따로 만들어두면<br>같은 수익에 세금이 0원입니다.</div>
+  </div>
+  <div class="cb">
+    <div class="concl-box">
+      <div class="concl-eyebrow">비과세 통장 하나로 달라집니다</div>
+      <div class="concl-title">글로벌 분산투자 수익을<br><em>세금 없이</em> 가져가세요</div>
+      <div class="concl-items">
+        <div class="concl-item"><div class="concl-item-icon">💰</div><div class="concl-item-text">은행 이자 → <b>15.4% 세금 자동 차감</b><br>변액연금 → 요건 충족 시 세금 0원</div></div>
+        <div class="concl-item"><div class="concl-item-icon">📊</div><div class="concl-item-text">국민연금도 주식에 57% 투자<br>→ <b>연평균 8.04% 달성</b></div></div>
+        <div class="concl-item"><div class="concl-item-icon">🛡️</div><div class="concl-item-text">보험 안에서 글로벌 펀드 운용<br>→ <b>금융소득종합과세 대상 제외</b></div></div>
+      </div>
+    </div>
+    <div class="sec-label">투자 수단별 세금 비교</div>
+    <div class="inv-list">
+      <div class="inv-item"><div class="inv-bar-wrap"><div class="inv-name">은행 예금·적금</div><div class="inv-track"><div style="width:70%;background:#F04452;height:8px;border-radius:9999px"></div></div></div><span class="inv-tag" style="background:#FFF0F1;color:#A32D2D">15.4% 과세</span></div>
+      <div class="inv-item"><div class="inv-bar-wrap"><div class="inv-name">해외주식 직접투자</div><div class="inv-track"><div style="width:100%;background:#FF9500;height:8px;border-radius:9999px"></div></div></div><span class="inv-tag" style="background:#FFF8EE;color:#7A4A00">22% 과세</span></div>
+      <div class="inv-item best"><div class="inv-bar-wrap"><div class="inv-name">비과세 통장</div><div class="inv-track"><div style="width:3%;background:#00B386;height:8px;border-radius:9999px"></div></div></div><span class="inv-tag" style="background:#F0FBF7;color:#0A5C45">비과세</span></div>
+    </div>
+    <div class="insight">
+      <div class="ins-icon">💡</div>
+      <div class="ins-text"><b>직접 투자는 유지하되,</b> 비과세 공간을<br>보험사 상품으로 하나 확보하는 전략입니다.<br>월 150만원까지, 연간 1억원 한도 비과세.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 임팩트 섹션 ═══ -->
+<div class="impact-wrap">
+  <div class="impact-cond">
+    <span class="impact-chip">40세 가입</span>
+    <span class="impact-chip">10년납</span>
+    <span class="impact-chip">월 150만원</span>
+    <span class="impact-chip">수익률 8%</span>
+    <span class="impact-chip">80세 연금개시</span>
+  </div>
+  <div class="impact-title">카디프 변액연금 · 비과세 시뮬레이션</div>
+  <div class="impact-subtitle">10년만 넣으면<br><em>이렇게 불어납니다</em></div>
+  <div class="impact-div"></div>
+  <div class="impact-stats">
+    <div class="imp-stat s1">
+      <div><div class="imp-step">STEP 1</div><div class="imp-label">총 납입액<span>10년간 월 150만원</span></div></div>
+      <div><div class="imp-num">1억 8천</div><div class="imp-unit">만원</div></div>
+    </div>
+    <div class="imp-stat s2">
+      <div><div class="imp-step">STEP 2</div><div class="imp-label">납입 완료 시점<span>50세 · 세금 없이 복리</span></div></div>
+      <div><div class="imp-num">2억 6,147</div><div class="imp-unit">만원</div><div class="imp-badge">적립률 145%</div></div>
+    </div>
+    <div class="imp-stat s3">
+      <div><div class="imp-step">STEP 3</div><div class="imp-label">연금 개시 시점<span>80세 · 30년간 복리 성장</span></div></div>
+      <div><div class="imp-num">22억 1,020</div><div class="imp-unit">만원</div><div class="imp-badge">적립률 1,228%</div></div>
+    </div>
+  </div>
+  <div class="pension-hl">
+    <div>
+      <div class="ph-label">80세부터 매월 수령<span>종신 · 세금 0원</span></div>
+      <div><span class="ph-num">1,087</span><span class="ph-unit">만원</span></div>
+    </div>
+    <div class="ph-badges">
+      <span class="ph-badge gr">비과세</span>
+      <span class="ph-badge bl">종신 수령</span>
+      <span class="ph-badge bl">종합과세 제외</span>
+    </div>
+  </div>
+  <div class="impact-memo">수익률 8% 가정 · 카디프 시그니처 ETF 변액연금 2.0 기준<br>실제 수익률에 따라 달라질 수 있습니다 · 변액보험 원금손실 가능</div>
+</div>
+
+<!-- ═══ 시뮬레이터 ═══ -->
+<div class="sim-card">
+  <div class="sim-title">📊 내 조건으로 직접 계산해보세요</div>
+
+  <div class="ctrl-row">
+    <div class="ctrl-top"><span class="ctrl-label">고객 나이</span><span><span class="ctrl-disp" id="dAge">40</span><span class="ctrl-unit-t">세</span></span></div>
+    <input type="range" id="sAge" min="20" max="65" step="1" value="40">
+    <div class="ctrl-ticks"><span>20세</span><span>30세</span><span>40세</span><span>50세</span><span>65세</span></div>
+  </div>
+  <div class="ctrl-row">
+    <div class="ctrl-top"><span class="ctrl-label">납입기간</span><span><span class="ctrl-disp" id="dTerm">10</span><span class="ctrl-unit-t">년납</span></span></div>
+    <input type="range" id="sTerm" min="0" max="7" step="1" value="2">
+    <div class="ctrl-ticks"><span>5년</span><span>7년</span><span>10년</span><span>12년</span><span>15년</span><span>20년</span><span>25년</span><span>30년</span></div>
+  </div>
+  <div class="ctrl-row">
+    <div class="ctrl-top"><span class="ctrl-label">월 기본보험료</span><span><span class="ctrl-disp" id="dBase">50</span><span class="ctrl-unit-t">만원</span></span></div>
+    <input type="range" id="sBase" min="10" max="150" step="10" value="50">
+    <div class="ctrl-ticks"><span>10만</span><span>50만</span><span>100만</span><span>150만</span></div>
+  </div>
+  <div class="ctrl-row">
+    <div class="ctrl-top"><span class="ctrl-label">월 추가납입</span><span><span class="ctrl-disp" id="dExtra">100</span><span class="ctrl-unit-t">만원</span></span></div>
+    <input type="range" id="sExtra" min="0" max="4" step="1" value="2">
+    <div class="ctrl-ticks"><span>0만</span><span>50만</span><span>100만</span><span>150만</span><span>200만</span></div>
+  </div>
+  <div class="ctrl-row">
+    <div class="ctrl-top"><span class="ctrl-label">예상 수익률</span><span><span class="ctrl-disp" id="dRate">8</span><span class="ctrl-unit-t">%</span></span></div>
+    <input type="range" id="sRate" min="0" max="4" step="1" value="1">
+    <div class="ctrl-ticks"><span>5%</span><span>8%</span><span>10%</span><span>12%</span><span>15%</span></div>
+  </div>
+
+  <div class="ctrl-div"></div>
+  <div class="total-bar">
+    <span class="total-label">월 총 납입 · 연금개시 <b style="color:#FFD84D">80세</b> 고정</span>
+    <span><span class="total-val" id="dTotal">150</span><span class="total-unit-s">만원/월</span></span>
+  </div>
+  <div class="warn-el" id="warnEl">⚠️ 월 <span id="warnN">0</span>만원 — 비과세 한도(150만원) 초과</div>
+  <div class="err-el" id="errEl">⚠️ 납입 완료 나이(<span id="errAge">0</span>세)가 80세 이상 — 납입기간을 줄이거나 나이를 낮춰주세요</div>
+
+  <div class="res-hero">
+    <div class="rh-label" id="rLabel">납입 완료 시점 적립금</div>
+    <div class="rh-val" id="rVal">—</div>
+    <div class="rh-sub" id="rSub">조건을 설정해 주세요</div>
+  </div>
+
+  <div class="ms" id="msEl"></div>
+
+  <div class="res4">
+    <div class="r4"><div class="r4-label">총 납입액</div><div class="r4-val" id="r1">—</div><div class="r4-sub" id="r1s">—</div></div>
+    <div class="r4"><div class="r4-label">납입완료 적립금</div><div class="r4-val" id="r2">—</div><div class="r4-sub" id="r2s">—</div></div>
+    <div class="r4 yellow"><div class="r4-label">연금개시 적립금</div><div class="r4-val" id="r3">—</div><div class="r4-sub">80세</div></div>
+    <div class="r4 green"><div class="r4-label">월 수령 연금</div><div class="r4-val" id="r4v">—</div><div class="r4-sub">종신 · 세금 0원</div></div>
+  </div>
+
+  <div class="chart-lbl">적립금 성장 추이</div>
+  <div style="position:relative;height:180px">
+    <canvas id="growChart"></canvas>
+  </div>
+  <div class="sim-note">카디프 시그니처 ETF 변액연금 2.0 · 수익률에 따라 달라질 수 있음</div>
+</div>
+
+<!-- ═══ 카카오 CTA ═══ -->
+<div class="kakao-card">
+  <div class="kakao-title">궁금하신 분들,<br>톡 남겨주시면<br><em>바로 설명드립니다 😊</em></div>
+  <div class="kakao-desc">내 조건으로 얼마나 불어나는지<br>맞춤 설계 제안서 무료로 보내드릴게요.</div>
+  <div class="kakao-row">
+    <div class="kakao-icon">💬</div>
+    <div><div class="kakao-name">정차수 팀장</div><div class="kakao-tel">토스인슈어런스 · 010-5542-6849</div></div>
+    <div class="kakao-arr">›</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="ft">
+  <div class="ft-date">기준일: 2026. 06. 25</div>
+  <div class="ft-notice">본 자료는 참고용이며 세금·수익은 개인 상황에 따라 달라질 수 있습니다. 국민연금 수익률·포트폴리오는 국민연금기금운용본부 공식 자료(2026.3)입니다. 시뮬레이션은 카디프 시그니처 ETF 변액연금보험 2.0 가입제안서 수수료 기준이며 실제와 다를 수 있습니다. 변액보험은 원금 손실 가능성이 있으며 투자 손익은 고객님께 귀속됩니다.</div>
+</div>
+
+</div>
+
+<script>
+var TERM_OPT  = [5,7,10,12,15,20,25,30];
+var EXTRA_OPT = [0,50,100,150,200];
+var RATE_OPT  = [5,8,10,12,15];
+var C_FEE     = {5:0.0394,7:0.0594,10:0.0619,12:0.0619,15:0.0619,20:0.0619,25:0.0619,30:0.0619};
+var MGMT=0.022, GMDB_M=0.0005/12, FUND_M=0.0051/12, XFER=0.016, P80=0.004996;
+
+function simulate(age, termYr, base, extra, rateYr) {
+  var total=base+extra, mr=Math.pow(1+rateYr/100,1/12)-1;
+  var termM=termYr*12, totalM=(80-age)*12;
+  var cf=C_FEE[termYr]||0.0619, ccM=Math.min(termM,120);
+  var acc=0, rows=[];
+  for (var m=1; m<=totalM; m++) {
+    var paying=m<=termM;
+    var dep=paying ? total-(m<=ccM?base*cf/ccM:0)-base*MGMT : -(base*MGMT);
+    acc=(acc+dep)*(1+mr);
+    acc-=acc*GMDB_M; acc-=acc*FUND_M;
+    if(acc<0)acc=0;
+    if(m%12===0){
+      var paid=total*Math.min(m,termM);
+      rows.push({yr:Math.floor((m-1)/12)+1,age:age+Math.floor((m-1)/12)+1,paid:Math.round(paid),acc:Math.round(acc),rate:Math.round(acc/paid*100)});
+    }
+  }
+  return rows;
+}
+function pension(acc){return Math.round(acc*(1-XFER)*P80);}
+function fmt(n){
+  if(n>=10000){var e=Math.floor(n/10000),r=n%10000;return r?(e+'억 '+r.toLocaleString()+'만원'):(e+'억원');}
+  return n.toLocaleString()+'만원';
+}
+
+var gChart=null;
+function drawGrow(rows, termYr){
+  var ctx=document.getElementById('growChart');
+  if(gChart){gChart.destroy();gChart=null;}
+  if(!rows||!rows.length)return;
+  var skip=rows.length>20?2:1;
+  var labels=rows.map(function(d,i){return i%skip===0?d.age+'세':'';});
+  var accs=rows.map(function(d){return d.acc;});
+  var paids=rows.map(function(d){return d.paid;});
+  var taxIdx=Math.min(termYr+1,rows.length-2);
+  var bg=accs.map(function(_,i){
+    if(i===rows.length-1)return '#FFD84D';
+    if(i===termYr-1)return '#fff';
+    if(i===taxIdx)return '#5BDBAD';
+    return i<termYr?'rgba(255,255,255,0.55)':'rgba(255,255,255,0.3)';
+  });
+  gChart=new Chart(ctx,{type:'bar',data:{labels:labels,datasets:[
+    {label:'적립금',data:accs,backgroundColor:bg,borderRadius:3,borderSkipped:false,order:1},
+    {label:'불입액',data:paids,backgroundColor:'rgba(255,255,255,0.08)',borderRadius:3,borderSkipped:false,order:2}
+  ]},options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.dataset.label+' '+c.raw.toLocaleString()+'만원';}}}},
+    scales:{
+      x:{grid:{display:false},ticks:{font:{size:8,family:'TP'},color:'rgba(255,255,255,0.45)',maxRotation:0}},
+      y:{grid:{color:'rgba(255,255,255,0.08)'},ticks:{font:{size:8},color:'rgba(255,255,255,0.45)',callback:function(v){return v>=10000?(v/10000).toFixed(0)+'억':v+'만';}}}
+    }
+  }});
+}
+
+function drawMS(rows,custAge,termYr){
+  var el=document.getElementById('msEl');
+  if(!rows||!rows.length){el.innerHTML='';return;}
+  var endD=rows[Math.min(termYr-1,rows.length-1)];
+  var taxD=rows[Math.min(termYr+1,rows.length-2)]||endD;
+  var retD=rows[rows.length-1];
+  el.innerHTML=
+    '<div class="ms-step"><div class="ms-dot d1">'+termYr+'년납</div><div class="ms-name">납입완료</div><div class="ms-val">'+fmt(endD.acc)+'</div></div>'+
+    '<div class="ms-step"><div class="ms-dot d2">비과세</div><div class="ms-name">'+taxD.age+'세 충족</div><div class="ms-val">'+fmt(taxD.acc)+'</div></div>'+
+    '<div class="ms-step"><div class="ms-dot d3">80세</div><div class="ms-name">연금개시</div><div class="ms-val yellow">'+fmt(retD.acc)+'</div></div>';
+}
+
+function update(){
+  var age=parseInt(document.getElementById('sAge').value,10);
+  var termIdx=parseInt(document.getElementById('sTerm').value,10);
+  var base=parseInt(document.getElementById('sBase').value,10);
+  var extIdx=parseInt(document.getElementById('sExtra').value,10);
+  var rIdx=parseInt(document.getElementById('sRate').value,10);
+  var termYr=TERM_OPT[termIdx], extra=EXTRA_OPT[extIdx], rate=RATE_OPT[rIdx];
+  var total=base+extra, endAge=age+termYr;
+
+  document.getElementById('dAge').textContent=age;
+  document.getElementById('dTerm').textContent=termYr;
+  document.getElementById('dBase').textContent=base;
+  document.getElementById('dExtra').textContent=extra;
+  document.getElementById('dRate').textContent=rate;
+  document.getElementById('dTotal').textContent=total;
+
+  var wEl=document.getElementById('warnEl');
+  wEl.style.display=total>150?'block':'none';
+  if(total>150)document.getElementById('warnN').textContent=total;
+
+  var eEl=document.getElementById('errEl');
+  if(endAge>=80){
+    eEl.style.display='block';
+    document.getElementById('errAge').textContent=endAge;
+    document.getElementById('rVal').textContent='조건 불가';
+    document.getElementById('rSub').textContent='납입기간을 줄이거나 나이를 낮춰주세요';
+    document.getElementById('msEl').innerHTML='';
+    document.getElementById('r1').textContent='—';
+    document.getElementById('r2').textContent='—';
+    document.getElementById('r3').textContent='—';
+    document.getElementById('r4v').textContent='—';
+    if(gChart){gChart.destroy();gChart=null;}
+    return;
+  }
+  eEl.style.display='none';
+
+  var rows=simulate(age,termYr,base,extra,rate);
+  if(!rows.length)return;
+  var endD=rows[Math.min(termYr-1,rows.length-1)];
+  var retD=rows[rows.length-1];
+  var ps=pension(retD.acc);
+  var paid=total*termYr*12;
+
+  document.getElementById('rLabel').textContent='납입 완료 ('+endAge+'세) 시점 적립금';
+  document.getElementById('rVal').textContent=fmt(endD.acc);
+  document.getElementById('rSub').textContent='불입 '+fmt(Math.round(paid))+' 대비 적립률 '+endD.rate+'%';
+  document.getElementById('r1').textContent=fmt(Math.round(paid)).replace('원','');
+  document.getElementById('r1s').textContent=termYr+'년 납입';
+  document.getElementById('r2').textContent=fmt(endD.acc).replace('원','');
+  document.getElementById('r2s').textContent='적립률 '+endD.rate+'%';
+  document.getElementById('r3').textContent=fmt(retD.acc).replace('원','');
+  document.getElementById('r4v').textContent=ps.toLocaleString()+'만원';
+
+  drawMS(rows,age,termYr);
+  drawGrow(rows,termYr);
+}
+
+['sAge','sTerm','sBase','sExtra','sRate'].forEach(function(id){
+  document.getElementById(id).addEventListener('input',update);
+});
+update();
+</script>
+</body>
+</html>

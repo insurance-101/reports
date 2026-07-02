@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta property="og:url" content="https://insurance-101.github.io/reports/r20260702-nfgdhz8e.html"><meta property="og:description" content="토스인슈어런스 + 보험전문가 "이용준" 레포트 검수 완료!"><meta name="twitter:description" content="토스인슈어런스 + 보험전문가 "이용준" 레포트 검수 완료!"><meta property="og:image" content="https://insurance-101.github.io/reports/og-thumb.png?v=2"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="토스인슈어런스 보장리포트"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://insurance-101.github.io/reports/og-thumb.png?v=2">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박의검고객님 보장 분석 리포트</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="박의검고객님 보장 분석 리포트">
+
+
+
+<style>
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Light.woff2') format('woff2'); font-weight: 300; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Regular.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Medium.woff2') format('woff2'); font-weight: 500; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Semibold.woff2') format('woff2'); font-weight: 600; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Bold.woff2') format('woff2'); font-weight: 700; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Extrabold.woff2') format('woff2'); font-weight: 800; }
+@font-face { font-family: 'TossProductSans'; src: url('https://toss-reports.pages.dev/fonts/TossProductSansOTF-Heavy.woff2') format('woff2'); font-weight: 900; }
+
+:root {
+  --toss-blue:   #0064FF;
+  --toss-blue-l: #EBF3FF;
+  --danger:      #F04452;
+  --warning:     #FF9500;
+  --success:     #00B386;
+  --bg:          #FFFFFF;
+  --bg2:         #F2F4F6;
+  --text1:       #191F28;
+  --text2:       #4E5968;
+  --border:      #E8ECF0;
+  --radius-sm:   12px;
+  --radius:      16px;
+  --radius-lg:   20px;
+  --shadow:      0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg:   0 8px 24px rgba(0,0,0,0.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'TossProductSans', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text1);
+  background: var(--bg2);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--bg);
+  min-height: 100vh;
+  padding-bottom: env(safe-area-inset-bottom, 24px);
+}
+
+.section-divider { height: 8px; background: var(--bg2); }
+.section { padding: 28px 20px; }
+
+.sec-label {
+  font-size: 12px; font-weight: 700; color: var(--toss-blue);
+  letter-spacing: 0.3px; margin-bottom: 4px;
+}
+.sec-title {
+  font-size: 20px; font-weight: 700; letter-spacing: -0.3px;
+  color: var(--text1); margin-bottom: 6px;
+}
+.sec-desc { font-size: 13px; color: var(--text2); line-height: 1.6; margin-bottom: 20px; }
+.divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes barGrow { from { width: 0%; } to { width: var(--bar-width); } }
+@keyframes progressFill { from { width: 0; } to { width: var(--progress-width); } }
+
+.fade-up { opacity: 0; animation: fadeUp 0.5s ease forwards; }
+.fade-up:nth-child(1) { animation-delay: 0.05s; }
+.fade-up:nth-child(2) { animation-delay: 0.10s; }
+.fade-up:nth-child(3) { animation-delay: 0.15s; }
+.fade-up:nth-child(4) { animation-delay: 0.20s; }
+.fade-up:nth-child(5) { animation-delay: 0.25s; }
+.fade-up:nth-child(6) { animation-delay: 0.30s; }
+
+/* 헤더 */
+.report-header { background: #191F28; padding: 24px 20px 28px; }
+.header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.header-logo { font-size: 16px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.3px; }
+.header-date { background: #1A2B42; border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 4px 10px; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.55); }
+.header-name-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px; flex-wrap: nowrap; }
+.header-customer-name { font-size: 32px; font-weight: 900; color: #fff; letter-spacing: -1.1px; line-height: 1; flex-shrink: 0; white-space: nowrap; }
+.header-greet-1 { font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.55); letter-spacing: -0.1px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.header-report-title { font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.5px; line-height: 1.25; margin-bottom: 6px; white-space: nowrap; }
+.header-sub { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 20px; line-height: 1.6; }
+.header-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+.hcard { background: #21232A; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 14px 12px; animation: fadeUp 0.5s ease forwards; opacity: 0; }
+.hcard-label { font-size: 11px; color: rgba(255,255,255,0.45); font-weight: 500; margin-bottom: 6px; }
+.hcard-value { font-size: 20px; font-weight: 700; color: #fff; line-height: 1.3; letter-spacing: -0.3px; }
+.hcard-value.hcard-danger  { color: var(--danger); }
+.hcard-value.hcard-warning { color: var(--warning); }
+.hcard-note .danger-text  { color: var(--danger); font-weight: 700; }
+.hcard-note .warning-text { color: var(--warning); font-weight: 700; }
+.hcard-note { font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 5px; line-height: 1.5; }
+.header-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 20px 0; }
+.fc-row { display: flex; align-items: center; gap: 10px; }
+.fc-avatar { width: 36px; height: 36px; border-radius: 50%; background: #1A2B42; border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: #fff; flex-shrink: 0; }
+.fc-info { flex: 1; }
+.fc-name { font-size: 14px; font-weight: 700; color: #fff; }
+.fc-sub { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+.fc-tel { font-size: 13px; font-weight: 600; color: #5BA4FF; background: rgba(91,164,255,0.15); border-radius: 20px; padding: 4px 12px; text-decoration: none; white-space: nowrap; }
+
+/* 배지 */
+.badge { display: inline-flex; align-items: center; gap: 3px; border-radius: 9999px; font-size: 11px; font-weight: 700; padding: 3px 10px; white-space: nowrap; }
+.badge-danger  { background: #FFF0F1; color: var(--danger); }
+.badge-warning { background: #FFF6E8; color: var(--warning); }
+.badge-success { background: #E8FAF5; color: var(--success); }
+.badge-blue    { background: var(--toss-blue-l); color: var(--toss-blue); }
+.badge-gray    { background: var(--bg2); color: var(--text2); }
+
+/* 알림박스 */
+.alert { display: flex; gap: 12px; align-items: flex-start; border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 12px; border-left: 3px solid transparent; }
+.alert-danger  { background: #FFF0F1; border-left-color: var(--danger); }
+.alert-warning { background: #FFF6E8; border-left-color: var(--warning); }
+.alert-info    { background: var(--toss-blue-l); border-left-color: var(--toss-blue); }
+.alert-success { background: #E8FAF5; border-left-color: var(--success); }
+.alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.alert-title { font-size: 13px; font-weight: 700; color: var(--text1); margin-bottom: 2px; }
+.alert-desc { font-size: 12px; color: var(--text2); line-height: 1.6; }
+
+/* 수치카드 */
+.summary-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+.scard { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 12px; text-align: center; box-shadow: var(--shadow); }
+.scard-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; margin: 0 auto 10px; }
+.scard-label { font-size: 11px; color: var(--text2); font-weight: 500; margin-bottom: 6px; }
+.scard-value { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; }
+.scard-sub { font-size: 10px; color: var(--text2); margin-top: 4px; line-height: 1.5; }
+
+/* detail-group */
+.detail-group { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; box-shadow: var(--shadow); }
+.detail-header { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--bg2); border-bottom: 1px solid var(--border); }
+.detail-icon { font-size: 16px; }
+.detail-cat { font-size: 13px; font-weight: 700; color: var(--text1); }
+.detail-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.detail-row:last-child { border-bottom: none; }
+.detail-left { flex: 1; padding-right: 12px; }
+.detail-name { font-size: 13px; font-weight: 600; color: var(--text1); margin-bottom: 3px; }
+.detail-sub { font-size: 11px; color: var(--text2); line-height: 1.5; }
+.detail-right { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; flex-shrink: 0; }
+.detail-amount { font-size: 14px; font-weight: 700; color: var(--text1); white-space: nowrap; }
+
+/* 가입보험현황 */
+.ins-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; box-shadow: var(--shadow); }
+.ins-card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.ins-company { font-size: 12px; color: var(--text2); font-weight: 500; }
+.ins-name { font-size: 15px; font-weight: 700; color: var(--text1); letter-spacing: -0.2px; margin-bottom: 8px; }
+.ins-meta-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.ins-meta { font-size: 11px; color: var(--text2); background: var(--bg2); border-radius: 6px; padding: 2px 8px; }
+.ins-premium-row { display: flex; justify-content: space-between; align-items: center; }
+.ins-premium-label { font-size: 12px; color: var(--text2); }
+.ins-premium-value { font-size: 16px; font-weight: 800; color: var(--toss-blue); letter-spacing: -0.3px; }
+
+/* 리모델링 */
+.remodel-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 16px; margin-bottom: 10px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+.remodel-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--toss-blue); }
+.remodel-card.priority-1::before { background: var(--danger); }
+.remodel-rank { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.remodel-order { width: 22px; height: 22px; border-radius: 50%; background: var(--bg2); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: var(--text2); }
+.remodel-title { font-size: 14px; font-weight: 700; color: var(--text1); letter-spacing: -0.2px; margin-bottom: 6px; }
+.remodel-desc { font-size: 12px; color: var(--text2); line-height: 1.6; }
+
+/* 배지 보는 법 */
+.badge-guide { font-size: 12px; color: var(--text2); padding: 10px 16px; background: var(--bg2); border-radius: var(--radius-sm); margin-bottom: 16px; line-height: 1.8; }
+
+/* 바차트 */
+.bar-chart { margin-bottom: 20px; }
+.bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.bar-label { font-size: 11px; color: var(--text2); width: 70px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-track { flex: 1; height: 6px; background: var(--bg2); border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; width: var(--bar-width, 0%); background: var(--fill-color, var(--toss-blue)); border-radius: 3px; animation: barGrow 1s cubic-bezier(.4,0,.2,1) forwards; }
+.bar-amount { font-size: 11px; font-weight: 600; color: var(--text1); width: 60px; text-align: right; white-space: nowrap; }
+.peer-compare { background: var(--bg2); border-radius: var(--radius-sm); padding: 14px 16px; }
+.peer-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.peer-row:last-of-type { margin-bottom: 0; }
+.peer-label { font-size: 13px; color: var(--text2); }
+.peer-value { font-size: 15px; font-weight: 700; color: var(--text1); }
+.peer-note { font-size: 11px; color: var(--text2); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+
+/* 푸터 */
+.report-footer { background: #191F28; padding: 24px 20px 40px; }
+.footer-date { font-size: 12px; color: rgba(255,255,255,0.75); margin-bottom: 8px; font-weight: 700; }
+.footer-notice { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <div class="header-top">
+    <span class="header-logo">토스인슈어런스</span>
+    <div class="header-date">2026. 07. 02</div>
+  </div>
+
+  <div class="header-name-row">
+    <h1 class="header-customer-name">박의검</h1>
+    <div class="header-greet-1">고객님을 위한</div>
+  </div>
+  <div class="header-report-title">보장 분석 리포트</div>
+  <div class="header-sub">토스앱 '내 보험 연결하기'를 통해 조회되는 가입내역 기준입니다</div>
+
+  <div class="header-cards">
+    <div class="hcard">
+      <div class="hcard-label">가입나이 / 성별</div>
+      <div class="hcard-value">40세 / 남</div>
+      <div class="hcard-note">상령일 2027-03-30</div>
+    </div>
+    <div class="hcard">
+      <div class="hcard-label">월 보험료</div>
+      <div class="hcard-value">155,319원</div>
+      <div class="hcard-note">동연령대 평균보다 낮은 수준</div>
+    </div>
+    <div class="hcard">
+      <div class="hcard-label">보장 갭</div>
+      <div class="hcard-value hcard-danger">5개</div>
+      <div class="hcard-note"><span class="danger-text">위험 2개</span> · <span class="warning-text">부족 3개</span></div>
+    </div>
+    <div class="hcard">
+      <div class="hcard-label">보장달성률</div>
+      <div class="hcard-value hcard-warning">61%</div>
+      <div class="hcard-note">동연령대 평균 대비 <span class="warning-text">보통</span> 수준</div>
+    </div>
+  </div>
+
+  <div class="header-divider"></div>
+
+  <div class="fc-row">
+    <div class="fc-avatar">IA</div>
+    <div class="fc-info">
+      <div class="fc-name">이용준 보험분석전문가</div>
+      <div class="fc-sub">토스인슈어런스 · Insurance Advisor</div>
+    </div>
+    <a class="fc-tel" href="tel:01095102222">010-9510-2222</a>
+  </div>
+</header>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 0 -->
+<section class="section">
+  <div class="sec-label">SUMMARY</div>
+  <div class="sec-title">한눈에 보는 보장 현황</div>
+  <div class="sec-desc">박의검고객님의 현재 가입내역을 기준으로 분석했어요.</div>
+
+  <div class="summary-cards">
+    <div class="scard fade-up">
+      <div class="scard-icon" style="background:var(--toss-blue-l);">💰</div>
+      <div class="scard-label">월 보험료</div>
+      <div class="scard-value" style="color:var(--toss-blue);">155,319원</div>
+      <div class="scard-sub">동연령대 평균보다 적어요</div>
+    </div>
+    <div class="scard fade-up">
+      <div class="scard-icon" style="background:#FFF0F1;">🔍</div>
+      <div class="scard-label">보장 갭</div>
+      <div class="scard-value" style="color:var(--danger);">5개</div>
+      <div class="scard-sub">위험 2 · 부족 3</div>
+    </div>
+    <div class="scard fade-up">
+      <div class="scard-icon" style="background:#FFF6E8;">📊</div>
+      <div class="scard-label">보장달성률</div>
+      <div class="scard-value" style="color:var(--warning);">61%</div>
+      <div class="scard-sub">보통 수준이에요</div>
+    </div>
+  </div>
+
+  <div class="alert alert-danger fade-up">
+    <div class="alert-icon">🚨</div>
+    <div class="alert-body">
+      <div class="alert-title">위험 항목 2건이 확인됐어요</div>
+      <div class="alert-desc">첨단암치료 특약, 심·뇌혈관 순환계 치료비가 전혀 준비되어 있지 않아요. 진단만 받고 치료비는 무방비 상태가 될 수 있어요.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 1 -->
+<section class="section">
+  <div class="sec-label">MY INSURANCE</div>
+  <div class="sec-title">가입보험 현황</div>
+  <div class="sec-desc">정상 · 납입중인 보험만 보험료 합계에 포함돼요.</div>
+
+  <div class="ins-card fade-up">
+    <div class="ins-card-top">
+      <span class="badge badge-blue">납입중</span>
+      <span class="ins-company">DB손해보험</span>
+    </div>
+    <div class="ins-name">참좋은운전자상해보험(TM)2501</div>
+    <div class="ins-meta-row">
+      <span class="ins-meta">10년납 / 48세만기</span>
+      <span class="ins-meta">비갱신형</span>
+      <span class="ins-meta">2025-02-18 가입</span>
+    </div>
+    <div class="divider"></div>
+    <div class="ins-premium-row">
+      <span class="ins-premium-label">월 보험료</span>
+      <span class="ins-premium-value">10,960원</span>
+    </div>
+    <div class="alert alert-success" style="margin-top:12px; margin-bottom:0;">
+      <div class="alert-icon">✅</div>
+      <div class="alert-body">
+        <div class="alert-desc">처리지원금 2억원, 변호사선임 5,000만원 — 현행 기준으로 매우 잘 가입되어 있어요.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ins-card fade-up">
+    <div class="ins-card-top">
+      <span class="badge badge-blue">납입중</span>
+      <span class="ins-company">한화생명보험</span>
+    </div>
+    <div class="ins-name">무배당 트리플케어통합종신보험</div>
+    <div class="ins-meta-row">
+      <span class="ins-meta">20년납 / 종신만기</span>
+      <span class="ins-meta">비갱신형</span>
+      <span class="ins-meta">2011-10-04 가입</span>
+    </div>
+    <div class="divider"></div>
+    <div class="ins-premium-row">
+      <span class="ins-premium-label">월 보험료</span>
+      <span class="ins-premium-value">76,020원</span>
+    </div>
+    <div class="alert alert-warning" style="margin-top:12px; margin-bottom:0;">
+      <div class="alert-icon">⚠️</div>
+      <div class="alert-body">
+        <div class="alert-desc">좋은 보험의 형태는 아니지만 납입완료(2031-09-30)까지 얼마 남지 않아 유지를 권장해요.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ins-card fade-up">
+    <div class="ins-card-top">
+      <span class="badge badge-blue">납입중</span>
+      <span class="ins-company">KB손해보험</span>
+    </div>
+    <div class="ins-name">(무)LIG닥터플러스보험(L8.07)</div>
+    <div class="ins-meta-row">
+      <span class="ins-meta">20년납 / 100세만기</span>
+      <span class="ins-meta">비갱신형</span>
+      <span class="ins-meta">1세대 실손</span>
+    </div>
+    <div class="divider"></div>
+    <div class="ins-premium-row">
+      <span class="ins-premium-label">월 보험료</span>
+      <span class="ins-premium-value">68,339원</span>
+    </div>
+    <div class="alert alert-success" style="margin-top:12px; margin-bottom:0;">
+      <div class="alert-icon">✅</div>
+      <div class="alert-body">
+        <div class="alert-desc">지금은 가입할 수 없는 1세대 실손이에요. 본인부담이 거의 없어 무조건 유지를 추천드려요.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ins-card fade-up">
+    <div class="ins-card-top">
+      <span class="badge badge-gray">납입완료</span>
+      <span class="ins-company">삼성생명보험</span>
+    </div>
+    <div class="ins-name">無삼성종신보험(W2.1,표준체)</div>
+    <div class="ins-meta-row">
+      <span class="ins-meta">20년납 완료</span>
+      <span class="ins-meta">비갱신형</span>
+      <span class="ins-meta">2002-12-24 가입</span>
+    </div>
+    <div class="divider"></div>
+    <div class="ins-premium-row">
+      <span class="ins-premium-label">월 보험료</span>
+      <span class="ins-premium-value">0원 (납입종료)</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 2 -->
+<section class="section">
+  <div class="sec-label">COVERAGE DETAIL</div>
+  <div class="sec-title">보장내용 상세</div>
+
+  <div class="badge-guide">
+    🔴 <strong>위험</strong> · 🟡 <strong>부족</strong> ·
+    🟢 <strong>적정</strong> · 🔵 <strong>과잉</strong>
+    — 목표 기준 대비 현재 보장 수준을 표시합니다.
+  </div>
+
+  <div class="detail-group fade-up">
+    <div class="detail-header"><span class="detail-icon">🏥</span><span class="detail-cat">실손보험</span></div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">질병실손의료비</div>
+        <div class="detail-sub">1세대 실손(2009.03 가입) — 본인부담이 거의 없는 유리한 조건. 갱신 시 인상폭이 큰 점만 참고하세요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-success">🟢 적정</span>
+        <div class="detail-amount">입원 1억 / 외래 30만</div>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">상해실손의료비</div>
+        <div class="detail-sub">질병실손과 동일한 1세대 구조로 유지되고 있어요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-success">🟢 적정</span>
+        <div class="detail-amount">입원 1,000만 / 외래 1,000만</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-group fade-up">
+    <div class="detail-header"><span class="detail-icon">🎗️</span><span class="detail-cat">암 진단비</span></div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">일반암 진단비</div>
+        <div class="detail-sub">권장 5,000만원 대비 1,500만원 부족해요. 로봇수술 등 고액 비급여 치료 대비 보완이 필요해요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-warning">🟡 부족</span>
+        <div class="detail-amount">3,500만원</div>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">소액암(유사암) 진단비</div>
+        <div class="detail-sub">갑상선암 등 소액암 보장이 별도로 없어요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-danger">🔴 위험</span>
+        <div class="detail-amount">미보유</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-group fade-up">
+    <div class="detail-header"><span class="detail-icon">🔬</span><span class="detail-cat">암 치료비</span></div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">첨단암치료 특약</div>
+        <div class="detail-sub">표적항암(월 300~1,000만원)·CAR-T(1회 1~5억원) 등 첨단치료 특약이 전혀 없어요. 즉시 보완이 필요해요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-danger">🔴 위험</span>
+        <div class="detail-amount">미보유</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-group fade-up">
+    <div class="detail-header"><span class="detail-icon">❤️‍🩹</span><span class="detail-cat">심·뇌혈관 진단비</span></div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">뇌혈관질환 진단비</div>
+        <div class="detail-sub">뇌졸중·뇌출혈만 보유해 전체 뇌혈관질환의 일부만 보장돼요. 가장 넓은 범위인 뇌혈관질환으로 확대가 필요해요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-warning">🟡 부족</span>
+        <div class="detail-amount">뇌졸중 2,400만 / 뇌출혈 1,000만</div>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">허혈성심장질환 진단비</div>
+        <div class="detail-sub">급성심근경색만 보유해 협심증 등 초기 단계는 보장되지 않아요. 허혈성심장질환으로 확대가 필요해요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-warning">🟡 부족</span>
+        <div class="detail-amount">3,400만원</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-group fade-up">
+    <div class="detail-header"><span class="detail-icon">🦽</span><span class="detail-cat">심·뇌혈관 치료비</span></div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">순환계 주요치료비</div>
+        <div class="detail-sub">수술·중환자실·혈전용해·혈전제거 치료비가 없어 재발 시 진단비 1회 소진 후 무방비 상태예요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-danger">🔴 위험</span>
+        <div class="detail-amount">미보유</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-group fade-up">
+    <div class="detail-header"><span class="detail-icon">🔪</span><span class="detail-cat">수술비</span></div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">질병·상해 수술비</div>
+        <div class="detail-sub">수술비를 꼼꼼하게 잘 준비하셨어요. 건강검진 중 용종 제거도 청구 가능해요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-success">🟢 적정</span>
+        <div class="detail-amount">질병 500만 / 상해 500만</div>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">암수술비</div>
+        <div class="detail-sub">암 진단 후 수술 시 별도로 지급돼요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-success">🟢 적정</span>
+        <div class="detail-amount">600만원</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-group fade-up">
+    <div class="detail-header"><span class="detail-icon">🛡️</span><span class="detail-cat">사망·후유장해, 상해</span></div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">사망보장</div>
+        <div class="detail-sub">종신보험 2건(트리플케어·삼성종신)으로 두텁게 준비돼 있어요. 가입 목적(상속·건강보장)에 맞게 수익자 지정이 되어있는지 확인해보세요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-success">🟢 적정</span>
+        <div class="detail-amount">질병 10,900만 / 상해 15,000만</div>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">상해후유장해(3~100%)</div>
+        <div class="detail-sub">권장 1억원 이상으로 잘 준비돼 있어요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-success">🟢 적정</span>
+        <div class="detail-amount">13,000만원</div>
+      </div>
+    </div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">골절진단비</div>
+        <div class="detail-sub">작은 금이라도 골절로 인정돼요. 꼼꼼하게 준비하셨어요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-success">🟢 적정</span>
+        <div class="detail-amount">90만원</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-group fade-up">
+    <div class="detail-header"><span class="detail-icon">🚗</span><span class="detail-cat">운전자보험</span></div>
+    <div class="detail-row">
+      <div class="detail-left">
+        <div class="detail-name">교통사고처리지원금 · 변호사선임비용</div>
+        <div class="detail-sub">현행 기준(처리지원금 2억, 변호사선임 5,000만)에 맞게 잘 준비되어 있어요.</div>
+      </div>
+      <div class="detail-right">
+        <span class="badge badge-success">🟢 적정</span>
+        <div class="detail-amount">2.5억 / 5,000만</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-tail" style="font-size:12px; color:var(--text2); line-height:1.6; padding:12px 14px; background:var(--bg2); border-radius:var(--radius-sm); margin-top:14px; text-align:center;">
+    치아보험은 현재 준비되어 있지 않아요. 다빈도 질환인 만큼 보완을 검토해보세요.
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 3 -->
+<section class="section">
+  <div class="sec-label">PREMIUM</div>
+  <div class="sec-title">보험료 적정성 분석</div>
+  <div class="sec-desc">일반적으로 월소득의 10% 이하(미혼 5%)로 통제하는 게 좋습니다.</div>
+
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">트리플케어</div>
+      <div class="bar-track"><div class="bar-fill" style="--bar-width:49%; --fill-color:var(--toss-blue);"></div></div>
+      <div class="bar-amount">76,020원</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">LIG닥터플러스</div>
+      <div class="bar-track"><div class="bar-fill" style="--bar-width:44%; --fill-color:var(--toss-blue);"></div></div>
+      <div class="bar-amount">68,339원</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">참좋은운전자</div>
+      <div class="bar-track"><div class="bar-fill" style="--bar-width:7%; --fill-color:var(--toss-blue);"></div></div>
+      <div class="bar-amount">10,960원</div>
+    </div>
+  </div>
+
+  <div class="peer-compare">
+    <div class="peer-row">
+      <span class="peer-label">내 보험료</span>
+      <span class="peer-value" style="color:var(--toss-blue);">155,319원</span>
+    </div>
+    <div class="peer-row">
+      <span class="peer-label">동년배 평균</span>
+      <span class="peer-value">230,000원</span>
+    </div>
+    <div class="peer-note">마이데이터 기준 40대 평균 보험료. 박의검고객님은 동연령대 평균 대비 낮은 편이며, 보장도 함께 부족한 상황이에요.</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SECTION 4 -->
+<section class="section">
+  <div class="sec-label">REMODELING</div>
+  <div class="sec-title">리모델링 제안</div>
+  <div class="sec-desc">보장 갭을 우선순위로 정리했어요.</div>
+
+  <div class="remodel-card priority-1 fade-up">
+    <div class="remodel-rank">
+      <span class="remodel-order">1</span>
+      <span class="badge badge-danger">[최우선]</span>
+    </div>
+    <div class="remodel-title">첨단암치료 특약 보완</div>
+    <div class="remodel-desc">표적항암·CAR-T·중입자 등 첨단치료 특약이 전무해요. CAR-T는 1회 1~5억원, 표적항암은 월 300~1,000만원이 들 수 있어 즉시 설계가 필요해요.</div>
+  </div>
+
+  <div class="remodel-card fade-up">
+    <div class="remodel-rank"><span class="remodel-order">2</span></div>
+    <div class="remodel-title">뇌혈관질환 진단비 확대</div>
+    <div class="remodel-desc">현재 뇌졸중·뇌출혈만 보유해 전체 뇌혈관질환의 일부만 보장돼요. 뇌혈관질환 진단비로 확대하면 뇌경색까지 폭넓게 보장받을 수 있어요.</div>
+  </div>
+
+  <div class="remodel-card fade-up">
+    <div class="remodel-rank"><span class="remodel-order">3</span></div>
+    <div class="remodel-title">허혈성심장질환 진단비 확대</div>
+    <div class="remodel-desc">급성심근경색만 보유해 협심증 등 초기 단계에서는 보장받지 못해요. 허혈성심장질환으로 확대를 권장해요.</div>
+  </div>
+
+  <div class="remodel-card fade-up">
+    <div class="remodel-rank"><span class="remodel-order">4</span></div>
+    <div class="remodel-title">순환계 치료비(수술·중환자실·혈전용해) 보완</div>
+    <div class="remodel-desc">재발 시 반복 보장되는 치료비 특약이 없어요. 진단비는 1회 지급 후 소진되므로 별도 치료비 특약이 필요해요.</div>
+  </div>
+
+  <div class="remodel-card fade-up">
+    <div class="remodel-rank"><span class="remodel-order">5</span></div>
+    <div class="remodel-title">일반암 진단비 보완</div>
+    <div class="remodel-desc">현재 3,500만원으로 권장 5,000만원 대비 1,500만원 부족해요. 여러 보험사 비교로 부담 적은 보완 설계를 안내드릴게요.</div>
+  </div>
+
+  <div class="remodel-card fade-up">
+    <div class="remodel-rank"><span class="remodel-order">6</span></div>
+    <div class="remodel-title">치아보험 신규 가입 검토</div>
+    <div class="remodel-desc">치아보험이 준비되어 있지 않아요. 치과 질환은 감기보다 다빈도 질환으로 꼽히는 만큼 미리 준비해두면 유리해요.</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<footer class="report-footer">
+  <div class="footer-date">기준일: 2026. 07. 02</div>
+  <div class="footer-notice">본 자료는 고객님의 이해를 돕기 위한 보장 분석 참고 자료이며, 정확한 보장 내용은 기존 가입된 보험증권 및 약관을 확인하시기 바랍니다.</div>
+</footer>
+
+</div>
+</body>
+</html>

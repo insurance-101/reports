@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>시장 브리핑 — 서울 아파트 격차 축소와 삼성전자 주가의 역설</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 밝은 호스트 페이지에 임베드해도 경계가 보이도록 어두운 계열로 확정 (2026-08 개정 · 되돌리지 말 것) */
+  --bg:#D8DEE7;
+  --paper:#FFFFFF;
+  --ink:#10151E;
+  --ink-soft:#3D4654;
+  --ink-mute:#68727F;
+  --line:#C6CEDA;
+  --blue:#3182F6;
+  --blue-deep:#1B64DA;
+  --navy:#0E1B33;
+  --navy-2:#16294A;
+  --sky:#EAF2FE;
+  --amber-bg:#FFF7E6;
+  --amber-line:#F5C86B;
+  --amber-ink:#8A5A00;
+  --green-bg:#EAF8F1;
+  --green-ink:#0F7B4D;
+  --red-bg:#FDECEC;
+  --red-ink:#C0392B;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  background:var(--bg);color:var(--ink);
+  line-height:1.75;font-size:16px;
+  word-break:keep-all;
+}
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--navy); /* 단색 폴백 — 그라데이션이 안 먹는 환경에서도 흰 글자 보장 */
+  background-image:linear-gradient(150deg,var(--navy) 0%,var(--navy-2) 55%,#1E3A6E 100%);
+  color:#fff;padding:72px 24px 112px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(49,130,246,.35),transparent 70%);
+}
+.hero-inner{max-width:880px;margin:0 auto;position:relative;z-index:1}
+.hero .eyebrow{
+  display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;
+  color:#8FBAF9;border:1px solid rgba(143,186,249,.45);border-radius:999px;
+  padding:6px 16px;margin-bottom:22px;
+}
+.hero h1{font-size:clamp(34px,5.4vw,54px);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px}
+.hero h1 .accent{color:#6EA8FA}
+.hero p.lead{font-size:17px;color:#B9C6DA;max-width:640px;margin-bottom:34px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px}
+.hero .meta span{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  border-radius:10px;padding:8px 14px;font-size:13.5px;color:#DDE7F5;font-weight:600;
+}
+/* ---------- PIPELINE (섹션 개요 카드) ---------- */
+.pipeline{max-width:880px;margin:-56px auto 0;padding:0 24px 40px;position:relative;z-index:2}
+.pipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.pipe{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;text-decoration:none;color:var(--ink);
+  box-shadow:0 10px 28px rgba(14,27,51,.12);transition:transform .18s,box-shadow .18s;
+  display:block;
+}
+.pipe:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(14,27,51,.18)}
+.pipe .no{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.1em;margin-bottom:10px}
+.pipe .tt{font-size:17px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;line-height:1.35}
+.pipe .ds{font-size:13px;color:var(--ink-mute);line-height:1.6}
+@media(max-width:720px){.pipe-grid{grid-template-columns:1fr;gap:14px}}
+/* ---------- LAYOUT ---------- */
+.wrap{max-width:880px;margin:0 auto;padding:64px 24px 96px}
+section.module{margin-bottom:88px;scroll-margin-top:84px}
+.mod-head{margin-bottom:34px}
+.mod-head .kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;
+  color:var(--blue);letter-spacing:.12em;margin-bottom:10px;
+}
+.mod-head .kicker::before{content:"";width:26px;height:2px;background:var(--blue);display:inline-block}
+.mod-head h2{font-size:clamp(26px,3.6vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.25}
+.mod-head p.sub{margin-top:10px;color:var(--ink-soft);font-size:16px}
+/* ---------- CARD / SUBSECTION ---------- */
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 36px;margin-bottom:28px;
+  box-shadow:0 4px 16px rgba(14,27,51,.06);
+}
+.card h3{font-size:19.5px;font-weight:800;letter-spacing:-.01em;margin-bottom:16px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:13px;font-weight:800;color:var(--blue);letter-spacing:.06em;flex-shrink:0}
+.card h4{font-size:16px;font-weight:800;margin:22px 0 8px;color:var(--ink)}
+.card p{color:var(--ink-soft);font-size:15.5px;margin-bottom:12px}
+.card p:last-child{margin-bottom:0}
+.card ul,.card ol{margin:0 0 14px 2px;list-style:none}
+.card ul li,.card ol li{
+  position:relative;padding-left:20px;margin-bottom:9px;
+  color:var(--ink-soft);font-size:15.5px;
+}
+.card ul li::before{
+  content:"";position:absolute;left:2px;top:.72em;width:6px;height:6px;border-radius:2px;background:var(--blue);
+}
+.card ul ul{margin-top:9px;margin-bottom:2px}
+.card ul ul li::before{background:#B7CFF3;border-radius:50%;width:5px;height:5px;top:.78em}
+.card strong{color:var(--ink);font-weight:700}
+/* 이미지 figure */
+figure.shot{margin:6px 0 20px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0E1B33}
+figure.shot img{display:block;width:100%;height:auto}
+figure.shot figcaption{
+  font-size:12.5px;color:var(--ink-mute);padding:9px 14px;background:#FAFBFC;border-top:1px solid var(--line);
+}
+/* 화법/스크립트 블록 */
+.script{
+  background:var(--sky);border:1px solid #CFE1FB;border-left:4px solid var(--blue);
+  border-radius:10px;padding:16px 20px;margin:14px 0 16px;
+}
+.script .lb{font-size:12px;font-weight:800;color:var(--blue-deep);letter-spacing:.08em;margin-bottom:6px}
+.script p{color:#2C4468;font-size:15px;margin-bottom:8px}
+.script p:last-child{margin-bottom:0}
+/* 콜아웃 박스 */
+.note{
+  border-radius:10px;padding:15px 20px;margin:14px 0 16px;font-size:15px;line-height:1.7;
+}
+.note .lb{font-size:12px;font-weight:800;letter-spacing:.08em;display:block;margin-bottom:4px}
+.note.key{background:var(--amber-bg);border:1px solid var(--amber-line);color:#6A4A08}
+.note.key .lb{color:var(--amber-ink)}
+.note.good{background:var(--green-bg);border:1px solid #BFE5D2;color:#155E42}
+.note.good .lb{color:var(--green-ink)}
+.note.warn{background:var(--red-bg);border:1px solid #F2C4C0;color:#8E2F26}
+.note.warn .lb{color:var(--red-ink)}
+/* 수치 칩 */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.chips span{
+  background:#F2F4F6;border:1px solid var(--line);border-radius:8px;
+  padding:6px 12px;font-size:13px;font-weight:700;color:var(--ink-soft);
+}
+/* 순위/비교 테이블 */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 16px;font-size:14.5px}
+table.rank th{
+  background:var(--navy);color:#fff;font-weight:700;padding:10px 14px;text-align:left;font-size:13.5px;
+}
+table.rank td{padding:12px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+table.rank tr:nth-child(even) td{background:#FAFBFC}
+table.rank td.rk{font-weight:800;color:var(--blue);white-space:nowrap}
+table.rank td.ag{font-weight:800;color:var(--ink);white-space:nowrap}
+/* 상단 고정 내비게이션 */
+nav.topnav{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+nav.topnav .in{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;overflow-x:auto}
+nav.topnav a{
+  flex-shrink:0;padding:14px 14px;font-size:14px;font-weight:700;color:var(--ink-mute);
+  text-decoration:none;border-bottom:2.5px solid transparent;transition:color .15s;
+}
+nav.topnav a:hover{color:var(--ink)}
+nav.topnav a.on{color:var(--blue);border-bottom-color:var(--blue)}
+/* 푸터 */
+footer{background:var(--navy);color:#8FA3C2;padding:44px 24px;text-align:center;font-size:13.5px}
+footer strong{color:#fff}
+@media(max-width:640px){
+  .card{padding:26px 22px}
+  .hero{padding:56px 20px 100px}
+  .pipe{padding:22px 20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pipe{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">MARKET BRIEFING · 경제·시장 자료</span>
+    <h1>서울 아파트 격차 축소와<br><span class="accent">삼성전자 주가의 역설</span></h1>
+    <p class="lead">중저가 아파트가 빠르게 오르는 '갭 메우기 장세' 속 1주택자 갈아타기 기회, 그리고 역대급 실적에도 하락하는 삼성전자 주가를 어떻게 읽고 대응할 것인가.</p>
+    <div class="meta">
+      <span>주제 1 · 서울 아파트 시장과 갈아타기 전략</span>
+      <span>주제 2 · 삼성전자 실적과 투자 전략</span>
+      <span>촬영일 기준 7월 9일</span>
+    </div>
+  </div>
+</header>
+
+<div class="pipeline">
+  <div class="pipe-grid">
+    <a class="pipe" href="#m1">
+      <div class="no">COURSE 01</div>
+      <div class="tt">서울 아파트 가격 격차와 갈아타기</div>
+      <div class="ds">상·하위 20% 격차 축소 · 전세난 · 대출 가능성 차이 · 1주택자 전략</div>
+    </a>
+    <a class="pipe" href="#m2">
+      <div class="no">COURSE 02</div>
+      <div class="tt">삼성전자 주가 하락과 투자 전략</div>
+      <div class="ds">역대급 실적의 역설 · 2021년 패턴 · 관전 포인트 · 대응하는 투자</div>
+    </a>
+  </div>
+</div>
+
+<nav class="topnav" id="topnav">
+  <div class="in">
+    <a href="#m1">01 아파트 격차와 갈아타기</a>
+    <a href="#m2">02 삼성전자와 투자 전략</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ COURSE 01 ============ -->
+<section class="module" id="m1">
+  <div class="mod-head">
+    <span class="kicker">COURSE 01</span>
+    <h2>서울 아파트 가격 격차 변화와 1주택자 갈아타기 기회</h2>
+    <p class="sub">상위 20%와 하위 20% 아파트 가격 격차가 좁혀지고 있으며, 전세난과 대출 가능성 차이로 중저가 아파트 소유자에게 상급지로 갈아탈 기회가 생기고 있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>서울 아파트 가격 격차 변화</h3>
+    <figure class="shot">
+      <img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/7PRgr93iRu8/6.jpg" alt="서울 아파트 가격 격차 변화 강의 화면" loading="lazy">
+      <figcaption>강의 화면 — 서울 아파트 가격 격차 변화</figcaption>
+    </figure>
+    <h4>상위 20%와 하위 20% 아파트 가격 격차 축소</h4>
+    <ul>
+      <li>서울 아파트 상위 20%와 하위 20% 가격 격차가 좁혀지고 있다.</li>
+      <li>일반적으로 강남 아파트가 더 많이 오르고 노도강 아파트가 덜 올라 격차가 벌어진다고 알려져 있지만, 시기적으로 좁아지거나 넓어지는 현상이 있다.</li>
+    </ul>
+    <h4>가격 격차의 역사적 흐름</h4>
+    <ul>
+      <li>2022년 12월에는 하위 20% 대비 상위 20% 아파트 평균 가격이 <strong>4.5배</strong>로 역대 최소치였다.</li>
+      <li>2026년 1월에는 <strong>6.9배</strong>까지 벌어졌다가, 2026년 6월까지 4개월 연속 하락하여 <strong>6.5배</strong>로 줄어들었다.</li>
+    </ul>
+    <div class="chips"><span>2022.12 — 4.5배 (역대 최소)</span><span>2026.1 — 6.9배 (최대)</span><span>2026.6 — 6.5배 (4개월 연속↓)</span></div>
+    <h4>가격 격차 변화의 원인</h4>
+    <ul>
+      <li>2022년 말부터 3년 동안은 강남 아파트 등 비싼 아파트들이 먼저 크게 오르면서 격차가 벌어졌다.</li>
+      <li>올해 상반기부터는 저렴한 아파트들이 빠르게 오르면서 격차가 좁혀지는 <strong>'키 맞추기 장세'</strong> 또는 <strong>'갭 메우기 장세'</strong>가 펼쳐졌다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>가격 격차 축소의 주요 원인 — 전세난과 대출 가능성 차이</h3>
+    <figure class="shot">
+      <img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/7PRgr93iRu8/190.jpg" alt="전세난과 대출 가능성 차이 강의 화면" loading="lazy">
+      <figcaption>강의 화면 — 전세난과 대출 가능성 차이</figcaption>
+    </figure>
+    <h4>전방위적인 전세난</h4>
+    <ul>
+      <li>서울 전 지역에 걸쳐 <strong>극심한 전세난</strong>이 발생하고 있다 — <strong>입주 물량 가뭄</strong> 때문이며, 강남이든 노원구든 서울 전체에 동일하게 적용된다.</li>
+      <li>노원구 아파트 — 매매가 8억에 전세가 4억이던 것이 전세난으로 5억이 되는 등, 전세가 상승이 서민들에게는 파괴적으로 느껴진다.</li>
+      <li>강남 아파트 — 매매가 35억에 전세가 12억이던 것이 14억으로 오르는 등 전세가 자체는 더 많이 올랐지만, 소득 수준을 고려할 때 체감 부담은 상대적으로 덜하다.</li>
+    </ul>
+    <h4>대출 가능성의 차이</h4>
+    <p>전세난 상황에서 <strong>대출 가능성(대출 금액)</strong>에 차이가 발생하여 지역별 아파트 가격 상승에 영향을 미친다.</p>
+    <table class="rank">
+      <tr><th style="width:160px">구분</th><th style="width:150px">대출 한도</th><th>시장 반응</th></tr>
+      <tr><td class="ag">중저가 지역<br>(예: 노원구)</td><td class="rk">최대 6억<br>(생애최초 70%)</td><td>매매가 15억 이하 아파트는 생애 최초 구매자 기준 집값의 70%, 최대 6억까지 대출 가능. 전세난으로 집 구매를 고려하는 사람들이 대출을 받아 살 수 있다고 판단해 매수에 나선다.</td></tr>
+      <tr><td class="ag">고가 지역<br>(예: 강남)</td><td class="rk">4억 / 2억</td><td>매매가 15억 초과는 4억, 25억 초과는 2억까지로 대출 제한. 전세가가 올라도 대출이 적게 나와 집을 살 엄두를 내기 어렵다.</td></tr>
+    </table>
+    <h4>결과 — 중저가 아파트 거래량·상승률 증가</h4>
+    <ul>
+      <li>지난 6개월 동안 15억 이하 중저가 아파트 밀집 지역에서 거래량과 가격 상승률이 크게 나타났다.</li>
+      <li>반면 강남 등 고가 지역에서는 직전 실거래가보다 낮은 매도 호가 물건들이 꽤 있으며, 전세 거주자들이 다른 단지로 이사하는 경우도 발생한다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>1주택자 갈아타기 기회와 향후 전망</h3>
+    <figure class="shot">
+      <img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/7PRgr93iRu8/458.jpg" alt="갈아타기 기회와 전망 강의 화면" loading="lazy">
+      <figcaption>강의 화면 — 1주택자 갈아타기 기회와 향후 전망</figcaption>
+    </figure>
+    <h4>전세난 지속과 대출 환경의 영향</h4>
+    <ul>
+      <li>입주 물량 부족으로 인한 전세난은 앞으로도 계속될 것이다.</li>
+      <li>대출을 많이 해주는 지역은 거래 가능성과 가격 상승 확률이 높고, 대출이 쪼여진 지역은 현재와 비슷하게 갈 확률이 높다.</li>
+    </ul>
+    <h4>갈아타기 기회 발생 조건</h4>
+    <ul>
+      <li>상급지에 대출 없이도 갈아탈 수 있을 만큼 중하급지 아파트 가격이 오르고 격차가 좁아지면, 실수요자들이 집을 팔고 상급지로 이동할 수 있는 기회가 생긴다.</li>
+      <li>예 — 동대문구 거주자가 집값이 많이 올라 성동구나 광진구(15억 이상으로 대출이 잘 안 나오는 지역)로 갈아탈 수 있게 된다.</li>
+    </ul>
+    <h4>대출 환경 변화 가능성</h4>
+    <ul>
+      <li><strong>상급지 대출 완화는 어려움</strong> — 강남 등 고가 지역에 생애 최초 구매자 70% 대출을 해주는 것은 현실적으로 어렵다.</li>
+      <li><strong>중저가 지역 대출 축소 가능성</strong>
+        <ul>
+          <li>6억까지 해주던 대출을 줄일 가능성이 있다.</li>
+          <li>실제로 국민은행이 대출을 3억으로 줄인다고 발표했으며, 다른 은행에도 영향을 미칠 수 있다.</li>
+          <li>대출 축소는 중저가 지역에도 영향을 줄 수 있지만, <strong>전세난이라는 근본적인 문제는 변하지 않는다.</strong></li>
+        </ul>
+      </li>
+    </ul>
+    <h4>대출 축소가 시장에 미치는 영향</h4>
+    <ul>
+      <li>대출이 3억으로 줄어들면, 3억 대출로 살 수 있는 5억 이하 가격대의 아파트들이 오히려 가격이 오를 수 있다.</li>
+      <li>대출 규제는 내집 마련을 미루던 사람들의 마음을 조급하게 만들어, 대출이 더 줄어들기 전에 서둘러 집을 알아보게 할 수 있다.</li>
+      <li>따라서 중저가 지역 내집 마련을 고민하는 사람들은 굳이 내집 마련을 미룰 필요가 없다.</li>
+    </ul>
+    <h4>1주택자 갈아타기 전략</h4>
+    <ul>
+      <li>중저가 아파트 가격이 계속 올라 고가 아파트와의 격차가 좁혀진다면, 중고가 시장으로의 갈아타기 기회가 생긴다.</li>
+      <li>갈아타기를 고려하는 1주택자는 자신의 집값과 갈아타려는 동네의 집값을 유심히 살펴보고, <strong>격차가 좁혀지는 시점을 활용해 미리 준비</strong>해야 한다.</li>
+    </ul>
+    <div class="note key"><span class="lb">핵심</span>전월세 임대 시장이 매우 불안정하므로, <strong>내집 마련을 하지 않는다고 해서 부동산 문제에서 자유로울 수 없음</strong>을 인지하고 의사 결정을 해야 한다.</div>
+    <h4>지방 부동산 시장 전망</h4>
+    <ul>
+      <li>지방도 입주 물량이 매우 부족하여 전월세 대란이 발생할 수 있다.</li>
+      <li>서울은 토지거래허가제 때문에 전세를 주면서 집을 살 수 없어 전세난이 더 심하지만, 지방은 토지거래허가제가 아니므로 서울보다는 덜하다.</li>
+      <li>지방 거주자들도 서울을 거울 삼아 본인 동네의 전세가를 유심히 살펴볼 필요가 있다.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ COURSE 02 ============ -->
+<section class="module" id="m2">
+  <div class="mod-head">
+    <span class="kicker">COURSE 02</span>
+    <h2>삼성전자 주가 하락 원인과 투자 전략</h2>
+    <p class="sub">역대급 실적 발표에도 주가가 하락하는 것은 투자자들이 현재 실적이 정점인지, 계속 성장할 것인지 확신하지 못하기 때문 — 과거 주가 패턴과 거시 환경을 고려한 신중한 투자 전략이 필요하다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>삼성전자 주가 하락 현상</h3>
+    <figure class="shot">
+      <img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/7PRgr93iRu8/801.jpg" alt="삼성전자 주가 하락 현상 강의 화면" loading="lazy">
+      <figcaption>강의 화면 — 삼성전자 주가 하락 현상</figcaption>
+    </figure>
+    <h4>코스피 및 삼성전자 주가 하락</h4>
+    <ul>
+      <li>촬영일(7월 9일) 기준, 코스피는 반도체 고점 우려로 연이틀 급락했으며, 3거래일 연속 하락하여 7,200선이 깨졌다.</li>
+      <li>현재 지수는 두 달 전 수준이며, 5월 초 7천을 뚫고 9천까지 갔다가 저점을 낮추며 하락하고 있다.</li>
+      <li>개인 투자자들이 1조 5천억 원을 팔아치우는 등 두려움에 익절하거나 멘탈이 흔들리는 상황이다.</li>
+    </ul>
+    <h4>역대급 실적에도 주가 하락</h4>
+    <ul>
+      <li>삼성전자는 7월 7일 역대급 실적을 발표했다.
+        <ul>
+          <li>분기 영업이익 <strong>89조 원</strong>(성과급 제외) — 우리나라 연간 예산(약 700조 원)의 1/8 수준.</li>
+          <li>작년 1년 동안 번 돈의 두 배이며, 지난해 2분기 대비 <strong>18배</strong> 증가한 수치.</li>
+        </ul>
+      </li>
+      <li>그러나 실적 발표 후 3일 연속 주가가 하락했다 — 창사 이래 가장 많은 돈을 벌었음에도 주가는 계속 떨어지는 상황.</li>
+    </ul>
+    <div class="chips"><span>발표 첫날 −7%</span><span>이튿날 −6%</span><span>당일 −2%</span></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>주가 하락의 원인과 과거 사례</h3>
+    <figure class="shot">
+      <img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/7PRgr93iRu8/1013.jpg" alt="주가 하락 원인과 과거 사례 강의 화면" loading="lazy">
+      <figcaption>강의 화면 — 주가 하락의 원인과 과거 사례</figcaption>
+    </figure>
+    <h4>실적 정점 우려</h4>
+    <ul>
+      <li>투자자들은 이번 실적이 <strong>정점</strong>인지, 아니면 <strong>계속 성장하는 중</strong>인지 확신하지 못하고 있다.</li>
+      <li>마치 반에서 15등 하던 아이가 갑자기 2등을 했을 때, 다음에도 잘할 수 있을지 의구심을 갖는 것과 비슷하다.</li>
+    </ul>
+    <h4>2021년 삼성전자 주가 패턴과의 유사성</h4>
+    <ul>
+      <li>2021년 1월, 주가는 9만 7천 원까지 오르며 <strong>'10만 전자'</strong>를 기대했으나 이때가 주가의 고점이었다.</li>
+      <li>당시 코로나로 인한 유동성 공급으로 부동산과 주식 시장이 모두 상승했다.</li>
+      <li>삼성전자 실적은 2021년 2분기 영업이익 12조 원을 기록하며 좋았고, 3분기에 실적이 고점을 찍었다.</li>
+      <li><strong>주가와 실적의 시차</strong> — 주가는 2021년 1분기에 고점을 찍고 선반영되어 하락하기 시작했지만, 실적은 오히려 6개월 동안 더 좋아졌다. 이후 실적이 꺾이면서 주가도 크게 하락했다.</li>
+      <li>2022년에는 금리 인상으로 주가가 5만 원대까지 떨어졌고, 3년 동안 버틴 투자자들은 수익을 냈지만 새로 진입한 투자자들은 어려움을 겪었다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.3</span>현재 상황의 공통점·차이점 및 투자 관점</h3>
+    <figure class="shot">
+      <img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/7PRgr93iRu8/1171.jpg" alt="투자 관점 강의 화면" loading="lazy">
+      <figcaption>강의 화면 — 현재 상황의 공통점과 차이점 및 투자 관점</figcaption>
+    </figure>
+    <h4>과거와의 공통점 — 실적과 무관한 주가 움직임</h4>
+    <ul>
+      <li>실적이 아무리 좋아도 주가가 다르게 움직일 수 있다는 점이 과거와 유사하다.</li>
+      <li>투자자들은 "이 실적이 고점 아니야? 계속 이어질 수 있어?"라는 우려를 하고 있다.</li>
+    </ul>
+    <h4>투자자들이 불안해하는 이유</h4>
+    <ul>
+      <li><strong>주가가 너무 많이 올랐다는 인식</strong> — 삼성전자 같은 대기업 주가가 6~7배 오르면서 고점이라는 인식이 강하다.</li>
+      <li><strong>다음 실적에 대한 기대치 부담</strong> — 역대급 어닝 서프라이즈를 기록했지만, 다음 분기에 얼마나 더 올라야 주가 상승을 유지할 수 있을지 의문이 든다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">위험한 투자 방식 경고</span>주가가 많이 오른 시점에 <strong>레버리지나 신용을 사용한 몰빵 투자</strong>는 매우 위험하다. 예 — 신혼부부가 집 살 돈을 삼성전자와 하이닉스에 반씩 투자하는 것은 위험한 행동이다.</div>
+    <h4>신중한 투자 전략</h4>
+    <ul>
+      <li>투자를 하더라도 소액으로 나누어 투자하고, 기준 가격을 정해놓고 매입 단가를 낮추려는 노력이 중요하다.</li>
+      <li>필자는 덜 벌더라도 돈을 잃지 않는 투자를 선호하며, 크게 돈을 잃어본 적이 거의 없다.</li>
+      <li>가격이 빠질 때 투자하고, 올라가면 못 버는 것을 감수한다.</li>
+    </ul>
+    <h4>주요 관전 포인트 — 미국 테크 기업 실적 발표</h4>
+    <ul>
+      <li>삼성전자의 주요 고객은 AI 개발·모델로 돈을 벌고자 하는 마이크로소프트, 구글, 메타 등 미국 테크 기업들이다.</li>
+      <li>이들은 AI 선점을 위해 막대한 투자를 해왔으며, 삼성전자와 하이닉스가 그 최대 수혜를 입었다.</li>
+      <li><strong>7월 테크 기업 실적 발표가 중요</strong>
+        <ul>
+          <li>"투자를 합리화하겠다", "AI를 통한 이익을 봐가면서 속도 조절하겠다"는 발언이 나온다면, 반도체 기업의 고객들이 구매를 줄일 수 있다는 신호로 해석될 수 있다.</li>
+          <li>이는 삼성전자·하이닉스 주가, 나아가 코스피 전체에 큰 영향을 미칠 수 있는 중요한 이벤트다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>반대 의견과 필자의 대응</h4>
+    <ul>
+      <li>일부에서는 반도체 수요가 과거와는 차원이 다르게 늘어날 것이므로, 과거 사이클대로 생각하면 안 된다고 주장한다.</li>
+      <li>그러나 필자는 이렇게 알 수 없을 때는 <strong>덜 벌더라도 돈을 잃지 않는 선택</strong>을 한다.</li>
+    </ul>
+    <h4>개인 투자자의 실수와 교훈</h4>
+    <ul>
+      <li>개인 투자자들이 가장 아쉬워하는 투자는 <strong>가격이 많이 올랐을 때 산 것</strong>이다.</li>
+      <li>가격이 많이 오른 것 자체가 악재이며, 모르는 상태에서 가격이 많이 오른 시점에 매매하는 것이 가장 큰 폐착이다.</li>
+      <li>주가가 떨어질 때 왜 떨어지는지 모르고 이해하지 못하면 괴롭기만 하다.</li>
+      <li>회복하자마자 매도하는 것도 아쉬운 실수이다.</li>
+      <li>이러한 실수를 통해 배우고, 재기가 불가능할 정도로 위험하게(빚내서) 투자하지 않는 것이 중요하다.</li>
+    </ul>
+    <h4>대응하는 투자자의 자세</h4>
+    <ul>
+      <li>투자자의 행동은 예측하는 것이 아니라 <strong>대응하는 것</strong>이다.</li>
+      <li>누구 말이 맞을지 모르는 상황에서 한쪽에 몰빵하는 것은 위험하다.</li>
+      <li>소액으로 양쪽에 걸쳐 투자하면, 가격이 빠져도 몰빵하지 않았기 때문에 돈이 남아있어 다음 기회를 노릴 수 있다.</li>
+      <li>가격이 올라가면 못 벌더라도 돈을 잃지 않는 것이 중요하다.</li>
+      <li>이러한 경험들이 쌓이면 돈을 밀어 넣어야 할 때를 자연스럽게 알게 된다.</li>
+    </ul>
+    <div class="note good"><span class="lb">마무리</span>시청자들이 투자로 인해 아픈 일이 생기지 않기를 바란다 — <strong>예측이 아닌 대응, 잃지 않는 투자.</strong></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>시장 브리핑 — 서울 아파트 격차 축소와 삼성전자 주가의 역설</strong> — 경제·시장 자료</p>
+  <p style="margin-top:6px">원문 출처: 강의 요약 (촬영일 기준 7월 9일)</p>
+</footer>
+
+<script>
+// 스크롤 위치에 따라 상단 내비게이션 활성화
+const links=[...document.querySelectorAll('#topnav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('on'));
+      const i=secs.indexOf(e.target);
+      if(i>-1)links[i].classList.add('on');
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px'});
+secs.forEach(s=>s&&io.observe(s));
+</script>
+</body>
+</html>

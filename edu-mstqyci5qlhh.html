@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>거절을 꺾고 판을 짜는 영업 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 */
+  --bg:#F2F4F6;
+  --paper:#FFFFFF;
+  --ink:#191F28;
+  --ink-soft:#4E5968;
+  --ink-mute:#8B95A1;
+  --line:#E5E8EB;
+  --blue:#3182F6;
+  --blue-deep:#1B64DA;
+  --navy:#0E1B33;
+  --navy-2:#16294A;
+  --sky:#EAF2FE;
+  --amber-bg:#FFF7E6;
+  --amber-line:#F5C86B;
+  --amber-ink:#8A5A00;
+  --green-bg:#EAF8F1;
+  --green-ink:#0F7B4D;
+  --red-bg:#FDECEC;
+  --red-ink:#C0392B;
+  --radius:20px;
+  --shadow:0 1px 3px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.04);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  background:var(--bg);color:var(--ink);
+  line-height:1.75;font-size:16px;letter-spacing:-0.01em;
+  word-break:keep-all;
+}
+.hero{
+  background:linear-gradient(150deg,var(--navy) 0%,var(--navy-2) 55%,#1E3A6E 100%);
+  color:#fff;padding:72px 24px 96px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(49,130,246,.35),transparent 70%);
+}
+.hero-inner{max-width:880px;margin:0 auto;position:relative;z-index:1}
+.hero .eyebrow{
+  display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;
+  color:#8FBAF9;border:1px solid rgba(143,186,249,.45);border-radius:999px;
+  padding:6px 16px;margin-bottom:22px;
+}
+.hero h1{font-size:clamp(34px,5.4vw,54px);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px}
+.hero h1 .accent{color:#6EA8FA}
+.hero p.lead{font-size:17px;color:#B9C6DA;max-width:640px;margin-bottom:34px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px}
+.hero .meta span{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  border-radius:10px;padding:8px 14px;font-size:13.5px;color:#DDE7F5;font-weight:600;
+}
+.pipeline{max-width:880px;margin:-52px auto 0;padding:0 24px 52px;position:relative;z-index:2}
+.pipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.pipe{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 16px;text-decoration:none;color:var(--ink);
+  box-shadow:0 8px 24px rgba(14,27,51,.08);transition:transform .18s,box-shadow .18s;
+  display:block;
+}
+.pipe:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(14,27,51,.14)}
+.pipe .no{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.1em;margin-bottom:6px}
+.pipe .tt{font-size:16.5px;font-weight:800;letter-spacing:-.01em;margin-bottom:4px}
+.pipe .ds{font-size:12.5px;color:var(--ink-mute);line-height:1.5}
+@media(max-width:720px){.pipe-grid{grid-template-columns:repeat(2,1fr)}}
+.wrap{max-width:880px;margin:0 auto;padding:64px 24px 96px}
+section.module{margin-bottom:88px;scroll-margin-top:84px}
+.mod-head{margin-bottom:34px}
+.mod-head .kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;
+  color:var(--blue);letter-spacing:.12em;margin-bottom:10px;
+}
+.mod-head .kicker::before{content:"";width:26px;height:2px;background:var(--blue);display:inline-block}
+.mod-head h2{font-size:clamp(26px,3.6vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.25}
+.mod-head p.sub{margin-top:10px;color:var(--ink-soft);font-size:16px}
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 32px;margin-bottom:22px;box-shadow:var(--shadow);
+}
+.card h3{font-size:19.5px;font-weight:800;letter-spacing:-.01em;margin-bottom:16px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:13px;font-weight:800;color:var(--blue);letter-spacing:.06em;flex-shrink:0}
+.card h4{font-size:16px;font-weight:800;margin:22px 0 8px;color:var(--ink)}
+.card p{color:var(--ink-soft);font-size:15.5px;margin-bottom:12px}
+.card p:last-child{margin-bottom:0}
+.card ul,.card ol{margin:0 0 14px 2px;list-style:none}
+.card ul li,.card ol li{
+  position:relative;padding-left:20px;margin-bottom:9px;
+  color:var(--ink-soft);font-size:15.5px;
+}
+.card ul li::before{
+  content:"";position:absolute;left:2px;top:.72em;width:6px;height:6px;border-radius:2px;background:var(--blue);
+}
+.card ul ul{margin-top:9px;margin-bottom:2px}
+.card ul ul li::before{background:#B7CFF3;border-radius:50%;width:5px;height:5px;top:.78em}
+.card strong{color:var(--ink);font-weight:700}
+.script{
+  background:var(--sky);border:1px solid #CFE1FB;border-left:4px solid var(--blue);
+  border-radius:10px;padding:16px 20px;margin:14px 0 16px;
+}
+.script .lb{font-size:12px;font-weight:800;color:var(--blue-deep);letter-spacing:.08em;margin-bottom:6px}
+.script p{color:#2C4468;font-size:15px;margin-bottom:8px}
+.script p:last-child{margin-bottom:0}
+.note{
+  border-radius:10px;padding:15px 20px;margin:14px 0 16px;font-size:15px;line-height:1.7;
+}
+.note .lb{font-size:12px;font-weight:800;letter-spacing:.08em;display:block;margin-bottom:4px}
+.note.key{background:var(--amber-bg);border:1px solid var(--amber-line);color:#6A4A08}
+.note.key .lb{color:var(--amber-ink)}
+.note.good{background:var(--green-bg);border:1px solid #BFE5D2;color:#155E42}
+.note.good .lb{color:var(--green-ink)}
+.note.warn{background:var(--red-bg);border:1px solid #F2C4C0;color:#8E2F26}
+.note.warn .lb{color:var(--red-ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.chips span{
+  background:#F2F4F6;border:1px solid var(--line);border-radius:8px;
+  padding:6px 12px;font-size:13px;font-weight:700;color:var(--ink-soft);
+}
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 16px;font-size:14.5px}
+table.rank th{
+  background:var(--navy);color:#fff;font-weight:700;padding:10px 14px;text-align:left;font-size:13.5px;
+}
+table.rank td{padding:12px 14px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top}
+table.rank tr:nth-child(even) td{background:#FAFBFC}
+table.rank td.rk{font-weight:800;color:var(--blue);white-space:nowrap}
+table.rank td.ag{font-weight:800;color:var(--ink);white-space:nowrap}
+nav.topnav{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+nav.topnav .in{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;overflow-x:auto}
+nav.topnav a{
+  flex-shrink:0;padding:14px 14px;font-size:14px;font-weight:700;color:var(--ink-mute);
+  text-decoration:none;border-bottom:2.5px solid transparent;transition:color .15s;
+}
+nav.topnav a:hover{color:var(--ink)}
+nav.topnav a.on{color:var(--blue);border-bottom-color:var(--blue)}
+footer{background:var(--navy);color:#8FA3C2;padding:44px 24px;text-align:center;font-size:13.5px}
+footer strong{color:#fff}
+@media(max-width:640px){
+  .card{padding:24px 20px}
+  .hero{padding:56px 20px 88px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pipe{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">SALES EDUCATION · TEAM 101 전용 영업 교육</span>
+    <h1>거절을 꺾고,<br><span class="accent">판을 짜는 영업</span></h1>
+    <p class="lead">보험 10년 차, 토스 4년간 계약 2,000건을 쌓은 이주형 지점장이 전하는 비대면 영업 실전 프로세스 — 시장 변화 인식부터 거절 처리, 상담 설계, 고객 관리, 루틴까지.</p>
+    <div class="meta">
+      <span>강사 · 이주형 지점장</span>
+      <span>TEAM 101 전용 · 외부 공유 금지</span>
+      <span>2026년 8월</span>
+    </div>
+  </div>
+</header>
+
+<div class="pipeline">
+  <div class="pipe-grid">
+    <a class="pipe" href="#m1">
+      <div class="no">COURSE 01</div>
+      <div class="tt">시장이 바뀌었다</div>
+      <div class="ds">2022 vs 2026 · DB 수급 · 1200% 룰 · 종합분석</div>
+    </a>
+    <a class="pipe" href="#m2">
+      <div class="no">COURSE 02</div>
+      <div class="tt">거절 DB 꺾기</div>
+      <div class="ds">선처리 멘트 · 갱신형 재정의 · 넷플릭스 비유 · 멘탈 관리</div>
+    </a>
+    <a class="pipe" href="#m3">
+      <div class="no">COURSE 03</div>
+      <div class="tt">판 짜기</div>
+      <div class="ds">하수·중수·고수 · 가족 단위 확장 · 밑밥 질문 · 사전 안내</div>
+    </a>
+    <a class="pipe" href="#m4">
+      <div class="no">COURSE 04</div>
+      <div class="tt">상담 프로세스</div>
+      <div class="ds">TA=약속 · 전문가 톤 · 개인정보 화법 · 심사 전략 · 시간 통보</div>
+    </a>
+    <a class="pipe" href="#m5">
+      <div class="no">COURSE 05</div>
+      <div class="tt">상품 화법 재정의</div>
+      <div class="ds">암 4층 구조 · 진단비=생활비 · 종신=상속 · 간병 전환</div>
+    </a>
+    <a class="pipe" href="#m6">
+      <div class="no">COURSE 06</div>
+      <div class="tt">관리와 소개</div>
+      <div class="ds">면책·감액 · 5분 청구 · 월 1회 콘텐츠 · 통지의무 콜 · 소개 지표</div>
+    </a>
+    <a class="pipe" href="#m7">
+      <div class="no">COURSE 07</div>
+      <div class="tt">루틴과 자생</div>
+      <div class="ds">절대 시간 · 업무시간=컨택 · 역산 루틴 · DB 이후의 영업</div>
+    </a>
+  </div>
+</div>
+
+<nav class="topnav" id="topnav">
+  <div class="in">
+    <a href="#m1">01 시장 변화</a>
+    <a href="#m2">02 거절 꺾기</a>
+    <a href="#m3">03 판 짜기</a>
+    <a href="#m4">04 프로세스</a>
+    <a href="#m5">05 상품 화법</a>
+    <a href="#m6">06 관리·소개</a>
+    <a href="#m7">07 루틴</a>
+  </div>
+</nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head">
+    <span class="kicker">COURSE 01</span>
+    <h2>시장이 바뀌었다 — 2022 vs 2026</h2>
+    <p class="sub">옛날처럼 똑같이 콜하면 망한다. 회사와 우리의 입장을 먼저 이해해야 전략이 나온다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>강사 소개와 이 강의의 목적</h3>
+    <ul>
+      <li><strong>보험 경력 10년</strong> — 26세에 시작, 타사 3년·2년 경력 후 토스인슈어런스 대면 조직 오픈(2022년 2월) 두 달 뒤 합류.</li>
+      <li><strong>상담의 95%를 전화·카톡 비대면</strong>으로 진행. 고액 계약자 스타일이 아니라 <strong>루틴과 계약 건수</strong> 중심.</li>
+      <li>토스 4년간 <strong>보유 계약 약 2,000건</strong>, 월 30~40건 체결, 월납 평균 약 200.</li>
+      <li>이 강의는 매뉴얼이 아니다 — 프로세스 중에서 <strong>"이 부분은 내가 가져가야겠다" 하나를 포인트 잡아 내 것으로 만드는 시간</strong>. 기록보다 기억.</li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>이 자료는 TEAM 101만을 위한 것으로 <strong>외부 공유 금지</strong>. 우리는 대면 조직이므로 "만나고 계약하든, 계약하고 만나든" 만남을 원칙으로 가져갈 것.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>초창기와 지금 — 숫자가 말하는 변화</h3>
+    <table class="rank">
+      <tr><th style="width:120px">구분</th><th>2022년 초창기</th><th>2026년 현재</th></tr>
+      <tr><td class="ag">설계사 규모</td><td>전체 300~400명, 직영 100명 미만</td><td>재직 3,000명 이상</td></tr>
+      <tr><td class="ag">DB 상황</td><td>넘쳐나서 상담 불가할 정도 (하루 20개, 리모델링 안 된 DB 다수)</td><td>구매 제한 + 전환율 하락, 물량 한계</td></tr>
+      <tr><td class="ag">실적 분포</td><td>—</td><td>6월 기준 월납 20만 원 미만이 약 1,600명</td></tr>
+    </table>
+    <ul>
+      <li>모든 플랫폼이 성장하면 겪는 시행착오 — <strong>인원이 늘면 DB 수급 문제는 반드시 생긴다.</strong></li>
+      <li>옛 고성과자들이 지금 못 하는 이유: "옛날처럼 하면 되겠지, 비대면이면 100 이상은 하겠지"라는 간단한 마음으로 갔다가 다 무너졌다.</li>
+      <li>강사가 초기 멤버들과 달랐던 점: <strong>항상 꾸준하게</strong> — 토스에서 100 언더가 단 한 번도 없었다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>DB의 비용 감각 — 10분에 18만 원</h3>
+    <ul>
+      <li>보유 DB 약 12,000개. <strong>연간 DB 구매액 약 5,000만 원, 누적 약 1억 3,000만 원.</strong></li>
+      <li>옛날 방식으로 꺾으려고 통화만 하다 보면 <strong>10분 동안 3만 5천 원짜리 DB 5개 소진 = 18만 원</strong>이 순식간에 사라진다.</li>
+      <li>제휴 DB는 월 200건씩 들어와도 다 칠 수 없고 허수도 많다 — 예전엔 "금액으로 물량 확보"가 유효했지만 지금은 구매 제한 + 전환율 하락으로 셈법이 달라졌다.</li>
+    </ul>
+    <div class="note key"><span class="lb">핵심</span>회사의 역할은 "전환율 몇 %짜리 DB"를 주는 게 아니라 <strong>토스 브랜드를 입힌 DB를 수급하고 기본 물량(직영 40개)을 보장</strong>하는 것. '퀄리티'라는 말 대신 <strong>이 DB의 성향이 어떻게 변하고 있는지</strong>를 읽어야 한다.</div>
+    <ul>
+      <li>예전: 암·뇌·심장, 유병자 CI 리모델링 DB가 다수 → 지금은 아니다.</li>
+      <li>따라서 앞으로의 상담 스탠스는 <strong>건강보험 단품이 아니라 종합분석</strong>이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.4</span>1200% 룰 이후 — 주력 보험사를 정하라</h3>
+    <ul>
+      <li>지난달부터 1200% 룰 적용 — <strong>1차년도 수수료 총액이 줄고 분할 지급</strong>으로 바뀌었다.</li>
+      <li>여러 보험사로 계약을 쪼갤수록 리스크가 커진다 → <strong>주력 보험사를 정하는 게 유리</strong>하다.</li>
+      <li>강사의 추천은 KB라이프 계열: 일반 생보사와 달리 <strong>미래에셋·KB라이프는 시책이 구간제가 아닌 월간제</strong>라, 5만 원짜리 계약을 꾸준히 쌓아도 시상이 잡힌다 (2,000% 시책 언급).</li>
+      <li>수수료가 뒤로 밀리는 구조에서는 <strong>밀린 몫을 쉽게 얻기 위한 전략</strong>(시책 활용)이 별도로 필요하다.</li>
+    </ul>
+    <div class="note good"><span class="lb">정리</span>수수료 분할 시대의 결론은 두 가지 — <strong>① 향후 고객 관리가 훨씬 중요해진다 ② 전략은 투트랙</strong>(거절 DB 꺾기 + 상담 의사 고객 판 짜기)으로 간다.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head">
+    <span class="kicker">COURSE 02</span>
+    <h2>투트랙 ① — 거절 DB 꺾기</h2>
+    <p class="sub">토스 DB의 디폴트는 거절이다. 거절 고객에겐 여러 말이 아니라 한두 가지 포인트만 던진다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>거절 고객 선처리 공식</h3>
+    <p>거절한 사람에게 열 가지를 설명하는 건 의미가 없다. <strong>취소를 먼저 처리해 주고, 검토 포인트 하나로 화두를 던진다.</strong></p>
+    <div class="script">
+      <div class="lb">SCRIPT · 거절 선처리</div>
+      <p>"그럼 저희가 해당 부분은 취소 접수해 드리고, 검토 사항만 전달드리고 마무리하도록 하겠습니다. 현재 짧게 쓰시면 해지할 보험이 세 가지 정도 확인되는데, 이건 해지 계획이 있으신 걸까요?"</p>
+    </div>
+    <ul>
+      <li><strong>"준비된 검토 사항만 전달드리고 마무리하겠습니다"</strong> — 이 문장을 포스트잇으로 붙여둘 것.</li>
+      <li>사람은 거절을 들으면 말이 멈춘다. <strong>고객이 무슨 말을 해도 흔들리지 말고 내 프로세스대로 말한다.</strong></li>
+      <li>"됐어요, 됐어요" 하면 인연이 아닌 것 — "한 사람을 또 지키지 못했다"는 사명감으로 끊는다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>거절에 화내서 되받아치면 <strong>민원행</strong>이다. 오래 일한 사람들이 이것 때문에 무너졌다. 화가 날 땐 그 고객을 안타까워해야 내가 일을 계속할 수 있다. 한 건 한 건 이기려 들지 말 것. 고객에게 절대 사과를 구걸하지도 말 것.</div>
+    <div class="script">
+      <div class="lb">SCRIPT · 거절 후 문자</div>
+      <p>"당황하셨죠, 토스입니다. 취소는 해드릴 테니 향후 궁금한 사항 있으시면 남겨주세요." <em>(그리고 미련 없이 종료)</em></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>갱신형 재정의 — 넷플릭스 비유</h3>
+    <p>"갱신형 = 보험료 오르는 나쁜 보험"이라고 까는 순간 전문성이 떨어진다. <strong>갱신형은 '일정 기간 활용하는 보험'</strong>으로 역할을 재정의해 준다.</p>
+    <div class="script">
+      <div class="lb">SCRIPT · 넷플릭스 비유</div>
+      <p>"넷플릭스 항상 켜두시나요? 보고 싶은 프로그램이 있을 때 구독하시잖아요. 언제 나올지 모르는 프로그램을 위해 제작비를 미리 후원하진 않으시고요. 갱신형이 그런 목적입니다 — 일정 기간을 활용하기 위한 보험이에요."</p>
+    </div>
+    <div class="script">
+      <div class="lb">SCRIPT · 건강검진용 단기 활용 예시</div>
+      <p>"목에 뭔가 잡혀서 걱정될 때, 당장 10만 원짜리 보험은 부담스럽죠. 딱 1년만 쓰고 해지할 보험으로 짧게 가입하고, 3개월 뒤 검사받고 결과에 따라 정리하는 목적 — 그게 갱신형입니다. 보험을 까는 게 아니라 역할을 말씀드리는 겁니다."</p>
+    </div>
+    <h4>갱신율 수치 — 외워둘 것</h4>
+    <div class="chips">
+      <span>남성 20년 갱신 3.5~4배</span>
+      <span>여성 20년 갱신 2~2.5배</span>
+      <span>남성 10년 갱신 약 2배</span>
+      <span>여성 10년 갱신 약 1.5배</span>
+      <span>통상 10년마다 1.5~1.7배 인상</span>
+    </div>
+    <div class="script">
+      <div class="lb">SCRIPT · 계획을 묻는 화법</div>
+      <p>"통계상 암은 50대쯤부터 보이니 고객님은 앞으로 20년간 큰일이 없으실 가능성이 높죠. 그럼 이 상품을 계속 쓰시다가 50대에 비싸지면 해지하실 계획이신가요, 아니면 처음부터 길게 잡으실 계획이신가요? 잘못된 보험이란 게 아니라 짧게 쓸지 나중에 쓸지의 차이인데, 고객님 계획은 어떤 쪽이실까요?"</p>
+    </div>
+    <div class="note key"><span class="lb">핵심</span>계획을 처음부터 픽스하지 않으면 나중에 "기존 게 더 저렴해서 그냥 유지할게요"가 나온다. <strong>처음부터 방향을 확정</strong>시킬 것.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.3</span>목표 수치 — 모수 싸움의 공식</h3>
+    <ul>
+      <li>10명 중 8명은 거절한다. <strong>목표: 거절 8명 중 4명을 꺾고, 상담 의사 2명을 끝까지 이어가는 것.</strong></li>
+      <li>꺾은 5명 중 3명은 다시 연락이 안 될 수 있다 — 미련 없이 넘기고 새 모수를 만든다.</li>
+      <li>이 전개(거절 꺾기 + 상담 연결 + 가족 확장)가 맞물려야 월납이 쌓인다. 운도 필요하고, 몸도 갈아야 한다.</li>
+    </ul>
+  </div>
+</section>
+<section class="module" id="m3">
+  <div class="mod-head">
+    <span class="kicker">COURSE 03</span>
+    <h2>투트랙 ② — 상담 의사 고객, 판 짜기</h2>
+    <p class="sub">설계사는 보험을 잘 설계하는 사람이 아니라 판을 잘 짜는 사람이다. 선진입으로 밑밥을 깔면 뒤가 편해진다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.1</span>하수 · 중수 · 고수의 차이</h3>
+    <table class="rank">
+      <tr><th style="width:96px">레벨</th><th>보장분석을 대하는 방식</th></tr>
+      <tr><td class="rk">하수</td><td>보험 내역을 다 분석하지 않고 팔고 싶은 것만 말한다</td></tr>
+      <tr><td class="rk">중수</td><td>분석은 하되 "연금이 없으시네요"처럼 빠진 것을 지적한다</td></tr>
+      <tr><td class="rk">고수</td><td>종합분석 초입부터 <strong>가족 단위 질문으로 판을 깔아</strong> 다음 상담의 길을 미리 연다</td></tr>
+    </table>
+    <div class="script">
+      <div class="lb">SCRIPT · 고수의 첫 질문 (밑밥)</div>
+      <p>"고객님, 건강보험을 준비하는 이유가 결국 가족의 생활비·간병비 때문이잖아요. 미혼이신지 기혼이신지, 자녀가 있으신지에 따라 방향이 달라집니다. 혹시 자녀분이 있으실까요? 결혼은 하셨을까요?" <em>(→ 이후 가족 보험 얘기가 자연스러워진다)</em></p>
+    </div>
+    <p>"건강보험 있으시네요, 혹시 배우자분 상담 필요 없으신가요?"처럼 단도직입으로 물으면 없어 보인다. <strong>질문 하나로 판을 먼저 깔아두는 것</strong>이 차이다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.2</span>가족으로 넘어가는 두 가지 장치</h3>
+    <h4>① 상담 마무리 한마디</h4>
+    <div class="script">
+      <div class="lb">SCRIPT · 배우자 확장</div>
+      <p>"배우자분이나 다른 가족분들은 추가 동의를 받아야 확인이 가능합니다. 저희가 확인 후 다시 안내드려도 괜찮으실까요? — 그럼 우선 고객님 것부터 설명드리고, 이후 배우자분 것도 다시 안내드리겠습니다."</p>
+    </div>
+    <ul>
+      <li>이 한마디로 상담의 <strong>약 50%가 배우자 상담으로 확장</strong>된다. 보통은 이 말을 안 해봤기 때문에 상담이 본인 선에서 끝난다.</li>
+    </ul>
+    <h4>② 이미 계약했더라도 — 배상책임 특약 활용</h4>
+    <div class="script">
+      <div class="lb">SCRIPT · 특약으로 배우자 정보 열기</div>
+      <p>"이 배상책임 특약이 보통 가족 단위로 붙는데, 가족 중 한 분만 있어도 보상이 되거든요. 혹시 배우자분 이 특약 있으실까요? 없으면 빼드리려고요. — 모르시겠죠? 그럼 제가 확인해 보고 말씀드려도 괜찮을까요?" <em>(→ 배우자 보장 내용을 자연스럽게 화제로 올림)</em></p>
+    </div>
+    <div class="note key"><span class="lb">핵심</span>완벽한 설계를 하려 하지 말고, <strong>이렇게 넘어가는 과정을 많이 만드는 것</strong>이 전략이다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.3</span>상담 전 사전 안내 자료 — 상담의 기준 3가지</h3>
+    <p>1차 통화와 2차 통화 사이에 고객에게 '상담의 기준' 자료 한 장을 보낸다. 고객을 설득하는 게 아니라 <strong>우리의 생각을 미리 공감·납득시키는 용도</strong>다. (자료 제작은 AI에게 맡기면 된다 — 직접 만들 필요 없다.)</p>
+    <ul>
+      <li><strong>① 보험의 본질은 하이 리스크</strong> — 고액 치료비가 보험의 역할. 독감·소액 담보로 논쟁하지 않는다.</li>
+      <li><strong>② 가족 구성에 따라 보장 구성이 달라진다</strong> — 예산 30만 원에 배우자·자녀가 있으면 나눠야 하고, 성인(본인·배우자)을 높게, 아이를 낮게 배분한다.</li>
+      <li><strong>③ 가족력 확인</strong> — 실효성보다 "이 상담사는 이런 것까지 고려하는구나"라는 신뢰 신호. 대부분 후천적이지만 유전 요인이 있는 질환도 분명 있다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m4">
+  <div class="mod-head">
+    <span class="kicker">COURSE 04</span>
+    <h2>비대면 상담 프로세스</h2>
+    <p class="sub">TA → 보장분석 카톡 → 2차 TA(개인정보) → 심사 → PT → 계약·관리. 강사의 올비대면 기준이며, 대면은 응용하면 된다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.1</span>1차 TA — 목적은 오직 약속</h3>
+    <ul>
+      <li><strong>TA의 핵심은 약속 잡기</strong>다. TA에서 PT까지 해버리는 건 TM 채널 방식 — 우리는 TM이 아니다. 고객은 이미 TM식 전화에 질려 있다.</li>
+      <li>통화가 길어질수록 확률은 떨어진다. 단, <strong>유병자 할인 가능성이 보이면 예외</strong> — "실제 할인 금액 보고 안내드릴까요, 가조립으로 설명드릴까요?" 물으면 고객은 정확한 금액을 원하므로 바로 정보 단계로 간다.</li>
+      <li><strong>이름을 먼저 묻지 않는다</strong> — "OOO 씨 맞으시죠?"는 보이스피싱의 화법이다. '토스'라는 브랜드로 여는 게 낫다.</li>
+    </ul>
+    <div class="script">
+      <div class="lb">SCRIPT · 오프닝</div>
+      <p>"네, 안녕하세요. 토스에서 연락드렸습니다. 앱 이용 중 신청해 주신 보험 Q&amp;A 접수 건으로 연락드린 담당 이주형입니다. 어떤 부분이 궁금하실까요?" <em>('보험 상담 신청'이라 하면 부담을 느끼므로 'Q&amp;A 접수'로 표현)</em></p>
+      <p>"아니에요, 잘못 눌렀어요." → "네, 취소는 접수해 드렸고요. 그럼 저희가 준비된 검토 사항만 전달드리고 마치도록 하겠습니다."</p>
+    </div>
+    <h4>전문가의 톤</h4>
+    <ul>
+      <li>전화 잘하는 사람들의 공통점: <strong>차분한 톤, 적절한 멈춤(포즈)</strong>. 변호사·의사는 하이톤으로 밝게 열지 않는다.</li>
+      <li>급하게 말하면 급한 느낌만 남고, 차분하게 말하면 듣는다. 어려운 내용은 쉽게 풀어 설명하는 것으로 전문성을 보여준다.</li>
+      <li>핵심 멘트는 <strong>스크립트로 외운다</strong> — 정해진 포인트와 딕션이 있어야 상황 대응이 흔들리지 않는다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.2</span>2차 TA — 남들이 안 하는 질문</h3>
+    <ul>
+      <li>"뭐가 있으신가요, 없으신가요"는 고객이 수없이 들은 말이다. <strong>수익자, 지정청구대리인</strong>처럼 남들이 안 하는 질문을 던져 새 정보를 하나 쥐여준다.</li>
+      <li>지정청구대리인: 내가 혼수상태일 때 대신 청구할 사람. 수익자를 바꿔도 그 사람 계좌·비밀번호를 모르면 소용없다 — 간병인보험엔 특히 필수. 서류(신분증 포함) 제출로 등록되며, 대부분의 고객이 해본 적 없다.</li>
+      <li>수익자·청구대리인 정비가 필요해지면 <strong>대면 전환의 명분</strong>이 된다 — 비대면은 서류가 번거로우니 만나서 앱 깔고 처리하는 게 낫다.</li>
+      <li>이 단계에서 <strong>예산(부담 없는 월납 수준)</strong>을 반드시 확인하고, 동시에 <strong>OK마이보험(타사 가입내역)을 열어 처음부터 다 오픈</strong>한다.</li>
+    </ul>
+    <div class="note key"><span class="lb">핵심</span>처음부터 오픈하는 이유 — 나중에 "이것보다 저렴한 데 있지 않아요?"가 안 나오게 하기 위해서다. <strong>깔끔한 상담은 앞에서 다 말하는 상담</strong>이다. 뒤늦게 나오는 얘기가 많을수록 무너진다. (골절 청구 때 부위·좌우·핀 삽입/제거를 스무고개 하듯 되묻지 말고 처음부터 한 번에 묻는 습관 — 틀린 건 적어두고 같은 실수를 반복하지 않는다.)</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.3</span>개인정보 · 심사 알림 — 민원을 막는 두 마디</h3>
+    <div class="script">
+      <div class="lb">SCRIPT · 개인정보 요청의 언어</div>
+      <p>"심사 통과를 전제로 말씀드렸는데, 실제 청구 이력이 있으시면 보험사에서 할인 여부를 다시 판단해야 합니다. 저희가 이걸 검토하고 다시 연락드려도 괜찮으실까요?" <em>(= 주민번호를 받겠다는 동의를 다른 언어로 얻는 것)</em></p>
+      <p>"혹시 카톡으로 토스인슈어런스 알림톡 받으신 게 있으실까요? 토스는 고객 개인정보를 카톡으로 취급하지 않아서, 토스 앱으로 입력해 주시면 상담 마무리 후 파기됩니다. 1분이면 되는데 지금 한번 입력해 보시겠어요?"</p>
+    </div>
+    <ul>
+      <li>포인트 세 가지: <strong>카톡으로 개인정보를 다루지 않는다 · 나중에 파기된다 · 지금 바로 쓰게 한다</strong> (나중으로 미루면 안 쓰는 고객이 매우 많다).</li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>심사를 올리면 <strong>보험사 본인등록 알림이 고객에게 간다</strong>. 이걸 사전 고지하지 않고 민원이 걸리면 동의서 자필서명 미이행으로 <strong>영업정지</strong>까지 갈 수 있다. 반드시 미리 말할 것.</div>
+    <div class="script">
+      <div class="lb">SCRIPT · 알림 사전 고지</div>
+      <p>"이제부터 보험사별로 검토를 해볼 텐데, 몇 개 보험사에서 알림이 갈 수 있습니다. 알림이 가면 '이 보험사에서 할인 여부를 확인 중이구나'라고 보시면 됩니다."</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.4</span>심사 전략 — 어디에 올리고, 왜 뺐는지 말하라</h3>
+    <ul>
+      <li><strong>비교표 순서대로 심사한다는 것을 미리 고지</strong>한다.</li>
+      <li>실전 사례(협착 관련 질병코드 고객): "이 보험사보다 저렴한 곳은 전부 거절이 나서 뺐고, 더 비싼 곳은 굳이 올릴 이유가 없어 안 올렸으며, <strong>재무 리스크가 있는 회사도 뺐다</strong>"고 설명 → 고객은 "이 사람 설계가 가장 유리하겠다"고 확신하게 된다.</li>
+      <li>리스크 근거: MG손해보험 영업정지 사례. 우리나라엔 아직 P&amp;A(자산부채이전) 선례가 없지만, M&amp;A와 달리 <strong>P&amp;A는 부채(불리한 계약)를 배제할 수 있는 구조</strong>라 향후 리스크로 설명 가능.</li>
+    </ul>
+    <div class="script">
+      <div class="lb">SCRIPT · 대형사 권유 (금액차가 작을 때)</div>
+      <p>"저렴하긴 하지만 예산이 8만 원이시라면, 보장을 조금 낮추더라도 대형사로 가시는 게 맞다고 봅니다. 1년 내고 끝나는 게 아니잖아요 — 회사가 바뀌면 납입·청구가 번거로워지고, 계약 조건이 달라질 리스크도 있습니다."</p>
+    </div>
+    <ul>
+      <li>보험료 차이가 1% 수준이면 대형사로 유도 (예: 8만 원 vs 메리츠 8.1만 vs 교보 8.2만).</li>
+      <li>시책이 사실상 없는 회사에 물량을 몰지 말 것 — <strong>내가 있어야 고객도 있다.</strong> 고객 이익과 내 수익 구조를 함께 본다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.5</span>PT 시간은 묻지 말고 통보하라</h3>
+    <div class="note warn"><span class="lb">주의</span>"언제 편하세요?"라고 먼저 물으면 놀랍게도 <strong>고객이 답장을 멈춘다</strong>. 그 뒤 "혹시 바쁘신가요?"부터는 대화가 끊긴다.</div>
+    <div class="script">
+      <div class="lb">SCRIPT · 시간 통보</div>
+      <p>"내용은 정리됐습니다. 다시 올려드리고 피드백드릴 텐데, 피드백은 이전과 동일한 시간인 4시로 안내드리겠습니다. 혹시 다른 편한 요일·시간 있으시면 남겨주세요." <em>(이전 상담 시간 기준 통보 + 변경권은 고객에게)</em></p>
+      <p>부재 시: "지금 통화가 어려우신 것 같아 1시간 뒤 혹은 내일 동일 일정으로 연락드리겠습니다. 다른 편한 시간 남겨주세요."</p>
+    </div>
+    <ul>
+      <li>이것마저 읽고 무시하면 그 고객과의 대화는 정리하고 <strong>새 고객을 만든다</strong> — 내 멘탈을 지키는 예의다.</li>
+      <li>상담 시간이 잡히면 고객 이름 옆에 "14시"처럼 적어두고, 이후 상담도 그 시간 기준으로 잡는다.</li>
+    </ul>
+    <div class="note good"><span class="lb">정리</span>실전 사례: 거절 DB → 위 프로세스로 상담 연결 → 기존 9만 원대 상품을 <strong>건강보험 월납 12만 원으로 리모델링 계약</strong>까지 완료.</div>
+  </div>
+</section>
+<section class="module" id="m5">
+  <div class="mod-head">
+    <span class="kicker">COURSE 05</span>
+    <h2>상품 화법 재정의</h2>
+    <p class="sub">상품을 까지 말고 역할을 말한다. 시각 자료 한 장으로 전문가 포지션을 잡는다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">5.1</span>암 보장 — 4층 구조로 설명하라</h3>
+    <p>의사가 그림을 보여주며 설명하듯, 고객이 보기 쉬운 표 한 장을 놓고 설명한다. <strong>시각 자료의 힘이 매우 크다.</strong> "암 보장"이라고 뭉뚱그리지 않고 치료 단계로 나눈다.</p>
+    <table class="rank">
+      <tr><th style="width:88px">층</th><th style="width:150px">항목</th><th>역할</th></tr>
+      <tr><td class="rk">1층</td><td class="ag">암 진단비</td><td>치료비가 아니라 <strong>생활비</strong> — 일 못 하는 2~3년간 쓸 돈</td></tr>
+      <tr><td class="rk">2층</td><td class="ag">항암 약물치료</td><td>급여·비급여 구분 없이 모든 약물치료를 포괄 보장 (단, 보험료가 비쌈)</td></tr>
+      <tr><td class="rk">3층</td><td class="ag">비급여 약물</td><td>치료 과정의 약 20%가 비급여일 때를 대비 (연 5천만 원 한도 수준)</td></tr>
+      <tr><td class="rk">4층</td><td class="ag">특수항암</td><td>표적·면역, 세기조절 방사선·양성자 등 고액 특수치료 대비</td></tr>
+    </table>
+    <ul>
+      <li>예산 6만 원이면 3~4층까지 다 준비, <strong>예산 3만 원이면 비급여·특수항암 우선</strong> — 3만 원으로 진단비를 넣어봐야 1,500~2,000 수준이라 의미가 약하다.</li>
+      <li>급여와 비급여의 차이를 숫자로: <strong>"연 300을 내느냐, 연 8,000을 내느냐의 차이입니다."</strong></li>
+      <li>진단비가 이미 있는 고객에게는 진단비를 또 팔지 않고, <strong>항암 보장으로 부족분을 보완했다</strong>고 말한다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">5.2</span>"암 1억이면 잘 준비하신 거예요"라고 말하지 마라</h3>
+    <ul>
+      <li>20대의 암 진단비 1억 — 암은 통계상 보통 50대 후반에 온다. <strong>40년 뒤 1억의 실질가치는 물가 반영 시 약 4천만 원</strong>. "잘 준비하셨네요"로 끝내면 안 되는 이유다.</li>
+      <li>과거 설계사들이 만든 "암 5천, 뇌·심장 3천" 식의 공식(533)이 고객의 기준을 굳혀놨다 — 이 정렬을 깨는 게 상담이다.</li>
+      <li>비급여 항암은 실제로 <strong>연 8천만 원</strong>이 나온 고객 사례가 있다. 두들겨 맞기 전에는 아무도 모른다.</li>
+    </ul>
+    <div class="script">
+      <div class="lb">SCRIPT · 진단비 재정의</div>
+      <p>"고객님, 암 진단비 1억이 있으신데 치료비가 없으세요. 이 1억은 치료비가 아니라 <strong>생활비</strong>입니다 — 일을 못 하실 때 2~3년간 쓰실 돈이고, 치료비는 별도로 준비해야 합니다."</p>
+    </div>
+    <div class="note key"><span class="lb">핵심</span>"암 1억 있네, 어떻게 꺾지?"가 아니라 <strong>"이 사람은 암 치료비가 없네"</strong>로 보는 눈 — 마인드부터 바꿔야 한다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">5.3</span>종신보험 — 목적(상속)으로 판별하라</h3>
+    <div class="script">
+      <div class="lb">SCRIPT · 상속 목적 판별</div>
+      <p>"상속세 준비를 하고 계신가요? 상속 목적으로 준비하시는 분들은 계약자·수익자를 자녀로 설정합니다. 고객님은 따로 설정이 안 되어 있으니 그 목적은 아니신 거죠. 그럼 이 보험은 상속 기능을 안 쓰고 계신 거라, 낼 수 있는 효율의 30%밖에 못 내고 있는 상태입니다. 상속 대비가 아니시라면, 보장에 집중한 플랜과 비교했을 때 최소 두 배 이상의 효율 차이가 날 것 같은데 — 이런 안내를 받으신 적이 없다면 저희가 정리해서 내일 점심시간에 다시 연락드리겠습니다."</p>
+    </div>
+    <h4>유니버셜 종신 — 물가로 분석하라</h4>
+    <ul>
+      <li>유니버셜 종신은 대부분 <strong>20~23년 사이에 원금 도달</strong>. 하지만 우리나라 물가가 연평균 약 3% 오르므로, <strong>물가 반영 그래프로 보면 손해가 점점 커지는 구조</strong>가 된다.</li>
+      <li>"손해가 언제 없어지는가"는 말할 수 없다(없으니까). 대신 <strong>"언제 해지해야 손해가 가장 적은가"는 말할 수 있다 — 그게 지금이다.</strong></li>
+      <li>상속으로 쓰기에도 애매한 사례: 6천 내고 40년 뒤 1억 1천 수령 → 상속도 저축도 애매.</li>
+      <li>원래 유니버셜의 기능은 <strong>추가납입(2배까지) + 중도인출</strong>로 환급률을 끌어올리는 것. 80%의 고객은 추가납입을 안 한다 — "추가납입 없이 계속 유지하실 계획이신가요?"로 화두를 던진다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">5.4</span>간병보험 — 본인 대신 부모로 전환</h3>
+    <div class="script">
+      <div class="lb">SCRIPT · 간병 전환 화법</div>
+      <p>"간병은 사람을 보내주는 방식이 제일 좋은데, 아쉽게도 그 상품은 갱신형뿐입니다. 고객님이 40세에 갱신형으로 가입하면 20년간 보험료만 내고, 정작 쓸 60대엔 보험료가 크게 올라 있죠. 인건비도 계속 오르고요. 그래서 이 보장은 권장드리지 않겠습니다. 대신 — 지금 간병 리스크가 실제로 있는 분은 고객님이 아니라 부모님이잖아요. <strong>부모님 간병 보장은 들어 있나요?</strong>"</p>
+    </div>
+    <ul>
+      <li>가족이 부모 간병을 진지하게 생각하는 시점은 <strong>자기 가정을 꾸렸을 때</strong> — 이 타이밍에 부모로 건너가는 것이 합리적이다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>"이렇게 하시면 다 해결됩니다"라고 말하지 말 것. 새로운 치료·상품은 계속 나온다 (표적·면역치료, 신규 담보 등). "향후 보완될 부분이 있다"고 여지를 남겨야, 나중에 심사·신담보에서 깨져도 신뢰가 무너지지 않는다. 실제로 "이거면 방사선·약물·전이 다 된다"고 했다가 더 저렴하고 보장 넓은 신상품이 나와 민망해진 사례가 있다.</div>
+    <div class="note good"><span class="lb">정리</span>보장 이야기는 늘리는 것만큼 <strong>적정선에서 끊어주는 것</strong>이 중요하다. "실비가 있으니 의료비는 뺐고, 진단비가 있으니 치료비만 보완했다" — 뺀 이유까지 설명하면 상담이 깔끔하게 닫힌다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">5.5</span>병력별 인수 지도 — 팀으로 공유하라</h3>
+    <ul>
+      <li>고지혈증 약 복용 → <strong>건강체 할인 가능: 흥국생명·KB라이프</strong> (신한도 가능하나 상대적으로 비쌈).</li>
+      <li>협착 없는 뇌 질환 진단 이력 → 인수 가능한 곳이 제한적 (삼성 계열 등) — <strong>"어떤 병력이면 어느 회사"를 알아야 유병자를 표준체·건강체로 살릴 수 있다.</strong></li>
+      <li>여러 보험사 유병자 심사를 혼자 다 꿰기는 불가능하다 — <strong>팀원끼리 각자 겪은 인수 케이스를 공유</strong>해 병력 지도를 함께 만들 것. 시책·DB 정책과 맞물리는 회사면 금상첨화.</li>
+      <li>실손 요청 고객은 가입까지 다 안내한다 — 단독 실손에 얹을 수 있는 소액 플랜(1만 원대)을 정해두면 좋다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m6">
+  <div class="mod-head">
+    <span class="kicker">COURSE 06</span>
+    <h2>고객 관리와 소개</h2>
+    <p class="sub">관리란 선물이 아니라 "남들이 안 해주는 걸 나에게 해주고 있구나"를 느끼게 하는 것이다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">6.1</span>계약 직후 — 면책·감액은 무조건 말하라</h3>
+    <ul>
+      <li><strong>보험금 부지급 사례의 대부분이 면책기간 이슈</strong>다. 가입하고 아무 생각 없이 검진받으면 사고가 난다. 비대면일수록 반드시 고지.</li>
+      <li>암 면책 종료일·감액 종료일·부담보 종료일을 <strong>카카오톡 일정 공유(예약) 기능으로 고객과 함께 걸어둔다.</strong></li>
+    </ul>
+    <div class="script">
+      <div class="lb">SCRIPT · 면책 종료 알림</div>
+      <p>"암 면책이 종료되어 오늘부터 정상 보장 가능하십니다. 혹시 건강검진은 언제로 예정되어 있으실까요? 검진에서 용종 제거 등이 나올 수 있는데 지금 보장으로는 이 부분이 부족해서, 원하시면 말씀해 주세요." <em>(축하 + 니즈 환기를 한 번에)</em></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">6.2</span>청구는 5분, 답장은 밤 10시</h3>
+    <ul>
+      <li>보험금 청구는 <strong>무조건 내가 대행</strong>하고, 요청이 오면 <strong>5분 안에 처리</strong>한다. 고액 건은 손해사정 여부까지 확인한다.</li>
+      <li>지급액이 적으면: "보상 담당자와 지급액에 문제가 없는지 검토해 보고 말씀드릴게요."</li>
+      <li>접수 즉시 "접수했습니다" 답장 + <strong>밤 10시 예약 메시지</strong>: "접수한 팩스 정상 처리 확인했습니다. 건이 밀려 답이 늦었습니다. 즐거운 저녁 되세요." → "바쁜 사람인데 나를 챙기는구나"라는 인식이 만들어진다.</li>
+    </ul>
+    <h4>대면에서의 연출 — 고객 우선 이미지</h4>
+    <ul>
+      <li>지인·고객과 만난 자리에서 "잠깐 청구 건 전화만 받겠습니다" 하고 실제 업무 통화를 처리하는 모습을 보여준다 → <strong>"이 사람은 고객이 우선이구나"</strong>라는 인식. 지인이 "요즘 왜 이렇게 바빠?"라고 물어오는 순간이 영업의 문이 된다 (예: 5년납 148% 환급 상품 이야기로 자연스럽게 전개).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">6.3</span>월 1회 콘텐츠 발송 — 무엇을 보내고, 무엇을 보내지 말까</h3>
+    <ul>
+      <li>계약 후 <strong>매달 한 번</strong> 유익 콘텐츠를 카톡으로 보낸다. 상품 광고("이번 달 OO화재")가 아니라 <strong>청구 유의사항·분쟁 사례·시즌 정보</strong> 위주.</li>
+      <li>보내면 좋은 것: 실손 청구 시 지급률이 달라지는 케이스(로봇 시술의 통원 처리 등), 명절 사고 대비, 건강검진 시즌 유의사항, 보험사 현장조사 대처법, 임신·출산 플랜, 월별 주목 상품.</li>
+      <li>발송 효과: 내가 보낸 건 운전자·화재보험이어도 연락 오는 건 어린이보험·연금이다 — <strong>고객이 "나에게 설계사가 있다"는 걸 기억하게 만드는 것</strong>이 목적.</li>
+      <li>실손 세대 안내는 <strong>전체표 말고 1~4세대 각각 만들어 해당 세대만</strong> 보낸다 — 전체표는 아무도 안 읽는다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>전 보험사 공통 신담보 추가처럼 <strong>전 고객이 일제히 문의할 소재는 보내지 말 것</strong> (예: 육아휴직 관련 담보). 문의가 폭주해 하루가 마비된다 — 실제로 보내고 크게 후회한 실패담.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">6.4</span>통지의무 확인 콜 — 할 일이 없다는 말은 없다</h3>
+    <div class="script">
+      <div class="lb">SCRIPT · 통지의무 콜</div>
+      <p>"안녕하세요, 토스에서 연락드렸습니다. 통지의무 변경 건으로 확인차 연락드렸는데, 혹시 직업이나 주소 바뀌신 부분 없으실까요? 주소·직업에 따라 보상이 달라질 수 있어 저희가 1년마다 확인 전화를 드리고 있습니다. — 변경 없으시고요. 따로 궁금하신 점은 없으실까요?"</p>
+    </div>
+    <ul>
+      <li>고객은 이사해도 우편물만 바꾸고 보험사 주소지는 안 바꾼다 — 원칙상 보상 이슈가 될 수 있는 지점이라 확인 명분이 확실하다.</li>
+      <li>6개월~1년 전 계약 고객 리스트에 이 콜을 돌리면 <strong>"신경 써주는구나"라는 관리 인식 + 추가 니즈 환기</strong>가 동시에 된다. 통지의무로 전화하는 설계사는 거의 없다 — 그래서 강력하다.</li>
+      <li>청구가 활발하던 고객이 두 달째 조용하면 전화해 본다: "청구 몰아서 하시면 소멸시효 이슈가 있을 수 있어 한 번씩 봐드리는 게 좋아요" — 이 한마디가 관리다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">6.5</span>지표를 바꿔라 — 계약 건수가 아니라 소개 건수</h3>
+    <div class="note key"><span class="lb">핵심</span>대면 영업 시절 가장 중요하게 본 지표는 <strong>"이번 달 소개 몇 명"</strong>이었다. 계약은 이번 달 성과지만, 소개는 앞으로를 만든다. 팀끼리도 "얼마 했어?"가 아니라 <strong>"상담 연결과 소개 얼마나 받았어?"로 경쟁</strong>할 것.</div>
+    <ul>
+      <li>소개해 주는 고객에게는 감사를 표현한다 — 단, 대가성으로 보이지 않게: <strong>"저희 지점 고객 감사 대상에 선정되셔서 선물 보내드립니다"</strong> 프레임 (실제 30만 원 상당 사례). 고객 반응: "주위에 다 소개하고 있는데 이렇게까지 해주셔서 감사하다, 앞으로도 잘 부탁드린다."</li>
+      <li>제천 거주 고객 사례: 한 번도 만난 적 없는 블로그 유입 고객 → 수년째 계약 지속. 비결은 <strong>기존 계약 수익 점검, 시기별 안내, 임신·출산 등 라이프이벤트 대응</strong>의 꾸준함.</li>
+      <li>퇴직연금·변액 포트폴리오 관리가 최고의 접점: 은행도 회사도 안 해주는 포트폴리오 피드백을 내가 해준다 → 지지난달 실적 480 중 250이 <strong>변액종신 수익 인출 → 상속 목적 종신 재가입</strong> 건. 변액·연금펀드를 다루는 이유는 <strong>고객과의 소통 콘텐츠가 계속 생기기 때문</strong>이다. 본인→배우자→자녀→며느리까지 가족 전체로 확장된 사례.</li>
+    </ul>
+  </div>
+</section>
+<section class="module" id="m7">
+  <div class="mod-head">
+    <span class="kicker">COURSE 07</span>
+    <h2>루틴과 자생 — DB 이후를 준비하라</h2>
+    <p class="sub">시스템은 강점이지만 시스템이 대신 일해주지 않는다. 절대적인 시간과 역산된 루틴이 남는다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">7.1</span>TEAM 101의 강점, 그리고 함정</h3>
+    <ul>
+      <li>여러 사업단에서 강의해 봤지만 <strong>시스템이 이 정도로 발전된 곳은 없다</strong> — TEAM 101의 유일하고 확실한 강점.</li>
+      <li>실제로 강사도 팀의 보장분석 양식을 지난주 처음 써봤고, 그 주에 계약이 추가로 들어갔다 — 시스템은 이미 완성돼 있고 편하다.</li>
+      <li>다만 <strong>시스템을 너무 믿고 있지 않은가?</strong> "이렇게 하면 조금 더 효율적이겠다" 정도로 쓰는 도구이지, 효율에 매몰되면 안 된다.</li>
+    </ul>
+    <div class="note key"><span class="lb">핵심</span>"효율적인 3시간 vs 우직한 10시간" 논쟁의 결론 — 효율 좋은 환경에 있어도 <strong>절대적인 시간을 넣지 않으면 의미가 없다.</strong> 우리는 천재가 아니다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">7.2</span>하루 루틴 — 업무시간엔 컨택만</h3>
+    <ul>
+      <li>강사의 하루: 6시 반 기상(육아) → 8시 20분 출근(사무실 불 켜는 사람) → 7시 퇴근 → 아기 재우고 <strong>밤 9~11시 카페에서 공부·자료 정리</strong>.</li>
+      <li><strong>설계 공부·약관 공부·자료 정리는 업무시간에 하지 말 것</strong> — 퇴근 후에 한다. 업무시간에 할 것은 <strong>전화, 미팅, 컨택</strong>뿐이다 (기본 교육은 교양으로 예외).</li>
+      <li>매일 셀 것: 오늘 가망고객 몇 명에게 전화했는가, 몇 명에게 카톡을 보냈는가.</li>
+      <li>역산 루틴: <strong>월 1,000을 벌고 싶으면 월납 100 → 그러려면 어떤 하루가 필요한가</strong>를 거꾸로 계산해 보라. 솔직히 쉬지 못할 것이다.</li>
+      <li>단가 감각: 월납 10만 원 계약 두 건이면 충분히 좋은 하루 — 소액(장례비 등)을 모으면서 가끔 큰 건이 섞이는 구조. 강사의 평균 건당 월납도 5만 원 수준이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">7.3</span>물량이 없을 때 — 미개척 DB 재터치</h3>
+    <ul>
+      <li><strong>DB는 물량이 제일 중요하다.</strong> 다음 달부터 업적에 따라 물량이 일부 풀릴 예정.</li>
+      <li>물량이 없으면 <strong>6개월 전·수개월 전 미결 DB를 전부 재터치</strong>한다: "상담 신청은 있었지만 미결 건으로 연락드렸습니다" → 카톡 먼저, 전화는 그다음.</li>
+      <li>타이밍 팁: <strong>오전에 카톡 보내고 그날 오후에 걸면 안 받는다. 다음 날 오후에 걸면 받는다</strong> — 사람은 하루 지나면 경계가 풀린다. 실시간 DB보다 오히려 연결이 나을 수 있다.</li>
+      <li>재신청 6개월 경과 DB 환급 정책 변경으로 강사 본인이 최대 피해자가 됐지만 — <strong>회사가 정책을 바꾸면 그에 맞게 움직이는 것</strong>이 답이다. 정책 탓은 인생에 도움이 안 된다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">7.4</span>DB는 시장을 보는 도구 — 결국 자생이다</h3>
+    <ul>
+      <li>토스 DB의 진짜 강점: <strong>① 보장 내역이 보인다</strong> (보이니까 거절 고객에게도 던질 화두가 생긴다 — 종신 가득한 40대에게 "상속 준비하시나요?"가 가능한 이유) <strong>② 토스 브랜드가 입혀져 있다 ③ 기본 40개 수급 보장 ④ 개인정보 동의 이슈가 없다.</strong></li>
+      <li>타 플랫폼 현실: 자체 DB 수급이 어려워 외부 모객 DB를 사거나 기존 고객 DB를 돌리는 곳이 많고, 인원도 늘리지 못한다. "보험료 조정 센터" 류는 사기이며, 금감원이 미검증 DB 컨택을 규제하는 흐름도 리스크다.</li>
+      <li><strong>DB를 사는 이유는 평생 DB 영업을 하려는 게 아니라 시장을 보기 위해서다.</strong> 강사는 DB 구매를 끊은 지 1년 — 지금은 기존 고객 자산으로 영업한다 (보유 고객 약 1,000명).</li>
+      <li>거절은 어느 보험사 DB든 똑같이 생기고, 앞으로 늘어난다 — 옮긴다고 달라지지 않는다. <strong>"DB 없으면 이직"이 아니라 이 시장 안에서의 자생을 고민할 것.</strong> 유지 고객이 쌓일수록 이직은 어차피 어려워진다.</li>
+    </ul>
+    <h4>자생의 도구들</h4>
+    <ul>
+      <li><strong>지인 50 : DB 50</strong> — 신입일수록 지인 접점을 우선하고, "계약할 고민"이 아니라 <strong>"소개받을 고민"</strong>을 한다 (배우자, 부모, 지인의 지인).</li>
+      <li><strong>퇴직연금·개인연금을 공부하고 자격을 등록</strong>하라 — "펀드 포트폴리오를 일정 시기마다 피드백드리러 방문하겠습니다"가 가능해진다. 1년에 두 번, 합법적이고 자연스러운 방문 명분.</li>
+      <li>계약 후 방문 명분: "계약 마무리 후 필수 전달 사항 안내로 20분만 쓰겠습니다" → 기존 계약 설명 + 청구 유의사항 + 연금 제안까지.</li>
+    </ul>
+    <div class="note good"><span class="lb">정리</span>고객을 만나기 위한 방법은 많다 — 안 하고 있을 뿐이다. 오늘 점검할 것: <strong>나는 매일 어떻게 살고 있는가 · 중간에 빼먹은 건 없는가 · 업무시간에 설계를 하고 있진 않은가 · 가망을 남기고 있는가.</strong> 이게 있어야 메타인지가 되고 나아갈 수 있다. 이 회사가 있는 한, 같이 열심히 해보자.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>거절을 꺾고, 판을 짜는 영업</strong> — TEAM 101 전용 영업 교육자료</p>
+  <p style="margin-top:6px">강의 · 이주형 지점장 | 정리 · 전종환 팀장 | 외부 공유 금지</p>
+</footer>
+
+<script>
+const links=[...document.querySelectorAll('#topnav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('on'));
+      const i=secs.indexOf(e.target);
+      if(i>-1)links[i].classList.add('on');
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px'});
+secs.forEach(s=>s&&io.observe(s));
+</script>
+</body>
+</html>

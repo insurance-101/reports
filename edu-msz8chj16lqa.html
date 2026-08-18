@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>환율의 방정식 — 엔화 약세, 미국의 개입, 달러 투자 전략 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">MARKET INSIGHT · 시장·금융 교육자료</div>
+    <h1>환율의 방정식 — <span class="accent">엔화 약세, 미국의 개입, 달러 투자 전략</span></h1>
+    <p class="lead">미국이 28년 만에 일본 외환시장에 개입한 사건을 출발점으로, 엔화 약세가 일본·미국·아시아에 미치는 파장, 한국은행의 '양날의 검' 금리 딜레마, 그리고 달러 자산을 어떻게 모아야 하는지까지 — 환율을 교과서가 아닌 실전 방정식으로 읽는 강의 정리.</p>
+    <div class="meta"><span>구성 <b>4 COURSE · 10 강</b></span><span>주제 <b>환율 · 엔화 · 달러 투자</b></span><span>활용 <b>고객 자산 상담 배경 지식</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">환율 예측의 어려움과 정부 개입</div><div class="ds">시장 원리 · 국가 개입 · 미·일 공동 개입 4회</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">엔화 약세의 파장</div><div class="ds">일본 인플레 · 미 장기금리 · 신흥국 이중고</div></a><a href="#m3"><div class="no">COURSE 03</div><div class="t">엔화 투자 신중론과 한국의 선택</div><div class="ds">일본은행 트라우마 · 엔캐리 청산 · 한미 금리차 · 양날의 검</div></a><a href="#m4"><div class="no">COURSE 04</div><div class="t">달러 투자 전략과 5가지 갈림길</div><div class="ds">분할 매수 · 나이키 커브 · 이란·양극화·연준·AI·달러</div></a></nav>
+
+<nav class="topnav"><ul><li><a href="#m1">01 환율 예측의 어려움과 정부 개입</a></li><li><a href="#m2">02 엔화 약세의 파장</a></li><li><a href="#m3">03 엔화 투자 신중론과 한국의 선택</a></li><li><a href="#m4">04 달러 투자 전략과 5가지 갈림길</a></li></ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head">
+    <div class="kicker">COURSE 01</div>
+    <h2>환율 예측의 어려움과 정부 개입의 중요성</h2>
+    <p>환율은 시장 원리뿐만 아니라 국가의 개입과 국제 공조에 의해 크게 영향을 받으므로 미래를 정확히 예측하기 매우 어렵다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>환율 예측의 복잡성과 정부 개입의 존재</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/0.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 환율 예측의 복잡성과 정부 개입의 존재</figcaption></figure>
+    <h4>환율은 단순히 오르거나 내리는 것이 좋다고 단정할 수 없다</h4>
+    <ul>
+      <li>환율 <strong>하락</strong>은 수입 물가를 낮추고 구매력을 높이지만, <strong>수출에는 불리</strong>할 수 있다</li>
+      <li>환율은 그 자체로만 보면 이해하기 어렵고, 항상 복합적인 영향을 미친다</li>
+    </ul>
+    <h4>환율은 시장 원리 외에 국가 개입의 영향을 받는다</h4>
+    <ul>
+      <li>때로는 국가가 직접 나서서 환율을 흔들기도 한다</li>
+      <li>다른 나라가 압력을 가해 환율에 영향을 미치기도 한다</li>
+      <li>환율의 미래를 정확히 예측하려면 <strong>미국의 속내</strong>와 같은 복잡한 요인까지 알아야 한다</li>
+    </ul>
+    <h4>환율 조작국은 존재하지만, 주가 조작국이나 금리 조작국은 존재하지 않는다</h4>
+    <ul>
+      <li>주가 조작국이나 금리 조작국이라는 단어는 들어본 적이 없을 것이다</li>
+      <li>하지만 <strong>환율 조작국</strong>은 실제로 존재하며, 한국도 이 문제로 많은 논의를 겪었다</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>환율은 시장 + 국가 개입 + 국제 공조가 함께 움직이는 변수다. "오르면 좋다/내리면 좋다"로 단정할 수 없고, 예측 자체가 구조적으로 어렵다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>일본 엔화 시장에 대한 미국의 개입 사례</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/118.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 일본 엔화 시장에 대한 미국의 개입 사례</figcaption></figure>
+    <h4>미국은 일본 외환 시장에 이례적으로 개입했다</h4>
+    <ul>
+      <li>지난주 언론에서 미국이 일본 외환 시장에 개입했다는 소식이 보도되었다</li>
+      <li>이러한 개입은 환율 예측을 더욱 어렵게 만드는 이례적인 현상이다</li>
+    </ul>
+    <h4>G20·G7 정상회담 성명서에도 외환 시장 개입 가능성이 명시되어 있다</h4>
+    <ul>
+      <li>성명서에는 "외환 시장은 아무도 개입하지 않는다"가 아니라 <strong>"과도한 쏠림이 있을 때는 개입할 수 있다"</strong>고 명시되어 있다</li>
+      <li>이는 정부의 외환 시장 개입이 국제적으로 용인될 수 있음을 보여준다</li>
+    </ul>
+    <h4>일본 엔화 시장 개입의 역사적 사례</h4>
+    <table class="rank">
+      <thead><tr><th>시기</th><th>상황</th><th>개입 내용</th></tr></thead>
+      <tbody>
+        <tr><td>1995년</td><td>고베(한신) 대지진 직후 <strong>슈퍼 엔고</strong> — 내수 부진에 엔화 강세로 수출까지 어려워져 일본 경제 큰 타격</td><td>미국이 일본 요청을 받아들여 <strong>엔화 약세 유도</strong>를 위해 일본과 공동 개입</td></tr>
+        <tr><td>1998년</td><td>엔화 약세 — 동아시아 외환 위기를 불러왔다는 분석(상당 부분 공감). 1995년 1달러당 78~79엔(역사상 최강) → 1998년 150엔 가까이 약세 전환. 한국은 엔고에 맞춰 설비 투자를 늘렸다가 급격한 엔저로 가격 경쟁력을 잃고 외환 위기. 태국·인도네시아 등도 어려움</td><td>미국·일본이 <strong>엔화 약세를 막기 위해</strong> 공동 개입</td></tr>
+        <tr><td>2011년</td><td>동일본 대지진 직후 <strong>슈퍼 엔고</strong> — 지진으로 힘든 상황에서 엔고로 수출까지 어려워지자 일본이 국제 사회에 도움 요청</td><td>미국을 비롯한 <strong>G7 국가들</strong>이 개입해 엔화 강세 제어 노력</td></tr>
+        <tr><td>2012년~</td><td><strong>아베노믹스</strong> 등장 — 아베 신조가 과감하게 엔화를 풀어 1달러당 75엔 → 160엔을 넘어서는 약세로</td><td>일본 스스로 엔화 약세 유도</td></tr>
+        <tr><td>2026년</td><td>최근 엔화 약세 시기</td><td>엔화 약세에 대한 개입은 <strong>1998년 이후 처음</strong>, 전체로는 <strong>네 번째</strong> 개입</td></tr>
+      </tbody>
+    </table>
+    <h4>정부 개입이 시장에 미치는 영향</h4>
+    <ul>
+      <li><strong>28년 만의</strong> 엔화 약세 개입은 시장에 큰 놀라움을 주었다</li>
+      <li>엔화 약세에 베팅하던 헤지펀드들은 정부의 개입 시점을 예측하기 어려워 투자를 주저하게 된다</li>
+      <li>이는 외환 시장에 일시적인 소강상태를 만들 수 있다</li>
+      <li>환율은 정부의 개입과 국제 공조에 의해 방향이 바뀔 수 있으므로 예측이 매우 어렵다</li>
+    </ul>
+  </div>
+</section>
+<section class="module" id="m2">
+  <div class="mod-head">
+    <div class="kicker">COURSE 02</div>
+    <h2>엔화 약세가 일본·미국·아시아 경제에 미치는 영향</h2>
+    <p>엔화 약세는 일본의 물가 상승, 미국의 장기 금리 상승, 아시아 신흥국의 부채 부담 증가 및 수출 경쟁력 약화 등 복합적인 문제를 야기하여 전 세계 경제에 큰 부담을 준다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>일본 경제에 미치는 영향: 디플레이션 탈출과 인플레이션의 고통</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/386.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 일본 경제에 미치는 영향</figcaption></figure>
+    <h4>원-엔 환율의 중요성</h4>
+    <ul>
+      <li>한국은 주요 산업에서 일본과 경쟁하므로 <strong>원-엔 환율</strong>이 국가 경제에 큰 영향을 미친다</li>
+      <li>과거 원-엔 환율은 100엔당 700~800원대에서 1,400원대까지 올랐다가 현재 800~900원대로 내려왔다</li>
+      <li>하지만 주요 투자자들은 원-엔 환율보다는 <strong>달러-엔 환율</strong>을 더 중요하게 본다</li>
+    </ul>
+    <div class="chips"><span>원-엔 과거 저점 <b>700~800원대</b></span><span>원-엔 고점 <b>1,400원대</b></span><span>원-엔 현재 <b>800~900원대</b></span></div>
+    <h4>아베노믹스 이후 일본 경제의 변화</h4>
+    <ul>
+      <li><strong>슈퍼 엔고 시기(2011~2012년)의 디플레이션 압력</strong>
+        <ul>
+          <li>엔화 강세는 수입 물가를 낮추고 경기 침체와 수요 부족이 겹쳐 일본을 디플레이션의 늪에 빠뜨렸다</li>
+          <li>당시 일본 닛케이 지수는 <strong>7천</strong>까지 하락하며 매우 힘든 시기를 보냈다</li>
+        </ul>
+      </li>
+      <li><strong>아베노믹스 이후 엔화 약세와 자산 시장 상승</strong>
+        <ul>
+          <li>2012년 하반기 아베 신조 등장 이후 엔화 약세가 빠르게 진행되어 164엔까지 상승했다</li>
+          <li>엔화 살포로 엔화 가치가 떨어지면서 일본의 부동산 가격 등 자산 가격이 크게 올랐다</li>
+          <li>2007년 '잃어버린 20년' 당시 경기 침체와 자산 시장 붕괴를 겪었던 것과 대조적이다</li>
+          <li>현재는 경기는 안 좋지만 자산 시장은 크게 올랐고, 임금은 많이 오르지 않아 구매력은 여전히 약하다</li>
+        </ul>
+      </li>
+      <li><strong>닛케이 지수의 폭발적 상승</strong>
+        <ul>
+          <li>2011~2012년 7천이었던 닛케이 지수는 최근 <strong>6만 3천~6만 4천</strong>까지 상승했으며, 한때 7만을 돌파하기도 했다</li>
+          <li>이는 주식 시장에서 10배 상승을 의미하는 <strong>'텐배거(Ten-bagger)'</strong>를 지수로 달성한 것이다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>엔화 약세의 부작용: 인플레이션의 등장</h4>
+    <ul>
+      <li><strong>수입 물가 상승</strong>
+        <ul>
+          <li>엔화 약세는 수입 물가를 끌어올려, 중동 사태와 같은 외부 요인 발생 시 일본의 수입 물가를 더욱 높인다</li>
+          <li>일본의 소비자 물가 상승률이 <strong>3% 가까이</strong> 나오면서 일본에게는 매우 힘든 시기가 되었다</li>
+        </ul>
+      </li>
+      <li><strong>디플레이션에 익숙한 일본의 고통</strong>
+        <ul>
+          <li>일본은 30년 동안 디플레이션만 겪었기 때문에, 인플레이션은 40대에게도 생소한 현상이다</li>
+          <li>인플레이션은 일본 국민들에게 혹독한 고통을 안겨줄 것이다</li>
+        </ul>
+      </li>
+      <li><strong>정치적 불안정 및 금리 인상 압력</strong>
+        <ul>
+          <li>인플레이션 압력으로 인해 기시다 내각이 무너지고, 이시바 내각도 흔들렸으며, 다카이치 내각도 불안정한 상황이다</li>
+          <li>일본 내부의 인플레이션 문제로 인해 일본은행은 <strong>금리를 인상해야 하는 압력</strong>을 받고 있다</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>엔화 약세 = 자산 시장 상승이라는 한 면만 보면 안 된다. 수입 물가 상승 → 소비자 물가 3% → 30년 디플레이션에 익숙한 국민의 고통 → 내각 교체와 금리 인상 압력으로 이어지는 부작용이 동시에 진행 중이다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>미국 경제에 미치는 영향: 장기 금리 상승과 부채 부담</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/575.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 미국 경제에 미치는 영향</figcaption></figure>
+    <h4>미국의 금리 인상 종용</h4>
+    <ul>
+      <li>미국 재무장관 베센트는 작년부터 일본을 방문할 때마다 일본에게 <strong>금리 인상</strong>을 요구했다</li>
+      <li>일본이 물가 상승 심리를 제압하지 않고 금리를 낮게 유지하자, 일본의 장기 금리가 상승하고 이는 다시 <strong>미국의 장기 금리</strong>를 끌어올린다</li>
+      <li>미국은 부채가 많아 금리를 낮추고 싶어 하지만, 일본의 금리 상승이 이를 방해하는 요인이 된다</li>
+      <li>베센트 장관은 일본의 물가 상승 기대 인플레이션이 장기 금리를 올리는 원인이라고 지적하며 금리 인상을 종용했다</li>
+    </ul>
+    <h4>미국 재무장관의 직접적인 메시지</h4>
+    <div class="script"><span class="lb">SCRIPT · 베센트 미 재무장관</span>
+      <p><strong>미·일 동시 외환 시장 개입 이후</strong> — 일본은행이 "멋지게 행동해 줄 거라고 본다"</p>
+      <p>"지금은 아베노믹스가 있던 그때와는 다르다" <em>(제로 금리를 유지하고 엔화를 풀 때가 아님을 강조)</em></p>
+    </div>
+    <ul>
+      <li>이는 일본에게 인플레이션을 잡기 위해 금리 인상을 하라는 <strong>직접적인 압박</strong>이다</li>
+      <li>결국 일본의 물가 상승 압력, 미국의 장기 금리 상승 부담 때문에 미국은 일본의 금리 인상을 요구하고 있다</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.3</span>아시아 신흥국 경제에 미치는 영향: 부채 부담과 수출 경쟁력 약화</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/679.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 아시아 신흥국 경제에 미치는 영향</figcaption></figure>
+    <h4>신흥국의 이중고: 달러 강세와 엔화 약세</h4>
+    <ul>
+      <li><strong>달러 강세로 인한 부채 부담 증가</strong>
+        <ul>
+          <li>신흥국들은 자금이 부족하여 해외에서 달러로 돈을 빌려오는 경우가 많다</li>
+          <li>달러가 강해지면 갚아야 할 달러 빚이 많아져 신흥국들의 부채 부담이 커진다</li>
+        </ul>
+      </li>
+      <li><strong>엔화 약세로 인한 수출 경쟁력 약화</strong>
+        <ul>
+          <li>달러 강세는 자국 통화 약세로 이어져 수출에는 유리할 수 있다</li>
+          <li>하지만 엔화가 달러보다 더 약해지면, 일본 제품의 가격 경쟁력이 높아져 신흥국들의 수출이 어려워진다</li>
+          <li>결국 신흥국들은 달러 강세로 부채 부담은 커지고, 엔화 약세로 수출은 안 되는 <strong>이중고</strong>를 겪게 된다</li>
+        </ul>
+      </li>
+      <li><strong>동남아시아 국가들의 어려움</strong>
+        <ul>
+          <li>인도네시아, 필리핀 등 동남아시아 국가들의 경제 분위기가 좋지 않다</li>
+          <li>엔화 약세가 지속되면 이들 국가들도 어려움을 겪을 수 있으며, 동아시아 외환 위기 때의 아픈 기억을 떠올리게 한다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>신흥국의 외환 시장 개입과 미국 국채 금리 상승</h4>
+    <ul>
+      <li><strong>자국 통화 약세 방어를 위한 외환 시장 개입</strong>
+        <ul>
+          <li>동남아시아 국가들의 체력이 과거보다 강해졌지만, 자국 통화 약세를 막기 위해 정부나 중앙은행이 외환 시장에 개입해야 할 수 있다</li>
+          <li>달러 강세를 막으려면 보유하고 있는 달러를 팔아야 하는데, 외환 보유고에는 주로 <strong>미국 국채</strong>가 들어있다</li>
+        </ul>
+      </li>
+      <li><strong>미국 국채 매각과 금리 상승</strong>
+        <ul>
+          <li>외환 방어를 위해 미국 국채를 팔면 국채 가격이 떨어지고 금리가 상승한다</li>
+          <li>이는 미국 재무장관 베센트가 불편해하는 요인 중 하나이다</li>
+        </ul>
+      </li>
+      <li><strong>미국 국채 수요 감소와 금리 부담 증가</strong>
+        <ul>
+          <li>중동 국가들이 전쟁으로 인해 미국 국채 매입을 줄이는 상황에서, 동남아시아 국가들까지 국채를 매각하면 미국 국채 금리는 더욱 뛰어오를 것이다</li>
+          <li>이는 결국 미국에 돈을 빌려주는 사람이 줄어들어 미국의 금리 부담이 더 커지는 결과를 초래한다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>엔화 약세에 대한 전 세계의 부담감</h4>
+    <ul>
+      <li>일본, 미국, 아시아 신흥국 모두 엔화 약세로 인해 불편함을 느끼고 있다</li>
+      <li>이러한 극단적인 엔화 약세에 대한 전 세계적인 부담감 때문에 <strong>28년 만에 미국이 일본 외환 시장에 개입</strong>한 것이다</li>
+    </ul>
+    <div class="note good"><span class="lb">정리</span>엔저의 피해자는 셋 — 일본(인플레이션), 미국(장기 금리 상승·부채 부담), 신흥국(달러 빚 + 수출 경쟁력 약화). 세 축이 모두 불편해졌기 때문에 미국이 28년 만에 개입했다.</div>
+  </div>
+</section>
+<section class="module" id="m3">
+  <div class="mod-head">
+    <div class="kicker">COURSE 03</div>
+    <h2>엔화 투자에 대한 신중한 접근과 한국의 환율 정책</h2>
+    <p>엔화 투자는 일본의 과거 트라우마로 인한 소극적인 금리 인상 정책 때문에 장기적인 관점에서 신중하게 접근해야 하며, 한국은 환율 안정을 위해 금리 인상이라는 어려운 선택을 해야 하는 상황이다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.1</span>엔화 투자에 대한 신중론: 일본의 트라우마와 소극적인 금리 인상</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/858.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 엔화 투자에 대한 신중론</figcaption></figure>
+    <h4>엔화 약세의 지속 가능성</h4>
+    <ul><li>엔화 약세를 계속 유지하는 것은 일본에게도 분명히 부담이 될 것이다</li></ul>
+    <h4>일본의 과거 트라우마와 금리 인상 주저</h4>
+    <ul>
+      <li><strong>디플레이션 경험</strong>
+        <ul>
+          <li>일본은 오랫동안 디플레이션을 겪으며 경기가 침체되었던 경험이 있어, 금리 인상을 매우 두려워한다</li>
+          <li>금리를 많이 올렸다가 경기가 박살 나 30년을 힘들게 보냈던 기억이 있다</li>
+        </ul>
+      </li>
+      <li><strong>엔화 강세에 대한 부정적 기억</strong>
+        <ul>
+          <li>일본은 엔화가 강했을 때 좋았던 기억이 거의 없다</li>
+          <li>1995년 고베 대지진, 2011년 동일본 대지진 당시 엔화 강세로 인해 경제적 어려움을 겪었다</li>
+          <li>따라서 엔화 강세가 급격히 진행되는 것에 대해 트라우마를 갖고 있다</li>
+        </ul>
+      </li>
+      <li><strong>금리 인상에 대한 소극적인 태도</strong>
+        <ul>
+          <li>금리를 올려 엔화 강세를 만들라는 요구에 일본은 과거 트라우마 때문에 적극적으로 나서기 어렵다</li>
+          <li>마치 "화장실 좀 다녀오고"처럼 온갖 핑계를 대며 미적거릴 가능성이 높다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>일본은행의 금리 인상 정책과 그 한계</h4>
+    <ul>
+      <li>일본은 마이너스 금리에서 <strong>1%까지</strong> 금리를 계속 올렸지만, 그 효과를 스스로 없애는 방식으로 진행했다</li>
+      <li>금리 인상 시 발생할 수 있는 문제에 대해 "언제든지 전화하라", "잘 케어해 주겠다"는 식으로 시장을 안심시켜 인상 효과를 반감시켰다</li>
+      <li>이러한 소극적인 태도로 인해 1%까지 금리를 올렸음에도 엔화 약세를 막지 못했다</li>
+    </ul>
+    <h4>2024년 8월 엔캐리 트레이드 청산 사태</h4>
+    <ul>
+      <li><strong>일본은행의 강경한 금리 인상 시도</strong>
+        <ul>
+          <li>2024년 7월, 일본은행 총재 우에다는 금리 인상을 제대로 할 것이며, 과거 일본과 다르다고 강경하게 발언했다</li>
+          <li>시장은 일본이 강력하게 금리를 올릴 것으로 예상하며 깜짝 놀랐다</li>
+        </ul>
+      </li>
+      <li><strong>미국 경기 침체 우려와 금리차 축소 예상</strong>
+        <ul>
+          <li>당시 미국에서는 경기 침체 소문이 돌며 연준이 금리를 내릴 수 있다는 전망이 나왔다</li>
+          <li>일본이 금리를 올리고 미국이 금리를 내리면, 양국 간 금리차가 크게 좁아질 것으로 예상되었다</li>
+        </ul>
+      </li>
+      <li><strong>엔캐리 트레이드 청산과 시장 충격</strong>
+        <ul>
+          <li>금리차가 좁아지면 엔화를 팔고 달러를 사서 미국에 투자하는 엔캐리 트레이드의 수익성이 사라진다</li>
+          <li>투자자들은 손실을 피하기 위해 달러를 팔고 엔화를 사서 돌아나가기 시작했고, 이는 엔화 강세와 일본 주식 시장 폭락으로 이어졌다</li>
+          <li>엔화는 <strong>160엔에서 140엔</strong>까지 급격히 강세로 전환되었고, 일본 닛케이 지수는 <strong>하루에 13% 폭락</strong>했다</li>
+        </ul>
+      </li>
+      <li><strong>일본은행의 정책 후퇴</strong>
+        <ul>
+          <li>일본은행은 이틀 만에 금리 인상을 세게 하지 않겠다고 정책을 후퇴하며 시장을 진정시켰다</li>
+          <li>이 사건은 '엔캐리 트레이드의 청산'으로 기억되며, 일본에게 큰 트라우마를 남겼다</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="chips"><span>2024.7 우에다 강경 발언</span><span>엔화 <b>160엔 → 140엔</b></span><span>닛케이 하루 <b>-13%</b></span><span>이틀 만에 정책 후퇴</span></div>
+    <h4>일본은행 총재의 딜레마와 엔화 약세 베팅</h4>
+    <ul>
+      <li><strong>과거 경험으로 인한 금리 인상 어려움</strong>
+        <ul>
+          <li>금리 인상으로 30년 디플레이션을 겪었고, 엔화 강세가 좋았던 적이 없으며, 최근 엔캐리 청산 사태까지 겪은 일본은행 총재는 금리를 세게 올리기 어렵다</li>
+          <li>"사람은 자기가 살아왔던 과거로부터 결코 자유로울 수가 없다"는 말이 이를 잘 보여준다</li>
+        </ul>
+      </li>
+      <li><strong>시장 플레이어들의 엔화 약세 베팅</strong>
+        <ul>
+          <li>시장 참여자들은 일본은행의 이러한 트라우마를 알고 있기 때문에, 일본이 금리를 세게 올리지 못할 것이라고 판단한다</li>
+          <li>따라서 금리를 1%까지 올렸음에도 불구하고 계속해서 엔화 약세에 베팅하는 것이다</li>
+        </ul>
+      </li>
+      <li><strong>엔화 약세의 모순 심화</strong>
+        <ul>
+          <li>엔화 약세가 한쪽 극단으로 치우치면서 일본, 미국, 동아시아 국가 모두 불편함을 느끼는 모순이 심화되고 있다</li>
+          <li>미국 재무장관 베센트가 일본에 금리 인상을 종용하는 이유도 여기에 있다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>엔화 투자의 장기적 관점과 기회비용</h4>
+    <ul>
+      <li><strong>긴 호흡에서의 엔화 강세 가능성</strong>
+        <ul>
+          <li>장기적으로는 일본 엔화가 강해지는 방향으로 갈 가능성이 있지만, 중간중간 과거 트라우마로 인해 정책이 바뀔 수 있다</li>
+          <li>엔화 강세로 가는 길이 순탄치 않으며, 기다림의 시간이 애매할 수 있다</li>
+        </ul>
+      </li>
+      <li><strong>다른 자산과의 비교 및 기회비용 고려</strong>
+        <ul>
+          <li>투자는 특정 자산 자체만 보는 것이 아니라, 다른 자산과의 경쟁도 고려해야 한다</li>
+          <li>돈을 잘 버는 기업의 주가가 오르지 않는 이유도 더 좋은 다른 기업이 있기 때문일 수 있다</li>
+          <li>엔화 투자 시에도 다른 자산들과 비교하여 감수해야 하는 <strong>기회비용</strong>을 함께 고려해야 한다</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>엔화 강세는 "언젠가"는 올 수 있어도 "언제"는 알 수 없다. 일본은행의 트라우마(30년 디플레·엔고 악몽·2024년 엔캐리 청산) 때문에 길이 순탄치 않으므로, 엔화 투자는 다른 자산 대비 기회비용까지 계산한 뒤 장기 관점으로만 접근한다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.2</span>한국의 환율 정책: 고환율 안정화의 대가</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/1211.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 한국의 환율 정책</figcaption></figure>
+    <h4>환율 변동의 심각성</h4>
+    <ul><li>원-달러 환율 3~4% 변동은 수치상 작아 보이지만, 국가 경제에 미치는 영향은 훨씬 크다</li></ul>
+    <h4>환율 변동에 대한 기대의 중요성</h4>
+    <ul>
+      <li><strong>금리 인상 전망 변화와 자산 가격 영향</strong>
+        <ul>
+          <li>미국 금리 전망이 '세 번 인하'에서 '두 번 인상'으로 바뀌면, 실제로는 <strong>다섯 번의 움직임</strong>과 같은 큰 변화로 인식된다</li>
+          <li>금 가격이 많이 빠진 것도 이러한 금리 인상 전망 변화 때문이다</li>
+        </ul>
+      </li>
+      <li><strong>환율 변동에 대한 기대의 반전</strong>
+        <ul>
+          <li>환율이 1,600원에서 1,400원으로 내려온 것이 단순히 200원 하락이 아니라, 기대했던 것과 반대로 돌았기 때문에 더 큰 변화로 느껴진다</li>
+          <li>예상과 반대로 움직일 때 사람들은 '의외'라고 느끼며, 그 영향은 실제 수치보다 크게 다가온다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>원-달러 환율 하락의 배경</h4>
+    <ul>
+      <li>미국의 엔화 약세 개입이 원-달러 환율 하락에 영향을 미쳤다</li>
+      <li>하지만 미국 개입 전에 이미 환율이 1,430원 정도로 내려왔고, 개입 이후 추가 하락했다</li>
+      <li>엔화와 원화는 <strong>동조화</strong>되어 움직이는 경향이 있어, 엔화 강세는 원화 강세에도 영향을 준다</li>
+    </ul>
+    <h4>고환율의 문제점과 환율 안정의 필요성</h4>
+    <ul>
+      <li><strong>수입 물가 상승과 인플레이션 압력</strong>
+        <ul>
+          <li>환율이 오랫동안 오르면 수입 물가가 상승하고, 이는 국내 인플레이션 압력을 높인다</li>
+          <li>인플레이션은 서민 경제에 어려움을 주고 양극화를 확대시킨다</li>
+        </ul>
+      </li>
+      <li><strong>환율 상승의 장기화와 부작용</strong>
+        <ul>
+          <li>환율이 4년 동안 올랐기 때문에, 계속 오를 것이라는 기대가 형성되면 물가 상승과 더욱 연관될 수 있다</li>
+          <li>하나의 추세가 형성되면 이를 누르기가 더 힘들어지므로, 적절한 시점에 정책적 개입이 필요하다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>한미 금리차 역전과 환율 상승 요인</h4>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>한국 기준금리</th><th>미국 기준금리</th><th>의미</th></tr></thead>
+      <tbody>
+        <tr><td>2010년대</td><td>3%</td><td>제로 금리</td><td>신용도가 높은 미국 금리가 한국보다 낮게 형성되는 일반적 구조</td></tr>
+        <tr><td>현재</td><td>2.75%</td><td>3.5%</td><td><strong>역전</strong> — 미국 금리가 한국보다 높음 (2022년부터 4년째)</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><strong>외국인 투자자들의 달러 선호</strong>
+        <ul>
+          <li>미국 금리가 높으면 외국인 투자자들은 이자를 더 많이 주는 달러를 선호하게 된다</li>
+          <li>원화를 팔고 달러를 사서 나가려는 수요가 늘어나면서 원화 약세, 달러 강세가 심화된다</li>
+          <li>양국의 금리가 뒤집어진 2022년부터 이러한 추세적인 환율 강세가 4년째 이어지고 있다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>한국의 딜레마: 환율 안정 vs 경기 안정</h4>
+    <ul>
+      <li><strong>금리차 해소를 통한 환율 안정 방안</strong> — 한미 금리차를 좁히면 환율을 안정시킬 수 있다</li>
+      <li><strong>미국 금리 인하 요청의 비현실성</strong> — 미국에 금리 인하를 요청하는 것은 현실적으로 어렵다</li>
+      <li><strong>한국의 금리 인상 선택과 그 대가</strong>
+        <ul>
+          <li>미국이 금리를 내리지 않으면 한국이 금리를 올려 금리차를 좁혀야 한다</li>
+          <li>하지만 미국은 경기가 좋아서 높은 금리를 견딜 수 있지만, 한국은 미국만큼 경기가 좋지 않아 높은 금리를 견디기 힘들다</li>
+          <li>결국 한국은행은 경기를 희생하며 환율을 안정시킬지, 환율 상승을 용인하며 경기를 안정시킬지 선택해야 하는 <strong>양날의 검</strong>과 같은 상황에 놓인다</li>
+          <li>지난 4년간은 미국보다 낮은 금리를 용인하며 환율 상승을 용인해왔다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>한국의 향후 환율 정책 방향</h4>
+    <ul>
+      <li><strong>환율의 뉴노멀과 부작용</strong> — 꾸준한 환율 상승은 사람들의 기대를 바꿔 환율의 <strong>뉴노멀</strong>을 만들 수 있으며, 이는 더 큰 부작용을 초래할 수 있다</li>
+      <li><strong>기준 금리 인상 의지</strong>
+        <ul>
+          <li>한국은 환율 안정을 위해 기준 금리 인상을 추진하고 있으며, 미국의 금리 인상 폭보다 더 크게 올릴 가능성이 있다</li>
+          <li>이는 과거 트라우마에 사로잡혀 소극적인 일본과 달리, 한국이 금리 인상에 대한 강한 의지를 보이고 있음을 의미한다</li>
+          <li>최근 하이닉스의 ADR 발행으로 인한 달러 자금 유입도 환율 안정에 영향을 주었다</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="note warn"><span class="lb">양날의 검</span>환율을 잡으려면 금리를 올려야 하고(경기 희생), 경기를 지키려면 환율 상승을 용인해야 한다. 지난 4년은 후자를 택했지만, 이제 뉴노멀 고착을 막기 위해 금리 인상 쪽으로 방향을 잡고 있다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.3</span>환율 1,300원대의 의미와 복잡한 방정식</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/1523.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 환율 1,300원대의 의미와 복잡한 방정식</figcaption></figure>
+    <h4>국가 경제 정책의 제한성</h4>
+    <ul>
+      <li>세계 경제를 주도하지 않는 나라에서는 경제 정책이 다른 나라의 정책에 영향을 받아 제한적일 수밖에 없다</li>
+      <li>과거 거시 경제학에서 배운 정책들이 실제로는 적용하기 어려울 정도로 세계 경제의 동조화 경향이 커졌다</li>
+    </ul>
+    <h4>환율 상승과 하락의 양면성</h4>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>수입 물가·구매력</th><th>수출</th><th>부작용</th></tr></thead>
+      <tbody>
+        <tr><td>환율 상승</td><td>수입 물가 상승 → 서민 경제 타격</td><td>유리 (혜택은 주로 대기업)</td><td>양극화 확대 · 장기화 시 내수-수출 양극화 (현재 중국과 유사)</td></tr>
+        <tr><td>환율 하락</td><td>수입 물가 하락 → 구매력 상승</td><td>불리할 수 있음</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <h4>환율 하락 시 수출 경쟁력 유지 조건</h4>
+    <ul>
+      <li><strong>독박 강세의 어려움</strong> — 한국만 원화 강세(독박 강세)가 되면 달러뿐만 아니라 모든 통화 대비 원화가 강해져 수출이 매우 어려워진다</li>
+      <li><strong>달러 약세 시 동반 강세의 유리함</strong>
+        <ul>
+          <li>한국 원화가 달러 대비 강세이지만, 다른 나라도 달러 대비 강세인 경우(달러 약세)에는 상황이 다르다</li>
+          <li>원화가 강해졌음에도 일본 등 경쟁국과의 수출 경쟁력은 훼손되지 않는다</li>
+        </ul>
+      </li>
+      <li><strong>상대적 우위의 중요성</strong>
+        <ul>
+          <li>관세 부과와 같은 상황에서도 경쟁국도 동일하거나 더 높은 관세를 맞으면 상대적으로 유리할 수 있다</li>
+          <li>즉, 환율은 그 자체로만 볼 것이 아니라 <strong>주변 통화와의 상대적인 움직임</strong>을 함께 고려해야 한다</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>환율의 복잡한 방정식</h4>
+    <ul>
+      <li>주변 통화와 동반 강세일 경우, 통화 강세가 지속 가능하며 부담이 덜하다</li>
+      <li>2007년 원화 강세 시기(900원대)에도 동아시아 국가들의 통화도 강세였고, 대중 수출이 많아 한국 경제가 큰 타격을 받지 않았다</li>
+      <li>환율은 교과서적인 단순한 관점이 아니라, 복잡한 방정식이 숨겨져 있는 심층적인 이해가 필요하다</li>
+    </ul>
+    <div class="note good"><span class="lb">정리</span>같은 1,300원대라도 "혼자 강세(독박)"인지 "달러 약세로 다 같이 강세"인지에 따라 의미가 완전히 다르다. 환율은 절대 수치가 아니라 주변 통화와의 상대 움직임으로 읽는다.</div>
+  </div>
+</section>
+<section class="module" id="m4">
+  <div class="mod-head">
+    <div class="kicker">COURSE 04</div>
+    <h2>달러 투자 전략과 미래 경제의 갈림길</h2>
+    <p>달러 투자는 환율 예측의 어려움을 고려하여 장기적인 관점에서 분할 매수하는 것이 좋으며, 미래 경제는 지정학적 리스크, 양극화, 연준 정책, AI 혁명, 달러 패권 등 다섯 가지 갈림길에 놓여 있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.1</span>달러 투자 전략: 예측 불가능성과 분할 매수</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/1693.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 달러 투자 전략</figcaption></figure>
+    <h4>환율 예측의 불가능성</h4>
+    <ul>
+      <li><strong>환율은 귀신도 모른다</strong></li>
+      <li>달러 강세 추세가 오래되면 사람들은 달러를 팔지 않고 쟁여두지만, 예상치 못한 약세가 나타나면 심리가 급변할 수 있다</li>
+      <li>2025년 5월 2일부터 7일까지 원-달러 환율이 <strong>1,470원에서 1,350원으로 120원</strong>이나 급락한 사례가 있다</li>
+      <li>이는 미국이 관세 협상으로 대만을 압박하여 대만이 달러 약세(대만 달러 강세)를 수용하겠다는 소문이 돌면서 발생했다</li>
+    </ul>
+    <h4>심리 변화에 따른 변동성 확대</h4>
+    <ul>
+      <li>한쪽 방향으로 쏠렸던 환율이 반대로 돌면, 심리가 바뀌면서 변동폭이 크게 나타날 수 있다</li>
+      <li>이러한 변동성은 때로는 펀더멘털보다 더 크게 나타나기도 한다</li>
+    </ul>
+    <h4>달러 자산 투자 전략</h4>
+    <ul>
+      <li><strong>타이밍 예측의 어려움</strong> — 환율의 저점을 잡는 것은 불가능하므로, 타이밍을 잡으려 하지 말아야 한다</li>
+      <li><strong>장기적인 관점의 분할 매수</strong>
+        <ul>
+          <li>달러는 장기적으로 무너지지 않고 다시 힘을 얻는 시기가 올 것이므로, <strong>나이키 커브</strong>와 같은 흐름을 염두에 두어야 한다</li>
+          <li>환율이 떨어지고 있을 때 조금씩 꾸준히 달러를 사서 모으는 방법을 사용하는 것이 좋다</li>
+          <li>보통 떨어질 때 사기 무서워하고 오를 때 사고 싶어 하는 경향이 있지만, 기계적으로 달러 자산을 늘리는 것을 고민해 볼 필요가 있다</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>저점은 못 잡는다. 떨어질 때 무섭더라도 기계적으로 조금씩 — 장기 분할 매수가 달러 자산의 정석이다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.2</span>미래 경제의 다섯 가지 갈림길</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/aIPNP8OawUc/1823.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 미래 경제의 다섯 가지 갈림길</figcaption></figure>
+    <table class="rank">
+      <thead><tr><th>갈림길</th><th>핵심 내용</th><th>유효성</th></tr></thead>
+      <tbody>
+        <tr><td>① 지정학적 리스크 (이란 사태)</td><td>아직 해결되지 않았으며 전 세계 물가 압력을 높이는 요인. 하반기 금리·물가 전망에 전쟁의 향방이 중요한 이슈</td><td>여전히 유효</td></tr>
+        <tr><td>② K자 양극화</td><td>이란 사태보다 훨씬 긴 호흡의 문제. 자본주의가 유지되는 한 더 높은 생산성 기대와 함께 양극화 계속 확대. 중간중간 속도 조절은 있음. 일론 머스크의 조만장자 대비 같은 현상이 중요한 의미</td><td>여전히 유효</td></tr>
+        <tr><td>③ 연준 의장 교체</td><td>4분기 FOMC와 잭슨홀 연설에서 연준 의장의 정책 방향과 연준 독립성 문제가 중요 이슈. 올해 하반기뿐 아니라 내년 상반기까지 자산 시장에 큰 영향</td><td>하반기~내년 상반기</td></tr>
+        <tr><td>④ AI 혁명</td><td>많은 사람들이 집중하는 테마이며, 꽤 오랫동안 지속될 것</td><td>장기 지속</td></tr>
+        <tr><td>⑤ 달러 투자</td><td>달러가 약해지면 미국의 힘이 빠지고 달러 패권이 흔들린다는 의구심이 늘지만, 결국 기축 통화는 달러로 다시 돌아온다. "결국은 달러다"라는 생각은 앞으로 상당 기간 이어질 것</td><td>상당 기간 유효</td></tr>
+      </tbody>
+    </table>
+    <h4>장기적인 관점의 갈림길</h4>
+    <ul>
+      <li>이러한 다섯 가지 갈림길은 단지 몇 달 안에 사라질 문제가 아니라, <strong>10년 후에도</strong> 현재를 돌아볼 때 중요한 주제로 남을 것이다</li>
+    </ul>
+    <div class="note good"><span class="lb">정리</span>이란·양극화·연준·AI·달러 — 다섯 가지는 이번 분기 이슈가 아니라 10년짜리 프레임이다. 고객 상담에서 "왜 달러 자산을 꾸준히 모아야 하는가"의 큰 그림으로 활용한다.</div>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101</b> · 교육자료 — 환율의 방정식</span><span>정리 <b>전종환 팀장</b></span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

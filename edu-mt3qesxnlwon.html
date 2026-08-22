@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0에서 100까지, 무경력 신입의 대면 영업 성장기 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* REVIEWS */
+.reviews{max-width:880px;margin:-14px auto 40px;padding:0 24px}
+.reviews .box{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.reviews .head{display:flex;align-items:center;gap:14px;padding:18px 24px;cursor:pointer;user-select:none}
+.reviews .head .avg{font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.reviews .head .stars{color:#F5A623;font-size:15px;letter-spacing:1px}
+.reviews .head .cnt{font-size:13px;color:var(--sub)}
+.reviews .head .tags{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.reviews .head .tags span{font-size:12px;color:var(--blue-deep);background:var(--sky);padding:4px 10px;border-radius:999px}
+.reviews .head .tg{font-size:13px;color:var(--sub);margin-left:10px}
+.reviews .list{display:none;border-top:1px solid var(--line)}
+.reviews.open .list{display:block}
+.reviews .rv{padding:16px 24px;border-bottom:1px solid var(--line-soft);font-size:14px;color:var(--ink-2)}
+.reviews .rv:last-child{border-bottom:0}
+.reviews .rv .who{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:13px;color:var(--sub)}
+.reviews .rv .who b{color:var(--ink);font-size:14px}
+.reviews .rv .who .st{color:#F5A623;letter-spacing:1px}
+.reviews .rv .txt{line-height:1.7;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+.reviews .rv.open .txt{-webkit-line-clamp:unset}
+.reviews .rv .rtags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.reviews .rv .rtags span{font-size:11.5px;color:var(--sub);background:#F2F4F6;padding:3px 9px;border-radius:999px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">SALES EDUCATION · 영업 교육자료</div>
+    <h1>0에서 100까지,<br>무경력 신입의 <span class="accent">대면 영업 성장기</span></h1>
+    <p class="lead">업적 0·월급 0으로 시작한 내향적 신입이 대면 상담으로 전환해 신뢰 기반 대형 계약과 카톡 3건 연쇄 계약을 만들어낸 과정, 하루 루틴·도구 활용법, 그리고 3월 부케 달성을 향한 마인드셋을 정리한 팀 공유 자료.</p>
+    <div class="meta"><span>주제 <b>대면 상담 · 카톡 영업 · 하루 루틴</b></span><span>팀 <b>TEAM 101</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline">
+  <a href="#m1"><div class="no">COURSE 01</div><div class="t">영업 초보 시절의 어려움과 극복</div><div class="ds">목표 · 업적 0 · 격려 멘트 · 대면 전환 결심</div></a>
+  <a href="#m2"><div class="no">COURSE 02</div><div class="t">대면 상담 신뢰 구축 노하우</div><div class="ds">조인트업 · 최애 고객 119만 원 · 가족 인적 · 정보 자료</div></a>
+  <a href="#m3"><div class="no">COURSE 03</div><div class="t">다양한 영업 방식과 업무 루틴</div><div class="ds">카톡 요약 · 운전자보험 절감 · 하루 루틴 · 구글 킵</div></a>
+  <a href="#m4"><div class="no">COURSE 04</div><div class="t">성공 마인드셋과 3월 목표</div><div class="ds">성장 5특징 · 끝장 마인드 · 부케 220만 원</div></a>
+</nav>
+
+<!-- 수강 후기: review-data JSON 배열에만 데이터를 넣는다. 비어 있으면 자동 숨김 -->
+<section class="reviews" id="reviews" hidden>
+  <div class="box">
+    <div class="head" id="rvHead"><span class="avg"></span><span class="stars"></span><span class="cnt"></span><div class="tags"></div><span class="tg">펼치기 ▾</span></div>
+    <div class="list" id="rvList"></div>
+  </div>
+</section>
+<script id="review-data" type="application/json">
+[
+]
+</script>
+
+<nav class="topnav"><ul><li><a href="#m1">01 초보 시절 극복</a></li><li><a href="#m2">02 대면 상담 신뢰</a></li><li><a href="#m3">03 영업 방식·루틴</a></li><li><a href="#m4">04 마인드셋·3월 목표</a></li></ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head">
+    <div class="kicker">COURSE 01</div>
+    <h2>영업 초보 시절의 어려움과 극복 과정</h2>
+    <p>영업 초보자가 겪는 어려움과 이를 극복하기 위한 초기 마인드셋 및 노력에 대해 설명한다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>영업 시작 전 마인드와 목표</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/3.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 영업 시작 전 마인드와 목표</figcaption></figure>
+    <p>영업을 시작하기 전의 개인적인 목표와 동기에 대해 이야기한다.</p>
+    <h4>2월 시작 시 마인드</h4>
+    <ul>
+      <li>1월 성과가 좋지 않아 <strong>바닥을 찍었다</strong>고 생각했으며, 신입 시절을 연상케 하는 상황이었다.</li>
+      <li>2월에는 '다시 올라가자', '무조건 대면 영업에 나가자'는 마인드로, <strong>'노력해야지'가 아닌 '무조건 해야 한다, 해야만 한다'</strong>는 각오로 시작했다.</li>
+    </ul>
+    <h4>입사 초반의 목표</h4>
+    <ul>
+      <li>하고 싶은 일을 가장 빠르게 이룰 수 있는 길이 <strong>영업</strong>이라고 생각했다.</li>
+      <li>BMW(버스, 지하철, 걷기) 일상에서 벗어나 자신의 차를 마련하고 싶었다.</li>
+      <li>식당이나 쇼핑 시 가격표를 보지 않고 비싼 레스토랑에 가고, 사고 싶은 것을 가격 따지지 않고 사고 싶었다.</li>
+      <li>가족과 함께 미국이나 캐나다 같은 해외여행을 <strong>'내 돈 내산'</strong>으로 가는 것이 최종 목표였다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>무경력 영업인의 초기 실패와 좌절</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/119.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 무경력 영업인의 초기 실패와 좌절</figcaption></figure>
+    <p>보험에 대한 지식이나 영업 경험이 전혀 없는 상태에서 겪었던 어려움과 실패 경험을 공유한다.</p>
+    <h4>무경력으로 시작한 영업</h4>
+    <ul>
+      <li>보험에 대해 전혀 모르고, 원래 <strong>보험과 영업을 싫어했던 사람</strong>이었다.</li>
+      <li>토스에 다니는 지인의 급여를 보고 혹해서 시작했으며, DB가 들어오면 100% 니즈가 있을 것이라고 생각했다.</li>
+      <li>하지만 현실은 달랐고, 내향적인 성격 때문에 전화 거는 것을 망설였으며, 전화 연결이 되어도 잘못 눌렀다거나 도중에 끊는 경우가 많아 상처와 현타를 많이 받았다.</li>
+    </ul>
+    <h4>초기 성과 부진</h4>
+    <ul>
+      <li>작년 3월 입사 후 3월과 4월 모두 <strong>업적 제로, 월급도 제로</strong>였다.</li>
+      <li>두 달 동안 버티는 것이 정말 힘들었으며, 이때 목표는 직장인 월급만이라도 받는 것, 즉 <strong>월 30만 원</strong>이었다.</li>
+      <li>5월에 14만 원을 벌었고, 첫 월급 24만 원을 6월 26일에 받았을 때 너무 좋았다고 회상한다.</li>
+    </ul>
+    <div class="chips"><span>3~4월 <b>업적 0 / 월급 0</b></span><span>목표 <b>월 30만 원</b></span><span>5월 <b>14만 원</b></span><span>첫 월급 <b>24만 원 (6/26)</b></span></div>
+    <h4>버틸 수 있었던 원동력</h4>
+    <ul>
+      <li>입사 초반에 윤희님이나 조한 팀장님께 그만두고 싶다는 면담을 꾸준히 했다.</li>
+      <li>윤희님은 목표가 얼마냐고 물었고, 30만 원을 말하자 격려했다.</li>
+      <li>조한 팀장님의 말이 버틸 수 있었던 원동력이 되었고, 이 말을 캡처하여 <strong>업무폰 배경화면</strong>으로 설정해두었다.</li>
+    </ul>
+    <div class="script"><span class="lb">SCRIPT · 팀장 격려 멘트</span>
+      <p><strong>윤희님</strong> — "30만 원 무조건 만들어주겠다, 야무진 대학생 타이틀 한번 해봐야지."</p>
+      <p><strong>조한 팀장님</strong> — "최선을 다해봐라, 후회 없이 그래야 안 돌아볼 수 있다. 이 업을 시작했으면 한 번쯤은 금융 치료 받아봐야 되지 않겠어?"</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>대면 상담으로의 전환과 성장</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/317.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 대면 상담으로의 전환과 성장</figcaption></figure>
+    <p>초기 비대면 상담의 한계를 느끼고 대면 상담으로 전환하며 겪었던 변화와 성장에 대해 설명한다.</p>
+    <h4>첫 금융 치료와 위기</h4>
+    <ul>
+      <li>6월에 <strong>133만 원</strong>을 벌며 첫 금융 치료를 경험했다.</li>
+      <li>하지만 7월에 반토막, 8월에 또 반토막이 나면서 "이대로 가다가는 입사 초반으로 돌아가겠는데, 뭐가 문제지?"라고 스스로 문제점을 찾으려 노력했다.</li>
+    </ul>
+    <h4>대면 상담의 필요성 인지</h4>
+    <ul>
+      <li>이때까지만 해도 비대면 상담을 고집했고, 사람을 만나 상담하는 것이 무서웠으며 어떻게 대해야 할지 몰랐다.</li>
+      <li>성과가 계속 떨어지자 "나는 또 전처럼 그만둬야 되는 생각을 하겠구나"라는 위기감을 느꼈다.</li>
+      <li>결국 남은 방법은 대면 상담밖에 없다고 판단하여 대면 상담을 시작하기로 결심했다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>"이제는 모른 척을 할 수가 없다, 부딪혀 봐야 된다." — 성과 하락을 회피하지 않고 <strong>대면 상담으로 정면 돌파</strong>하기로 한 결심이 성장의 전환점이 되었다.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head">
+    <div class="kicker">COURSE 02</div>
+    <h2>대면 상담을 통한 고객 신뢰 구축 및 영업 노하우</h2>
+    <p>대면 상담을 시작하며 고객과의 신뢰를 쌓고, 다양한 영업 방식을 시도하며 얻은 노하우와 성공 사례를 소개한다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>대면 상담 시작과 학습</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/374.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 대면 상담 시작과 학습</figcaption></figure>
+    <p>대면 상담을 시작하게 된 계기와 이를 위해 어떤 노력을 했는지 구체적으로 설명한다.</p>
+    <h4>첫 대면 상담 시도</h4>
+    <ul>
+      <li>어떻게 시작해야 할지 고민했지만, 비대면으로 통화했던 어머니 고객과 분위기가 너무 좋았고, 30분 넘게 통화하며 <strong>"이 사람은 만날 수 있겠다, 만나면 계약에 들어가겠다"</strong>는 생각이 들었다.</li>
+      <li>이 고객에게 실손 보험 전환 상담을 도와드리겠다고 약속하고 대면 상담을 잡았다.</li>
+    </ul>
+    <h4>규성님의 도움과 학습</h4>
+    <ul>
+      <li>실손 전환 경험이 없어 사무실에 남아있던 규성님과 지영 언니에게 질문했고, 대면 상담 강자인 규성님께 도움을 요청했다.</li>
+      <li>9월에 규성님께서 <strong>조인트업(Joint-up)</strong>을 해주면서 대면 상담의 흐름과 스타일을 배웠다.</li>
+      <li>9월 금조기 교육에서 규성님이 해주신 대면 롤플레잉을 <strong>녹음하여 집에 가서 그대로 스크립트를 작성하고 암기</strong>했다.</li>
+      <li>상담 시에는 항상 녹음을 하고, 9월에는 대면 상담이 무경력이었기 때문에 더 열심히 시간을 투자하여 늦게까지 퇴근하며 빠르게 습득하려고 노력했다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>최애 고객 사례: 신뢰를 통한 대형 계약 성사</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/506.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 최애 고객 사례</figcaption></figure>
+    <p>월 100만 원 보험료 부담을 느끼던 고객과의 상담 과정을 통해 신뢰를 쌓고 대형 계약을 성사시킨 구체적인 사례를 제시한다.</p>
+    <h4>최애 고객과의 만남</h4>
+    <ul>
+      <li>52세 일산 거주 어머니 고객이 최애 고객이며, 총 <strong>네 번의 대면 상담</strong>을 진행했다.</li>
+      <li>이 고객의 고민은 <strong>월 보험료 100만 원 납입이 너무 부담된다</strong>는 것이었다.</li>
+    </ul>
+    <h4>상담 과정과 문제 해결</h4>
+    <table class="rank">
+      <thead><tr><th>회차</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td>첫 번째 상담</td><td>규성님의 조인트업으로 기존 보험 해지를 도왔다.</td></tr>
+        <tr><td>두 번째 상담</td><td>어머니와 딸의 보험을 클로징했다.</td></tr>
+        <tr><td>세 번째 상담</td><td>아들의 보험 전자서명 및 지문서명이 계속 안 되어 종이 청약으로 진행하기 위해 만났다. 이때 저축 상품을 제안했지만 고객이 기존에 저축이 있어 관심이 없었다.</td></tr>
+        <tr><td>네 번째 상담</td><td>저축 상품을 클로징했고, 어머니와 친해져 밥을 거르지 말라며 소떡을 사주는 등 신뢰 관계를 형성했다.</td></tr>
+      </tbody>
+    </table>
+    <h4>세 번째 상담 이후 — 저축 상품 재제안 준비</h4>
+    <ul>
+      <li>추석 연휴 때 혼자 공부하며 <strong>동양생명 종신보험 해지 후 만기 시 재가입 방안</strong>을 고민했다.</li>
+      <li>동양생명 해약환급금과 남은 납입 기간(3년)을 고려하여, 10년 납입 상품으로 재가입 시 더 높은 이자를 얻을 수 있다는 점을 계산하여 설명했다.</li>
+      <li>해약환급금으로 새로운 보험에 가입하고 <strong>월 10만 원만 더 투자</strong>하는 방식을 추천했다.</li>
+    </ul>
+    <h4>결과 및 교훈</h4>
+    <div class="note good"><span class="lb">RESULT</span>월 100만 원이 부담된다던 고객이 기존 보험을 모두 해지하고 <strong>총 119만 원</strong>의 보험을 가입했다.</div>
+    <div class="note key"><span class="lb">KEY POINT</span>대면 상담을 통해 고객과 <strong>신뢰의 관계</strong>를 구축하는 것이 중요하다고 느꼈다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.3</span>대면 상담의 장점과 효과적인 활용법</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/645.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 대면 상담의 장점과 효과적인 활용법</figcaption></figure>
+    <p>대면 상담이 비대면 상담과 비교하여 가지는 장점과, 이를 효과적으로 활용하기 위한 전략들을 설명한다.</p>
+    <h4>비대면과 대면 상담의 차이점</h4>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>특징</th></tr></thead>
+      <tbody>
+        <tr><td>비대면 상담</td><td>전화로만 상담이 가능하여 정적이고 신뢰 형성이 어렵다. 계약이 들어가도 본인 것만 계약하고 끝나는 경우가 많다.</td></tr>
+        <tr><td>대면 상담</td><td>고객과 친해질 수 있으며, 아버님·어머님처럼 편하게 부르며 친밀감을 형성한다. 나중에 소개를 받을 확률이 높고, 한 명의 인적을 통해 가족 인적을 우르르 받을 수 있는 큰 장점이 있다.</td></tr>
+      </tbody>
+    </table>
+    <h4>첫 단독 대면 상담 경험</h4>
+    <ul>
+      <li>분당 6시 아버님 상담이 첫 단독 대면 상담이었고, 매우 떨렸다.</li>
+      <li>신도림에서 분당까지 가는 동안 규성님이 교육해준 RP(Role Playing) 방법을 계속 듣고 메모하며 준비했다.</li>
+      <li>6시에 시작한 상담이 8시 반에 끝났고, 아버님께 "고생하셨다며 내 시간 내줘서 감사하다"는 말을 듣고 감동받았다.</li>
+    </ul>
+    <h4>대면 상담의 정보 전달력과 기록</h4>
+    <ul>
+      <li>대면 상담의 큰 장점은 <strong>다양한 정보를 한 번에 전달받을 수 있다</strong>는 점이다.</li>
+      <li>대면 상담 시 <strong>타임스탬프가 찍힌 카메라</strong>로 사진을 찍어 시간과 장소를 기록한다.</li>
+      <li>10월 23일, 24일, 다음 주 수요일, 11월 5일, 12월 6일 등 꾸준히 대면 상담을 나갔다.</li>
+      <li>대면 상담 시 오른쪽 위에 항상 <strong>가족 인적사항</strong>을 기록하며, 자녀 세 명의 인적사항을 한 번에 받을 수 있어 큰 장점이라고 생각했다.</li>
+    </ul>
+    <h4>정보 전달의 중요성</h4>
+    <ul>
+      <li>일반 건강보험 플랜이나 연금 출시 시에만 정보를 돌리는 것이 아니라, <strong>정보 전달용 자료</strong>를 직접 만들어서 보낸다.</li>
+      <li>예를 들어, 대장 용종 제거 비용 같은 알면 좋을 정보를 자료로 만들었다.</li>
+      <li>5월에 가입 신청을 하지 않고 검토하겠다던 고객에게 6월에 연금 출시 소식, 납입 면제 제도, 대장 용종 제거 관련 자료를 보내자 연락이 왔다.</li>
+      <li>이후 이 고객의 설계와 가입까지 완료했으며, 이는 <strong>다양한 방식을 시도</strong>하는 것이 중요함을 보여준다.</li>
+    </ul>
+    <div class="script"><span class="lb">SCRIPT · 고객 회신</span>
+      <p><strong>고객</strong> — "보험 점검을 예전에 요청드렸는데, 현재 기준으로 다시 한번 요청드립니다."</p>
+    </div>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head">
+    <div class="kicker">COURSE 03</div>
+    <h2>다양한 영업 방식 시도와 효율적인 업무 루틴</h2>
+    <p>고객의 상황에 맞춰 다양한 영업 방식을 시도하고, 효율적인 업무 루틴과 도구 활용을 통해 성과를 극대화하는 방법을 설명한다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.1</span>고객 맞춤형 영업 전략</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/894.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 고객 맞춤형 영업 전략</figcaption></figure>
+    <p>고객의 특성과 상황에 따라 카톡, 전화, 대면 등 다양한 채널을 활용하여 계약을 성사시킨 사례들을 소개한다.</p>
+    <h4>카카오톡을 활용한 계약</h4>
+    <ul>
+      <li>보험 변경 절차를 문의한 고객에게 카톡으로 정보를 제공하여 <strong>암 진단금을 늘려</strong> 가입시켰다.</li>
+      <li>독감 플랜이 1~2천 원 할 때 카톡을 보냈을 때도 답장이 와서 가입시켰다.</li>
+    </ul>
+    <h4>지하철 설계 경험</h4>
+    <ul>
+      <li>"너 어디까지 해봤어?"라는 질문에 <strong>"지하철에서도 설계를 해봤다"</strong>고 당당하게 말할 수 있다.</li>
+      <li>옆 사람이 못 보게 화면을 내리면서까지 설계를 진행하며 발길을 최대한 줄였다.</li>
+    </ul>
+    <h4>비대면 운전자 보험에서 건강보험까지</h4>
+    <ul>
+      <li>12월 말 운전자 보험과 건강보험 이슈가 많을 때, 운전자 보험이 <strong>24,000원</strong>인 고객을 CRM 보장 분석으로 확인했다.</li>
+      <li>TM 가입 경로를 보고 "이 사람 무조건이다" 싶었지만, 업무 중이라 통화가 어렵다는 답을 받았다.</li>
+      <li>고객을 놓치기 싫어 명함과 함께 보험료 과잉이라 연락 남겼다는 카톡을 보냈고, 오후에 연락하겠다는 답을 받았으나 연락이 없었다.</li>
+      <li>12월 31일 마지막 날 3시 30분에 전화가 와서 바로 인적을 따고 설계 후 해지 절차를 안내하고 가입시켰다.</li>
+      <li>운전자 보험을 <strong>14,000원으로 절감</strong>시켜주며 신뢰를 쌓고 바로 건강보험까지 가입시켰으며, 1월 6일에 비대면 PT와 계약을 완료했다.</li>
+    </ul>
+    <div class="chips"><span>기존 운전자보험 <b>24,000원</b></span><span>절감 후 <b>14,000원</b></span><span>건강보험 <b>추가 계약</b></span></div>
+    <h4>부재 고객에게 카톡 요약 발송의 중요성</h4>
+    <ul>
+      <li>4번 부재중이던 고객에게 전화가 안 되자 <strong>문제점을 요약한 카카오톡과 엑셀 리포트</strong>를 발송했다.</li>
+      <li>고객이 카톡을 읽고 답장이 왔으며, 부족한 보험을 추천했다.</li>
+      <li>PT는 전화로 해야 한다고 생각했지만, 고객이 카톡으로 내용을 받을 수 있는지 물어봐서 전화 상담 내용을 모두 타이핑하여 비교 분석표와 함께 보냈다.</li>
+      <li>며칠 뒤 검토 여부를 묻자 고객이 여러 질문을 했고, 결국 운전자 보험과 함께 변경 가입을 완료했다.</li>
+      <li>이 고객이 <strong>키우먼</strong>이었는데, 남편도 다른 토스 설계사와 상담 중 특약이 오버해서 들어간 것 같다고 연락이 왔다.</li>
+      <li>남편의 설계안을 받아보니 쓸데없는 특약이 많고, 42세 남편에게 30년 납입 기간(72세까지 납입)을 설정한 문제점을 설명했다.</li>
+      <li>30년 납입 기간에는 카드 상품을 추천하며 설명했고, 결국 남편을 소개받아 가입을 마쳤다.</li>
+      <li>한 달 뒤 이 고객이 친정엄마의 보험 가입 가능 여부를 물었고, 토스 앱 신청 없이 카톡으로 인적사항을 받아 설계 후 가입을 완료했다.</li>
+    </ul>
+    <div class="note good"><span class="lb">RESULT</span>오로지 카톡으로만 거래한 이 고객에게서 <strong>세 건의 계약</strong>(본인·남편·친정엄마)이 나왔다.</div>
+    <div class="note key"><span class="lb">KEY POINT</span>고객이 부재중이라도 <strong>카톡 요약 발송을 포기할 수 없는 이유</strong>다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.2</span>효율적인 하루 루틴과 도구 활용</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/1177.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 효율적인 하루 루틴과 도구 활용</figcaption></figure>
+    <p>개인의 업무 효율을 높이기 위한 하루 루틴과 구글 킵, 스크립트 등 다양한 도구 활용법을 소개한다.</p>
+    <h4>하루 루틴</h4>
+    <table class="rank">
+      <thead><tr><th>시간대</th><th>주요 활동</th></tr></thead>
+      <tbody>
+        <tr><td>오전 9:30 ~ 12:00</td><td>평균 9시 30분에 출근하여 설계 수정이나 PT 자료를 준비한다. 가망이 없다고 판단되면 CRM을 열어 보장을 분석하고 문제점을 파악한다(예: 운전자 보험 비쌈, CI 보험 문제점 설명). 상담 노트에 키워드를 기록하며, <strong>TA 상담에 가장 효과적인 시간은 오전 11시</strong>로 이때는 무조건 콜이 들어온다.</td></tr>
+        <tr><td>점심 ~ 오후 5:00</td><td>12시 또는 12시 30분에 점심. 1시 30분~3시는 설계 및 PT 준비 — 이 시간대는 부재가 많아 인적을 따기 어렵기 때문이다. 설계 수정·자료 준비·부재 고객 카톡 요약 발송을 한다. 3시 30분~5시는 다시 TA를 하며 <strong>오후 TA 시간 중 가장 효과적</strong>이다. 중간에 비대면 PT가 있으면 PT를 하고, 콜방이 비면 TA를 한다.</td></tr>
+        <tr><td>퇴근 후 ~ 새벽 1:00</td><td>5시에 인적 사항을 정리하고 매니저에게 예약 톡을 발송한다. 할 일이 많으면 남은 업무를 처리하고 퇴근하지만 항상 노트북을 챙겨 집에 간다. 집에서 쉬다가 <strong>밤 11시~새벽 1시</strong>에 다음 날 준비(설계 수정, 부재 카톡 요약 미리 작성 등)를 한다.</td></tr>
+      </tbody>
+    </table>
+    <h4>구글 킵 활용</h4>
+    <ul>
+      <li>구글 킵을 활용하면 시간 분배가 더 잘 된다.</li>
+      <li>고객 정보(인적)는 <strong>일주일만 유효</strong>하므로, 고객 정보를 따면 킵에 등록하고 '고정됨'으로 표시하여 피드해야 할 고객들을 관리한다.</li>
+      <li>가입된 고객 정보는 따로 아래에 정리하고, 딜 교육 RP 스크립트, TA 피드백, 금주 기반 교육 RP, 조한 팀장님이 보내준 자료 등을 모두 킵에 저장한다.</li>
+      <li>비대면 PT 성공 시 보내는 '청약 완료 안내' 멘트도 미리 만들어 복사 붙여넣기 한다.</li>
+    </ul>
+    <h4>카카오톡 스크립트 활용</h4>
+    <ul>
+      <li>부재 카톡 요약 발송은 귀찮을 수 있지만, 카카오톡 스크립트에 종류별로 스크립트를 넣어두어 <strong>10~15분</strong>밖에 걸리지 않는다.</li>
+      <li>해지 및 이관 절차 안내, 운전자 보험 해지 절차 등도 미리 작성해두어 효율적으로 시간을 활용한다.</li>
+    </ul>
+    <h4>대면/비대면 상담 스크립트 정리</h4>
+    <ul>
+      <li>사람인지라 기억이 안 날 때를 대비해 자주 쓰는 대면 상담 RP들을 정리해두어 언제든지 볼 수 있도록 한다.</li>
+      <li>비대면 카카오톡 스크립트도 마찬가지로, <strong>고객 반응이 좋았던 멘트들을 캡처</strong>하여 파일로 만들고, 잘 안 풀릴 때 해당 멘트를 참고하여 수정한다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m4">
+  <div class="mod-head">
+    <div class="kicker">COURSE 04</div>
+    <h2>성공을 위한 마인드셋과 3월 목표</h2>
+    <p>성공하는 사람들의 특징을 통해 마인드셋의 중요성을 강조하고, 3월의 구체적인 목표를 제시한다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.1</span>성공하는 사람의 특징 5가지</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/1500.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 성공하는 사람의 특징 5가지</figcaption></figure>
+    <p>힘든 시기에 동기 부여를 받았던 영상 내용을 바탕으로 성공하는 사람들의 공통적인 특징을 설명한다.</p>
+    <table class="rank">
+      <thead><tr><th>특징</th><th>설명</th></tr></thead>
+      <tbody>
+        <tr><td>1. 혼자 있을 때 성장한다</td><td>자신에게 시간을 투자하고 조용히 외로움을 이겨내는 사람이 미친듯이 성장한다.</td></tr>
+        <tr><td>2. 거절당할 때 성장한다</td><td>거절은 자신을 더 단단하게 만들고 더 좋은 생각을 하게 만든다.</td></tr>
+        <tr><td>3. 불안할 때 성장한다</td><td>편안하면 안주하게 되지만, 불안하면 또 다른 방법을 찾으며 자연스럽게 성장한다.</td></tr>
+        <tr><td>4. 무시당할 때 성장한다</td><td>무시당하는 순간은 기분이 나쁘지만, 무시받지 않기 위해 실력으로 증명하려는 노력을 하게 된다.</td></tr>
+        <tr><td>5. 실패를 통해 성장한다</td><td>성공한 사람들은 실패를 통해 성장했으며, 성장은 고통스럽지만 자신을 더 단단하고 강하게 만든다.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.2</span>마인드셋의 중요성과 3월 목표</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/fcb496c2-24b5-47d1-aab0-ec68d0d6f239/1570.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 마인드셋의 중요성과 3월 목표</figcaption></figure>
+    <p>개인의 성장 경험을 바탕으로 마인드셋의 중요성을 강조하고, 3월의 구체적인 목표를 제시한다.</p>
+    <h4>개인의 성장 경험과 마인드셋</h4>
+    <ul>
+      <li>자신은 잘하는 사람이나 성공한 사람이라고 말할 수 없지만, <strong>0에서 100까지 올라오는 과정</strong> 속에서는 성공하고 성장했다고 생각한다.</li>
+      <li>위에서 언급한 성공하는 사람의 5가지 특징이 모두 자신에게 포함되어 있다고 생각한다.</li>
+      <li>회사에서 하루 일과를 열심히 보냈는지, 부족한 부분을 채우기 위해 노력했는지 스스로 돌아보고, 3월에는 다른 마인드를 가졌으면 좋겠다.</li>
+    </ul>
+    <h4>강지영 아나운서의 '끝장을 보겠다' 마인드</h4>
+    <ul>
+      <li>강지영 아나운서가 말한 <strong>"끝장을 보겠다"</strong>는 마인드 세팅을 해본 경험이 있는 사람과 없는 사람은 다르다.</li>
+      <li>"내가 그렇게까지 해봤다? 나는 이렇게까지 해볼 수 있는 사람이다"라는 자신감이 있어야 한다.</li>
+    </ul>
+    <div class="script"><span class="lb">SCRIPT · 자신감 멘트</span>
+      <p><strong>질문</strong> — "너 어디 가서 그렇게까지 해봤어?"</p>
+      <p><strong>나</strong> — "나는 더한 것도 해봤고, 그래서 이 정도 일은 그때 독기 있는 내가 나와서 해줄 거다."</p>
+    </div>
+    <h4>경쟁 속에서의 독기 모먼트</h4>
+    <ul>
+      <li>우리는 무한한 경쟁 속에 있으며, 매월이 경쟁이기 때문에 그런 <strong>'독기 모먼트'</strong>가 필요한 순간들이 있다.</li>
+      <li>현재 놓인 상황에서 최선을 다하는 사람이 되기를 바란다.</li>
+    </ul>
+    <h4>3월의 목표: 부케 달성</h4>
+    <ul>
+      <li>3월의 목표는 <strong>부케 달성</strong>이며, 220만 원을 채워 프로모션에 가고 싶다는 강한 의지를 보인다.</li>
+      <li>현재 대면 상담 3개를 잡아놓았으며, 이들을 클로징하여 위빅 20을 채울 수 있도록 노력할 것이라고 다짐한다.</li>
+    </ul>
+    <div class="chips"><span>목표 <b>부케 달성</b></span><span>프로모션 기준 <b>220만 원</b></span><span>대면 상담 <b>3건 확보</b></span><span>위빅 <b>20</b></span></div>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101 교육자료</b> · 전종환 팀장 / 010-4637-3210</span><span>내부 교육 공유용</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+<script>// reviews render — 수정 금지
+(function(){
+  const el=document.getElementById('review-data'),sec=document.getElementById('reviews');
+  if(!el||!sec)return;let data=[];try{data=JSON.parse(el.textContent||'[]')}catch(e){}
+  if(!Array.isArray(data)||!data.length)return;
+  sec.hidden=false;
+  const avg=(data.reduce((s,r)=>s+(+r.rating||0),0)/data.length);
+  const star=n=>'★'.repeat(Math.round(n))+'☆'.repeat(5-Math.round(n));
+  sec.querySelector('.avg').textContent=avg.toFixed(1);
+  sec.querySelector('.stars').textContent=star(avg);
+  sec.querySelector('.cnt').textContent='수강 후기 '+data.length+'건';
+  const tc={};data.forEach(r=>(r.tags||[]).forEach(t=>tc[t]=(tc[t]||0)+1));
+  sec.querySelector('.tags').innerHTML=Object.entries(tc).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([t,c])=>'<span>#'+t+' '+c+'</span>').join('');
+  const list=document.getElementById('rvList');
+  list.innerHTML=data.map(r=>'<div class="rv"><div class="who"><b>'+(r.name||'')+'</b>'+(r.team?'<span>'+r.team+'</span>':'')+(r.status?'<span>'+r.status+'</span>':'')+'<span class="st">'+star(+r.rating||0)+'</span>'+(r.date?'<span>'+r.date+'</span>':'')+'</div><div class="txt">'+(r.text||'')+'</div>'+((r.tags||[]).length?'<div class="rtags">'+r.tags.map(t=>'<span>#'+t+'</span>').join('')+'</div>':'')+'</div>').join('');
+  const head=document.getElementById('rvHead');
+  head.addEventListener('click',()=>{sec.classList.toggle('open');head.querySelector('.tg').textContent=sec.classList.contains('open')?'접기 ▴':'펼치기 ▾';});
+  list.querySelectorAll('.txt').forEach(x=>x.addEventListener('click',()=>x.parentElement.classList.toggle('open')));
+})();
+</script>
+</body>
+</html>

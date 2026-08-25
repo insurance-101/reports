@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>간병보험 이해하기 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">PRODUCT STUDY · 상품 스터디</div>
+    <h1>간병보험 이해하기 —<br>실손이 못 막는 <span class="accent">간병비</span>, 가족의 일상을 지키는 법</h1>
+    <p class="lead">간병이 가족 전체를 묶어두는 현실과 하루 15만 원의 간병인 비용, 현물 제공형·사용일당형의 차이, 중증·경증·자녀 입원 사례별 효과, 그리고 연령대별 제안 논리까지 간병보험 세일즈의 전체 흐름을 정리한다.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>정리 <b>전종환 팀장</b></span><span>TEAM 101 교육자료</span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">간병보험의 필요성</div><div class="ds">간병이라는 족쇄 · 하루 15만 원 · 실손 사각지대</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">종류 및 보장 방식</div><div class="ds">간병인 · 장기요양 · 치매 · 현물형 vs 일당형</div></a><a href="#m3"><div class="no">COURSE 03</div><div class="t">간병인이 필요한 상황</div><div class="ds">중증 장기 · 경증 수술 · 자녀 입원 · 통합병동 한계</div></a><a href="#m4"><div class="no">COURSE 04</div><div class="t">실제 활용 사례</div><div class="ds">뇌출혈 재활 · 담낭 절제 · 자녀 골절</div></a><a href="#m5"><div class="no">COURSE 05</div><div class="t">연령대별 제안 포인트</div><div class="ds">자녀 · 비혼 · 중장년 · 고령층</div></a></nav>
+
+
+<nav class="topnav"><ul><li><a href="#m1">01 필요성</a></li><li><a href="#m2">02 종류·보장 방식</a></li><li><a href="#m3">03 필요한 상황</a></li><li><a href="#m4">04 활용 사례</a></li><li><a href="#m5">05 연령대별 제안</a></li></ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head">
+    <div class="kicker">COURSE 01</div>
+    <h2>간병보험의 필요성 및 중요성</h2>
+    <p>간병보험은 간병으로 인한 경제적 부담과 가족의 일상 붕괴를 막기 위해 반드시 필요하며, 특히 간병비는 실손보험으로 해결되지 않는 사각지대에 놓여있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>간병이 가족에게 미치는 영향: '간병이라는 족쇄'</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/20.jpg" alt="간병이라는 족쇄" loading="lazy"><figcaption>강의 화면 — 간병이라는 족쇄</figcaption></figure>
+    <ul>
+      <li>간병은 환자뿐만 아니라 가족 전체의 삶을 묶어두는 <strong>'족쇄'</strong>와 같다고 표현된다.
+        <ul>
+          <li>실제 사례에서 <strong>37세의 자녀</strong>가 6년 전 뇌경색으로 쓰러진 아버지의 간병 때문에 결혼과 직장 생활을 포기하고 미래가 불안정해지는 상황이 발생했다.</li>
+          <li>아버지는 뇌경색 후유증과 합병증으로 인해 한 발 전진했다가 두 발 후퇴하는 상황을 반복하며, 요로결석 수술 후 과다출혈로 콧줄을 꽂고 유동식을 섭취하는 생활로 돌아가기도 했다.</li>
+          <li>간병하는 자녀는 "밑 빠진 독에 언제까지 물을 부어야 하냐", "모두 그만두고 싶다"고 호소하며, 병상 옆에 묶인 일상에 한없이 쪼그라들었다고 한다.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>가족 간병을 피할 수 없는 현실적인 이유</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/124.jpg" alt="가족 간병을 피할 수 없는 이유" loading="lazy"><figcaption>강의 화면 — 가족 간병을 피할 수 없는 현실적인 이유</figcaption></figure>
+    <h4>간병인 비용의 막대한 부담</h4>
+    <ul>
+      <li><strong>간병인 비용의 막대한 부담</strong> 때문에 가족 간병을 선택할 수밖에 없는 경우가 많다.</li>
+      <li>하루 간병인 비용을 한 달로 계산하면 개인의 <strong>월급보다 훨씬 많은</strong> 경우가 많아, 결국 직장을 그만두고 간병을 해야 하는 상황이 발생한다.</li>
+    </ul>
+    <h4>환자 상태가 나쁠 경우 간병인이 간병을 거부</h4>
+    <ul>
+      <li>일정 금액을 받고 일하지만, 손이 많이 가고 힘든 환자는 간병인들이 꺼려하며, <strong>웃돈</strong>을 더 주지 않으면 간병인들이 도망가는 경우도 많다.</li>
+      <li>환자가 아프면서 신경이나 정신적으로 문제가 생겨 평소와 달리 욕설이나 폭력적인 행동을 보이는 경우도 있어, 여성 간병인들이 버티지 못하고 도망가는 사례도 많다.</li>
+      <li>이러한 이유들로 인해 중증 가족에 대한 간병은 가족들을 더욱 힘들게 하는 요인이 된다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>간병보험이 필요한 핵심적인 이유</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/224.jpg" alt="간병보험이 필요한 이유" loading="lazy"><figcaption>강의 화면 — 간병보험이 필요한 핵심적인 이유</figcaption></figure>
+    <ul>
+      <li><strong>전문 간병인 비용이 매우 부담스럽고 매년 상승</strong>하고 있기 때문이다.
+        <ul><li>대체적으로 하루에 약 <strong>15만 원 내외</strong>의 비용이 발생하며, 이 비용은 매년 계속 오르고 있다.</li></ul>
+      </li>
+      <li>간병은 환자뿐만 아니라 <strong>가족 전체를 힘들게 하고, 가족 전체의 일상을 무너뜨린다</strong>.
+        <ul><li>가족들 간에 간병을 누가 할 것인지, 간병비를 누가 감당할 것인지를 두고 다툼이 발생하는 경우가 많다.</li></ul>
+      </li>
+      <li><strong>치료비는 실손보험으로 해결되지만, 간병비는 실손보험으로 해결되지 않는 사각지대</strong>에 놓여있다.
+        <ul><li>간병에 드는 비용과 시간은 온전히 가족들이 감당해야 하는 힘든 부분이다.</li></ul>
+      </li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>간병인 하루 약 15만 원 · 매년 상승 · <strong>실손 사각지대</strong> — 치료비는 실손이 막아도 간병비는 가족이 온전히 감당한다.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head">
+    <div class="kicker">COURSE 02</div>
+    <h2>간병보험의 종류 및 보장 방식</h2>
+    <p>간병보험은 크게 간병인 지원, 장기요양 등급에 따른 정액 보장, 치매 보장으로 나뉘며, 간병인 보장은 현물 제공형과 사용일당형으로 구분된다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>간병보험의 세 가지 주요 분류</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/193.jpg" alt="간병보험의 세 가지 분류" loading="lazy"><figcaption>강의 화면 — 간병보험의 세 가지 주요 분류</figcaption></figure>
+    <div class="chips"><span>① 간병인 보장</span><span>② 장기요양 등급 정액 보장</span><span>③ 치매 보장</span></div>
+    <ul>
+      <li>간병보험은 크게 세 가지 종류로 구분된다.
+        <ul>
+          <li><strong>간병인을 보장</strong>해주는 상품</li>
+          <li><strong>장기요양 등급에 따라 정액을 보장</strong>해주는 상품</li>
+          <li><strong>치매에 대한 보장</strong>을 해주는 상품</li>
+        </ul>
+      </li>
+      <li>각 상품은 장단점이 다양하지만, 최근에는 이 세 가지를 전반적으로 <strong>혼합하여 제안</strong>하는 추세이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>간병인 보험의 두 가지 보장 방식: 현물 제공형 vs. 사용일당형</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/264.jpg" alt="현물 제공형 vs 사용일당형" loading="lazy"><figcaption>강의 화면 — 현물 제공형 vs. 사용일당형</figcaption></figure>
+    <p>간병인 보험은 간병인을 사용할 때 보장해주는 특약으로, 크게 두 가지 방식으로 나뉜다.</p>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>현물 제공형</th><th>사용일당형</th></tr></thead>
+      <tbody>
+        <tr><td>방식</td><td>보험사가 제휴 업체와 연결해 간병인을 직접 파견</td><td>고객이 직접 고용 후 청구 → 가입 금액만큼 정액 현금 지급</td></tr>
+        <tr><td>장점</td><td>고객이 직접 간병인을 찾을 걱정이 없음</td><td>원하는 사람을 직접 고용 가능 → 가족 간병 시 활용</td></tr>
+        <tr><td>단점</td><td>인력 매칭 대기·매칭 어려움, 특정 병원 지정 업체 문제</td><td>간병비 상승으로 전문 간병인 비용 대비 지급액 부족 가능</td></tr>
+        <tr><td>추천 고객</td><td>간병인 구하기 힘들 것 같거나 전화 한 통으로 파견받길 원하는 고객</td><td>원하는 사람이 가족을 돌봐야 한다고 생각하거나 가족 간병 예정 고객</td></tr>
+      </tbody>
+    </table>
+    <h4>현물 제공형</h4>
+    <ul>
+      <li>보험사가 제휴 업체와 연결하여 <strong>간병인을 직접 파견</strong>해주는 방식이다.</li>
+      <li><strong>장점</strong>: 고객이 직접 간병인을 찾을 걱정이 없다는 점이다.</li>
+      <li><strong>단점</strong>: 업체 상황에 따라 인력 매칭에 <strong>대기 시간</strong>이 발생하거나 매칭이 어려운 경우가 있다. 특정 병원이 정해진 업체를 사용해야 하는 경우, 현물 제공형 간병인이 들어가기 어려운 경우도 있다.</li>
+      <li><strong>추천 고객</strong>: 간병인 구하는 것이 힘들 것 같거나, 전화 한 통으로 간병인을 보내주기를 원하는 고객에게 적합하다.</li>
+    </ul>
+    <h4>사용일당형</h4>
+    <ul>
+      <li>고객이 직접 간병인을 고용한 후 비용을 청구하면, <strong>가입 금액만큼 정액으로 현금을 지급</strong>해주는 방식이다.</li>
+      <li><strong>장점</strong>: 고객이 원하는 사람을 직접 고용할 수 있다는 점이다. 이 때문에 <strong>가족 간병</strong> 시 현장에서 많이 활용되며, 가족이 간병하는 김에 간병인 비용을 지급받는 컨셉으로 많이 이야기된다.</li>
+      <li><strong>단점</strong>: 간병비가 매년 상승하고 있어, 가족이 아닌 전문 간병인을 불렀을 때 지급받는 금액이 <strong>실제 비용보다 부족</strong>해질 수 있다.</li>
+      <li><strong>추천 고객</strong>: 자신의 가족을 자신이 원하는 사람이 돌봐야 한다고 생각하거나, 가족 간병을 하게 될 것 같은 고객에게 적합하다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head">
+    <div class="kicker">COURSE 03</div>
+    <h2>간병인이 필요한 다양한 상황과 활용 사례</h2>
+    <p>간병인은 중증 질환의 장기 간병뿐만 아니라 경증 수술, 골절, 어린 자녀의 입원 등 다양한 상황에서 필요하며, 간호간병통합서비스로는 중증 환자의 1대1 간병 수요를 충족하기 어렵다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.1</span>중증 질환으로 인한 장기 간병</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/380.jpg" alt="중증 질환 장기 간병" loading="lazy"><figcaption>강의 화면 — 중증 질환으로 인한 장기 간병</figcaption></figure>
+    <ul>
+      <li><strong>암, 심뇌혈관 질환</strong> 등 중증 질환은 후유증이나 집중 재활 치료로 <strong>최소 6개월 이상</strong>의 간병이 필요한 경우가 많다.
+        <ul>
+          <li>뇌졸중이나 뇌수술 후 재활, 암 환자의 항암 치료 후 후유증, 기력 저하, 발열 등으로 입원 치료가 필요할 때 간병인을 사용할 수 있다.</li>
+          <li>장기 입원은 <strong>경제 활동</strong>에도 문제를 일으키는데, 간병보험은 이러한 부분을 어느 정도 커버해 줄 수 있다.</li>
+        </ul>
+      </li>
+      <li><strong>암 치료 시 간병인의 필요성</strong>은 생각보다 높다.
+        <ul>
+          <li>특히 연세가 있는 환자가 항암 치료를 받을 때 매우 힘들어하며, 발열, 기력 저하, 구토 등으로 옆에서 케어해줄 사람이 필요하다.</li>
+          <li>밤에 <strong>낙상 위험</strong>이나 화장실 이용 시 위험 등 안전 문제 때문에 옆에 있어줄 사람이 필요하며, 독성이 강한 약을 쓰거나 고령 환자의 경우 항암 치료 기간에도 간병인이 필수적이다.</li>
+        </ul>
+      </li>
+      <li><strong>수술</strong>이 필요한 경우에도 간병이 필요한 상황이 많다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.2</span>경증에서 중등도 질환 및 상해</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/482.jpg" alt="경증·중등도 질환 및 상해" loading="lazy"><figcaption>강의 화면 — 경증에서 중등도 질환 및 상해</figcaption></figure>
+    <ul>
+      <li><strong>골절 같은 상해</strong>로 수술이 필요한 경우, 수술 당일부터 퇴원까지 일정한 도움이 필요하다.
+        <ul>
+          <li>중증은 아니지만 화장실 이용, 거동, 이동 등에서 어려움이 있어 주변에서 챙겨주고 서포트해주는 것이 필요하다.</li>
+          <li>수술 후 일시적으로 거동이 힘들거나 컨디션 저하가 있을 수 있어 부축하고 동행해주는 도움이 필요하다.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.3</span>어린 자녀의 입원 시 간병의 필요성</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/517.jpg" alt="어린 자녀 입원 시 간병" loading="lazy"><figcaption>강의 화면 — 어린 자녀의 입원 시 간병의 필요성</figcaption></figure>
+    <ul>
+      <li><strong>미성년 자녀가 병원에 입원하면 무조건 보호자가 상주</strong>해야 한다.
+        <ul><li>경증 상병이라도 엄마, 아빠, 할머니 등 누군가 옆에 있어야 하며, 대체적으로 부모 중 한 명이 보호자 역할을 하게 된다.</li></ul>
+      </li>
+      <li>부모가 간병을 하게 되면 <strong>회사나 사회생활에 문제가 생길 수 있어</strong>, 이에 대한 보장이 필요하다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.4</span>간호간병통합서비스와 개인 간병인의 차이</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/545.jpg" alt="간호간병통합서비스 vs 개인 간병인" loading="lazy"><figcaption>강의 화면 — 간호간병통합서비스와 개인 간병인의 차이</figcaption></figure>
+    <ul>
+      <li><strong>간호간병통합서비스</strong>는 중증 환자의 1대1 케어가 필요한 경우에는 거의 사용할 수 없다.
+        <ul>
+          <li>주로 간단한 수술, 날짜가 정해진 치료 과정, 단순한 수술(담낭 절제, 골절 수술 등)에 한해서만 이용할 수 있도록 입원 가능한 환자의 질병 및 상병이 정해져 있다.</li>
+          <li>중증 환자처럼 1대1 간병인이 필요한 경우에는 통합병동에 들어갈 수 없으며, <strong>개인 간병인을 사용해야 한다</strong>고 안내받는다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>간호간병통합서비스와 개인 간병인 비교</h4>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>간호간병통합서비스</th><th>개인 간병인</th></tr></thead>
+      <tbody>
+        <tr><td>간병 인력</td><td>병동 간호사·조무사 등 병원 인력</td><td>전문 간병인 (1대1 간병 필요 시)</td></tr>
+        <tr><td>본인 부담금</td><td>병실(2·4·6인실)에 따라 다르나 대체로 몇만 원 수준</td><td>건강보험 혜택 없음 — <strong>전액 본인 부담</strong></td></tr>
+        <tr><td>간병 방법</td><td>필요시 호출하면 와서 도와주는 개념</td><td>1대1 밀착 간병</td></tr>
+        <tr><td>사용 결정</td><td>의료진이 결정, 입원 시 통합병동 안내</td><td>가족이 직접 결정, 실손·건보 도움 없이 개인 부담</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>현재 <strong>요양병원에 한해</strong> 국민건강보험이 간병인 지원 제도를 확대하고 있지만, 이는 매우 제한적으로 시행되는 과정이다.
+        <ul><li>따라서 이 제도 하나만 믿고 간병인이 필요 없다고 말하기에는 아직 위험한 시기이므로, 개인적으로 간병인에 대한 준비를 해야 한다.</li></ul>
+      </li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>"통합병동 있으니 간병인 필요 없다"는 위험한 판단 — 중증 1대1 케어는 통합병동 <strong>이용 불가</strong>, 건보 지원은 요양병원 한정·제한적.</div>
+  </div>
+</section>
+
+<section class="module" id="m4">
+  <div class="mod-head">
+    <div class="kicker">COURSE 04</div>
+    <h2>간병보험의 실제 활용 사례 및 효과</h2>
+    <p>간병보험은 뇌출혈과 같은 중증 질환의 장기 재활, 담낭 절제술 같은 경증 수술, 어린 자녀의 입원 등 다양한 상황에서 가족의 부담을 줄이고 환자의 회복을 돕는 데 큰 역할을 한다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.1</span>뇌출혈 수술 후 집중 재활 기간 (중증 질환)</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/682.jpg" alt="뇌출혈 수술 후 집중 재활" loading="lazy"><figcaption>강의 화면 — 뇌출혈 수술 후 집중 재활 기간</figcaption></figure>
+    <ul>
+      <li>뇌출혈 수술 후 <strong>최소 6개월의 집중 재활 기간</strong>이 필요하며, 이 기간 동안 간병인이 반드시 필요하다.
+        <ul><li>뇌가 다친 후 회복 및 재활을 통해 좋아질 수 있는 기간을 보통 6개월로 보며, 이 기간이 지나면 회복에 제한이 생긴다.</li></ul>
+      </li>
+    </ul>
+    <h4>간병보험이 없을 경우의 문제점</h4>
+    <ul>
+      <li><strong>간병인 사용 시 막대한 비용 부담</strong>: 하루 15만 원 기준으로 한 달에 <strong>450만 원</strong>이 발생하며, 이는 일반 주부가 벌어오기 어려운 금액이다.</li>
+      <li><strong>가족 간병 선택</strong>: 간병인 비용 부담 때문에 가족이 직접 간병하는 사례가 많다.
+        <ul>
+          <li>남편이 쓰러지면 배우자가 케어하는 경우가 많고, 여성 환자의 경우 혼자 계시는 경우가 많아 더욱 슬픈 현실이다.</li>
+          <li>가족 간병은 <strong>소득 단절, 육아 공백</strong> 등의 문제를 야기하며, 간병하다가 보호자가 먼저 쓰러지는 경우도 많을 정도로 힘들다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>간병보험이 있을 경우의 이점</h4>
+    <ul>
+      <li>간병 비용 부담 없이 <strong>전문 간병인</strong>을 사용할 수 있다.</li>
+      <li>아픈 환자 걱정 없이 원래 하던 경제 활동과 자녀 육아 등 <strong>일상생활을 유지</strong>할 수 있다.</li>
+      <li>비용 준비가 어렵다면 6개월 정도 간병 후 요양 등급을 받아 시설에 입소하는 등의 선택지도 고려할 수 있다.</li>
+      <li>최근 간병보험은 <strong>365일 쉬지 않고 보장</strong>하도록 구성되어 있어 활용도가 매우 높다.</li>
+    </ul>
+    <div class="note good"><span class="lb">비용 예시</span>하루 15만 원 × 30일 = <strong>월 450만 원</strong> · 6개월 집중 재활 시 약 2,700만 원 — 간병보험 유무가 가족의 일상을 가른다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.2</span>담낭 절제술 등 간단한 수술 후 (경증 수술)</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/803.jpg" alt="담낭 절제술 등 경증 수술" loading="lazy"><figcaption>강의 화면 — 담낭 절제술 등 간단한 수술 후</figcaption></figure>
+    <ul>
+      <li>담낭 절제술이나 여성의 자궁 수술 등 간단한 수술 후에도 <strong>간병인의 유무는 큰 차이</strong>를 만든다.
+        <ul><li>간단한 수술이라 간병인을 불러야 할지 고민하는 경우가 많다.</li></ul>
+      </li>
+    </ul>
+    <h4>간병보험이 없을 경우의 문제점</h4>
+    <ul>
+      <li><strong>가족에게 도움 요청</strong>: 혼자 있기 불편하여 남편에게 연차를 쓰고 이틀 정도 도와달라고 요청하는 등 가족의 눈치를 보게 된다.</li>
+      <li><strong>혼자 불편함 감수</strong>: 불편함을 감수하며 혼자서 병원 생활을 버텨야 한다.</li>
+      <li><strong>개인 비용 부담</strong>: 간병인을 부르면 <strong>5일 기준 75만 원</strong>(하루 15만 원)의 비용을 개인이 전액 부담해야 한다.</li>
+    </ul>
+    <h4>간병보험이 있을 경우의 이점</h4>
+    <ul>
+      <li>가족 눈치를 보지 않고, 혼자 불편함을 감당하지 않으며, 간병 비용 부담 없이 간병인의 도움을 받을 수 있다.</li>
+      <li>편안하게 병원 생활을 하고 <strong>충분히 회복한 후 퇴원</strong>할 수 있다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.3</span>어린 자녀의 골절 수술 (미성년 자녀)</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/865.jpg" alt="어린 자녀의 골절 수술" loading="lazy"><figcaption>강의 화면 — 어린 자녀의 골절 수술</figcaption></figure>
+    <ul>
+      <li>어린 자녀가 계단에서 넘어져 골절 수술을 하는 등 아이들은 입원하는 경우가 많다.</li>
+    </ul>
+    <h4>간병보험이 없을 경우의 문제점</h4>
+    <ul>
+      <li><strong>보호자 상주 필수</strong>: 미성년 자녀는 무조건 보호자가 상주해야 한다.</li>
+      <li><strong>부모의 경제 활동 어려움</strong>: 부모가 케어하면 경제 활동에 어려움이 생긴다.
+        <ul>
+          <li>직장인은 연차를 사용할 수 있지만, 개인 가게 운영자나 <strong>자영업자</strong>는 가게 문을 닫아야 하므로 소득 단절 문제가 발생한다.</li>
+          <li><strong>일용직 근로자</strong>는 일한 만큼 돈을 받기 때문에 쉬게 되면 소득이 줄어드는 문제가 생긴다.</li>
+        </ul>
+      </li>
+      <li><strong>간병인 고용의 어려움</strong>: 간병인 비용도 부담이지만, 어린아이가 낯선 사람과 함께 있으려 하지 않는 문제도 발생한다.</li>
+    </ul>
+    <h4>간병보험이 있을 경우의 이점</h4>
+    <ul>
+      <li>입원 기간 동안 간병 비용을 충분히 지원받을 수 있다.</li>
+      <li>보통 <strong>가족 간병</strong>으로 많이 진행되며, 부모가 케어하면서 아이에게 안정감을 주고 잘 회복할 수 있도록 도울 수 있다.</li>
+      <li>특히 자녀 보험에서는 가족 간병이 가능한 <strong>간병인 사용 일당 상품</strong>이 많이 활용되며, 보험료 대비 보장이 좋은 경우가 많아 현장에서 많이 제안된다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m5">
+  <div class="mod-head">
+    <div class="kicker">COURSE 05</div>
+    <h2>연령대별 간병보험의 필요성 및 제안 포인트</h2>
+    <p>간병보험은 모든 연령대에서 필수적인 상품이며, 어린 자녀부터 고령층까지 각자의 상황과 리스크에 맞춰 소득 보존, 가족 부재 대비, 자녀에게 부담 주지 않기, 은퇴 자산 방어 등 다양한 논리로 제안할 수 있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">5.1</span>간병보험은 시대에 반드시 필요한 상품</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/958.jpg" alt="시대에 반드시 필요한 상품" loading="lazy"><figcaption>강의 화면 — 간병보험은 시대에 반드시 필요한 상품</figcaption></figure>
+    <ul>
+      <li>간병보험은 현재를 살아가는 시대에 <strong>반드시 필요한 상품</strong>이라고 할 수 있다.</li>
+      <li>고객의 상태나 상황에 따라 리스크를 분석하고 <strong>맞춤형으로 제안</strong>하는 것이 중요하다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">5.2</span>연령대별 간병보험 제안 포인트</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/974.jpg" alt="연령대별 제안 포인트" loading="lazy"><figcaption>강의 화면 — 연령대별 간병보험 제안 포인트</figcaption></figure>
+    <table class="rank">
+      <thead><tr><th>연령대</th><th>핵심 리스크</th><th>제안 논리</th></tr></thead>
+      <tbody>
+        <tr><td>어린 자녀</td><td>부모의 경제 활동 중단</td><td>부모의 소득 보존</td></tr>
+        <tr><td>미혼·비혼</td><td>돌봐줄 가족의 부재</td><td>노후 전문 간병인 도움 미리 대비</td></tr>
+        <tr><td>중장년층</td><td>자녀에게 짐이 되고 싶지 않음</td><td>스스로 케어 준비 · 은퇴 자산 방어</td></tr>
+        <tr><td>고령층</td><td>배우자도 고령이라 간병 불가</td><td>전문 간병인이 케어·회복 모두 유리</td></tr>
+      </tbody>
+    </table>
+    <h4>어린 자녀 (미성년 자녀)</h4>
+    <ul>
+      <li>부모가 주로 케어하기 때문에 <strong>부모의 경제 활동 중단 문제</strong>가 발생한다.</li>
+      <li>따라서 <strong>부모의 소득을 보존</strong>해야 한다는 논리로 간병보험을 제안할 수 있다.</li>
+    </ul>
+    <h4>미혼 또는 비혼주의자</h4>
+    <ul>
+      <li>나중에 아플 때 자신을 돌봐줄 <strong>가족의 부재</strong>가 가장 큰 문제이다.</li>
+      <li>병상에서 가족이 없는 환자를 보며 마음 아팠던 경험을 통해, 나를 돌봐줄 가족이 있어야 한다는 생각을 하게 된다.</li>
+      <li>비혼주의자들은 젊을 때 여유 있을 때 보험으로 미리 대비하여, 노후에 <strong>전문 간병인의 도움</strong>을 받겠다고 이야기한다.</li>
+      <li>이러한 점을 포인트로 간병보험을 제안할 수 있다.</li>
+    </ul>
+    <h4>중장년층</h4>
+    <ul>
+      <li>이미 연세가 있고 몸이 여기저기 아파오기 시작하며, <strong>자녀들에게 짐이 되고 싶지 않은 마음</strong>이 크다.</li>
+      <li>이 연령대는 간병에 대한 니즈가 이미 높은 상태이며, 자녀에게 부담을 주지 않으면서 스스로 케어를 받을 수 있도록 준비해야 한다.</li>
+      <li><strong>은퇴 자산 방어</strong>를 위해서도 간병에 대한 준비가 필요하다.</li>
+    </ul>
+    <h4>고령층</h4>
+    <ul>
+      <li>컨디션이 나빠지고 거동이 힘들면 일상생활 자체가 불가능해지는데, 이때 간병보험이 있으면 자신을 잘 케어해 줄 수 있다.</li>
+      <li>고령층이 되었을 때(예: 80세) 아파서 누워있으면, 자신을 케어해주는 가족(배우자)도 거의 80세로 기력이 없어 제대로 된 간병을 하기 어렵다.</li>
+      <li>이러한 상황에서는 서로가 힘들기 때문에, <strong>전문 간병인</strong>을 사용하면 오히려 케어도 더 잘 되고 회복도 더 잘 될 수 있다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">5.3</span>간병보험의 중요성 재강조</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/718feee7-d00f-4074-8c80-f03f5f210a59/1106.jpg" alt="간병보험의 중요성 재강조" loading="lazy"><figcaption>강의 화면 — 간병보험의 중요성 재강조</figcaption></figure>
+    <ul>
+      <li>결론적으로, 간병보험은 <strong>나이대별, 시대별</strong>로 다양하게 활용될 수 있다.</li>
+      <li>국민건강보험이나 실손보험의 <strong>사각지대</strong>에 놓여있기 때문에, 스스로 준비해야 하는 매우 중요한 부분이다.</li>
+      <li>이러한 논리로 고객들에게 간병보험의 필요성을 설명하고 제안하는 것이 효과적이다.</li>
+    </ul>
+    <div class="note key"><span class="lb">정리</span>간병비 = 건보·실손 <strong>사각지대</strong>. 연령대별 리스크(소득 보존 · 가족 부재 · 자녀 부담 · 은퇴 자산)를 짚어 맞춤 제안한다.</div>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101</b> · 토스인슈어런스 교육자료</span><span>전종환 팀장 · 010-4637-3210</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

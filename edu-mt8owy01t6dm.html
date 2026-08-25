@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026년 8월 시장 브리핑 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">MARKET BRIEFING · 월간 시장 동향</div>
+    <h1>2026년 8월 시장 브리핑 —<br>7월 <span class="accent">-22%</span> 폭락 뒤, 하반기를 읽는 8가지 이슈</h1>
+    <p class="lead">7월 코스피 -22% 폭락과 하루 1000포인트 급등, 서킷브레이크 9회라는 전례 없는 변동성의 원인(반도체 쏠림·전쟁·환율)을 짚고, 세제 개편안과 분산 투자 원칙 등 고객 안내에 필요한 하반기 핵심 이슈를 정리한다.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>정리 <b>전종환 팀장</b></span><span>TEAM 101 교육자료</span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">7월 증시 변동성</div><div class="ds">-22% 폭락 · 하루 1000p 급등 · 서킷브레이크 9회</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">하반기 전망·이슈</div><div class="ds">전쟁 종료 · 고용 둔화 · 환율 · 세제 개편</div></a><a href="#m3"><div class="no">COURSE 03</div><div class="t">한국 경제의 역설</div><div class="ds">경상수지 서프라이즈 · 반도체 비중 53%</div></a><a href="#m4"><div class="no">COURSE 04</div><div class="t">전쟁 장기화·유가</div><div class="ds">이란 협상 · 중간선거 · 유가→물가→금리</div></a><a href="#m5"><div class="no">COURSE 05</div><div class="t">글로벌 증시·반도체</div><div class="ds">코스피 +40% · 키옥시아 +400% · 창신메모리</div></a><a href="#m6"><div class="no">COURSE 06</div><div class="t">개인 투자 동향</div><div class="ds">서학개미 3배 레버리지 39조 · 빅테크 우려</div></a><a href="#m7"><div class="no">COURSE 07</div><div class="t">환율·세제 개편안</div><div class="ds">1400원대 · 강남3구 보유세 · 가업상속공제</div></a><a href="#m8"><div class="no">COURSE 08</div><div class="t">변동성 투자 전략</div><div class="ds">현금 보유 · 분산 투자 · 저평가 자산</div></a></nav>
+
+
+<nav class="topnav"><ul><li><a href="#m1">01 7월 변동성</a></li><li><a href="#m2">02 하반기 이슈</a></li><li><a href="#m3">03 한국 경제 역설</a></li><li><a href="#m4">04 전쟁·유가</a></li><li><a href="#m5">05 글로벌 증시</a></li><li><a href="#m6">06 개인 투자 동향</a></li><li><a href="#m7">07 환율·세제</a></li><li><a href="#m8">08 투자 전략</a></li></ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head"><div class="kicker">COURSE 01</div><h2>7월 한국 증시의 극심한 변동성 분석</h2><p>7월 한국 증시는 전례 없는 폭락과 폭등을 반복하며 개인 투자자들에게 큰 손실을 안겨주었으며, 이는 비정상적인 시장 상황을 보여주었다.</p></div>
+  <div class="card">
+    <h3><span class="idx">1.1</span>7월 증시의 잔인한 폭락과 개인 투자자들의 손실</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/0.jpg" alt="7월 증시의 잔인한 폭락과 개인 투자자들의 손실" loading="lazy"><figcaption>강의 화면 — 7월 증시의 잔인한 폭락과 개인 투자자들의 손실</figcaption></figure>
+    <div class="chips"><span>7월 코스피 <b>-22%</b></span><span>5월 상승 <b>+28%</b></span><span>7천 돌파 후 개인 매수 <b>100조 원</b></span></div>
+    <ul>
+      <li>7월 한국 증시는 <strong>마이너스 22%</strong>라는 기록적인 폭락을 경험했다.
+        <ul><li>이는 전 세계에서 가장 큰 폭락으로, 한 나라의 인덱스가 22%까지 떨어지면 그 안에 있는 기업들은 하한가가 무더기로 나올 정도로 심각한 수준이다.</li></ul></li>
+      <li>5월의 급상승 폭(28%)보다 7월의 하락 폭이 더 크게 느껴졌지만, 실제로는 5월에 <strong>28%</strong> 상승한 만큼 7월에도 폭락할 수 있다는 의미를 내포한다.
+        <ul><li>한 달에 30% 가까이 상승했다는 것은 반대로 한 달에 30% 가까이 폭락할 수도 있다는 것을 의미하며, 이는 <strong>정상적인 시장이 아니다</strong>.</li></ul></li>
+      <li>개인 투자자들은 코스피가 7천 포인트를 돌파한 이후 <strong>100조 원</strong>을 매수했으며, 7월에는 5천 포인트까지 하락하여 큰 손실을 입었다.
+        <ul><li>2026년 1월 코스피가 4천 포인트 초반대였고, 9천까지 갔다가 6천으로 떨어졌음에도 주변에서 손실을 봤다는 이야기가 많은 것은 개인 투자자들이 <strong>고점에 진입</strong>했기 때문이다.</li></ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">1.2</span>전례 없는 변동성과 시장 안전장치 발동</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/183.jpg" alt="전례 없는 변동성과 시장 안전장치 발동" loading="lazy"><figcaption>강의 화면 — 전례 없는 변동성과 시장 안전장치 발동</figcaption></figure>
+    <ul>
+      <li>7월 31일, 한국 코스피는 <strong>단 하루 만에 1000포인트 이상 급등</strong>하는 역사적인 변동성을 보였다.
+        <ul>
+          <li>과거 1000포인트 상승에는 18년(1000→2000), 14년(2000→3000)이 걸렸던 것에 비하면, 며칠 만에 1000포인트가 오르는 급상승이 있었고, 7월에는 하루 만에 1000포인트가 올랐다.</li>
+          <li>이러한 엄청난 변동성은 개인 투자자들이 견디기 매우 어려운 수준이다.</li>
+        </ul></li>
+      <li>증시 안전장치인 <strong>서킷 브레이크</strong>가 올해만 9번 발동되는 이례적인 상황이 발생했다.
+        <ul>
+          <li>서킷 브레이크는 코스피 개장 이후 36~40년 동안 총 15번 발동되었는데, 그중 <strong>9번이 올해</strong> 발동된 것이다.</li>
+          <li>이는 올해 증시가 얼마나 힘들었는지를 보여주는 지표이다.</li>
+        </ul></li>
+      <li>7월 말의 극심한 변동성으로 인해 <strong>레버리지 투자자들의 청산 및 마진콜</strong>이 속출했다.
+        <ul>
+          <li>7월 초부터 말까지 극심한 하락이 이어져 6,700선이 깨지고 6,500선까지 내려갔다가 마지막 날 급등했다.</li>
+          <li>월요일부터 목요일까지의 폭락을 금요일의 급등이 상쇄하여 전체적인 하락을 체감하기 어려웠지만, 레버리지 투자자들은 큰 손실을 입었다.</li>
+          <li>많은 개인 투자자들이 이러한 변동성 장세를 이기지 못하고 손실을 기록했으며, 심지어 증시를 다시는 안 보겠다는 이야기까지 나오고 있다.</li>
+        </ul></li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>서킷 브레이크 역대 15회 중 <strong>9회가 올해</strong>. 레버리지 투자자는 청산·마진콜 속출 — 변동성 장세에서 레버리지는 치명적이다.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head"><div class="kicker">COURSE 02</div><h2>하반기 시장 전망 및 주요 이슈</h2><p>하반기에도 변동성 장세는 계속될 것으로 예상되며, 전쟁 종료 시점, 고용 둔화, 환율 변동, 그리고 세제 개편안 발표가 주요 이슈로 작용할 것이다.</p></div>
+  <div class="card">
+    <h3><span class="idx">2.1</span>하반기 변동성 지속과 주요 경제 지표</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/372.jpg" alt="하반기 변동성 지속과 주요 경제 지표" loading="lazy"><figcaption>강의 화면 — 하반기 변동성 지속과 주요 경제 지표</figcaption></figure>
+    <ul>
+      <li>하반기에도 <strong>변동성 장세는 계속될 것</strong>이며, 폭등과 폭락이 반복될 수 있다.
+        <ul><li>투자자들은 시장의 <strong>펀더멘털 훼손 여부</strong>를 확인하며 하반기를 지켜봐야 한다.</li></ul></li>
+      <li><strong>전쟁 종료 시점</strong>은 하반기 시장의 핵심 이슈 중 하나이다.
+        <ul>
+          <li>현재 전쟁은 휴전 상태로 보이지만, 11월 트럼프의 중간선거를 앞두고 지지율 하락과 사망자 발생 등으로 분위기가 좋지 않다.</li>
+          <li>전쟁이 끝나지 않고 물가 불안정, 유가 급등락 등 시장 불안정 요소가 많아 하반기 <strong>금리 인상 압박</strong>이 강하게 작용하고 있다.</li>
+        </ul></li>
+      <li><strong>고용 둔화</strong>는 오히려 금리 인상 중단에 대한 기대를 불러일으키고 있다.
+        <ul><li>고용 둔화는 경제 악화를 의미하지만, 시장은 이를 금리 인상에 제동을 거는 긍정적인 신호로 해석하고 있다.</li></ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">2.2</span>환율 하락 이슈와 반도체 쏠림 현상</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/485.jpg" alt="환율 하락 이슈와 반도체 쏠림 현상" loading="lazy"><figcaption>강의 화면 — 환율 하락 이슈와 반도체 쏠림 현상</figcaption></figure>
+    <ul>
+      <li>최근 <strong>환율 하락</strong> 이슈가 점검되고 있다.</li>
+      <li>7월 증시 폭락과 폭등의 가장 큰 이유는 <strong>반도체 쏠림 현상</strong> 때문이다.
+        <ul>
+          <li>한국 전체 시가총액에서 <strong>삼성전자와 하이닉스</strong>가 차지하는 비중이 50%를 넘어 60%에 가까워지고 있다.</li>
+          <li>이 두 기업이 조금만 흔들려도 전체 코스피가 크게 출렁이는 구조이다.</li>
+        </ul></li>
+      <li>2분기 반도체 기업들의 실적은 기대 이상으로 좋았음에도 불구하고 주가는 하락했다.
+        <ul><li>이는 한국뿐만 아니라 미국에서도 동일하게 나타난 현상이다.</li></ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">2.3</span>세제 개편안 발표와 투자 전략</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/543.jpg" alt="세제 개편안 발표와 투자 전략" loading="lazy"><figcaption>강의 화면 — 세제 개편안 발표와 투자 전략</figcaption></figure>
+    <ul>
+      <li>7월 말과 8월의 중요한 이슈 중 하나는 <strong>세제 개편안 발표</strong>이다.
+        <ul>
+          <li>2026년 세제 개편안은 국회 통과 시 <strong>2027년 1월부터 적용</strong>될 예정이므로, 영업하는 사람들은 반드시 꼼꼼히 살펴봐야 한다.</li>
+          <li>고객들에게 <strong>절세 준비를 위한 사전 안내</strong>가 필요하다.</li>
+          <li>하반기부터 2차 세제 개편에 관한 강의가 계속 진행될 예정이다.</li>
+        </ul></li>
+    </ul>
+    <div class="note key"><span class="lb">영업 포인트</span>2026 세제 개편안 → 국회 통과 시 <strong>2027년 1월 시행</strong>. 고객 절세 사전 안내가 하반기 핵심 활동이다.</div>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head"><div class="kicker">COURSE 03</div><h2>한국 경제의 역설과 반도체 의존도 심화</h2><p>한국 경제는 경상수지 흑자 등 긍정적인 지표에도 불구하고, 반도체 산업에 대한 높은 의존도로 인해 7월 증시가 크게 하락하는 역설적인 상황을 겪었다.</p></div>
+  <div class="card">
+    <h3><span class="idx">3.1</span>긍정적인 경제 지표와 반도체 의존도의 역설</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/596.jpg" alt="긍정적인 경제 지표와 반도체 의존도의 역설" loading="lazy"><figcaption>강의 화면 — 긍정적인 경제 지표와 반도체 의존도의 역설</figcaption></figure>
+    <ul>
+      <li>한국 경제는 7월 증시 하락에도 불구하고 <strong>매우 좋은 분위기</strong>를 유지하고 있다.
+        <ul>
+          <li>1분기 경상수지가 좋았고, 2분기는 1분기보다 훨씬 좋았으며, 이는 기업들의 실적이 잘 나오기 때문이다.</li>
+          <li>상반기 GDP와 실질 지니어스, 무역 소득 모두 크게 증가하여 <strong>"상반기는 서프라이즈"</strong>라고 표현될 정도로 실적이 좋았다.</li>
+        </ul></li>
+      <li>그럼에도 불구하고 증시가 하락한 이유는 <strong>반도체 비중이 높은 국가들이 흔들렸기 때문</strong>이다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>국가</th><th>시총 내 반도체 비중</th><th>특징</th></tr></thead>
+      <tbody>
+        <tr><td>한국</td><td>53%</td><td>반도체 기업의 작은 흔들림에도 큰 영향</td></tr>
+        <tr><td>대만</td><td>56%</td><td>한국과 유사한 고의존 구조</td></tr>
+        <tr><td>미국</td><td>17~18%</td><td>반도체가 흔들려도 나머지 기업이 견고하면 버팀</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>이러한 반도체 의존도로 인해 7월 한 달 사이에 증시가 <strong>30% 이상 폭락</strong>하는 모습을 보였다.
+        <ul><li>반도체 수익률은 원래 100%가 넘을 정도로 좋았지만, 7월 한 달 동안 극단적으로 많이 떨어졌다.</li></ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">3.2</span>반도체 쏠림 현상의 지속과 하반기 전망</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/664.jpg" alt="반도체 쏠림 현상의 지속과 하반기 전망" loading="lazy"><figcaption>강의 화면 — 반도체 쏠림 현상의 지속과 하반기 전망</figcaption></figure>
+    <ul>
+      <li>상대적으로 <strong>반도체 비중이 낮았던 기업들</strong>은 7월에 좋은 흐름을 보였다.</li>
+      <li>이러한 <strong>쏠림 현상</strong>은 갑자기 사라지지 않을 것이며, 하반기에도 <strong>반도체 움직임에 따라 한국 코스피가 크게 좌우될 것</strong>으로 예상된다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m4">
+  <div class="mod-head"><div class="kicker">COURSE 04</div><h2>전쟁 장기화와 유가, 물가 불안정</h2><p>전쟁의 장기화는 유가와 물가 불안정을 야기하며, 이는 하반기 금리 상승 압박으로 이어져 시장 변동성을 더욱 키우는 요인이 되고 있다.</p></div>
+  <div class="card">
+    <h3><span class="idx">4.1</span>전쟁 장기화의 원인과 미국의 딜레마</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/693.jpg" alt="전쟁 장기화의 원인과 미국의 딜레마" loading="lazy"><figcaption>강의 화면 — 전쟁 장기화의 원인과 미국의 딜레마</figcaption></figure>
+    <ul>
+      <li><strong>전쟁의 장기화</strong>는 시장 변동성을 일으키는 또 다른 주요 원인이다.
+        <ul>
+          <li>하메네이 사망 후 폭격에도 불구하고 이란이 쉽게 항복하지 않고 버티고 있으며, 협상이 잘 진전되지 않고 있다.</li>
+          <li>이란은 전쟁 피해 보상금을 요구하고 있지만, 트럼프는 돈이 없어 난색을 표하고 있어 협상이 지지부진하다.</li>
+        </ul></li>
+      <li><strong>11월 중간선거</strong>가 다가오면서 미국의 상황은 더욱 복잡해지고 있다.
+        <ul>
+          <li>중동 국가들도 어려움을 겪고 있으며, 미국은 국방 예산으로 미사일을 너무 많이 사용하여 미사일이 부족하다는 이야기까지 나오고 있다.</li>
+          <li>내년 국방 예산의 국회 통과 여부도 미지수여서, 시장에서는 이란보다 <strong>미국이 더 급하다</strong>는 인식이 확산되고 있다.</li>
+        </ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">4.2</span>전쟁 종료의 중요성과 경제 안정 효과</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/759.jpg" alt="전쟁 종료의 중요성과 경제 안정 효과" loading="lazy"><figcaption>강의 화면 — 전쟁 종료의 중요성과 경제 안정 효과</figcaption></figure>
+    <ul>
+      <li>전쟁이 빠르게 끝나야 시장의 변동성이 가라앉을 것으로 예상된다.</li>
+      <li>전쟁이 종료되면 <strong>유가가 안정</strong>되고, 이는 다시 <strong>물가 안정</strong>으로 이어진다.</li>
+      <li>물가 안정이 이루어져야 하반기 <strong>금리 상승 압박을 방어</strong>할 수 있으므로, 전쟁 종료 소식이 매우 중요하게 기다려지고 있다.</li>
+    </ul>
+    <div class="note key"><span class="lb">연결 고리</span>전쟁 종료 → 유가 안정 → 물가 안정 → <strong>금리 인상 압박 방어</strong> → 변동성 완화</div>
+  </div>
+</section>
+
+<section class="module" id="m5">
+  <div class="mod-head"><div class="kicker">COURSE 05</div><h2>글로벌 증시 동향 및 반도체 산업의 영향</h2><p>한국 증시는 7월 폭락에도 불구하고 연초 대비 높은 상승률을 기록했으며, 일본 증시 또한 반도체 붐으로 크게 상승하는 등 글로벌 시장에서 반도체 산업의 영향력이 두드러졌다.</p></div>
+  <div class="card">
+    <h3><span class="idx">5.1</span>한국 증시의 높은 상승률과 일본 증시의 반도체 붐</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/786.jpg" alt="한국 증시의 높은 상승률과 일본 증시의 반도체 붐" loading="lazy"><figcaption>강의 화면 — 한국 증시의 높은 상승률과 일본 증시의 반도체 붐</figcaption></figure>
+    <div class="chips"><span>코스피 연초 대비 <b>+40%</b></span><span>키옥시아 연초 대비 <b>+400%</b></span></div>
+    <ul>
+      <li>7월에 크게 하락했음에도 불구하고 <strong>코스피는 여전히 전 세계에서 가장 많이 오른 증시 중 하나</strong>이다.
+        <ul>
+          <li>4,000포인트에서 시작하여 6,000~6,200포인트를 오가며 연초 대비 <strong>40% 상승</strong>했다.</li>
+          <li>하지만 급격한 상승과 하락으로 인해 고점에서 진입한 투자자들의 손실이 컸다.</li>
+        </ul></li>
+      <li><strong>일본 증시</strong>도 한국만큼 좋은 흐름을 보였으며, 이는 <strong>반도체 산업</strong> 덕분이다.
+        <ul>
+          <li>일본의 반도체 회사인 <strong>키옥시아</strong>는 한때 시가총액 1위를 차지할 정도로 급등했으며, 연초 대비 <strong>400% 상승</strong>한 상태이다.</li>
+          <li>키옥시아의 최대 주주 중 하나는 <strong>하이닉스</strong>이다.</li>
+          <li>일본은 <strong>외국인 매수</strong>로 증시가 상승한 반면, 한국은 <strong>개인 매수</strong>로 상승했다는 차이점이 있다.</li>
+        </ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">5.2</span>삼성전자, 하이닉스 실적 발표 후 주가 하락의 원인</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/889.jpg" alt="삼성전자, 하이닉스 실적 발표 후 주가 하락의 원인" loading="lazy"><figcaption>강의 화면 — 삼성전자, 하이닉스 실적 발표 후 주가 하락의 원인</figcaption></figure>
+    <ul>
+      <li>삼성전자와 하이닉스는 7월에 발표된 2분기 실적에서 <strong>전년 동기 대비 각각 1800%, 500%</strong>라는 엄청난 실적을 기록했다.
+        <ul><li>삼성전자는 <strong>89조 원의 영업이익</strong>을 내며 전 세계에서 가장 돈을 많이 버는 기업 중 하나가 되었다.</li></ul></li>
+      <li>그럼에도 불구하고 주가가 하락한 주요 원인은 다음과 같다.</li>
+    </ul>
+    <h4>이익 실현 매물 출회</h4>
+    <ul>
+      <li>기업이 분기에 100조 원씩 실적을 낸다는 소식에 "벌만큼 벌었다, 이제 피크다"라는 인식이 확산되며 이익 실현을 위한 매물이 많이 나왔다.</li>
+    </ul>
+    <h4>중국 창신메모리의 빠른 성장</h4>
+    <ul>
+      <li>중국의 반도체 기업인 <strong>창신메모리</strong>의 성장 속도가 예상보다 빨라 삼성전자와 하이닉스의 독주가 오래가지 않을 수 있다는 우려가 선반영되었다.
+        <ul>
+          <li>창신메모리는 상장하자마자 500% 가까이 폭등했으며, 애플에서 삼성전자와 하이닉스가 비싸다며 창신메모리 제품을 시험 구매하는 등 시장 반응이 좋다.</li>
+          <li>현재 <strong>D램 점유율 세계 4위</strong>에 오를 정도로 빠른 성장세를 보이며, 우리나라 반도체 산업에 큰 영향을 미치고 있다.</li>
+        </ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">5.3</span>삼성전자의 저평가 가능성</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/1065.jpg" alt="삼성전자의 저평가 가능성" loading="lazy"><figcaption>강의 화면 — 삼성전자의 저평가 가능성</figcaption></figure>
+    <ul>
+      <li>현재 삼성전자의 주가는 <strong>23만 원대</strong>에서 움직이고 있다.</li>
+      <li>2026년 12월 예상 영업이익이 300억 달러를 넘을 것으로 예상되는데, 현재 주가 대비 <strong>PER(주가수익비율)이 4배</strong>로 5배 미만이다.
+        <ul>
+          <li>이는 삼성전자가 <strong>아직 저평가되어 있을 가능성</strong>을 시사한다.</li>
+          <li>시장에서는 영업이익이 워낙 좋기 때문에 현재 가격이 매력적이라고 평가할 수 있다.</li>
+        </ul></li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m6">
+  <div class="mod-head"><div class="kicker">COURSE 06</div><h2>개인 투자자들의 투자 동향과 글로벌 시장의 우려</h2><p>개인 투자자들은 여전히 반도체 관련 레버리지 상품에 적극적으로 투자하고 있으며, 미국 빅테크 기업들도 실적 발표 후 주가가 하락하는 등 글로벌 시장 전반에 걸쳐 투자자들의 우려가 반영되고 있다.</p></div>
+  <div class="card">
+    <h3><span class="idx">6.1</span>서학개미의 반도체 레버리지 투자와 한국 투자</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/1116.jpg" alt="서학개미의 반도체 레버리지 투자와 한국 투자" loading="lazy"><figcaption>강의 화면 — 서학개미의 반도체 레버리지 투자와 한국 투자</figcaption></figure>
+    <ul>
+      <li>올 상반기 <strong>서학개미(해외 주식에 투자하는 국내 개인 투자자)</strong>들은 반도체 관련 상품에 집중적으로 투자했다.
+        <ul>
+          <li>국내에서는 삼성전자, 하이닉스 2배 레버리지 상품에 대한 규제가 있었지만, 규제가 없는 미국 시장에서 <strong>세미컨덕터 3배 레버리지 주식</strong>을 <strong>39조 원어치</strong> 매수했다.</li>
+          <li>이는 반도체에 대한 개인 투자자들의 강한 믿음을 보여준다.</li>
+        </ul></li>
+      <li>서학개미들은 <strong>스페이스X</strong>에도 많이 투자하고 있으며, 특히 <strong>한국(South Korea)</strong>에도 투자하고 있다.
+        <ul><li>달러를 보유한 고객들이 달러를 원화로 바꾸지 않고 한국 증시에 투자하는 현상이다.</li></ul></li>
+      <li>일본의 반도체 기업인 <strong>키옥시아</strong>에도 투자하는 등 전방위적으로 반도체 분야에 많은 투자가 이루어지고 있다.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">6.2</span>미국 빅테크 기업 실적 발표 후 주가 하락의 원인</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/1200.jpg" alt="미국 빅테크 기업 실적 발표 후 주가 하락의 원인" loading="lazy"><figcaption>강의 화면 — 미국 빅테크 기업 실적 발표 후 주가 하락의 원인</figcaption></figure>
+    <ul>
+      <li>글로벌 시장에서도 미국 빅테크 기업들이 <strong>실적 발표 후 주가가 하락</strong>하는 현상이 나타났다.
+        <ul>
+          <li>1분기와 2분기 실적이 구글과 테슬라를 제외하고는 매우 좋았으며, 특히 구글의 실적은 좋았다.</li>
+          <li>엔비디아를 제외한 대부분의 빅테크 기업 실적이 좋았음에도 주가가 떨어졌다.</li>
+        </ul></li>
+      <li>주가 하락의 주요 원인은 <strong>투자자들의 우려</strong> 때문이다.
+        <ul>
+          <li>구글의 경우 영업이익과 단기 순이익은 좋았지만, <strong>번 돈보다 더 많은 돈을 투자</strong>하고 있다는 점이 투자자들의 불안감을 키웠다.</li>
+          <li>과거에는 번 돈으로만 투자했지만, 이제는 <strong>빚까지 내서 투자</strong>하는 모습이 나타나면서, 실적이 제대로 나오지 않을 경우 문제가 될 수 있다는 우려가 반영된 것이다.</li>
+          <li>이러한 우려 때문에 한국뿐만 아니라 미국에서도 실적이 좋았음에도 주가가 하락하는 모습을 보였다.</li>
+        </ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">6.3</span>실적 대비 주가 조정 시 밸류에이션 확인의 중요성</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/1320.jpg" alt="실적 대비 주가 조정 시 밸류에이션 확인의 중요성" loading="lazy"><figcaption>강의 화면 — 실적 대비 주가 조정 시 밸류에이션 확인의 중요성</figcaption></figure>
+    <ul>
+      <li>실적은 좋았지만 주가가 조정을 받았을 때, <strong>밸류에이션(기업 가치 평가)</strong>을 확인하는 것이 중요하다.
+        <ul>
+          <li>현재 주가가 너무 비싸다는 느낌이 들지 않는지 확인해야 한다.</li>
+          <li>밸류에이션을 확인하고 투자하면 좀 더 편안하게 투자를 시작할 수 있을 것이다.</li>
+        </ul></li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m7">
+  <div class="mod-head"><div class="kicker">COURSE 07</div><h2>환율 변동과 세제 개편안의 영향</h2><p>최근 원/달러 환율이 하락하며 안정세를 보였으나, 장기적으로는 상승 가능성이 남아있으며, 부동산 및 법인 세제 개편안은 특정 지역 거주자와 기업에 큰 영향을 미칠 것으로 예상된다.</p></div>
+  <div class="card">
+    <h3><span class="idx">7.1</span>원/달러 환율 하락과 장기적 전망</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/1341.jpg" alt="원/달러 환율 하락과 장기적 전망" loading="lazy"><figcaption>강의 화면 — 원/달러 환율 하락과 장기적 전망</figcaption></figure>
+    <ul>
+      <li>원/달러 환율이 <strong>1500원대에서 1400원 초반대</strong>로 크게 하락하며 안정세를 보였다.
+        <ul><li>심지어 1400원 선이 깨질 수도 있다는 전망도 나오고 있다.</li></ul></li>
+    </ul>
+    <h4>환율 하락의 주요 원인</h4>
+    <ul>
+      <li><strong>미국과 일본의 엔화 약세 개입</strong>: 엔화가 너무 강해지자 미국과 일본이 공동으로 시장에 개입하여 엔화를 약세로 만들었고, 이는 아시아 화폐 전반의 강세로 이어져 원화 강세에 영향을 미쳤다.</li>
+      <li><strong>달러 인덱스 하락</strong>: 글로벌 달러 인덱스가 소폭 하락했다.</li>
+      <li><strong>한미 금리 차이 축소</strong>: 미국이 금리를 동결한 반면, 한국이 3년 만에 금리를 인상하면서 한미 간 금리 차이가 줄어들어 원화 강세 요인으로 작용했다.</li>
+    </ul>
+    <h4>장기적 전망</h4>
+    <ul>
+      <li>장기적인 관점에서 환율 하락 추세가 지속될지는 <strong>불확실</strong>하다.
+        <ul>
+          <li>국민연금과 개인 투자자들은 여전히 해외 투자를 많이 하고 있으며, 개인 자산 <strong>300조 원</strong>이 해외에 투자되어 있어 이 추세가 쉽게 꺾이지 않을 것으로 보인다.</li>
+          <li>하반기에 미국이 다시 금리를 인상할 경우 금리 차이가 다시 벌어져 환율이 인상될 가능성이 있어, 환율이 많이 내려갔을 때 관심을 가지고 지켜보는 것이 좋다.</li>
+        </ul></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">7.2</span>부동산 및 법인 세제 개편안의 주요 내용</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/1478.jpg" alt="부동산 및 법인 세제 개편안의 주요 내용" loading="lazy"><figcaption>강의 화면 — 부동산 및 법인 세제 개편안의 주요 내용</figcaption></figure>
+    <ul>
+      <li>새로운 <strong>세제 개편안</strong>은 특히 <strong>강남, 송파, 서초 지역의 부동산 보유세제를 크게 인상</strong>하는 내용을 담고 있다.
+        <ul>
+          <li>양도세, 재산세, 종부세 모두 인상되며, 특히 <strong>거주하지 않는 주택에 대한 양도세와 종부세 인상 폭이 매우 크다</strong>.</li>
+          <li>이 개편안이 시행되면 해당 지역 거주자들의 세금 부담이 엄청날 것으로 예상된다.</li>
+          <li>부동산 세금 이슈에 대해 꼼꼼히 파악하여 고객들에게 전달하는 것이 중요하다.</li>
+        </ul></li>
+      <li>법인 컨설팅 분야에서는 <strong>가업상속공제 규제가 더욱 강화</strong>될 것으로 예상된다.
+        <ul>
+          <li>과거 가업상속공제에 대한 논란이 많았기 때문에, 규제가 더욱 타이트해진 것이다.</li>
+          <li>세제 개편안이 국회를 통과하여 2027년 1월부터 시행될 경우를 대비하여 고객들에게 사전 안내를 제공해야 한다.</li>
+        </ul></li>
+    </ul>
+    <div class="note key"><span class="lb">고객 안내 포인트</span>강남·송파·서초 보유세 인상, 비거주 주택 양도세·종부세 대폭 인상, 가업상속공제 규제 강화 — <strong>2027년 1월 시행 대비</strong> 사전 안내 필수.</div>
+  </div>
+</section>
+
+<section class="module" id="m8">
+  <div class="mod-head"><div class="kicker">COURSE 08</div><h2>변동성 장세에서의 투자 전략</h2><p>7월의 극심한 변동성 장세에서는 현금 보유가 가장 유리했으며, 앞으로도 분산 투자를 통해 장기적인 관점에서 저평가된 자산에 투자하는 전략이 중요하다.</p></div>
+  <div class="card">
+    <h3><span class="idx">8.1</span>현금 보유의 중요성과 분산 투자 원칙</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/1558.jpg" alt="현금 보유의 중요성과 분산 투자 원칙" loading="lazy"><figcaption>강의 화면 — 현금 보유의 중요성과 분산 투자 원칙</figcaption></figure>
+    <ul>
+      <li>7월의 힘든 장세에서는 <strong>수익이 난 펀드가 거의 없었으며, 현금을 가지고 있는 투자자들이 결국 승자</strong>였다.
+        <ul><li>이는 포트폴리오에 <strong>일정 비중의 현금</strong>이 반드시 필요하다는 것을 보여준다.</li></ul></li>
+      <li>앞으로도 변액보험, 장기투자상품, 연금 등 <strong>한 곳에 쏠리지 않도록 분산 투자</strong>하는 것이 중요하다.
+        <ul><li>분산된 포트폴리오는 장기적으로 좋은 수익을 가져다주므로, 마음을 가다듬고 <strong>저평가된 자산, 남들이 잘 보지 않는 자산</strong>에 골고루 분산 투자하여 좋은 수익을 얻을 수 있도록 고객들에게 안내해야 한다.</li></ul></li>
+    </ul>
+    <div class="note good"><span class="lb">정리</span>변동성 장세의 승자는 <strong>현금 보유자</strong>. 변액·장기투자·연금 등 분산 포트폴리오 + 저평가 자산 — 고객 안내의 기본 원칙.</div>
+  </div>
+  <div class="card">
+    <h3><span class="idx">8.2</span>8월 이슈 정리 및 다음 달 예고</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/0ea96012-316e-40a1-bff8-4dc6e2405d54/1616.jpg" alt="8월 이슈 정리 및 다음 달 예고" loading="lazy"><figcaption>강의 화면 — 8월 이슈 정리 및 다음 달 예고</figcaption></figure>
+    <ul>
+      <li>8월의 주요 이슈는 여기서 정리되며, 다음 달에 다시 인사드릴 예정이다.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101</b> · 토스인슈어런스 교육자료</span><span>전종환 팀장 · 010-4637-3210</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>보험 상품의 종류와 세금 · 절세 전략 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">SALES EDUCATION · 영업 교육자료</div>
+    <h1>보험과 세금,<br><span class="accent">비과세·분리과세</span>로 만드는 절세 시너지</h1>
+    <p class="lead">보장성·저축성 보험의 과세 차이, 장기 저축성 보험 비과세 요건, 금융소득 종합과세 2천만 원 기준과 연금·증여를 활용한 소득·수령자 분산 전략까지 상담용으로 정리한다.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>강사 <b>현직 지점장 · 세무사</b></span><span>활용 <b>고액 자산가·법인 대표 상담</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">보험 상품의 종류와 세금</div><div class="ds">보장성/저축성 · 비과세 요건 · 종합과세 · 연금</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">세금과 보험의 시너지 절세 전략</div><div class="ds">2천만 원 관리 · 비과세 상품 · 소득·수령자 분산 · 증여</div></a><a href="#m3"><div class="no">COURSE 03</div><div class="t">세무 전문가의 역할과 상담 안내</div><div class="ds">자산 관리 · 증여 활용 · 교육 문의</div></a></nav>
+
+
+<nav class="topnav"><ul><li><a href="#m1">01 보험과 세금</a></li><li><a href="#m2">02 절세 전략</a></li><li><a href="#m3">03 전문가 상담</a></li></ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head"><div class="kicker">COURSE 01</div><h2>보험 상품의 종류와 세금</h2><p>보험 상품은 크게 보장성과 저축성으로 나뉘며, 각각의 목적과 특징에 따라 세금 부과 방식이 달라진다.</p></div>
+  <figure class="shot"><img src="https://resource.lilys.ai/images/genimg_20ff50c01100e00b.png" alt="" loading="lazy"><figcaption>강의 화면 — 보험 상품의 종류와 세금</figcaption></figure>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>보장성 보험과 저축성 보험의 차이</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/35.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 보장성 보험과 저축성 보험의 차이</figcaption></figure>
+    <h4>보장성 보험은 위험 보장에 중점을 둔 상품이다</h4>
+    <ul>
+      <li>납입한 보험료보다 환급금이 클 수 없으며, 최소한 같거나 낮게 설정된다.</li>
+      <li><strong>보험금 자체는 과세 대상이 아니다.</strong></li>
+      <li><strong>단기납 종신보험</strong>은 보장성 보험이면서 특정 시기 이후 환급금이 높아지는 저축성 기능도 가진다.</li>
+    </ul>
+    <h4>저축성 보험은 저축이나 투자 기능에 중점을 둔 상품이다</h4>
+    <ul>
+      <li>만기 환급금이 납입 보험료보다 커서 차익이 발생할 수 있다.</li>
+      <li>보험 차익은 <strong>이자소득</strong>으로 과세되지만, 일정 요건을 충족하면 <strong>비과세</strong>가 가능하다.</li>
+      <li>이자소득은 배당소득과 함께 <strong>금융소득</strong>으로 분류되며, 비과세와 분리과세가 중요한 절세 포인트이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>장기 저축성 보험의 비과세 요건</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/202.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 장기 저축성 보험의 비과세 요건</figcaption></figure>
+    <h4>장기 저축성 보험은 일정 요건 충족 시 비과세 혜택을 받을 수 있다</h4>
+    <ul><li>비과세 요건은 과거보다 엄격해지고 있다.</li></ul>
+    <h4>일시납 형태의 비과세 요건</h4>
+    <ul>
+      <li>보험 계약 기간은 <strong>10년 이상</strong> 유지해야 한다.</li>
+      <li>납입 방법에는 제한이 없지만, 납입 한도에는 제한이 있다.</li>
+      <li>가입 시기에 따라 납입 한도가 다르다.
+        <ul>
+          <li>2017년 3월 30일 이전 가입 상품: 2억 원 이하 납입 금액</li>
+          <li>2017년 4월 1일 이후 가입 상품: 계약자 1명당 합계 1억 원 이하 납입 금액</li>
+        </ul>
+      </li>
+      <li>고객의 납입 금액이 커져 이자 소득이 일정 금액을 초과하면 <strong>종합과세</strong> 대상이 되어 세 부담이 높아질 수 있으므로 주의해야 한다.</li>
+    </ul>
+    <h4>월정립식 형태의 비과세 요건</h4>
+    <ul>
+      <li>납입 기간은 5년 이상이어야 하며, 5년 이상 납입 후 10년 이상 유지해야 한다.</li>
+      <li>매월 납입하는 기본 보험료가 균등해야 하며, 선납 기간은 6개월 이내여야 한다.</li>
+      <li>가입 시기에 따라 납입 한도가 다르다.
+        <ul>
+          <li>2017년 3월 31일 이전 가입 상품: 납입 금액 한도 없음</li>
+          <li>2017년 4월 1일 이후 가입 상품: 월 150만 원 기준으로 납입해야 한다</li>
+        </ul>
+      </li>
+      <li>이 네 가지 요건을 모두 충족해야 월정립식 상품의 비과세가 가능하다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>일시납</th><th>월정립식</th></tr></thead>
+      <tbody>
+        <tr><td>유지 기간</td><td>10년 이상</td><td>5년 이상 납입 + 10년 이상 유지</td></tr>
+        <tr><td>납입 조건</td><td>납입 방법 제한 없음</td><td>기본 보험료 균등, 선납 6개월 이내</td></tr>
+        <tr><td>2017.4.1 이전 가입</td><td>2억 원 이하 (3/30 이전)</td><td>한도 없음 (3/31 이전)</td></tr>
+        <tr><td>2017.4.1 이후 가입</td><td>계약자 1명당 합계 1억 원 이하</td><td>월 150만 원 기준</td></tr>
+      </tbody>
+    </table>
+    <h4>비과세 요건의 핵심 숫자</h4>
+    <ul>
+      <li>월정립식: 5년 납입, 10년 유지, 6개월 선납, 월 150만 원 한도</li>
+      <li>일시납: 10년 이상 유지, 2억 원(구 기준), 1억 원(신 기준) 한도</li>
+      <li>기준 시점: 2013년 2월 14일, 2017년 4월 1일</li>
+    </ul>
+    <div class="chips"><span>월정립식 <b>5년 납 · 10년 유지</b></span><span>선납 <b>6개월 이내</b></span><span>월 <b>150만 원</b></span><span>일시납 <b>1억 원 (신)</b></span><span>기준일 <b>2013.2.14 · 2017.4.1</b></span></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>보험 차익 과세와 금융소득 종합과세</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/424.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 보험 차익 과세와 금융소득 종합과세</figcaption></figure>
+    <h4>보험 차익은 납입 보험료보다 수령한 보험금이 많을 때 발생하는 소득이다</h4>
+    <ul><li>예시: 납입 보험료 1억 2천만 원, 수령 보험금 2억 원일 경우, 보험 차익 <strong>8천만 원</strong>에 대해 이자소득세가 과세된다.</li></ul>
+    <h4>금융소득 종합과세는 연간 금융소득(이자소득 + 배당소득)이 2천만 원을 초과할 때 적용된다</h4>
+    <ul>
+      <li>연 2천만 원 이하의 금융소득은 <strong>분리과세</strong>되어 15.4%의 원천징수로 납세 의무가 종결된다.</li>
+      <li>연 2천만 원 초과분은 다른 소득(근로소득, 사업소득 등)과 합산하여 <strong>종합소득세</strong> 신고 대상이 된다.</li>
+      <li>종합소득세는 6%에서 45%까지 누진세율이 적용되므로, 금융소득이 2천만 원을 초과하면 세 부담이 크게 늘어날 수 있다.</li>
+      <li>따라서 고객에게 금융소득 종합과세 기준과 누진세율 적용 가능성을 명확히 안내해야 한다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY NUMBER</span>금융소득 연 <strong>2천만 원</strong> — 이하는 15.4% 분리과세로 종결, 초과분은 6~45% 누진세율 종합과세. 고객에게 반드시 이 기준을 안내한다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.4</span>연금 수령 방식과 절세 효과</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/618.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 연금 수령 방식과 절세 효과</figcaption></figure>
+    <h4>보험금을 연금으로 수령하면 과세 이연 효과를 얻을 수 있다</h4>
+    <ul>
+      <li>과세 이연은 소득 발생 시점에 세금을 한 번에 내는 대신, 소득을 뒤로 미루어 과세 효과를 연기하는 개념이다.</li>
+      <li>은퇴 시기에 절세하는 방식으로 매우 유리하며, 누진세율 적용을 피하고 세금 부담을 낮출 수 있다.</li>
+      <li>고객 상담 시 연금 수령 방식의 절세 포인트를 안내하는 것이 좋다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.5</span>연금보험의 종류와 특징</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/664.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 연금보험의 종류와 특징</figcaption></figure>
+    <h4>연금보험은 세제 적격과 세제 비적격으로 나뉜다</h4>
+    <h4>세제 적격 연금보험은 세액공제 혜택을 받을 수 있다</h4>
+    <ul>
+      <li>연금저축계좌를 개설하여 가입하는 상품(연금저축보험, 연금저축펀드)이 해당된다.</li>
+      <li>연말정산 시 세액공제가 가능하며, 연금 수령 시 3~5%의 낮은 세율로 분리과세된다.</li>
+      <li>낮은 세율은 나라에서 노후 준비를 장려하기 위한 혜택이며, 55세 이후 수령, 5년 이상 납입 등의 조건이 있다.</li>
+      <li>근로소득자에게 특히 유리하며, 연금소득 외 다른 소득이 적을 것으로 예상되는 경우 사적 연금을 미리 준비하는 것이 좋다.</li>
+      <li>우리나라의 사적 연금 가입 비중은 OECD 국가 중 가장 낮은 편이므로, 노령화와 인구 절벽에 대비하여 적극적으로 안내해야 한다.</li>
+    </ul>
+    <h4>세제 비적격 연금보험은 세액공제는 안 되지만 비과세 혜택을 받을 수 있다</h4>
+    <ul>
+      <li>장기간 유지 시 기대할 수 있는 차익이 커지므로, 세액공제보다 비과세 혜택이 현실적으로 더 효과적일 수 있다.</li>
+      <li>특히 고소득 은퇴자의 경우 투자 금액이 커지므로, 세액공제보다는 비과세 혜택을 목적으로 안내하는 것이 좋다.</li>
+      <li>세액공제가 필요 없거나 금융소득 종합과세가 걱정되는 고객에게는 비과세 상품이 좋은 대안이 된다.</li>
+      <li>연금 수령액이 1,500만 원을 초과하는 경우, 종합과세 또는 기타소득으로 16.5% 분리과세 중 선택할 수 있으며, 세무사와 상담하여 절세 시뮬레이션을 해보는 것이 좋다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>세제 적격 (연금저축)</th><th>세제 비적격 (연금보험)</th></tr></thead>
+      <tbody>
+        <tr><td>납입 시 혜택</td><td>연말정산 세액공제</td><td>없음</td></tr>
+        <tr><td>수령 시 과세</td><td>3~5% 저율 분리과세 (55세 이후, 5년 이상 납입)</td><td>요건 충족 시 비과세</td></tr>
+        <tr><td>적합 고객</td><td>근로소득자, 은퇴 후 소득이 적을 고객</td><td>고소득 은퇴자, 종합과세 우려 고객</td></tr>
+        <tr><td>참고</td><td>연금 수령액 1,500만 원 초과 시 종합과세 또는 16.5% 분리과세 선택</td><td>장기 유지 시 비과세 효과가 세액공제보다 클 수 있음</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head"><div class="kicker">COURSE 02</div><h2>세금과 보험의 시너지를 위한 절세 전략</h2><p>세금과 보험의 시너지를 극대화하기 위해서는 금융소득 종합과세 기준을 관리하고, 소득과 수령자를 분산하며, 다양한 금융 상품을 활용하는 전략이 필요하다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>금융소득 종합과세 절세 전략</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/929.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 금융소득 종합과세 절세 전략</figcaption></figure>
+    <h4>금융소득 2천만 원 기준 관리가 중요하다</h4>
+    <ul>
+      <li>법인 대표의 경우, 배당소득과 보험 상품을 활용한 이자소득의 합산 금액이 2천만 원을 넘지 않도록 배당을 조절하거나 보험 상품 가입 내역을 조정해야 한다.</li>
+      <li>2천만 원 초과분에는 누진세율이 적용됨을 명확히 안내해야 한다.</li>
+      <li><strong>그로스업 제도</strong>와 같은 이중과세 방지 제도를 활용하여 소득 구성을 디자인하는 것도 절세에 도움이 된다.</li>
+    </ul>
+    <h4>비과세 상품 활용은 필수적이다</h4>
+    <ul>
+      <li>비과세 효과를 보지 못하면 운용 수익률의 약 20% 손실이 발생할 수 있다.</li>
+      <li><strong>ISA 계좌</strong>와 같은 분리과세 금융 상품도 함께 안내하는 것이 좋다.</li>
+    </ul>
+    <h4>자산 포트폴리오 구성에서 보험은 수비수 역할을 한다</h4>
+    <ul>
+      <li>주식은 공격수, ETF는 미드필더 역할로 비유할 수 있으며, 보험은 가장 안전하게 자산을 형성하는 기반이 된다.</li>
+      <li>보험 상품 외에 ISA, 연금저축, 퇴직연금(IRP) 등 다양한 금융 상품을 함께 안내하여 균형 잡힌 포트폴리오를 구성하도록 돕는 것이 좋다.</li>
+    </ul>
+    <div class="note good"><span class="lb">포트폴리오 비유</span>주식 = 공격수 · ETF = 미드필더 · <strong>보험 = 수비수</strong>. 보험이 가장 안전한 자산 형성의 기반이며, ISA·연금저축·IRP와 함께 균형을 잡는다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>소득 및 수령자 분산 전략</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/1067.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 소득 및 수령자 분산 전략</figcaption></figure>
+    <h4>소득은 쪼개고, 기간은 늘릴수록 유리하다</h4>
+    <ul>
+      <li>보험금 수령 시기를 한 번에 받기보다 여러 해로 분산하는 것이 중요하다.</li>
+      <li>금융 상품 가입 시에도 일시납이나 월 적립액을 한 번에 많이 하기보다, 가입 시기를 늦춰 만기 시점을 분산시키는 것이 효과적이다.</li>
+      <li>일시납보다 연금 형식으로 받아가는 것이 과세 효율이 훨씬 좋다.</li>
+    </ul>
+    <h4>수령자도 분산하는 것이 좋다</h4>
+    <ul>
+      <li>가족 구성원 중 한 명에게만 소득이 집중되지 않도록 금융 상품을 활용하여 소득을 분산시켜야 한다.</li>
+      <li>한 명에게 소득이 많이 발생할 경우, 다른 가족 구성원이 해당 금액을 활용할 수 있도록 <strong>증여</strong>를 활용할 수 있다.
+        <ul>
+          <li>배우자 증여는 10년간 누적 6억 원까지 공제된다 (비과세가 아닌 공제이다).</li>
+          <li>자녀 증여는 5천만 원(미성년 자녀는 2천만 원)까지 공제된다.</li>
+          <li>자녀의 경우 장기간 복리 효과가 크므로 미리 증여를 활용하여 노후를 대비하는 것이 좋다.</li>
+        </ul>
+      </li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>증여 대상</th><th>공제 한도 (10년 누적)</th><th>비고</th></tr></thead>
+      <tbody>
+        <tr><td>배우자</td><td>6억 원</td><td>비과세가 아닌 공제</td></tr>
+        <tr><td>성인 자녀</td><td>5천만 원</td><td>장기 복리 효과 큼</td></tr>
+        <tr><td>미성년 자녀</td><td>2천만 원</td><td>미리 증여해 노후 대비</td></tr>
+      </tbody>
+    </table>
+    <h4>명의 분산 및 가족 간 자산 분산을 통해 개인별 금융소득을 2천만 원 이하로 관리할 수 있다</h4>
+    <ul>
+      <li>법인 운영 시 주주 구성을 대표자 외 배우자, 자녀 등으로 분산하여 배당금을 균등하게 받으면, 1인에게 집중될 금융소득을 가족 구성원에게 골고루 분산시킬 수 있다.</li>
+      <li>이는 4대 보험 부담 없이 배당 효과로 소득을 분산시키는 방법이 된다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head"><div class="kicker">COURSE 03</div><h2>세무 전문가의 역할과 상담 안내</h2><p>보험 상품과 세금을 접목한 절세 전략은 복잡하므로, 세무 전문가와 함께 구체적인 내용을 논의하고 다양한 금융 상품 활용법에 대한 안내를 받는 것이 중요하다.</p></div>
+  <div class="card">
+    <h3><span class="idx">3.1</span>세무 전문가의 역할</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/1225.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 세무 전문가의 역할</figcaption></figure>
+    <ul>
+      <li>보험 상품과 세금을 접목한 전략을 통해 고객의 자산 관리를 돕는다.</li>
+      <li>증여 활용법, 다양한 금융 상품 활용법 등 구체적인 절세 방안을 제시한다.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">3.2</span>상담 안내</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/595eba92-1371-4a79-bb58-743fc52a5f66/1244.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 상담 안내</figcaption></figure>
+    <ul>
+      <li>강사는 현직 보험사 지점장이자 개인 세무회계 사무실을 운영하는 세무사이다.</li>
+      <li>보험 설계사 및 관리자, 지점원 교육을 희망하는 경우 문의할 수 있다.</li>
+      <li>서울 외 지방에서도 줌이나 구글 미트 등 영상으로 강의를 제공한다.</li>
+      <li>개인적인 문의는 편하게 연락하면 된다.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101 교육자료</b> · 전종환 팀장 / 010-4637-3210</span><span>출처: lilys.ai 강의 요약 · 2026-09</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

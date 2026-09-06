@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9월 생명보험·손해보험 신상품 소개 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">PRODUCT STUDY · 상품 스터디</div>
+    <h1>9월 <span class="accent">생보·손보 신상품</span> 및 담보 총정리</h1>
+    <p class="lead">교보·메트라이프·미래에셋·삼성·신한·흥국·한화·AIA 생명과 롯데·메리츠·삼성화재·하나손보의 9월 신상품·신규 담보·헬스케어·인수기준 변화를 상품별로 정리한다.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>시점 <b>9월 신상품</b></span><span>활용 <b>상품 제안·비교 설계</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">생명보험 신상품 및 담보</div><div class="ds">교보 · 메트라이프 · 미래에셋 · 삼성 · 신한 · 흥국 · 한화 · AIA</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">손해보험 신상품 및 담보</div><div class="ds">롯데손보 · 메리츠 · 삼성화재 · 하나손보</div></a></nav>
+
+
+<nav class="topnav"><ul><li><a href="#m1">01 생명보험</a></li><li><a href="#m2">02 손해보험</a></li></ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head"><div class="kicker">COURSE 01</div><h2>9월 생명보험 신상품 및 담보 소개</h2><p>9월에 출시된 주요 생명보험 신상품들은 고객의 다양한 니즈를 충족시키기 위해 보장 범위와 혜택을 혁신적으로 확장했다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>교보생명 신상품: 20년 리필형 치료비 종신보험 및 낸 보험료 100% 돌려받는 종신보험</h3>
+    <p>교보생명은 치료비 보장을 강화하고 납입 보험료 환급 기능을 추가한 두 가지 종신보험 상품을 선보였다.</p>
+    <h4>교보 다시 채용 건강 종신보험 (20년 리필형 치료비 종신보험)</h4>
+    <ul>
+      <li><strong>주요 특징</strong>
+        <ul>
+          <li>기존 종신보험에 진단비와 치료비 보장을 결합한 상품이다.</li>
+          <li><strong>20년 리필형 치료비 개념</strong>을 도입하여, 최초 가입 시 보장 한도(가입 금액의 최대 10배) 내에서 매년 수술, 방사선, 약물 등 치료를 반복해서 보장한다.</li>
+          <li>20년이 지나면 사용 금액과 관계없이 처음 가입했던 보장 한도(10배)가 다시 채워진다.</li>
+          <li>암, 뇌, 심장 질환뿐만 아니라 치매까지 보장하며, 암·뇌·심장 질환은 급부별 연간 1회, 치매는 투약 횟수별 최초 1회 지급된다.</li>
+          <li>사망 시에는 <strong>체증 보장 기능</strong>이 있어, 사망 증액 보너스를 통해 일반 사망 보장 한도를 30%에서 60%까지 늘려준다.</li>
+          <li>재해로 인한 사망 시에는 남은 보장금액의 10%를 재해 사망금으로 추가 지급한다.</li>
+        </ul>
+      </li>
+      <li><strong>예시를 통한 설명</strong>
+        <ul>
+          <li>40세에 1억 원 보장으로 가입하면 10억 원의 치료비 통장이 생성된다.</li>
+          <li>가입 후 1년 내 암 수술, 항암약물치료, 혈전용 치료로 총 9천만 원을 사용하면 9억 1천만 원의 한도가 남는다.</li>
+          <li>60세가 되면 한도는 다시 10억 원으로 리필된다.</li>
+          <li>이후 10년 뒤 항암 방사선 치료로 3천만 원을 사용하고, 19년 뒤 재해 사망 시, 원래 사망금과 리필된 10억 원 중 남은 9억 7천만 원의 10%인 9천 7백만 원이 추가 사망보험금으로 지급된다.</li>
+        </ul>
+      </li>
+      <li><strong>상품의 장점</strong>
+        <ul>
+          <li>기존 치료비 보장 보험의 한도 연장과 재해 사망금 지급 옵션이 결합되어 있다.</li>
+          <li>갑상선암과 기타 피부암을 일반암으로 보장하며, 암뿐만 아니라 순환계 치료까지 보장한다.</li>
+          <li>치매 부분에서는 표적 치매 약물 허가 치료비와 카티 항암약물 허가 치료까지 보장한다.</li>
+          <li>단순히 종신보험에 치료비를 더한 것을 넘어, 비급여 항목까지 보장을 포함하여 경쟁력이 높다.</li>
+        </ul>
+      </li>
+      <li><strong>상품의 단점</strong>
+        <ul>
+          <li>보험료가 다소 비쌀 수 있으므로 신중한 검토가 필요하다.</li>
+          <li>해약환급금은 10년 시점에 75.4%이며, 30년이 되어야 100%에 도달한다.</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="note warn"><span class="lb">체크</span>보험료가 비쌀 수 있고, 해약환급금은 10년 75.4% · 30년 100% — 환급 관점의 고객에게는 신중히 제안한다.</div>
+    <h4>교보 모두 지킴 종신보험 (낸 보험료 100% 돌려받는 종신보험)</h4>
+    <ul>
+      <li><strong>주요 특징</strong>
+        <ul>
+          <li>납입한 보험료를 모두 돌려받는 것이 가장 큰 특징이다.</li>
+          <li>가입 후 일정 거치 기간을 거쳐 '라이프 플랜 자금 전환' 제도를 신청하면, 납입한 보험료 전체의 10%씩을 10년 동안 나누어 수령할 수 있다.</li>
+          <li>이를 통해 납입한 보험료를 모두 회수할 수 있다.</li>
+        </ul>
+      </li>
+      <li><strong>사망보험금 유지 기능</strong>
+        <ul><li>보험료를 모두 환급받았음에도 <strong>최초 가입한 사망보험금이 유지</strong>된다는 점이 중요한 판매 포인트이다.</li></ul>
+      </li>
+      <li><strong>라이프 플랜 자금 인출 조건</strong>
+        <ul>
+          <li>납입 기간에 따라 인출 시기가 달라진다.</li>
+          <li>7년 납은 5년 거치 후 12년 경과 시, 10년 납은 4년 거치 후, 12년 납은 3년 거치 후 인출 가능하다.</li>
+          <li>20년 납은 거치 기간 없이 바로 라이프 플랜 자금으로 인출할 수 있다.</li>
+        </ul>
+      </li>
+      <li><strong>체증형 사망 보장 기능</strong>
+        <ul>
+          <li>라이프 플랜 자금을 받지 않는 고객을 위해 체증형 사망 보장 기능이 제공된다.</li>
+          <li>납입 완료 후 라이프 플랜 자금을 받지 않을 경우, 사망 보장 금액을 50% 또는 70% 체증하여 연간 10%씩 인상한다.</li>
+          <li>이는 5년에서 7년 동안 체증되어 종신 보험금이 더 커지는 기능이다.</li>
+          <li>베이직형은 150% 체증(15~45세 가입), 프리미엄형은 170% 체증(15~60세 가입)으로 나뉜다.</li>
+        </ul>
+      </li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>납입 기간</th><th>라이프 플랜 자금 인출 조건</th></tr></thead>
+      <tbody>
+        <tr><td>7년 납</td><td>5년 거치 후 12년 경과 시</td></tr>
+        <tr><td>10년 납</td><td>4년 거치 후</td></tr>
+        <tr><td>12년 납</td><td>3년 거치 후</td></tr>
+        <tr><td>20년 납</td><td>거치 기간 없이 바로 인출</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>메트라이프 헬스케어 서비스 강화</h3>
+    <p>메트라이프는 '초격차'라는 슬로건 아래 헬스케어 서비스를 대폭 강화하여 상품 차별화를 꾀하고 있다.</p>
+    <h4>헬스케어 서비스 확대</h4>
+    <ul>
+      <li>기존 2가지 종류였던 선택 치료 패키지를 <strong>10가지</strong>로 늘렸다.</li>
+      <li>간병인 지원, 가사도우미, 건강 회복식 지원, 자녀 돌봄, 펫 케어 서비스 등 다양한 헬스케어 서비스를 제공한다.</li>
+    </ul>
+    <h4>서비스 횟수 증가 및 양도 기능</h4>
+    <ul>
+      <li>스탠다드 등급은 기존 6회에서 12회로, 패밀리 등급은 6회에서 12회로, 프리미엄 등급은 10회에서 17회로 서비스 횟수를 늘렸다.</li>
+      <li>패밀리 등급 이상일 경우 <strong>서비스 양도 기능</strong>도 추가되었다.</li>
+    </ul>
+    <h4>서비스 이용 기준</h4>
+    <table class="rank">
+      <thead><tr><th>등급</th><th>이용 기준</th><th>서비스 횟수</th></tr></thead>
+      <tbody>
+        <tr><td>스탠다드</td><td>보험 가입 금액 합산 5천만 원 이상, 월납 보험료 50만 원 이상</td><td>6회 → 12회</td></tr>
+        <tr><td>패밀리</td><td>사망 보장형 가입 금액 1억 원 이상, 월납 보험료 100만 원 이상 (양도 가능)</td><td>6회 → 12회</td></tr>
+        <tr><td>프리미엄</td><td>사망 보장 2억 원 이상</td><td>10회 → 17회</td></tr>
+      </tbody>
+    </table>
+    <h4>차별화 전략</h4>
+    <ul><li>메트라이프는 헬스케어 서비스를 통해 자사 상품을 차별화하는 전략을 사용하고 있다.</li></ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>미래에셋생명 인수 기준 완화</h3>
+    <p>미래에셋생명은 9월에 보험 인수 기준을 대폭 확대하여 더 많은 고객이 보험에 가입할 수 있도록 했다.</p>
+    <h4>자동 인수 대상 확대</h4>
+    <ul>
+      <li>자동 인수 대상 질병이 기존 12개에서 5,491개로 늘어났고, 현재는 <strong>13,934개</strong>로 더욱 확대되었다.</li>
+      <li>간단한 약물 처방으로 관리하는 만성질환이나 급성 경증 질환도 자동 인수 대상에 포함된다.</li>
+      <li>예를 들어 갑상선 기능 저하증, 당뇨, 고지혈증, 녹내장, 폐렴, 통풍, 골관절염, 척추증, 추간판 장애 등 경증 질환들이 자동 인수 대상에 포함된다.</li>
+    </ul>
+    <h4>예외 질환 인수 기준 완화</h4>
+    <ul>
+      <li>3년 이내 수술이나 입원이 있었더라도 <strong>7,147개의 예외 질환</strong>에 포함되면 퇴원 즉시 또는 수술 즉시 인수가 가능하다.</li>
+      <li>5년 이내 암 유병자는 뇌심장 담보 인수가 가능하며, 뇌심장 유병자는 암 담보 인수가 가능하다.</li>
+      <li>예를 들어 6개월 전 뇌혈관 협착 진단을 받았더라도 암 담보는 인수할 수 있다.</li>
+    </ul>
+    <h4>수술/퇴원 즉시 인수 질병</h4>
+    <ul>
+      <li><strong>수술 즉시 인수 질병:</strong> 피부종, 지방종, 치질, 요로결석, 하지정맥류 등 경증 질환은 수술 즉시 인수가 가능하다.</li>
+      <li><strong>퇴원 즉시 인수 질병:</strong> 위염, 장염, 비염, 편도염, 폐렴, 수면 무호흡증, 이명, 염좌, 골절 등 치료 후 퇴원하면 모두 인수가 가능하다.</li>
+    </ul>
+    <div class="chips"><span>자동 인수 질병 <b>13,934개</b></span><span>예외 질환 <b>7,147개</b></span><span>암 유병자 → 뇌심장 <b>5년 이내 가능</b></span></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.4</span>삼성생명 신규 특약 및 헬스케어 서비스</h3>
+    <p>삼성생명은 '질병 재통합 치료비' 특약을 출시하고 헬스케어 서비스를 강화하여 고객의 보장과 편의성을 높였다.</p>
+    <h4>신규 특약 '질병 재통합 치료비'</h4>
+    <ul>
+      <li>9월 10일에 출시되는 이 특약은 기존 실손보험으로 충분하지 않은 보장을 추가로 받을 수 있도록 설계되었다.</li>
+      <li>검사, 수술뿐만 아니라 주요 치료 부분까지 보장하며, 실손보험의 자기부담금 증가 및 비급여 보장 부족 부분을 보완한다.</li>
+    </ul>
+    <h4>보험금 지급 및 인수 장점</h4>
+    <ul>
+      <li>복잡한 질병 정의 없이 <strong>진단 코드만으로 보험금이 빠르게 지급</strong>되는 것이 삼성생명의 큰 장점이다.</li>
+      <li>인수 기준도 완화되어 예외 질환이 많아졌다.</li>
+      <li>암내신 플랜의 예외 질환은 8,403개이며, 암 패스 플랜 설계 시에는 11,364개로, 암과 관련 없는 질병은 대부분 커버된다.</li>
+    </ul>
+    <h4>헬스케어 서비스</h4>
+    <ul>
+      <li><strong>기본 제공 서비스:</strong> 진단 후 상급종합병원 간호사 동행, 입원 시 간병인 지원, 병원 통원 차량 에스코트, 가사도우미 지원, 자녀 돌봄, 펫 돌봄, 건강 회복식 딜리버리 등이 제공된다.</li>
+      <li><strong>서비스 적용 상품:</strong> 건강 회복식 딜리버리는 플러스원 상품, 플래티넘, 암치료 플러스 종신보험에서만 지원된다.</li>
+      <li>라이트 간편 진단 후에는 서비스가 지원되지 않으므로, 상품별 서비스 내용을 확인하고 고객에게 설명해야 한다.</li>
+      <li>메트라이프의 헬스케어 서비스가 10종 중 선택 가능했던 것에 비해, 삼성생명은 개수는 많지만 진단 후 케어 서비스는 7개로 상대적으로 적은 편이다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>라이트 간편 진단 후에는 헬스케어 서비스가 지원되지 않는다. 상품별 서비스 적용 범위를 확인한 뒤 안내한다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.5</span>신한라이프 변액연금보험 및 흥국생명 신상품</h3>
+    <p>신한라이프는 주식 편입 비율을 높인 변액연금보험을, 흥국생명은 치매 보장 강화 및 원금 보장, 그리고 100% 환급형 종신보험을 출시했다.</p>
+    <h4>신한 원더드림 변액연금보험</h4>
+    <ul>
+      <li><strong>주식 편입 비율 최대 100%</strong>
+        <ul><li>기존 변액보험의 주식 편입 비율이 50%인 경우가 많았으나, 이 상품은 최대 100%까지 주식에 투자하여 펀드 수익률을 그대로 가져갈 수 있다.</li></ul>
+      </li>
+      <li><strong>최저 연금 적립금 보장 없음</strong>
+        <ul>
+          <li>주식 편입 비율이 100%인 만큼, 최저 연금 적립금 보장이 되지 않는다.</li>
+          <li>운용 중 손해가 발생하면 고객이 모든 손해를 감수해야 한다.</li>
+          <li>따라서 펀드 관리에 능숙한 영업 가족이나 고객에게 적합한 상품이다.</li>
+        </ul>
+      </li>
+      <li><strong>브릿지 기간 기능</strong>
+        <ul>
+          <li>고객이 선택하면 연금 수령 시작 시점부터 5년간, 원래 받을 연금보다 5배(500%)를 더 많이, 더 짧은 기간 동안 한꺼번에 받을 수 있는 기능이다.</li>
+          <li>이는 60세 연금 개시 후 65세 국민연금 수령 전까지의 <strong>'소득 크레바스'</strong> 기간 동안 생활비 부족을 메꿀 수 있도록 돕는 컨셉이다.</li>
+        </ul>
+      </li>
+      <li><strong>비과세 혜택</strong>
+        <ul>
+          <li>변액보험 상품은 해외 주식 매매차익과 환차익에 대해 비과세 혜택이 있다.</li>
+          <li>저축성 보험 비과세 기준(10년 이상 유지, 월 150만 원 이하 납입)을 충족하면 비과세 혜택을 받을 수 있다.</li>
+          <li>해외 주식 투자 시 월 250만 원 초과 매매차익에 22% 양도소득세가 부과되는 점을 고려할 때, 노후 자금 마련을 위한 해외 주식 투자자에게 매력적인 상품이 될 수 있다.</li>
+        </ul>
+      </li>
+      <li><strong>안심 플러스 옵션</strong>
+        <ul>
+          <li>최저 연금 적립금 보증이 없어 마이너스 수익률이 날 수 있는 점을 보완하기 위한 옵션이다.</li>
+          <li>고객이 목표 수익률을 설정하면, 해당 수익률 초과 시 초과 수익분을 MMF(머니마켓 펀드)로 전환하여 이익을 확정하고, 나머지 금액으로 다시 투자할 수 있다.</li>
+        </ul>
+      </li>
+      <li><strong>스타뱅고 기능</strong>
+        <ul>
+          <li>종신 연금을 수령하다가 중간에 멈췄다가 다시 개시할 수 있는 기능이다.</li>
+          <li>연금 수령을 멈춘 기간 동안 받지 못한 금액은 공시이율로 적립되어 이후 받는 연금액이 늘어난다.</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>주식 편입 100% = 최저 연금 적립금 보장 없음. 손실은 전부 고객 부담이므로 펀드 관리에 능숙한 고객에게만 제안한다.</div>
+    <h4>흥국생명 신상품</h4>
+    <ul>
+      <li><strong>치매 담보 플러스 보장</strong>
+        <ul>
+          <li>110세까지 치매를 보장하며, 건강하면 원금을 보장해주는 상품이다.</li>
+          <li>치매가 발병하지 않을 경우 원금을 보장받을 수 있어 원금 보장을 선호하는 고객에게 경쟁력이 있다.</li>
+          <li>치매 약물 치료비 1천만 원, 복합제 50만 원, 주야간 보호, 복지용구, 방문 요양 등 최대 110만 원까지 보장한다.</li>
+        </ul>
+      </li>
+      <li><strong>통합 치료비 5종 추가 (비급여 암 집중 치료비)</strong>
+        <ul>
+          <li>비급여 암 통합 치료비가 추가되었으며, 표적 면역치료 각각 2천만 원, 암 로봇 수술 각각 2천만 원을 지원한다.</li>
+          <li>입원 지원금과 영양 치료까지 지원하는 비급여 집중 암 통합 치료비가 신설되었다.</li>
+        </ul>
+      </li>
+      <li><strong>플렉스 리턴백 종신보험 (리턴 100% 종신보험)</strong>
+        <ul>
+          <li>납입한 보험료를 100% 돌려받는 종신보험이다.</li>
+          <li>3개월간 <strong>배타적 사용권</strong>을 획득하여 흥국생명 판매사만 판매할 수 있다.</li>
+          <li>납입 완료 후 리턴 개시 시점에서 월 납입한 금액이 자동으로 환급된다.</li>
+          <li>사망 보장은 리턴 개시 시점에 사망 보장금에서 환급받은 금액만큼 차감하고 지급된다.</li>
+          <li><strong>체증 납입형</strong>을 선택하면 매년 5%씩 정액으로 체증하여 납입하고, 납입한 형태 그대로 환급받을 수 있다.</li>
+          <li>체증 납입형은 받을 때 금액이 조금씩 오르는 장점이 있지만, 낼 때도 체증해서 내야 하므로 이 부분은 고려해야 한다.</li>
+        </ul>
+      </li>
+      <li><strong>교보 모두 지킴 종신보험과의 비교</strong>
+        <ul>
+          <li>흥국생명은 매월 환급, 교보생명은 10%씩 1년에 한 번 환급한다.</li>
+          <li>교보생명은 사망보험금이 유지되지만, 흥국생명은 환급받은 만큼 사망보험금에서 차감된다.</li>
+          <li>두 상품의 기능적 차이를 고려하여 보험료까지 비교해 볼 필요가 있다.</li>
+        </ul>
+      </li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>비교 항목</th><th>교보 모두 지킴 종신</th><th>흥국 플렉스 리턴백 종신</th></tr></thead>
+      <tbody>
+        <tr><td>환급 방식</td><td>납입 보험료의 10%씩 1년에 한 번, 10년간</td><td>리턴 개시 후 월 납입액이 매월 자동 환급</td></tr>
+        <tr><td>사망보험금</td><td>최초 가입 사망보험금 유지</td><td>환급받은 만큼 사망보장금에서 차감</td></tr>
+        <tr><td>특이 기능</td><td>미수령 시 체증형(150%/170%)</td><td>체증 납입형(매년 5%), 3개월 배타적 사용권</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.6</span>한화생명 암 치료비 및 건강 더한 종신보험</h3>
+    <p>한화생명은 암 치료비 보장을 강화하고, 단기납 종신보험 수준의 환급률을 제공하는 '건강 더한 종신보험'을 출시했다.</p>
+    <h4>생활비용 암 치료비</h4>
+    <ul>
+      <li><strong>항암약물치료 보장</strong>
+        <ul>
+          <li>통원 또는 입원과 관계없이 회당 최대 300만 원을 보장한다.</li>
+          <li>최근 암 항암약물 치료 시 입원을 잘 시키지 않아 실손보험으로 통원치료비만 받을 수 있는 경우를 보완한다.</li>
+          <li>항암약물 통합치료는 항암약물 회당 100만 원, 표적항암약물 회당 200만 원(종에 따라 50만~200만 원)을 지급한다.</li>
+        </ul>
+      </li>
+      <li><strong>항암방사선치료 보장</strong>
+        <ul>
+          <li>통원 또는 입원과 관계없이 회당 최대 300만 원을 보장한다.</li>
+          <li>비급여 항암약물치료도 통원·입원 구별 없이 회당 최대 200만 원을 보장한다.</li>
+          <li>항암방사선 통합치료는 항암방사선 치료 회당 100만 원, 양성자 치료 200만 원, 비급여인 경우 200만 원을 지급한다.</li>
+        </ul>
+      </li>
+      <li><strong>표적항암방사선 종류별 보장</strong></li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>종류</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td>1종</td><td>소분자 항암제 (크기가 작은 저분자 화합물 형태)</td></tr>
+        <tr><td>2종</td><td>암세포의 특정 단백질에 결합하는 항체</td></tr>
+        <tr><td>3종</td><td>면역세포가 암세포를 공격하는 면역항암제</td></tr>
+        <tr><td>4종</td><td>특정 면역항암제 (가장 많은 보장금액)</td></tr>
+        <tr><td>5종</td><td>그 외의 것들</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><strong>최대 보장 한도</strong>
+        <ul><li>계속 받는 항암약물 통합치료와 항암방사선 통합치료 모두 최대 500만 원까지 보장한다.</li></ul>
+      </li>
+    </ul>
+    <h4>건강 더한 종신보험</h4>
+    <ul>
+      <li><strong>단기납 종신보험 수준의 환급률</strong>
+        <ul>
+          <li>기존 종신보험에 건강 보장을 더한 상품으로, 단기납 종신보험과 비교해도 무방하다.</li>
+          <li>7년 납 예시에서 7년 완납 시 환급률 100%, 10년 시점 남자 기준 116%를 제공한다.</li>
+          <li>이는 10년 시점 117%를 제공하는 타사 단기납 종신보험과 비교해도 매우 높은 환급률이다.</li>
+        </ul>
+      </li>
+      <li><strong>상품 컨셉: '짜장면 시키면 탕수육 서비스'</strong>
+        <ul>
+          <li>50만 원 보험료로 단기납 종신과 건강보험, 암 진단을 각각 가입하는 것과, 50만 원으로 건강 더한 종신을 가입하는 것을 비교한다.</li>
+          <li>실제 받을 수 있는 보장은 비슷하지만, 건강 더한 종신보험의 환급률이 훨씬 높다는 점이 강점이다.</li>
+        </ul>
+      </li>
+      <li><strong>납입면제 및 보장 범위 확대</strong>
+        <ul>
+          <li>기존 납입면제에 '건강보장형' 내용이 추가되었다.</li>
+          <li>기존에는 제외되었던 유방암과 전립선암도 보장에 포함되었다.</li>
+        </ul>
+      </li>
+      <li><strong>타사 대비 경쟁력</strong>
+        <ul><li>건강보장형 종신보험만 놓고 봤을 때, 단기납 수준의 환급률로 타사 대비 가장 좋은 수치를 가지고 있다.</li></ul>
+      </li>
+    </ul>
+    <div class="note good"><span class="lb">세일즈 포인트</span>같은 50만 원이면 단기납 종신+건강보험+암진단을 따로 가입하는 것과 보장은 비슷한데, 건강 더한 종신 한 건이 환급률(7년 완납 100% · 10년 116%)이 훨씬 높다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.7</span>AIA 생명 상품 및 헬스케어 서비스</h3>
+    <p>AIA 생명은 높은 해약환급률과 업계 최고 수준의 헬스케어 서비스를 통해 상품 경쟁력을 강화했다.</p>
+    <h4>높은 해약환급률</h4>
+    <ul>
+      <li>월납 연금은 공시이율 4.86%, 10년 시점 해약환급률 148.2%를 제공한다.</li>
+      <li>일시납 연금은 10년 확정 5.79%, 10년 시점 확정 해약환급률 157.8%를 제공한다.</li>
+      <li>단기납 종신보험은 7년 납입 후 10년 만기 시 124.8%의 환급률을 제공하며, 이는 일반적인 117%보다 훨씬 높은 수치이다.</li>
+    </ul>
+    <div class="chips"><span>월납 연금 10년 <b>148.2%</b></span><span>일시납 연금 10년 <b>157.8%</b></span><span>단기납 종신 7납 10년 <b>124.8%</b></span></div>
+    <h4>업계 최고 수준의 헬스케어 서비스</h4>
+    <ul>
+      <li>365일 24시간 건강 상담이 가능하다.</li>
+      <li>의심 소견만으로 또는 진단명과 무관하게 간병인 지원, 가정 간호 서비스가 지원된다.</li>
+      <li>보험 유지 기간 내내 서비스가 가능하며, 기간 제한이 없다.</li>
+      <li>양가 가족까지 서비스 양도가 가능하며, 전 상품 가입 시 모두 헬스케어 서비스가 제공된다.</li>
+    </ul>
+    <h4>서비스 이용 기준</h4>
+    <ul>
+      <li>스마트 플래티넘, 플래티넘 플러스 등급에 따라 월 납 보험료 20만 원 이상, 50만 원 이상, 200만 원 이상 등의 기준이 적용된다.</li>
+      <li>이는 타사들도 기본적으로 가지고 있는 기준이며, 더 좋은 서비스를 제공하기 위한 것이다.</li>
+      <li>고객 상황에 맞춰 상품을 제안할 때 이 기준을 참고해야 한다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head"><div class="kicker">COURSE 02</div><h2>9월 손해보험 신상품 및 담보 소개</h2><p>9월에 출시된 주요 손해보험 신상품들은 비급여 치료 보장을 확대하고 간병인 지원 서비스를 혁신적으로 개선하는 등 고객의 실질적인 필요를 충족시키기 위한 노력을 기울였다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>롯데손해보험 비급여 치료 보장 강화</h3>
+    <p>롯데손해보험은 뉴 비급여 통합 치료비, 뉴 암 치료단비, 뉴 3대 생존 치료비 등 비급여 치료 보장을 대폭 확대했다.</p>
+    <h4>뉴 비급여 통합 치료비</h4>
+    <ul>
+      <li>최대 1억 원까지 한도가 설정되어 있다.</li>
+      <li>삼성화재 고급형 비급여 통합 치료비(1억 2천만 원)보다는 적지만, 가장 많이 추천하는 기본 플랜(1억 원)과 비교하면 경쟁력이 있다.</li>
+      <li>중요한 것은 보장하는 금액이며, 한도는 참고 사항이다.</li>
+    </ul>
+    <h4>뉴 암 치료단비 (암 비급여 통합 치료비)</h4>
+    <ul>
+      <li>8천만 원짜리 암 비급여 통합 치료비를 선택할 수 있다.</li>
+      <li>표적항암, 면역항암, 양성자 치료 등 고비용 치료의 경우 가입 금액에 따라 최대 3천만 원까지 보장한다.</li>
+      <li>다빈치 로봇 수술을 포함하면 1천만 원까지 보장받을 수 있다.</li>
+      <li>기본 보장금액은 타사와 큰 차이가 없으며, 여기에 2천만 원의 하이클래스 비급여 암 치료비를 추가할 수 있다.</li>
+      <li>암 수술, 항암 방사선 치료, 항암 약물 등 전액 본인 부담 비급여 치료 시 2천만 원이 추가 지급되어 총 최대 보장 금액은 2억 원이다.</li>
+      <li><strong>예시:</strong> 면역항암제 8천만 원, 표적항암제 5천만 원, 항암 양성자 치료 5천만 원, 로봇 수술 3천만 원 등을 받을 수 있다.</li>
+    </ul>
+    <h4>뉴 3대 생존 치료비 (질병 통합 치료비)</h4>
+    <ul>
+      <li>9월에 신규 출시된 질병 통합 치료비도 포함되어 검사, 수술 등 여러 항목에 대한 보장이 제공된다.</li>
+      <li>주요 치료, 중증 치료까지 치료비를 모두 보장받을 수 있다.</li>
+    </ul>
+    <h4>암 진단비</h4>
+    <ul>
+      <li>치료비와 진단비를 함께 제공한다.</li>
+      <li>암 진단 시 가입 금액을 지급하고, 항암 치료를 받으면 2천만 원이 추가 지급된다.</li>
+      <li>메리츠화재의 암 진단비는 특정 치료를 2회 중복으로 받아야 보험금이 지급되는 반면, 롯데손해보험은 <strong>1회부터 보장</strong>한다는 강점이 있다.</li>
+      <li>보험료도 더 저렴할 수 있으므로 설계 시 확인이 필요하다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>메리츠화재 1~5종 수술 플러스</h3>
+    <p>메리츠화재는 기존 1~5종 수술비에 한 번 더 보장하는 '1~5종 수술 플러스'를 출시하여 특정 수술의 반복 보장을 강화했다.</p>
+    <h4>1~5종 수술 플러스 특징</h4>
+    <ul>
+      <li>기존 1~5종 수술비에 추가로 한 번 더 1~5종 수술을 보장하는 상품이다.</li>
+      <li>보험료가 저렴하며, 실제로 두 번 받는 경우가 있는 수술에 유용하다.</li>
+    </ul>
+    <h4>백내장 수술 사례</h4>
+    <ul>
+      <li>대표적인 예시로 백내장 수술이 있다.</li>
+      <li>양쪽 눈 백내장 수술 시, 첫째 날 한쪽을 받고 다음 날 다른 쪽을 받는 경우가 많다.</li>
+      <li>이 경우 1~5종 수술비에 한 번 더 보장되어 두 번 모두 받을 수 있다는 장점이 있다.</li>
+    </ul>
+    <h4>기타 적용 가능 사례</h4>
+    <ul><li>디스크 재발이나 다발성 외상 등에도 적용될 수 있지만, 백내장 수술에서 특히 장점이 부각된다.</li></ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.3</span>삼성화재 간병인 지원 및 일당 동시 제공</h3>
+    <p>삼성화재는 간병인 지원과 간병 일당을 모두 제공하는 혁신적인 간병보험을 출시하여 고객의 선택권을 넓혔다.</p>
+    <h4>간병인 지원 및 일당 동시 제공</h4>
+    <ul>
+      <li>기존에는 간병인을 보내주는 것과 간병 일당을 지급하는 것 중 하나를 선택해야 했으나, 삼성화재는 이를 합쳤다.</li>
+      <li>간병인을 신청하면 간병인을 보내주고, 신청하지 않으면 하루 일당 최대 5만 원을 현금으로 지급한다.</li>
+    </ul>
+    <h4>간병인 서비스의 질</h4>
+    <ul>
+      <li>간병인 신청 시 24시간 이내에 연중무휴로 자격증 보유자를 배정해준다.</li>
+      <li>간병인이 마음에 들지 않으면 제한 없이 교체할 수 있다.</li>
+      <li>가정 케어도 가능하며, 최대 30일까지 제공된다.</li>
+    </ul>
+    <h4>경쟁 우위</h4>
+    <ul><li>간병인 지원과 일당 지급 중 어느 것이 더 좋은지 논쟁하던 양쪽의 장점을 모두 취하여 가장 좋은 간병인 보험이 되었다.</li></ul>
+    <div class="note good"><span class="lb">정리</span>간병인 신청 시 → 24시간 내 자격증 보유자 배정(교체 무제한, 가정 케어 최대 30일) / 미신청 시 → 일당 최대 5만 원 현금 지급.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.4</span>하나손보 고당지 간편보험 및 통합 골절 진단비 확대</h3>
+    <p>하나손보는 고당지 맞춤 간편보험을 출시하고 통합 골절 진단비를 확대하여 다양한 고객의 니즈에 맞춘 보장을 제공한다.</p>
+    <h4>고당지 맞춤 간편보험</h4>
+    <ul>
+      <li>9월 중 출시 예정인 이 상품은 고혈압, 당뇨, 고지혈증 중 하나라도 없으면 할인이 적용되며, 모두 없으면 최대 할인을 받을 수 있다.</li>
+      <li>이는 타사에도 유사한 상품이 있으나, 하나손보의 라인업이 갖춰진 것으로 볼 수 있다.</li>
+    </ul>
+    <h4>통합 골절 진단비 확대</h4>
+    <ul>
+      <li>기존 골절 진단비의 한계를 넘어 통합 골절 진단비가 출시되었다.</li>
+      <li>최대 가입 금액이 커졌고, 보장 형태도 개선되었다.</li>
+      <li>두 가지 이상의 골절에 대해 기존에는 한 번만 보장되었으나, 이제는 <strong>각각에 대해 보장</strong>한다.</li>
+      <li>이 담보는 베스트 운전자 상해 종합보험에도 가입되어 있다.</li>
+      <li>기존 골절 진단비는 치아 파절 포함 20만 원, 제외 30만~50만 원이 지급되었으나, 통합 골절 진단비는 골절 코드에 따라 퍼센트를 곱하여 보험료를 지급하므로 지급 금액이 더 커질 수 있다.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101 교육자료</b> · 전종환 팀장 / 010-4637-3210</span><span>출처: lilys.ai 강의 요약 · 2026-09</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

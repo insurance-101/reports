@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5세대 실손보험 핵심 정리 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">PRODUCT STUDY · 상품 스터디</div>
+    <h1>5세대 실손보험,<br><span class="accent">무엇이 어떻게</span> 바뀌었나</h1>
+    <p class="lead">급여 통원의 건강보험 본인부담률 연동, 비급여 중증·비중증 차등, 1·2세대 가입자 전환·할인 제도까지 — 5세대 실손의 흐름을 이해하고 정액 담보 상담에 활용하기 위한 정리.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>주제 <b>5세대 실손보험</b></span><span>활용 <b>고객 상담·정액 담보 제안</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">등장 배경 및 주요 변화</div><div class="ds">보장 축소 흐름 · 중증 강화 · 급여/비급여 구조</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">급여·비급여 보장 세부 내용</div><div class="ds">본인부담률 연동 · 관리급여 · 특약1/특약2</div></a><a href="#m3"><div class="no">COURSE 03</div><div class="t">기존 가입자 전환 및 할인 제도</div><div class="ds">11월 시행 · 재매입 할인 · 선택형 특약</div></a><a href="#m4"><div class="no">COURSE 04</div><div class="t">정액 담보의 중요성</div><div class="ds">보장 공백 · 갭 채우기 · 상담 활용</div></a></nav>
+
+
+<nav class="topnav"><ul><li><a href="#m1">01 등장 배경</a></li><li><a href="#m2">02 보장 세부</a></li><li><a href="#m3">03 전환·할인</a></li><li><a href="#m4">04 정액 담보</a></li></ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head"><div class="kicker">COURSE 01</div><h2>5세대 실손보험의 등장 배경 및 주요 변화</h2><p>5세대 실손보험은 기존 실손보험의 문제점을 해결하고 의료 정책 변화에 발맞춰 보장 내용을 재편하며 출시되었다.</p></div>
+  <div class="card">
+    <h3><span class="idx">1.1</span>실손보험의 변화 흐름</h3>
+    <h4>초기 실손보험은 보장 범위가 넓었다</h4>
+    <ul><li>초기 실손보험은 부족한 의료비를 <strong>100% 보장</strong>해주는 상품으로, 사실상 거의 무제한에 가까웠다.</li></ul>
+    <h4>손해율 문제 등으로 보장이 점차 축소되었다</h4>
+    <ul><li>여러 가지 문제(손해율, 의료정책 등)로 인해 실손보험은 계속 개정되었고, 보장률은 <strong>90% → 80% → 70%</strong>로 점차 축소되었다.</li></ul>
+    <h4>5세대 실손보험은 보장 축소와 함께 중증 질환 보장을 강화했다</h4>
+    <ul>
+      <li>올해 출시된 5세대 실손보험은 비중증 질환의 자기부담률을 <strong>50%까지</strong> 늘려 보장을 더욱 축소했다.</li>
+      <li>동시에 다양한 조건을 추가하여 사용에 제약을 만들었다.</li>
+      <li>반면, <strong>중증 질환에 대한 보장은 강화</strong>하여 꼭 필요한 곳에 더 많은 지원을 하고, 문제가 되는 부분은 축소하여 보험료를 합리적으로 만들고자 했다.</li>
+    </ul>
+    <div class="chips"><span>초기 <b>100%</b></span><span>2세대 <b>90%</b></span><span>3세대 <b>80%</b></span><span>4세대 <b>70%</b></span><span>5세대 비중증 <b>50%</b></span></div>
+  </div>
+  <div class="card">
+    <h3><span class="idx">1.2</span>5세대 실손보험의 핵심 목표 및 구성</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/113.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 5세대 실손보험의 핵심 목표 및 구성</figcaption></figure>
+    <h4>중증질환 보장을 강화하고 보험료를 낮추는 것을 목표로 한다</h4>
+    <ul>
+      <li>5월 6일자 보도자료에 따르면, 5세대 실손은 부담이 큰 <strong>중증질환의 보장을 강화</strong>하고 <strong>보험료를 낮추는 것</strong>을 목표로 한다.</li>
+      <li>이는 보편적인 의료비(급여)와 중증질환 치료비(정말 필요한 부분)를 잘 보장하도록 근본적으로 재편하는 것이다.</li>
+    </ul>
+    <h4>급여와 비급여로 크게 구분되며, 급여는 주계약, 비급여는 특약으로 구성된다</h4>
+    <ul>
+      <li>5세대 실손보험은 급여와 비급여로 크게 구분된다.</li>
+      <li><strong>급여는 주계약</strong>으로, <strong>비급여는 특약</strong>으로 구성된다.</li>
+    </ul>
+    <h4>급여 통원 치료는 건강보험 본인 부담률과 연동되며, 비급여는 중증과 비중증으로 차등화된다</h4>
+    <ul>
+      <li>급여의 가장 큰 핵심은 <strong>통원 치료</strong>이다.
+        <ul>
+          <li>급여 통원은 건강보험의 본인 부담률과 연동하여 건강보험 정책 효과를 높이려 한다.</li>
+          <li>강사는 5세대 실손보험의 가장 큰 핵심이 비급여보다는 <strong>급여에서의 건강보험 본인 부담률 연동</strong>이라고 강조한다.</li>
+        </ul>
+      </li>
+      <li>비급여는 중증과 비중증으로 구분하여 보장을 차등화하고 합리적인 보장을 제공한다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>5세대의 진짜 핵심은 비급여 축소보다 <strong>급여 통원의 건강보험 본인부담률 연동</strong>이다. 급여=주계약, 비급여=특약(중증/비중증)으로 구조가 바뀐다.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head"><div class="kicker">COURSE 02</div><h2>5세대 실손보험의 급여 및 비급여 보장 세부 내용</h2><p>5세대 실손보험은 급여와 비급여 항목에 대해 기존 4세대와 비교하여 보장 내용에 큰 변화를 주었으며, 특히 급여 통원 치료와 비급여 비중증 항목에서 환자 부담이 증가했다.</p></div>
+  <div class="card">
+    <h3><span class="idx">2.1</span>급여 보장: 통원 치료의 변화와 환자 부담 증가</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/185.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 급여 보장: 통원 치료의 변화</figcaption></figure>
+    <h4>입원 급여 치료는 기존 4세대와 큰 차이 없이 유지된다</h4>
+    <ul>
+      <li>기존 4세대와 비교했을 때, 입원 급여 치료는 실제로 필요한 부분에 사용된다고 보아 기존과 큰 차이 없이 유지된다.</li>
+      <li>보상 한도는 <strong>연간 5천만원</strong>, 자기부담률은 <strong>20%</strong>로 동일하게 유지된다.</li>
+    </ul>
+    <h4>통원 급여 치료는 건강보험 본인 부담률과 연동되어 환자 부담이 실질적으로 증가한다</h4>
+    <ul>
+      <li>통원 치료의 자기부담률은 20%로 동일하지만, <strong>건강보험 본인 부담률과 연동</strong>하겠다는 새로운 조건이 추가되었다.</li>
+      <li>이는 5세대 실손보험의 가장 큰 핵심 변화 중 하나이다.</li>
+      <li>건강보험 본인 부담률 연동으로 인해 환자의 부담이 실질적으로 많이 증가할 수 있다.</li>
+      <li>우리나라 건강보험 제도는 병원 규모, 약제, 검사 등에 따라 자기부담률이 다르며, 이는 <strong>의료 수요를 조절</strong>하기 위함이다.</li>
+      <li>기존 실손보험은 건강보험 자기부담률(30~60%)과 상관없이 모두 보장해주어 의료 수요 조절의 의미가 없어졌다.</li>
+      <li>따라서 5세대 실손보험은 건강보험과 동일하게 자기부담률을 연동시켜 의료 수요 조절 효과를 높이려 한다.</li>
+    </ul>
+    <h4>건강보험 본인 부담률 연동 방식의 구체적인 예시</h4>
+    <ul>
+      <li>국민건강보험관리체계는 급여와 비급여로 구분된다.
+        <ul>
+          <li>비급여는 환자가 전액 부담하고, 급여는 공단 지원 후 자기부담률이 발생한다.</li>
+          <li>입원은 보통 20%, 통원은 30~60%의 자기부담률이 발생한다.</li>
+        </ul>
+      </li>
+      <li>기존에는 건강보험 자기부담률과 상관없이 실손보험에서 보상했지만, 5세대부터는 <strong>건강보험 자기부담률을 그대로 가져와 적용</strong>한다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>예시: 응급실 비응급 진료 (병원비 11만원)</th><th>4세대 실손</th><th>5세대 실손</th></tr></thead>
+      <tbody>
+        <tr><td>건강보험 자기부담률</td><td>90% (환자 10만원 수납, 공단 10% 지원)</td><td>90% (동일)</td></tr>
+        <tr><td>실손 자기부담 산정</td><td>환자가 낸 10만원 × 실손 자기부담률 20% = <strong>2만원</strong></td><td>건보 자기부담률 90% 그대로 적용 → 10만원 × 90% = <strong>9만원</strong></td></tr>
+        <tr><td>결과</td><td>8만원 환급</td><td>돌려받을 금액이 거의 없을 수 있음</td></tr>
+      </tbody>
+    </table>
+    <h4>관리급여 제도 도입으로 비급여 항목의 자기부담률이 대폭 증가한다</h4>
+    <ul>
+      <li><strong>관리급여</strong>는 기존에 없던 새로운 틀로, 선별급여의 일종이다.</li>
+      <li>실손보험에서 문제가 되는 경증 질병의 과잉 남용 비급여 항목들을 관리급여로 편입한다.</li>
+      <li>관리급여로 지정되면 <strong>자기부담률이 95%인 급여 항목</strong>으로 편입되어 보장이 대폭 축소된다.</li>
+    </ul>
+    <h4>전액 본인 부담(100대 100) 치료는 5세대 실손보험에서 보상받을 수 없다</h4>
+    <ul>
+      <li>급여 항목 중 자기부담률이 100%인 <strong>전액 본인 부담</strong> 치료가 있다.</li>
+      <li>병원에서는 이를 '100대 100'이라고 표현하며, 공단 지원 없이 환자가 전체 비용을 100% 부담하는 개념이다.</li>
+      <li>5세대 실손보험은 자기부담률 100%를 실손보험의 자기부담률과 동일하게 적용하므로, 전액 본인 부담 치료는 보상받을 수 없다.</li>
+      <li>따라서 5세대 실손보험의 급여 통원 치료는 건강보험 본인 부담률 연동으로 환자 부담이 커지고, 관리급여 도입으로 비급여 항목의 제어가 강화된다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">주의</span>관리급여(자기부담 95%)와 100대 100 전액본인부담 항목은 5세대에서 사실상 보상이 되지 않는다. 통원 급여도 건보 본인부담률에 따라 환급이 거의 없을 수 있다.</div>
+  </div>
+  <div class="card">
+    <h3><span class="idx">2.2</span>비급여 보장: 중증과 비중증의 차등 보장 및 비중증 보장 축소</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/583.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 비급여 보장: 중증과 비중증의 차등 보장</figcaption></figure>
+    <h4>비급여는 특약1(중증)과 특약2(비중증)로 구분된다</h4>
+    <ul><li>비급여는 <strong>특약1(중증)</strong>과 <strong>특약2(비중증)</strong>로 나뉜다.</li></ul>
+    <h4>중증 비급여(특약1)는 기존 보장과 큰 차이 없이 유지되며, 자기부담 한도가 신설된다</h4>
+    <ul>
+      <li><strong>중증 질환</strong>은 산정특례 대상 질환(암, 뇌, 심장, 희귀난치성 질환 등)과 이 질환들과 의학적 인과관계가 분명한 합병증을 포함한다.</li>
+      <li>이러한 질환들은 치료비가 많이 발생하고 보장이 필요하므로, 기존 보장과 큰 차이 없이 <strong>연간 5천만원 한도, 자기부담률 30%</strong>로 유지된다.</li>
+      <li>비급여임에도 불구하고 <strong>자기부담 한도 500만원</strong>이 신설되어, 500만원 이상은 전부 보장해준다.</li>
+      <li>이는 상급종합병원과 종합병원 규모에 한해서 적용되지만, 중증질환은 주로 큰 병원에서 치료하므로 환자에게 매우 유리한 부분이다.</li>
+    </ul>
+    <h4>비중증 비급여(특약2)는 보장이 대폭 축소되고 일부 항목은 보장 대상에서 제외된다</h4>
+    <ul>
+      <li><strong>비중증 비급여</strong>는 실손보험의 의료체계 왜곡 및 과잉 의료비 상승의 주원인으로 지목된다.</li>
+      <li>이에 따라 보장 한도가 5천만원에서 <strong>1천만원</strong>으로 대폭 낮아지고, 자기부담률은 <strong>50%</strong>로 상향된다.</li>
+      <li>과잉 의료가 큰 일부 항목은 아예 보장 대상에서 제외된다.
+        <ul><li><strong>제외 항목:</strong> 미등재 신의료기술, 근골격계 물리치료(도수 포함), 체외충격파, 비급여 주사제는 아예 면책된다.</li></ul>
+      </li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>특약1 · 중증 비급여</th><th>특약2 · 비중증 비급여</th></tr></thead>
+      <tbody>
+        <tr><td>대상</td><td>산정특례 질환(암·뇌·심장·희귀난치) + 인과관계 분명한 합병증</td><td>중증 이외의 질병과 상해</td></tr>
+        <tr><td>한도</td><td>연간 5천만원</td><td>입원 회당 300만원 · 연간 1천만원</td></tr>
+        <tr><td>자기부담률</td><td>30% (자기부담 한도 500만원 신설 — 상급종합·종합병원)</td><td>50% (50%와 5만원 중 큰 금액 공제 → 5만원 미만 보상 불가)</td></tr>
+        <tr><td>도수·체외충격파·주사제</td><td>—</td><td>아예 보장하지 않음</td></tr>
+        <tr><td>영상검사</td><td>3D 비급여 MRI 보장 그대로</td><td>MRI만 보장, MRA 삭제</td></tr>
+      </tbody>
+    </table>
+    <h4>표로 정리한 비중증 비급여 보장 내용</h4>
+    <ul>
+      <li>중증 이외의 질병과 상해를 비중증으로 구분한다.</li>
+      <li>입원 한도는 해당 300만원, 연간 1천만원으로 축소된다.</li>
+      <li>자기부담률은 50%로 늘어나며, 50%와 5만원 중 큰 금액을 공제하므로 <strong>5만원 미만은 보상받을 수 없다</strong>.</li>
+      <li>문제가 되었던 도수치료, 체외충격파 등은 아예 보장하지 않는다.</li>
+      <li>비급여 MRI, MRA 정도만 보장해준다.</li>
+    </ul>
+    <h4>MRI/MRA 보장 차이</h4>
+    <ul>
+      <li>중증에서는 3D 비급여 MRI 보장을 그대로 가져간다.</li>
+      <li>비중증에서는 MRI만 보장하고 <strong>MRA는 삭제</strong>된다.</li>
+    </ul>
+    <h4>의료재평가 D등급 항목은 중증, 비중증 상관없이 보장하지 않는다</h4>
+    <ul><li>의료재평가를 통해 효과가 없다고 평가된 <strong>D등급 항목(권고하지 않음)</strong>은 중증이든 비중증이든 상관없이 보장하지 않는다.</li></ul>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head"><div class="kicker">COURSE 03</div><h2>기존 실손보험 가입자를 위한 5세대 전환 및 할인 제도</h2><p>5세대 실손보험 출시와 함께 기존 1, 2세대 가입자들을 위한 선택형 할인 특약과 계약 전환 제도가 도입되어, 보험료 부담을 줄이면서 보장 내용을 조정할 수 있는 기회를 제공한다.</p></div>
+  <div class="card">
+    <h3><span class="idx">3.1</span>기존 가입자를 위한 제도: 선택형 할인 특약 및 계약 전환 할인</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/753.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 기존 가입자를 위한 제도</figcaption></figure>
+    <h4>기존 1, 2세대 가입자들은 11월부터 제도 활용이 가능하다</h4>
+    <ul>
+      <li>5세대 실손보험 출시 후, 기존 1세대와 2세대 초기 가입자들은 어떻게 해야 할지에 대한 궁금증이 많았다.</li>
+      <li>이들을 위해 <strong>선택형 할인 특약</strong>과 <strong>계약 전환 제도</strong> 두 가지 중 하나를 선택할 수 있다.</li>
+      <li>이 제도는 <strong>11월부터 시행</strong>되므로, 그 전까지는 당장 할 수 있는 것이 없다.</li>
+      <li>본격적인 안내는 11월부터 이루어질 예정이며, 그 전까지는 고객들에게 이러한 내용이 있다는 정도만 안내하는 것이 좋다.</li>
+    </ul>
+    <div class="note key"><span class="lb">상담 포인트</span>11월 시행 전까지는 "이런 제도가 생긴다" 수준으로만 안내한다. 강제 전환은 없다.</div>
+  </div>
+  <div class="card">
+    <h3><span class="idx">3.2</span>계약 전환 할인 (재매입 할인)</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/805.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 계약 전환 할인 (재매입 할인)</figcaption></figure>
+    <h4>5세대 실손으로 전환 시 보험료 50%를 3년간 할인해준다</h4>
+    <ul>
+      <li>계약 전환 할인은 흔히 <strong>재매입 할인</strong>이라고 불린다.</li>
+      <li>5세대 실손으로 전환하면 해당 보험료의 <strong>50%를 3년 동안 할인</strong>해주는 방안이 논의되고 있다.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">3.3</span>선택형 할인 특약: 불필요한 보장 제외 및 보험료 할인</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/831.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 선택형 할인 특약</figcaption></figure>
+    <h4>선택형 할인 특약은 불필요한 보장을 제외하고 보험료를 할인해주는 제도이다</h4>
+    <ul>
+      <li>보험료 부담은 되지만 기존 보험을 바꾸기 아쉬운 가입자들에게 좋은 선택권이 될 수 있다.</li>
+      <li><strong>강제 전환은 없으므로</strong>, 아무것도 하지 않고 기존 보험을 유지해도 된다.</li>
+      <li>하지만 보험료 부담을 꼭 고려해야 한다.</li>
+      <li>선택형 특약은 불필요한 보장을 제외하여 보험료를 할인해주는 방식이다.</li>
+    </ul>
+    <h4>세 가지 선택형 특약 항목이 결정되었다</h4>
+    <ul>
+      <li><strong>첫 번째:</strong> 근골격계 물리치료, 도수치료, 체외충격파, 비급여주사제 보장을 제외한다.</li>
+      <li><strong>두 번째:</strong> 비급여 MRI, MRA 등 영상 검사 보장을 제외한다.</li>
+      <li><strong>세 번째:</strong> 보험금 자기부담 비중을 20%로 높인다. (1세대는 0%, 2세대는 10%였음)</li>
+      <li>가입자는 이 1, 2, 3번 항목 중에서 선택할 수 있다.</li>
+    </ul>
+    <h4>선택형 특약 적용 시 보험료 할인 예시</h4>
+    <ul>
+      <li>나중에 특약을 삭제할 때 얼마가 할인되는지 확인할 수 있다.</li>
+      <li><strong>60대 여성 예시</strong>
+        <ul>
+          <li><strong>1세대 실손보험:</strong> 월 17만 8천원 정도의 보험료를 낸다.</li>
+          <li>1, 2, 3번 옵션을 모두 선택(세 가지 보장 모두 삭제)하면 보험료가 <strong>약 40% 절감</strong>되어 거의 반값으로 줄어든다.</li>
+          <li><strong>2세대 실손보험:</strong> 월 12만원대 보험료를 낸다.</li>
+          <li>선택형 3개 모두 삭제 시 <strong>약 30% 할인</strong>이 된다.</li>
+          <li>이러한 할인율은 체감적으로 큰 도움이 될 수 있다.</li>
+        </ul>
+      </li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>60대 여성 예시</th><th>현재 보험료</th><th>선택형 3개 모두 삭제 시</th></tr></thead>
+      <tbody>
+        <tr><td>1세대 실손</td><td>월 약 17만 8천원</td><td>약 40% 절감 (거의 반값)</td></tr>
+        <tr><td>2세대 실손</td><td>월 12만원대</td><td>약 30% 할인</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h3><span class="idx">3.4</span>5세대 전환 시 고려사항 및 장단점</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/938.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 5세대 전환 시 고려사항 및 장단점</figcaption></figure>
+    <h4>기존 1, 2세대 가입자는 비급여 사용량을 고려하여 전환 여부를 결정해야 한다</h4>
+    <ul>
+      <li>1, 2세대 실손보험은 <strong>비급여를 많이 사용해도 할증이 없다</strong>는 장점이 있다.</li>
+      <li>따라서 단순히 5세대 보험료만 비교하기보다는, 본인의 비급여 사용량이 얼마나 될지 고려하여 결정하는 것이 좋다.</li>
+    </ul>
+    <h4>5세대 전환 시 초기 보험료는 크게 내려가지만, 보장 축소 및 할증 제도를 고려해야 한다</h4>
+    <ul>
+      <li>5세대 실손으로 전환하면 보험료가 순간적으로 많이 내려간다.
+        <ul>
+          <li>1세대는 <strong>76%</strong>, 2세대는 <strong>66%</strong> 정도 내려간다.</li>
+          <li>3년 동안 할인해준다고 하면 거의 2만원대, 즉 80~90% 저렴하게 이용할 수 있다.</li>
+        </ul>
+      </li>
+      <li>하지만 5세대의 보장 축소 부분, 할증 제도, 그리고 앞으로도 계속 재가입으로 인해 새로운 실손보험을 사용하게 될 수밖에 없다는 점들을 잘 고려해야 한다.</li>
+      <li>고객들이 이러한 점들을 종합적으로 고려하여 선택할 수 있도록 도와주어야 한다.</li>
+      <li>4세대와 동일하게 5세대에도 할인 할증 제도가 적용되며, 4세대도 할증으로 인해 보험료가 많이 올랐던 점을 참고해야 한다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">전환 전 체크</span>전환 후 보험료는 크게 낮아지지만 ① 보장 축소 ② 비급여 할인·할증 ③ 재가입 주기로 계속 신상품으로 넘어가야 한다는 점을 함께 안내해야 한다.</div>
+  </div>
+</section>
+
+<section class="module" id="m4">
+  <div class="mod-head"><div class="kicker">COURSE 04</div><h2>실손보험 변화에 따른 정액 담보의 중요성</h2><p>실손보험의 보장 축소로 인해 발생하는 의료비 공백을 메우기 위해 정액 담보의 중요성이 더욱 커지고 있다.</p></div>
+  <div class="card">
+    <h3><span class="idx">4.1</span>실손보험의 본래 목적과 변화</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/1004.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 실손보험의 본래 목적과 변화</figcaption></figure>
+    <h4>실손보험의 초기 목적은 의료비 자기부담을 100% 보장하는 것이었다</h4>
+    <ul><li>실손보험에 가입하는 목적은 병원에 갔을 때 발생하는 자기부담금을 최대한 100% 메우고 보장받기 위함이었다.</li></ul>
+    <h4>다양한 문제로 인해 실손보험의 보장이 점차 축소되고 있다</h4>
+    <ul><li>실손보험의 손해율 문제나 건강보험 정책과의 상충 등으로 인해 보장이 90%, 80%, 70%, 50%까지 계속적으로 축소되고 있다.</li></ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">4.2</span>보장 축소에 따른 정액 담보의 필요성 증가</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/1036.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 보장 축소에 따른 정액 담보의 필요성</figcaption></figure>
+    <h4>실손보험 보장 축소로 발생하는 공백을 정액 담보로 채워야 한다</h4>
+    <ul>
+      <li>원래 100%를 채우는 것이 목적이었지만, 실손보험의 보장이 줄어들면서 그만큼 빈자리가 생기게 된다.</li>
+      <li>기존에 정액 담보가 있었더라도, 실손보험 보장이 줄어들어 생긴 이 <strong>공백(갭)</strong>을 채우기 위해 추가로 정액 담보를 구성해야 한다.</li>
+      <li>이러한 흐름으로 고객과 상담하면 더욱 도움이 될 것이다.</li>
+    </ul>
+    <div class="note good"><span class="lb">상담 흐름</span>실손 100% → 90/80/70/50%로 줄어든 만큼 생긴 갭 = 정액 담보(진단비·치료비)로 채운다. 기존 정액이 있어도 <strong>추가 구성</strong>이 필요하다는 논리로 제안한다.</div>
+  </div>
+  <div class="card">
+    <h3><span class="idx">4.3</span>5세대 실손보험의 이해와 활용</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/bf1373b7-bc64-4a08-9f82-5db3683164aa/1070.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 5세대 실손보험의 이해와 활용</figcaption></figure>
+    <h4>5세대 실손보험의 큰 흐름과 정책 방향을 이해하고 상담에 활용해야 한다</h4>
+    <ul>
+      <li>5세대 실손보험의 큰 흐름과 정책 방향에 대한 전반적인 설명을 바탕으로, 고객 상담 자료로 활용하면 좋다.</li>
+      <li>이를 통해 고객들이 합리적인 선택을 할 수 있도록 돕는 것이 중요하다.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101 교육자료</b> · 전종환 팀장 / 010-4637-3210</span><span>출처: lilys.ai 강의 요약 · 2026-09</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

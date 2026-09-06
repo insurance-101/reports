@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>재테크의 진정한 의미와 지금 시작해야 하는 이유 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">FINANCE STUDY · 재무 설계 기초</div>
+    <h1>재테크는 <span class="accent">개인 재무 관리</span>,<br>시간이 최고의 무기다</h1>
+    <p class="lead">120세 시대의 재무 계획, 20년 벌어 50년 쓰는 한국인의 현실, 국민연금 수령 전 15년 '데스밸리', 그리고 복리의 마법과 시간의 가치까지 — 고객에게 '지금 시작해야 하는 이유'를 설명하기 위한 기초 자료.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>주제 <b>개인 재무 관리·복리</b></span><span>활용 <b>연금·저축 상담 오프닝</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">재테크의 진정한 의미와 필요성</div><div class="ds">재물+테크닉 · 파이낸셜 매니지먼트 · 라이프 플랜</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">길어진 수명, 재무 계획의 중요성</div><div class="ds">경험생명표 · 120세 · 재무 내비게이션</div></a><a href="#m3"><div class="no">COURSE 03</div><div class="t">한국인의 재무적 현실과 은퇴</div><div class="ds">20년 벌어 50년 · 실제 은퇴 72세 · 현금 흐름 · 노인 빈곤</div></a><a href="#m4"><div class="no">COURSE 04</div><div class="t">지금 시작해야 하는 이유: 시간의 마법</div><div class="ds">데스밸리 15년 · 도토리 · 복리 · 목표 수익률 · 3대 연금</div></a></nav>
+
+
+<nav class="topnav"><ul><li><a href="#m1">01 재테크의 의미</a></li><li><a href="#m2">02 장수 시대</a></li><li><a href="#m3">03 한국의 현실</a></li><li><a href="#m4">04 시간의 마법</a></li></ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head"><div class="kicker">COURSE 01</div><h2>재테크의 진정한 의미와 필요성</h2><p>재테크는 단순히 돈을 불리는 기술이 아니라, 길어진 인생을 대비하기 위한 개인 재무 관리이며, 이는 선택이 아닌 필수가 되었다.</p></div>
+  <div class="card">
+    <h3><span class="idx">1.1</span>재테크의 정의와 올바른 이해</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/4.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 재테크의 정의와 올바른 이해</figcaption></figure>
+    <h4>재테크의 어원과 오해</h4>
+    <ul>
+      <li>'재테크'는 '재물'과 '테크닉'의 합성어로, 원래 표준어가 아니었으나 사람들이 많이 사용하면서 국어사전에 등재되었다.</li>
+      <li>사람들은 재테크를 '비법'이나 '꼼수' 같은 기술로 오해하는 경향이 있다.</li>
+      <li>하지만 재테크는 '파이낸셜 매니지먼트(Financial Management)', 즉 <strong>재무 관리</strong>를 의미하며, 특히 개인의 재무를 관리하는 '개인 재무 관리(Personal Financial Management)'가 올바른 표현이다.</li>
+    </ul>
+    <h4>개인 재무 관리의 본질</h4>
+    <ul>
+      <li>개인 재무 관리는 인스타그램에 벤츠 사진을 올리는 식의 과장된 모습이 아니라, 개인의 라이프 플랜을 짜고 자산과 투자 성향을 파악하여 정리하는 과정이다.</li>
+      <li>이는 곧 내 인생 전반에 걸친 재무 계획과 관리가 필요하다는 의미이다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>재테크 = 비법·꼼수가 아니라 <strong>Personal Financial Management</strong>. 라이프 플랜 → 자산·투자 성향 파악 → 인생 전반의 재무 계획.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head"><div class="kicker">COURSE 02</div><h2>길어진 수명, 재무 계획의 중요성</h2><p>현대인의 기대 수명이 크게 늘어나면서, 과거와는 다른 장기적인 재무 계획이 필수적인 시대가 되었다.</p></div>
+  <div class="card">
+    <h3><span class="idx">2.1</span>급증하는 기대 수명과 장수 시대의 도래</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/166.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 급증하는 기대 수명과 장수 시대</figcaption></figure>
+    <h4>예상보다 긴 인생</h4>
+    <ul>
+      <li>사람들은 보통 60세에 죽고 싶다고 말하지만, 실제로는 120세까지 살 수도 있는 시대가 되었다.</li>
+      <li>2024년 보험사의 경험생명표에 따르면, 여성의 평균 사망 나이는 <strong>90.7세</strong>, 남성은 <strong>86.3세</strong>로 나타났다.</li>
+      <li>이 추세대로라면 한국 여성의 공식 평균 사망 나이가 90세를 넘길 가능성이 높으며, 이는 인류 역사상 최초의 기록이 될 수 있다.</li>
+    </ul>
+    <h4>미래 기대 수명 예측</h4>
+    <ul>
+      <li>남녀 간 기대 수명 차이도 줄어들고 있으며, 전체적으로 기대 수명이 가파르게 상승하고 있다.</li>
+      <li>의료 기술 발전에 따라 110세, 120세, 심지어 130세까지도 살 수 있는 가능성이 열리고 있다.</li>
+      <li>이는 젊은 시절 기대했던 인생보다 훨씬 긴 인생을 살게 된다는 의미이다.</li>
+    </ul>
+    <h4>인생 주기의 변화</h4>
+    <ul>
+      <li>120세 인생을 기준으로 보면 50세는 인생의 절반도 살지 않은 시점이며, 40세는 '촉법소년' 수준으로 여겨질 수 있다.</li>
+      <li>심지어 투표권을 50세에 줘야 한다는 주장까지 나올 정도이다.</li>
+    </ul>
+    <div class="chips"><span>2024 경험생명표 여성 <b>90.7세</b></span><span>남성 <b>86.3세</b></span><span>가능 수명 <b>110~130세</b></span></div>
+  </div>
+  <div class="card">
+    <h3><span class="idx">2.2</span>재무 계획 없는 장수 시대의 위험성</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/288.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 재무 계획 없는 장수 시대의 위험성</figcaption></figure>
+    <h4>갑작스러운 위기 상황</h4>
+    <ul>
+      <li>"지금부터 60년, 70년 더 살 거라면 재무적 계획 없이 살아도 될까?"라는 질문에 직면하게 된다.</li>
+      <li>회사를 평생 다닐 것 같다고 생각했지만, 갑자기 일이 터져 퇴직하게 되는 상황이 발생할 수 있다.</li>
+      <li>이러한 상황에서 "준비라도 할 걸"이라는 후회를 하게 될 수 있다.</li>
+    </ul>
+    <h4>미래에 대한 대비의 부재</h4>
+    <ul>
+      <li>아무런 계획 없이 100세까지 살게 되었을 때의 재무 상태를 상상하고 최소한의 준비라도 해야 한다.</li>
+      <li>서울에서 부산 갈 때도 내비게이션을 찍고 가는데, 100세 인생을 살면서 <strong>재무 내비게이션</strong> 없이 가는 것은 위험하다.</li>
+      <li>미리 대비하지 않으면 나중에 대처하기가 매우 어려워진다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head"><div class="kicker">COURSE 03</div><h2>한국인의 재무적 현실과 은퇴의 어려움</h2><p>한국 사회는 늦은 취업과 빠른 퇴직, 그리고 긴 노년기로 인해 재무적으로 매우 취약한 구조를 가지고 있으며, 이는 심각한 사회 문제로 이어진다.</p></div>
+  <div class="card">
+    <h3><span class="idx">3.1</span>짧은 소득 기간과 긴 지출 기간</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/342.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 짧은 소득 기간과 긴 지출 기간</figcaption></figure>
+    <h4>소득 활동 기간의 단축</h4>
+    <ul>
+      <li>대부분의 사람들은 0세에 태어나 30세까지는 돈이 없거나 마이너스 상태이다.</li>
+      <li>주된 직장의 평균 퇴직 연령은 약 50세로, 실제 돈을 버는 기간은 <strong>20년 정도</strong>에 불과하다.</li>
+    </ul>
+    <h4>은퇴 후 긴 삶</h4>
+    <ul>
+      <li>20년 동안 벌어서 50년(120세 기준)을 써야 하는 상황에 직면한다.</li>
+      <li>퇴직하는 순간, 대비가 되어 있지 않으면 절망과 무력감을 느끼게 된다.</li>
+      <li>퇴직 시점에는 자녀의 대학 등록금, 결혼 비용, 부모님의 병원비 등 돈 들어갈 일이 많아 재정적 압박이 더욱 커진다.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">3.2</span>늦은 은퇴와 현금 흐름의 부재</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/407.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 늦은 은퇴와 현금 흐름의 부재</figcaption></figure>
+    <h4>한국의 늦은 은퇴 연령</h4>
+    <ul>
+      <li>주된 직장에서의 퇴직이 곧 은퇴를 의미하지는 않는다.</li>
+      <li>한국인의 실제 은퇴 연령은 대략 70세 또는 75세로, 주된 직장 퇴직 후에도 22년간 치킨집, 택배, 자영업 등 다양한 형태로 일을 계속한다.</li>
+      <li>이는 OECD 국가 중 압도적으로 긴 기간이며, 다른 나라들이 60대 중반에서 후반에 은퇴하는 것과 비교하면 한국은 <strong>72세</strong>로 매우 늦게까지 일해야 한다.</li>
+    </ul>
+    <h4>현금 흐름의 중요성</h4>
+    <ul>
+      <li>늦게까지 일해야 하는 주된 이유는 <strong>현금 흐름</strong>이 없기 때문이다.</li>
+      <li>유럽 등 OECD 선진국들은 일찍부터 연금 제도를 마련하여 65세 이후에도 안정적인 현금 흐름을 확보하여 여유로운 삶을 즐길 수 있다.</li>
+      <li>하지만 한국은 현금 흐름이 끊기면 생계에 문제가 발생하여 은퇴 후에도 계속 일해야 하는 상황에 놓인다.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">3.3</span>노인 빈곤과 자살률 문제</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/485.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 노인 빈곤과 자살률 문제</figcaption></figure>
+    <h4>세계 1위의 자살률</h4>
+    <ul>
+      <li>한국은 전 세계 자살률 1위 국가이며, 특히 노인 자살률이 매우 높다.</li>
+      <li>과거에는 압도적인 수치였으나 지금은 다소 내려갔지만 여전히 심각한 수준이다.</li>
+      <li>자본주의 사회에서 돈 문제, 즉 <strong>경제력 문제</strong>가 노인 자살의 주된 원인이며, 특히 남성 노인에게서 두드러진다.</li>
+    </ul>
+    <h4>노년의 비참함</h4>
+    <ul>
+      <li>50세에 퇴직 후 대책이 없으면 자존감이 크게 떨어진다.</li>
+      <li>60대, 70대가 되어 몸 움직일 기력도 없는데 현금이 떨어지고 돈이 없으며 아프기까지 하면 매우 비참한 상황에 놓이게 된다.</li>
+    </ul>
+    <h4>과거와 현재의 노후 대비 방식 변화</h4>
+    <ul>
+      <li>과거 1940~60년대 고도 성장기에는 노후 대비를 현금 흐름으로 극복하려 하지 않았다.</li>
+      <li>당시에는 자식들이 노후를 책임져 줄 것이라고 생각하여 셋, 넷 이상의 자녀를 낳는 것이 노후 대비 방법이었다.</li>
+      <li>하지만 요즘에는 자녀에게 노후를 의지할 수 없다는 인식이 확산되면서, <strong>노후의 현금 흐름</strong> 확보에 대한 관심이 매우 높아졌다.</li>
+      <li>다른 나라들이 먼저 겪었던 어려움을 한국도 이제 느끼고 있으며, 개인 재무 관리, 즉 재테크를 통해 미래를 계획하는 것이 중요해졌다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m4">
+  <div class="mod-head"><div class="kicker">COURSE 04</div><h2>재테크, 지금 시작해야 하는 이유: 시간의 마법</h2><p>재테크는 빠르면 빠를수록 좋으며, 특히 젊을 때 시작해야 복리의 마법을 통해 적은 돈으로도 노후에 필요한 현금 흐름을 만들 수 있다.</p></div>
+  <div class="card">
+    <h3><span class="idx">4.1</span>길어지는 취업 준비 기간과 줄어드는 소득 기간</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/627.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 길어지는 취업 준비 기간과 줄어드는 소득 기간</figcaption></figure>
+    <h4>늦어지는 취업 연령</h4>
+    <ul>
+      <li>한국은 직장에 들어가는 나이가 점점 늦춰지고 있다.</li>
+      <li>2024년 국가공무원 9급 공채 시험 응시자의 평균 나이는 처음으로 30세를 넘어 30.4세였고, 합격자 역시 29.4세로 곧 30세를 넘을 것으로 예상된다.</li>
+      <li>대기업의 평균 취업 연령은 이보다 더 높다.</li>
+      <li>과거에는 30대 초반에 취업하면 늙은이 취급을 받았지만, 이제는 취업 연령이 전반적으로 높아졌다.</li>
+    </ul>
+    <h4>줄어드는 일하는 시간</h4>
+    <ul>
+      <li>취업 연령은 늦어지는데 정년 퇴직 연령은 뒤로 가지 않아, 실제 일하는 시간은 점점 줄어들고 있다.</li>
+      <li>이는 회사에서 높은 임금을 받는 고연령층이 구조적 재산이 될 수밖에 없는 상황과 맞물려, 젊은 세대가 환영받지 못하는 현상으로 이어진다.</li>
+      <li>결과적으로 가만히 있으면 일하는 시간은 줄어들 수밖에 없다.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">4.2</span>은퇴 후 '데스밸리'와 현금 흐름의 단절</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/713.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 은퇴 후 '데스밸리'와 현금 흐름의 단절</figcaption></figure>
+    <h4>국민연금 수령 전 공백기</h4>
+    <ul>
+      <li>국민연금은 보통 65세부터 수령할 수 있다고 생각하지만, 평균 퇴직 연령이 50세라면 15년 동안은 현금 흐름이 전혀 없는 <strong>'데스밸리(Death Valley)'</strong> 구간이 발생한다.</li>
+      <li>20년 일하고 15년 동안 소득이 없는 이 기간은 매우 필사적으로 버텨야 하는 시기이다.</li>
+    </ul>
+    <h4>데스밸리 극복을 위한 노력</h4>
+    <ul>
+      <li>이 시기에 많은 사람들이 치킨집, 자영업, 음식점 등을 시작하며, 다시 취직을 하거나 이직을 시도하기도 한다.</li>
+      <li>하지만 한두 번 이직하다 보면 더 이상 다닐 수 없다는 판단을 하게 되고, 국민연금 수령까지는 여전히 15년이 남아있는 상황에 직면한다.</li>
+    </ul>
+    <h4>대비 여부에 따른 삶의 질 차이</h4>
+    <ul>
+      <li>잘 나가는 회사에 다니고 돈을 잘 버는 사람들도 은퇴 시기가 오면 대비 여부에 따라 삶의 질이 크게 달라진다.</li>
+      <li>임원이 되면 괜찮을 것이라고 생각하는 사람들도 있지만, 임원 급여만으로는 오랫동안 임원 생활을 유지하지 않는 한 노후 대비가 어렵다.</li>
+      <li>임원도 계약직인 경우가 많고 기간도 짧으며, 임원이 되는 것 자체가 매우 어렵다.</li>
+      <li>많은 임원 출신 퇴직자들이 40대 중반부터 노후를 걱정하기 시작하여 50세가 되면 좌불안석이 되며, 자영업에 대한 문의를 많이 한다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">데스밸리</span>퇴직 50세 → 국민연금 65세. <strong>15년의 현금 흐름 공백</strong>이 고객 상담에서 가장 먼저 짚어야 할 지점이다.</div>
+  </div>
+  <div class="card">
+    <h3><span class="idx">4.3</span>미래를 위한 '도토리' 모으기: 현금 흐름 확보</h3>
+    <h4>미래로 돈 보내기</h4>
+    <ul>
+      <li>국민연금 수령 전까지의 공백기를 대비하기 위해서는 상식적으로 돈을 모아두어야 한다.</li>
+      <li>이는 마치 겨울이 오기 전에 도토리를 모아두는 다람쥐처럼, 지금 번 돈을 미래로 보내는 것과 같다.</li>
+      <li>당장 먹고 싶어도 미래를 위해 참고 보내야 한다.</li>
+    </ul>
+    <h4>필요한 현금 흐름 계산</h4>
+    <ul>
+      <li>얼마나 많은 돈을 미래로 보내야 할지, 즉 65세, 70세, 80세에 어느 정도의 현금 흐름이 있어야 안락하고 무난한 삶을 살 수 있을지 고민해야 한다.</li>
+      <li>집이 있다면 한 달에 200만 원 정도가 필요하다고 가정할 때, 현재 소득의 절반 정도(100 중 50)를 미래의 현금 흐름으로 만들려고 노력해야 한다.</li>
+      <li>30~40년 벌어서 30~40년을 써야 하는데, 현재 소득의 절반을 미래 현금 흐름으로 만드는 것은 아무것도 하지 않으면 불가능하다.</li>
+    </ul>
+    <h4>젊을 때 즐기면서 대비하기</h4>
+    <ul>
+      <li>젊을 때 즐겨야 한다는 말도 맞지만, 즐기면서 현재 월급의 절반을 미래 현금 흐름으로 만들 수 있을지 고민해야 한다.</li>
+      <li>대부분의 사람들은 월급의 10% 정도도 저축하기 어렵다고 느낀다.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">4.4</span>복리의 마법과 시간의 중요성</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/948.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 복리의 마법과 시간의 중요성</figcaption></figure>
+    <h4>복리의 마법</h4>
+    <ul>
+      <li>미래로 돈을 보낼 때, 단순히 모아두는 것이 아니라 <strong>수익률</strong>을 고려해야 한다.</li>
+      <li>30년, 40년이라는 긴 시간 동안 수익률이 적용되면, 지금 50%를 보내지 않아도 목표를 달성할 수 있다.</li>
+      <li>이것이 바로 <strong>복리의 마법</strong>이다.</li>
+    </ul>
+    <h4>시간은 최고의 무기</h4>
+    <ul>
+      <li>여러분이 가진 최고의 무기는 바로 <strong>시간</strong>이다.</li>
+      <li>50대, 60대에 재무 계획을 세우기 어려운 이유는 시간이 없기 때문에 돈이 복리로 굴러갈 기회가 적기 때문이다.</li>
+      <li>시간이 충분하면 적은 돈을 넣어도 복리 효과로 인해 나중에 큰 금액이 된다.</li>
+      <li>수익률은 조절하기 어렵지만, 시간만큼은 개인이 조절할 수 있는 거의 유일한 자산이다.</li>
+    </ul>
+    <h4>시간을 활용한 목표 달성</h4>
+    <ul>
+      <li>연봉이나 수익률은 마음대로 조절하기 어렵지만, 시간은 조절할 수 있다.</li>
+      <li>현재 수익의 100%를 기준으로 나중에 50%의 현금 흐름을 만드는 목표는 <strong>시간을 가진 사람들</strong>만이 이룰 수 있는 목표이다.</li>
+      <li>따라서 <strong>시간</strong>이 가장 큰 무기임을 항상 기억해야 한다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>연봉·수익률은 내 마음대로 안 되지만 <strong>시간은 내가 조절할 수 있는 유일한 자산</strong>이다. 일찍 시작할수록 적은 돈으로 같은 목표에 도달한다.</div>
+  </div>
+  <div class="card">
+    <h3><span class="idx">4.5</span>재테크 목표 수익률과 자산 관리의 중요성</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/1032.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 재테크 목표 수익률과 자산 관리</figcaption></figure>
+    <h4>재테크 시작의 적기</h4>
+    <ul>
+      <li>많은 사람들이 "아직 급하지 않다"며 결혼, 연애, 여행, 차 구매 등 당장의 욕구에 집중하여 재테크를 미룬다.</li>
+      <li>하지만 40대, 50대가 되어 후회하는 착각을 하고 있는 것이며, 재테크는 결코 빠르지 않다.</li>
+      <li>개인 연금 수령 시기인 55세까지 25년이 남았다고 해도, 복리의 마법은 1년, 1년 늘어갈수록 찍히는 금액 자체가 크게 달라진다.</li>
+    </ul>
+    <h4>목표 수익률 설정</h4>
+    <ul>
+      <li>목표 수익률은 연 3%에서 6% 정도를 추천한다.</li>
+      <li>이때의 목표 수익률은 주식이나 비트코인 같은 개별 투자 수익률이 아니라, <strong>전체 자산의 수익률</strong>을 의미한다.</li>
+      <li>예를 들어, 전체 자산이 1억이라면 최소 500만 원 이상, 2억이라면 최소 1천만 원 이상 늘어나야 한다.</li>
+      <li>이는 저축이든 투자를 통해서든 달성해야 하며, 그래야 최소한 사회의 평균을 따라갈 수 있다.</li>
+    </ul>
+    <h4>자산 규모별 목표 수익률</h4>
+    <ul>
+      <li>자산 규모가 작을 때는 목표 수익률을 더 높게 잡아야 한다 (예: 6~7%).</li>
+      <li>젊을수록 더 공격적인 목표를 세울 수 있다.</li>
+      <li>자산이 2억이라면 1년에 최소 1,400만 원 이상 늘어나야 하며, 더 공격적으로는 2,200만 원 가까이 늘어나야 한다.</li>
+      <li>매년 이렇게 자산을 늘려야 20년, 30년 후에 평균치를 따라가거나 앞서갈 수 있다.</li>
+      <li>주식 1천만 원 투자로 50만 원을 벌었다면, 이는 전체 자산(2억)의 0.25% 수익률에 불과하므로, 개별 투자 수익률과 전체 자산 수익률을 반드시 구분해야 한다.</li>
+    </ul>
+    <h4>복리 효과의 실제 예시</h4>
+    <table class="rank">
+      <thead><tr><th>연 5% 복리 투자 기간</th><th>원금 대비</th><th>예시 (100만 원 기준)</th></tr></thead>
+      <tbody>
+        <tr><td>10년</td><td>1.6배</td><td>40세 시작 시 10년 → 1.6배에 그침</td></tr>
+        <tr><td>20년</td><td>2.6배</td><td>30세 시작 시 현실적 상한(20년 근로)</td></tr>
+        <tr><td>30년</td><td>4.3배</td><td>2024년 2월 100만 원 → 2072년 2월 430만 원</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>연 5% 금리로 10년 투자하면 원금의 1.6배, 20년 투자하면 2.6배, 30년 투자하면 4.3배가 된다.</li>
+      <li>예를 들어, 2024년 2월에 100만 원을 넣었다면 2072년 2월에는 430만 원을 받을 수 있다.</li>
+      <li>투자 기간이 길수록 적은 돈으로도 큰 금액을 만들 수 있다.</li>
+      <li>하지만 30세에 시작하면 30년 채우기 어렵고, 20년밖에 일하지 못하는 현실을 고려해야 한다.</li>
+      <li>40세에 시작하면 10년 투자로 1.6배밖에 되지 않으므로, 30년 투자(4.3배)와 같은 효과를 내려면 훨씬 더 많은 돈을 넣어야 하는데, 이는 현실적으로 어렵다.</li>
+      <li>따라서 재테크는 무조건 <strong>빨리 시작</strong>해야 한다.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="idx">4.6</span>재테크, 지금 당장 시작해야 하는 이유</h3>
+    <figure class="shot"><img src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/SpWz5Q4OS1A/1228.jpg" alt="" loading="lazy"><figcaption>강의 화면 — 재테크, 지금 당장 시작해야 하는 이유</figcaption></figure>
+    <h4>시간의 소중함</h4>
+    <ul>
+      <li>지금 재테크를 시작하지 않는 사람들은 이미 소중한 시간을 흘려보내고 있는 것이다.</li>
+      <li>회사에 들어가면 적응하느라 바빠 재테크를 놓치기 쉽다.</li>
+    </ul>
+    <h4>회사 생활만으로는 부족</h4>
+    <ul>
+      <li>회사를 열심히 다니고 승진하면 문제가 없을 것이라는 생각은 착각이다.</li>
+      <li>회사 생활을 열심히 하는 동시에, 내 인생의 재무 내비게이션을 찍고 가야 한다.</li>
+    </ul>
+    <h4>젊을 때 시작해야 하는 이유</h4>
+    <ul>
+      <li>40대, 50대에 재무 계획을 세우는 것은 매우 어렵다.</li>
+      <li>취업도 20대에 하고, 돈을 미래로 보내는 것도 그때부터 시작해야 한다.</li>
+      <li>젊을 때는 아주 적은 돈을 넣어도 복리 효과로 인해 큰 자산을 만들 수 있다.</li>
+    </ul>
+    <h4>미래를 위한 연금 제도 활용</h4>
+    <ul>
+      <li>미래를 위해 돈을 보내는 방법 중 하나는 연금 제도를 활용하는 것이다.</li>
+      <li>한국에는 국민연금, 퇴직연금, 개인연금 세 가지 연금 제도가 있다.</li>
+    </ul>
+    <div class="note good"><span class="lb">정리</span>회사 생활 + <strong>재무 내비게이션</strong>을 동시에. 국민연금·퇴직연금·개인연금 3대 연금이 미래로 돈을 보내는 기본 통로다.</div>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101 교육자료</b> · 전종환 팀장 / 010-4637-3210</span><span>출처: lilys.ai 강의 요약 · 2026-09</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

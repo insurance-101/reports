@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>만기 후 재가입 플랜 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">PRODUCT STUDY · 상품 스터디</div>
+    <h1>만기 후 <span class="accent">재가입 플랜</span></h1>
+    <p class="lead">평균 수명 90세 시대, 80세 만기 증권은 그 자체로 상담의 명분이 된다. 담보별 만기를 차등 설정해 보험료는 낮추고 보장은 강화하는 설계 논리와 A·B 두 가지 타입의 활용법을 정리했다.</p>
+    <div class="meta">
+  <span>구분 <b>상품 스터디</b></span>
+  <span>주제 <b>만기 연장형 보장 플랜</b></span>
+  <span>출처 <b>lilys.ai 강의 요약</b></span>
+</div>
+  </div>
+</header>
+
+<nav class="pipeline">
+  <a href="#m1"><div class="no">COURSE 01</div><div class="t">개념 및 필요성</div><div class="ds">만기 재설정 · 80플러스 · 평균수명 90세 · 리터치</div></a>
+  <a href="#m2"><div class="no">COURSE 02</div><div class="t">담보별 만기 차등의 근거</div><div class="ds">100세 담보 · 치료비 80·90세 · 연령별 통계</div></a>
+  <a href="#m3"><div class="no">COURSE 03</div><div class="t">A타입 · B타입</div><div class="ds">보장 공백 보완 · 선택형 · 무심사 연장</div></a>
+  <a href="#m4"><div class="no">COURSE 04</div><div class="t">설계 예시와 효과</div><div class="ds">16% 절감 · 치료비 보강 · 업셀링</div></a>
+</nav>
+
+<nav class="topnav"><ul>
+  <li><a href="#m1">01 개념 · 필요성</a></li>
+  <li><a href="#m2">02 만기 차등 근거</a></li>
+  <li><a href="#m3">03 A타입 · B타입</a></li>
+  <li><a href="#m4">04 설계 예시 · 효과</a></li>
+</ul></nav>
+
+<main class="wrap">
+<section class="module" id="m1">
+  <div class="mod-head">
+    <div class="kicker">COURSE 01</div>
+    <h2>만기 후 재가입 플랜의 개념 및 필요성</h2>
+    <p>만기 후 재가입 플랜은 평균 수명 연장에 따라 짧아진 기존 보험의 만기를 연장하고, 보장 내용을 합리적으로 재설정하여 보험료를 절감하고 보장을 강화하는 전략이다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>만기 후 재가입 플랜의 정의</h3>
+    <figure class="shot"><img loading="lazy" src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/a4f00056-7b1d-434a-be1f-a0ecb2d646ab/0.jpg" alt="만기 후 재가입 플랜의 정의"><figcaption>강의 화면 — 만기 후 재가입 플랜의 정의</figcaption></figure>
+    <ul>
+      <li><strong>만기 후 재가입 플랜</strong>은 보험 만기 재설정을 통해 보장을 연장하고 보험료를 절감하며, 보장에 대한 합리적인 만족도를 높이는 전략이다.</li>
+      <li>이는 <strong>손해보험사와 생명보험사 모두</strong>에서 활발히 이루어지고 있는 보장 플랜이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>만기 연장형 보장 플랜의 종류</h3>
+    <ul>
+      <li>업계에서는 <strong>80플러스</strong>, <strong>90플러스</strong>, <strong>70플러스</strong>와 같은 만기 연장형 보장 플랜이 다양하게 출시되고 있다.</li>
+      <li>이러한 명칭은 특정 회사를 의식한 표현일 수 있으나, 본질적으로는 <strong>80세·90세 만기 연장형 보장</strong>을 의미한다.</li>
+    </ul>
+    <div class="chips"><span>70플러스</span><span>80플러스</span><span>90플러스</span></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>기존 보험의 짧은 만기 문제점</h3>
+    <ul>
+      <li>과거에 가입한 보험증권에는 <strong>80세 만기</strong> 또는 <strong>70세 만기</strong>와 같이 보장 만기가 짧은 경우가 많다.
+        <ul>
+          <li>일부 보험증권에는 100세 만기 보장도 있지만, 과거 CI보험의 특약 등은 만기가 짧은 경우가 많았다.</li>
+        </ul>
+      </li>
+      <li>과거에는 한국인의 평균 수명이 <strong>80세 전후</strong>였기 때문에 80세 만기가 짧다고 여겨지지 않았다.</li>
+      <li>그러나 현재는 평균 수명이 길어져 <strong>90세를 평균 수명</strong>으로 보는 시대가 되었으므로, 80세 만기는 짧게 느껴진다.</li>
+      <li>따라서 보장 만기 연장의 필요성이 대두되고 있으며, 이는 보험 소비자·설계사·보험회사 모두가 공감하는 부분이다.</li>
+      <li>보장이 짧은 기존 보험에 대한 <strong>리터치(재검토 및 재설계)</strong>는 영업 및 세일즈 측면에서 당연한 방향으로 자리 잡고 있다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>가입 당시 평균 수명 80세 전후 → 현재 90세. 증권에 찍힌 '80세 만기' 자체가 상담을 여는 명분이 된다.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head">
+    <div class="kicker">COURSE 02</div>
+    <h2>담보별 만기 차등 설정의 필요성 및 근거</h2>
+    <p>모든 보장을 100세 만기로 가져가는 대신, 담보별 특성을 고려해 만기를 차등 설정하면 보험료를 절감하면서 효율적인 보장을 받을 수 있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>100세 만기 추천 담보</h3>
+    <ul>
+      <li>특정 보장 담보들은 <strong>100세 만기</strong>로 설정하는 것이 합리적이다.
+        <ul>
+          <li><strong>간병인 일당 보장</strong>: 고연령대일수록 간병이 필요한 상황이 증가한다.</li>
+          <li><strong>질병/상해 후유장애 보장</strong>: 80세 이후에도 장애 발생 가능성이 높다.</li>
+          <li><strong>골절 진단비 및 수술 보장</strong>: 고연령대일수록 골절 발생 가능성이 증가한다.</li>
+        </ul>
+      </li>
+      <li>이러한 보장들은 <strong>80세 이후에도 보험금 청구 사유 발생 가능성이 매우 크기</strong> 때문에 100세 만기로 가져가는 것이 유리하다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>80세 또는 90세 만기 추천 담보 및 그 근거</h3>
+    <h4>암 및 순환기 질환 치료비 보장</h4>
+    <ul>
+      <li><strong>암 및 순환기 질환 치료비 보장</strong>은 80세 또는 90세 만기로 설정하는 것을 고려할 수 있다.
+        <ul>
+          <li><strong>치료 경향의 변화</strong>: 실제 통계적으로 암이나 순환기 질환의 발생 빈도는 80세 이후에도 높지만, 치료를 받는 경향은 오히려 줄어들 수 있다.</li>
+          <li><strong>노인 건강 상태의 영향</strong>: 노인의 건강 상태나 컨디션에 따라 치료 방법이나 치료 여부가 달라질 수 있기 때문이다. 예를 들어 85세에 암 진단을 받더라도 수술 치료 여부가 의료적으로 선택 사항이 될 수 있고, 건강 상태가 좋지 않으면 수술과 같은 적극적인 치료가 어려울 수 있다.</li>
+          <li><strong>치료 행위의 집중 시기</strong>: 대부분의 치료 행위는 80세 이전에 집중적으로 이루어지는 경향이 있다. 따라서 80세나 90세까지 집중적으로 보장받고, 그 이후에는 보장 연장 여부를 선택할 수 있는 <strong>유연성</strong>을 확보하는 것이 합리적이다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>연령별 암 치료 환자 분포도 데이터</h4>
+    <ul>
+      <li><strong>50대·60대·70대</strong>는 암으로 진단받고 치료받는 환자의 비중이 높다.</li>
+      <li>그러나 <strong>80대 이상</strong>에서는 암 치료 환자의 분포도가 현저히 떨어진다.</li>
+      <li>이는 암 치료비 보장을 80세 또는 90세 만기로 설정하면 100세 만기보다 <strong>보험료를 절감</strong>할 수 있음을 의미한다.
+        <ul>
+          <li>80세 만기로 설정하고, 80세가 되었을 때 보장 연장 여부를 선택할 수 있다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>연령별 주요 수술 환자 비중 데이터</h4>
+    <ul>
+      <li><strong>50대·60대·70대</strong>에서 수술 환자 비중이 집중적으로 높다.</li>
+      <li><strong>80대 이상</strong>에서는 수술 환자의 비중이 크게 떨어진다.</li>
+      <li>강사의 개인적인 경험으로도, 뇌수두증을 앓던 어머니가 고연령이어서 수술적 치료 대신 <strong>약물 치료</strong>를 선택한 사례가 있다.
+        <ul>
+          <li>고연령 환자의 경우 수술 시 생명의 위협이나 체력 저하로 인한 리스크가 크기 때문에 수술적 치료가 어려울 수 있다.</li>
+          <li>이는 80세 이후에는 직접적인 치료 행위가 우리가 흔히 생각하는 수술이 아닐 수도 있음을 시사한다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>암 신규 진단자 수 및 순환기 질환 진료 데이터</h4>
+    <ul>
+      <li><strong>80대 이상</strong>에서도 암 신규 진단자 수가 꽤 많다.</li>
+      <li><strong>순환기 질환 진료</strong> 역시 80대에서 높은 비중을 차지한다.</li>
+      <li>이는 진단받는 확률은 고연령대에도 높으므로 <strong>진단비는 100세 만기</strong>로 설정하는 것이 합리적일 수 있음을 의미한다.</li>
+      <li>그러나 <strong>치료비</strong>는 진단과 달리 고연령대에서 치료 행위가 줄어들 수 있으므로 만기 설정을 달리 고려해야 한다는 것이 이러한 보장 플랜의 기본 취지이다.</li>
+      <li>고연령대의 암이나 순환기 질환 발생 분포는 해를 거듭해도 크게 달라지지 않는 경향을 보인다.</li>
+    </ul>
+    <table class="rank">
+      <tr><th>연령대</th><th>암 치료·수술 환자 비중</th><th>암 진단자 수 / 순환기 진료</th></tr>
+      <tr><td>50~70대</td><td>집중적으로 높음</td><td>높음</td></tr>
+      <tr><td>80대 이상</td><td>현저히 떨어짐</td><td>여전히 꽤 많음</td></tr>
+    </table>
+    <div class="note key"><span class="lb">핵심 논리</span>진단은 고연령에도 계속 발생하지만 치료 행위는 80세 이전에 집중된다. 그래서 <strong>진단비는 100세, 치료비는 80·90세</strong>로 나눠 설계한다.</div>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head">
+    <div class="kicker">COURSE 03</div>
+    <h2>만기 연장형 보장 플랜의 두 가지 유형</h2>
+    <p>보험 업계에서는 보장 만기 연장을 위한 합리적인 설정을 크게 두 가지 타입으로 제공하고 있으며, 각각의 특징과 활용 목적이 다르다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.1</span>A타입: 80세 만기 연장형 (보장 공백 보완)</h3>
+    <ul>
+      <li><strong>A타입</strong>은 80세 이전의 특약 가입 금액(예: 1천만 원)을 80세 이후에는 일정 비율(예: 10%)로 보장하여, 기존 보험의 짧은 만기로 인한 <strong>보장 공백을 채워주는 방식</strong>이다.</li>
+      <li>이 타입은 업계에서 그리 많지는 않다.</li>
+    </ul>
+    <h4>활용 목적 — 고객 터치용</h4>
+    <ul>
+      <li>주로 <strong>고객 터치용</strong>으로 활용되어 활동량을 증가시키는 데 중점을 둔다.</li>
+      <li>기존 고객들이 가입한 짧은 만기의 보험을 <strong>리모델링</strong>한다는 명분을 제공한다.</li>
+      <li>고객에게 추가적인 보장을 제안할 때 <strong>심리적인 저항</strong>을 줄일 수 있다.
+        <ul>
+          <li>앞단(80세 이전)에 추가적인 보장 금액을 쌓는 것이 아니라 뒷단(80세 이후)만 보완하는 것이므로 보험료가 저렴하다.</li>
+          <li>고객은 기존 보험을 유지하면서 뒷단 보장만 추가하는 것에 긍정적으로 반응할 수 있다.</li>
+        </ul>
+      </li>
+      <li>고객 방문 및 활동량을 늘려가는 과정에서 많이 활용되는 보장 만기 연장형 플랜이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.2</span>B타입: 80세/90세 만기 선택형 (보험료 절감 및 선택권 부여)</h3>
+    <figure class="shot"><img loading="lazy" src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/a4f00056-7b1d-434a-be1f-a0ecb2d646ab/579.jpg" alt="B타입 80세/90세 만기 선택형"><figcaption>강의 화면 — B타입: 80세/90세 만기 선택형</figcaption></figure>
+    <ul>
+      <li><strong>B타입</strong>은 암 진단비나 치료비 등을 가입할 때 <strong>80세 만기</strong>로 먼저 가입하는 방식이다.
+        <ul>
+          <li>100세 만기 상품보다 보험료가 저렴하다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>80세 만기 시점의 선택권</h4>
+    <ul>
+      <li>80세가 되었을 때 고객이 <strong>보장 연장</strong> 또는 <strong>보장 종료</strong>를 선택할 수 있다.
+        <ul>
+          <li><strong>보장 종료</strong>: 80세에 보장이 끝난다.</li>
+          <li><strong>보장 연장</strong>: 100세까지 보장을 더 받고 싶다면, 그때부터 <strong>전기납 구조</strong>로 보험료를 납입하고 보장을 받는다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>무심사 연장</h4>
+    <ul>
+      <li>보장 연장 시, 해당 보장 담보를 취급하는 회사들은 통상적으로 <strong>무심사</strong>로 진행한다.</li>
+      <li>과거 보장 기간 중 병력이나 보험금 지급 청구 사유가 있었더라도, <strong>심사 없이</strong> 산출된 보험료만 납입하면 보장 연장이 가능하다.</li>
+    </ul>
+    <h4>활용 목적</h4>
+    <ul>
+      <li><strong>보험료 절감</strong>에 초점을 맞추고, 고객의 합리적인 선택을 우선하는 보장 담보이다.</li>
+    </ul>
+    <table class="rank">
+      <tr><th>구분</th><th>A타입</th><th>B타입</th></tr>
+      <tr><td>구조</td><td>80세 이후를 가입금액의 일정 비율(예 10%)로 보완</td><td>80세 만기로 가입 후 연장/종료 선택</td></tr>
+      <tr><td>초점</td><td>보장 공백 보완</td><td>보험료 절감 · 선택권</td></tr>
+      <tr><td>활용</td><td>고객 터치용, 활동량 증대</td><td>합리적 설계 제안</td></tr>
+      <tr><td>연장 심사</td><td>—</td><td>통상 무심사</td></tr>
+    </table>
+    <div class="note good"><span class="lb">세일즈 포인트</span>A타입은 "기존 보험은 그대로 두고 뒷단만 채운다"는 명분, B타입은 "지금 보험료를 낮추고 80세에 다시 선택한다"는 명분으로 접근한다.</div>
+  </div>
+</section>
+
+<section class="module" id="m4">
+  <div class="mod-head">
+    <div class="kicker">COURSE 04</div>
+    <h2>실제 설계 예시 및 효과</h2>
+    <p>담보별 만기를 차등 설정하면 보험료를 절감하고, 절감된 보험료로 추가 보장을 강화할 수 있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.1</span>담보별 만기 차등 설계 예시</h3>
+    <h4>샘플 설계 담보</h4>
+    <ul>
+      <li>암 진단비, 뇌혈관/심혈관 질환 진단비, 암 통합 보장, 질병 통합 치료비, 하이클래스 통합 보장, 간병인 질병/상해 일당 등의 담보를 예시로 든다.</li>
+    </ul>
+    <h4>만기 연장 설계</h4>
+    <ul>
+      <li><strong>진단비</strong>(암, 뇌혈관/심혈관): <strong>90세 만기</strong></li>
+      <li><strong>통합 보장 및 치료비</strong>(암 통합, 질병 통합, 하이클래스 통합): <strong>80세 만기</strong> — 치료비 성격이 강하기 때문</li>
+      <li><strong>간병인 보장</strong>: <strong>100세 만기</strong> — 고연령에 간병 필요성이 증가하기 때문</li>
+    </ul>
+    <table class="rank">
+      <tr><th>담보</th><th>설정 만기</th><th>근거</th></tr>
+      <tr><td>암 진단비 / 뇌·심혈관 진단비</td><td>90세</td><td>고연령에도 진단 발생은 이어짐</td></tr>
+      <tr><td>암 통합 · 질병 통합 치료비 · 하이클래스 통합</td><td>80세</td><td>치료비 성격이 강함</td></tr>
+      <tr><td>간병인 질병/상해 일당</td><td>100세</td><td>고연령일수록 간병 필요성 증가</td></tr>
+    </table>
+    <div class="note good"><span class="lb">보험료 절감 효과</span>모든 담보를 100세 만기로 설계하는 것보다 담보별로 만기를 차등 설정하면 <strong>약 16%의 보험료 절감 효과</strong>가 발생한다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.2</span>절감된 보험료의 활용 및 추가 보장 강화</h3>
+    <figure class="shot"><img loading="lazy" src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/a4f00056-7b1d-434a-be1f-a0ecb2d646ab/836.jpg" alt="절감된 보험료의 활용"><figcaption>강의 화면 — 절감된 보험료의 활용 및 추가 보장 강화</figcaption></figure>
+    <ul>
+      <li><strong>추가 보장 담보 강화</strong>: 절감된 보험료를 활용하여 추가적인 보험 보장 담보를 강화할 수 있다.</li>
+      <li>예시
+        <ul>
+          <li>기존 100세 만기 플랜에서 암 진단비 5천만 원, 유사암 진단비 5천만 원을 가입했다고 가정한다.</li>
+          <li>만기 후 재가입 플랜을 통해 보험료를 절감하면, 기존 담보 외에 <strong>치료비 쪽 담보</strong>를 추가로 설정하여 보장을 강화할 수 있다.</li>
+        </ul>
+      </li>
+      <li><strong>보험료 차이 최소화</strong>: 이러한 추가 보장에도 불구하고, 절감된 보험료만큼을 신규 보장으로 보완할 수 있어 전체 보험료 차이는 크게 나타나지 않는다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">4.3</span>만기 후 재가입 플랜의 의의</h3>
+    <figure class="shot"><img loading="lazy" src="https://resource-release.s3.ap-northeast-2.amazonaws.com/thumbnails/a4f00056-7b1d-434a-be1f-a0ecb2d646ab/888.jpg" alt="만기 후 재가입 플랜의 의의"><figcaption>강의 화면 — 만기 후 재가입 플랜의 의의</figcaption></figure>
+    <ul>
+      <li><strong>합리적인 보장 설계 기회 제공</strong>: 80세·90세 만기 연장형 또는 80세 플러스와 같은 보장 담보들은 고객에게 합리적인 보장 설계 기회를 제공한다.</li>
+      <li><strong>업셀링 유도</strong>: 이러한 담보를 통해 고객들에게 추가적인 <strong>업셀링(Up-selling)</strong>을 유도할 수 있는 좋은 기회가 만들어질 수 있다.</li>
+      <li><strong>학습 및 활용 권장</strong>: 설계사들은 이러한 담보를 충분히 학습하고 연구하며, <strong>약관을 확인한 후</strong> 고객들에게 제안하는 것이 좋다.</li>
+      <li>이를 통해 좋은 성과를 나타낼 수 있을 것으로 기대된다.</li>
+    </ul>
+    <div class="note key"><span class="lb">마무리</span>담보별 만기 차등 = 보험료 절감 + 보장 강화 + 상담 명분. 제안 전 반드시 해당 상품의 약관을 확인한다.</div>
+  </div>
+</section>
+
+</main>
+
+<footer><span>TEAM 101 · 토스인슈어런스 교육자료</span><span>전종환 팀장 · 010-4637-3210</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

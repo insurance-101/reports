@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10월 시장 이슈와 9월 시황 리뷰 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">MARKET BRIEFING · 시황 교육자료</div>
+    <h1>10월 시장 이슈와 <span class="accent">9월 시황 리뷰</span></h1>
+    <p class="lead">글로벌 금리 인상과 반도체·AI 기업의 실적 호조, 사상 최대 무역 흑자로 확인된 한국 경제의 강력한 펀더멘탈, 그리고 고금리·물가가 만드는 횡보 우려까지. 고객 상담에서 바로 쓸 수 있도록 9월 시장을 되짚고 10월 주요 이벤트와 고금리 시대의 분산 투자 전략을 정리했다.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>주제 <b>금리 인상·실적 호조·수출</b></span><span>활용 <b>시황 브리핑·변액보험 상담</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline">
+  <a href="#m1"><div class="no">COURSE 01</div><div class="t">10월 이슈 &amp; 9월 시장 흐름</div><div class="ds">횡보장 · 장기채 금리 · 유가 100달러 · AI 반도체 · 금리 인상 · 실적 호조</div></a>
+  <a href="#m2"><div class="no">COURSE 02</div><div class="t">10월 이벤트와 한국 펀더멘탈</div><div class="ds">삼성전자 실적 · 금통위 · FOMC · 무역 흑자 499억 달러 · 수출 1조 달러</div></a>
+  <a href="#m3"><div class="no">COURSE 03</div><div class="t">글로벌 동향과 투자 전략</div><div class="ds">엔비디아 · CAPEX · 이자 갭 · 환율 · 금값 · 변액보험</div></a>
+</nav>
+
+<nav class="topnav"><ul>
+  <li><a href="#m1">01 10월 이슈 &amp; 9월 흐름</a></li>
+  <li><a href="#m2">02 이벤트 · 한국 펀더멘탈</a></li>
+  <li><a href="#m3">03 글로벌 동향 · 투자 전략</a></li>
+</ul></nav>
+
+<main class="wrap">
+<div class="note key"><span class="lb">핵심 요약</span><strong>Q.</strong> 10월 국내외 경제 시장의 핵심 이슈는 무엇인가요?<br><strong>A.</strong> <strong>글로벌 금리 인상</strong>과 <strong>반도체 및 AI 기업의 실적 호조</strong>가 핵심이며, 특히 한국은 반도체 수출에 힘입어 사상 최대 무역 흑자를 기록하는 등 <strong>강력한 펀더멘탈</strong>을 보이고 있습니다.</div>
+
+<section class="module" id="m1">
+  <div class="mod-head">
+    <div class="kicker">COURSE 01</div>
+    <h2>10월 경제 시장의 주요 이슈와 흐름</h2>
+    <p>10월은 4분기의 시작을 알리는 중요한 시기로, 글로벌 금리 인상과 반도체 및 AI 기업의 실적 호조가 핵심 이슈로 부상하고 있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>9월 시장의 전반적인 흐름</h3>
+    <h4>주식 시장의 횡보와 채권 시장의 불안정성</h4>
+    <ul>
+      <li>8월에 이어 9월에도 주식 시장은 특별한 이슈 없이 <strong>횡보</strong>하는 모습을 보였다.</li>
+      <li>중국 증시만 하락세를 보였으며, 전반적으로 주가는 크게 움직이지 않았다.</li>
+    </ul>
+    <h4>미국 장기채 금리 급등과 시장 영향</h4>
+    <ul>
+      <li>주식 시장보다 채권 시장이 불안정한 모습을 보였는데, 특히 미국의 국채 <strong>10년물과 30년물</strong> 장기채 금리가 크게 상승하여 시장을 뒤흔드는 주요 이슈가 되었다.</li>
+    </ul>
+    <h4>하반기 기준금리 인상 전망</h4>
+    <ul>
+      <li>미국과 한국의 기준금리가 하반기에 나란히 인상될 것으로 예상되어, 이에 대한 우려가 커지고 있다.</li>
+    </ul>
+    <h4>환율 및 원유 가격 변동</h4>
+    <ul>
+      <li>환율은 <strong>1,350원에서 1,370원</strong> 사이를 유지하며 1,400원을 넘지 않는 수준을 보였다.</li>
+      <li>원유 가격은 미국과 이란의 분쟁 격화로 <strong>100달러</strong>를 넘어서며 급등했다.</li>
+      <li>반면, 금값은 오르지 않고 오히려 하락하는 모습을 보였다.</li>
+    </ul>
+    <h4>미국과 한국 증시의 변동성</h4>
+    <ul>
+      <li>한국 증시는 한때 6,500까지 하락했다가 회복되었으나, 추석 이후 <strong>6,900~7,000</strong> 사이를 오가며 지지부진한 모습을 보였다.</li>
+      <li>미국 증시도 일시적인 하락 후 장중 최고치를 기록했으나, <strong>7,700~8,000</strong> 사이에서 상승세를 이어가지 못하고 둔화되는 모습을 보였다.</li>
+    </ul>
+    <h4>유가 상승과 물가 및 금리 인상 압력</h4>
+    <ul>
+      <li>9월 초 미국과 이란 간의 긴장이 격화되면서 유가가 상승했다.</li>
+      <li>유가 상승은 11월 중간선거를 앞둔 미국 내 분위기를 악화시켰고, 이는 물가 상승으로 이어져 <strong>국제 금리 인상 압력</strong>을 높였다.</li>
+    </ul>
+    <div class="chips"><span>환율<b>1,350~1,370원</b></span><span>유가<b>100달러 돌파</b></span><span>금값<b>하락</b></span><span>한국 증시(추석 이후)<b>6,900~7,000</b></span><span>미국 증시<b>7,700~8,000</b></span></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>AI 기술 발전과 반도체 수요 증가</h3>
+    <h4>AI 모델의 빠른 발전과 경쟁 심화</h4>
+    <ul>
+      <li>AI 모델들이 빠르게 발전하며 시장에서 치열한 경쟁을 벌이고 있다.</li>
+      <li>Claude의 "오퍼스 5.5"와 ChatGPT의 "아스트라" 같은 새로운 모델들이 출시되며 성능이 크게 향상되었다.</li>
+      <li>AI 에이전트나 컷 편집 같은 기능들이 빠르고 정확하게 구현되는 모델들이 등장하고 있다.</li>
+    </ul>
+    <h4>AI 발전이 반도체 수요에 미치는 영향</h4>
+    <ul>
+      <li>AI 모델의 빠른 발전은 더 많은 <strong>데이터 센터</strong>를 필요로 하며, 이는 곧 <strong>반도체 수요 증가</strong>로 이어진다.</li>
+      <li>따라서 반도체 수요가 줄어들지 않을 것이라는 전망이 나왔고, 실제로 반도체 시장은 개선되는 모습을 보였다.</li>
+    </ul>
+    <div class="chips"><span>AI 모델 발전</span><span>더 많은 데이터 센터</span><span>반도체 수요 증가</span></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>9월 및 10월 시장의 핵심 키워드: 금리 인상과 실적 호조</h3>
+    <h4>금리 인상이 주가 횡보의 주요 원인</h4>
+    <ul>
+      <li>9월과 10월에 기업 실적이 좋게 나왔음에도 불구하고 주가가 횡보한 주된 이유는 <strong>금리 인상</strong> 때문이다.</li>
+      <li>FOMC의 금리 인상과 국채 금리 상승이 시장에 큰 영향을 미쳤다.</li>
+    </ul>
+    <h4>외국인 매도세와 코스피의 선방</h4>
+    <ul>
+      <li>추석 이후 외국인 투자자들이 한국 시장에서 지속적으로 매도세를 보였다.</li>
+      <li>연초부터 9월 말까지 외국인이 한국 시장에서 매도한 자금은 <strong>190조 원</strong>이 넘었지만, 코스피는 비교적 잘 버텨주는 모습을 보였다.</li>
+    </ul>
+    <h4>글로벌 금리 인상 추세</h4>
+    <ul>
+      <li>10월의 핵심 키워드는 <strong>금리 인상</strong>으로, 미국뿐만 아니라 한국과 일본에서도 기준금리 및 국채금리가 상승하고 있다.</li>
+      <li>이는 전 세계적으로 금리 인상 기조가 확산되고 있음을 보여준다.</li>
+    </ul>
+    <h4>실적 호조가 주가 하락을 방어하는 요인</h4>
+    <ul>
+      <li>높은 금리 수준이 2022년 폭락장과 비슷함에도 불구하고 주가가 폭락하지 않는 이유는 <strong>기업들의 실적이 매우 좋기 때문</strong>이다.</li>
+      <li>9월 28일 발표된 마이크론의 실적은 사상 최대치를 기록했으며, 매출 대비 이익률이 <strong>87%</strong>에 달하는 등 반도체 및 AI 기업들의 실적이 놀라울 정도로 좋게 나오고 있다.</li>
+    </ul>
+    <h4>10월의 중요성: 삼성전자 및 빅테크 실적 발표</h4>
+    <ul>
+      <li>10월은 매우 중요한 시기로, 삼성전자의 3분기 실적 발표와 10월 말 빅테크 기업들의 실적 발표가 예정되어 있다.</li>
+      <li>이들 기업의 실적이 매우 좋을 것으로 예상되어 시장에 긍정적인 호재로 작용할 수 있다.</li>
+    </ul>
+    <h4>물가 상승이 시장의 발목을 잡는 요인</h4>
+    <ul>
+      <li>물가는 전쟁, 관세 문제, 유가 상승(100달러 돌파) 등 여러 이유로 쉽게 내려가지 않고 있어 하반기 시장의 발목을 잡는 요인이 될 것으로 예상된다.</li>
+      <li>따라서 10월은 이러한 복합적인 요인들이 시장에 어떤 영향을 미칠지 자세히 살펴봐야 하는 중요한 시기이다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>주가를 누르는 힘은 <strong>금리 인상과 물가</strong>, 받치는 힘은 <strong>기업 실적</strong>이다. 금리가 2022년 폭락장 수준인데도 주가가 폭락하지 않는 이유는 실적이다.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head">
+    <div class="kicker">COURSE 02</div>
+    <h2>10월 주요 경제 이벤트 및 한국 경제의 강력한 펀더멘탈</h2>
+    <p>10월에는 삼성전자 실적 발표, 금리 결정 회의 등 중요한 경제 이벤트가 집중되어 있으며, 한국 경제는 사상 최대 무역 흑자와 수출 증가율을 기록하며 강력한 펀더멘탈을 보여주고 있다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>10월의 주요 경제 이벤트 및 하반기 전망</h3>
+    <h4>삼성전자의 3분기 실적 발표</h4>
+    <ul>
+      <li><strong>10월 8일</strong> 삼성전자의 3분기 실적 발표가 예정되어 있으며, 예상 영업이익은 <strong>100조 원</strong>을 넘어설 것으로 보인다.</li>
+      <li>이는 한국 역사상 단일 기업의 영업이익이 100조 원을 넘는 첫 사례가 될 것으로, 원래 114조~120조 원을 예상했으나 환율 영향으로 <strong>102조~105조 원</strong>으로 조정되었다.</li>
+      <li>이러한 좋은 실적은 시장에 긍정적인 영향을 미칠 것으로 기대된다.</li>
+    </ul>
+    <h4>금리 결정 회의와 빅테크 실적 발표</h4>
+    <ul>
+      <li>한국의 금융통화위원회는 <strong>10월 22일</strong>에, 미국의 FOMC 회의는 <strong>10월 28일</strong>에 열릴 예정이며, 금리 인상 여부가 가장 중요한 이슈 중 하나이다.</li>
+      <li>10월 말에는 빅테크 기업들의 실적 발표가 이어지며 시장의 주목을 받을 것이다.</li>
+    </ul>
+    <h4>11월 미국 중간선거와 경제 상황</h4>
+    <ul>
+      <li><strong>11월 3일</strong> 트럼프의 중간선거가 예정되어 있으나, 현재 분위기는 좋지 않다는 이야기가 들린다.</li>
+      <li>미국의 부채는 사상 최대치를 넘어섰고, 부채 이자 지급 비용이 국방예산보다 커진 상황이다.</li>
+      <li>예산 감축이 어렵고 내년 예산은 더 크게 신청되어 있어 재정 부담이 가중될 것으로 보인다.</li>
+      <li>미국의 물가 상승과 경유 가격 6달러 돌파 등 경제 상황이 좋지 않아 중간선거 결과에 대한 불확실성이 크다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>날짜</th><th>이벤트</th><th>체크 포인트</th></tr></thead>
+      <tbody>
+        <tr><td>10월 8일</td><td>삼성전자 3분기 실적 발표</td><td>예상 영업이익 100조 원 돌파(원래 114조~120조 원 → 환율 영향으로 102조~105조 원으로 조정)</td></tr>
+        <tr><td>10월 22일</td><td>한국 금통위</td><td>금리 인상 여부</td></tr>
+        <tr><td>10월 28일</td><td>미국 FOMC 회의</td><td>금리 인상 여부</td></tr>
+        <tr><td>10월 말</td><td>빅테크 기업 실적 발표</td><td>시장의 주목</td></tr>
+        <tr><td>11월 3일</td><td>미국 중간선거</td><td>분위기 좋지 않음 · 결과 불확실성</td></tr>
+      </tbody>
+    </table>
+    <h4>하반기 주요 경제 지표 전망</h4>
+    <ul>
+      <li>미국 국채 10년물 금리가 <strong>5.3%</strong>, 30년물 금리가 <strong>5.6%</strong>를 넘었다가 현재는 소폭 하락한 상태이지만, 다시 <strong>5.3%~5.4%</strong>를 넘을지 주목해야 한다.</li>
+      <li>기준금리 인상 여부도 확률이 <strong>반반</strong>이므로, 이에 대한 관심이 필요하다.</li>
+      <li>환율은 1,350원에서 <strong>1,400원 돌파 여부</strong>가 관건이며, 이 역시 중요한 체크 포인트이다.</li>
+    </ul>
+    <div class="note key"><span class="lb">CHECK POINT</span>미국 국채 금리 5.3%~5.4% 재돌파 여부 · 기준금리 인상(확률 반반) · 환율 1,400원 돌파 여부.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>한국 수출의 폭발적 성장과 강력한 펀더멘탈</h3>
+    <h4>사상 최대 월 수출액 및 무역 흑자 기록</h4>
+    <ul>
+      <li>한국의 월 수출액은 <strong>1,200억 달러</strong>를 돌파했으며, 무역 흑자는 <strong>499억 달러</strong>에 달해 한국 역사상 처음 있는 엄청난 금액을 기록했다.</li>
+      <li>이는 전년 동기(2025년 9월) 대비 <strong>83%</strong> 증가한 수치이다.</li>
+    </ul>
+    <h4>반도체 수출의 압도적인 기여</h4>
+    <ul>
+      <li>이러한 수출 증가의 가장 큰 기여는 <strong>반도체 수출</strong>이며, 두 개 기업의 반도체 수출액만 <strong>600억 달러</strong>를 돌파했다.</li>
+      <li>이는 일본 전체 수출액과 맞먹는 수준으로, 반도체 수출의 규모가 얼마나 큰지 보여준다.</li>
+      <li>무역 흑자 499억 달러는 500억 달러에 육박하는 엄청난 수치이다.</li>
+    </ul>
+    <h4>지속적인 무역 흑자 확대</h4>
+    <ul>
+      <li>작년 2~3월 40억 달러였던 무역 흑자가 1년 반 만에 <strong>10배 이상</strong> 증가하여 <strong>20개월째</strong> 지속되고 있다.</li>
+      <li>6월에 300억 달러를 돌파했던 무역 흑자가 현재 499억 달러에 이르렀으며, 다음 달에는 500억 달러, 심지어 600억 달러도 가능할 것이라는 전망이 나온다.</li>
+    </ul>
+    <div class="chips"><span>무역 흑자 작년 2~3월<b>40억 달러</b></span><span>6월<b>300억 달러 돌파</b></span><span>현재<b>499억 달러</b></span><span>다음 달 전망<b>500억, 600억 달러도 가능</b></span></div>
+    <h4>강력한 펀더멘탈과 코스피의 의문</h4>
+    <ul>
+      <li>이러한 수출 실적은 한국 경제의 <strong>펀더멘탈이 매우 강하다</strong>는 것을 보여준다.</li>
+      <li>수출과 실적이 이렇게 좋은데도 코스피가 오르지 않는 것에 대한 의문이 제기될 정도이다.</li>
+    </ul>
+    <h4>경제적 파급 효과</h4>
+    <ul>
+      <li>좋은 실적은 <strong>연말 배당</strong>으로 이어질 가능성이 높으며, 법인세 등 세수도 많이 걷힐 것으로 예상된다.</li>
+      <li>벌어들인 돈이 국내로 환전되어 유입될 가능성이 높아 당분간 환율이 오르지 않을 것으로 전망된다.</li>
+    </ul>
+    <h4>GDP 성장과 수출의 견인</h4>
+    <ul>
+      <li>한국의 GDP가 크게 증가하고 있으며, 최근 출산율도 상승하는 추세이다.</li>
+      <li>현재 성장률이 <strong>4%</strong>에 가까워 이 수준이 유지되면 1인당 GDP가 <strong>4만 달러</strong>를 넘는 것이 확실시될 것으로 보인다.</li>
+      <li>수출 증가율(빨간색 그래프)이 GDP 성장 속도(파란색 그래프)를 크게 웃돌며 한국 경제 전체를 견인하고 있다.</li>
+      <li>건국 이래 최대 실적을 연속해서 기록하고 있으며, "단군 이래 최대"라는 표현을 쓸 정도로 수출이 매우 잘 되고 있다.</li>
+    </ul>
+    <h4>반도체 외 다양한 품목의 수출 호조</h4>
+    <ul>
+      <li>반도체뿐만 아니라 선박, 방위산업, 전력 인프라, 화장품 등 다양한 품목에서 한국이 수출 1위를 차지하고 있다.</li>
+      <li>연간 수출액은 <strong>1조 달러</strong>를 넘을 것으로 예상되는데, 1월부터 9월까지 이미 <strong>8,100억 달러</strong>를 넘어섰기 때문에 남은 3개월 동안 1조 달러 달성이 가능할 것으로 보인다.</li>
+    </ul>
+    <h4>세계 4위 수출 강국으로의 도약</h4>
+    <ul>
+      <li>1조 달러 수출액은 2025년 기준 4위였던 네덜란드(9천억 달러)를 넘어서는 수치로, 한국이 전 세계 <strong>4위</strong> 안에 드는 수출 강국이 될 것임을 의미한다.</li>
+      <li>이러한 성과는 대기업 수출 위주로 이루어져 중소기업은 체감하기 어렵다는 <strong>K자형 경제 성장</strong> 문제도 있지만, 대한민국 전체 경제의 수출 증가는 명백한 사실이다.</li>
+    </ul>
+    <div class="note good"><span class="lb">FUNDAMENTAL</span>월 수출액 1,200억 달러 돌파 · 무역 흑자 499억 달러(20개월째 흑자) · 1~9월 수출 8,100억 달러 돌파 → 연간 1조 달러 전망, 세계 4위 안에 드는 수출 강국.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.3</span>삼성전자, SK하이닉스 실적과 투자자 기대</h3>
+    <h4>삼성전자, SK하이닉스의 압도적인 실적</h4>
+    <ul>
+      <li>수출을 이끄는 삼성전자와 SK하이닉스의 실적은 매우 좋지만, 주가는 오르지 않는다는 의문이 제기된다.</li>
+      <li>삼성전자의 3분기 영업이익은 환율 영향으로 <strong>103조~104조 원</strong>으로 예상되며, SK하이닉스도 <strong>76조~77조 원</strong>으로 예상된다.</li>
+      <li>두 기업을 합치면 거의 <strong>180조~190조 원</strong>에 가까운 영업이익을 낼 것으로 보인다.</li>
+      <li>내년, 내후년에도 삼성전자는 최소 100조 원 이상의 영업이익이 예상되며, SK하이닉스도 2027년부터 100조 원 이상의 영업이익을 기대하고 있다.</li>
+      <li>이는 현재의 주가수익비율(PER)로는 이해하기 어려울 정도로 엄청난 이익이다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>3분기 영업이익(예상)</th><th>이후 전망</th></tr></thead>
+      <tbody>
+        <tr><td>삼성전자</td><td>103조~104조 원(환율 영향)</td><td>내년, 내후년에도 최소 100조 원 이상</td></tr>
+        <tr><td>SK하이닉스</td><td>76조~77조 원</td><td>2027년부터 100조 원 이상 기대</td></tr>
+        <tr><td>합계</td><td>180조~190조 원에 가까움</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <h4>투자자들의 과도한 기대감</h4>
+    <ul>
+      <li>삼성전자와 SK하이닉스의 실적이 나쁜 것이 아니라, <strong>투자자들의 기대가 너무 높다</strong>는 분석이 있다.</li>
+      <li>100조 원씩 이익을 내는 기업에게 매번 30%, 40%, 100%, 200%의 증가율을 기대하는 것은 현실적으로 어렵다.</li>
+      <li>과거 전년 동기 대비 800%~1000%씩 증가했던 경험 때문에 투자자들이 계속해서 높은 증가율을 기대하지만, 어떤 기업도 그렇게 지속적으로 증가할 수는 없다.</li>
+      <li>따라서 이익률과 증가율은 당연히 떨어질 수밖에 없지만, <strong>절대적인 이익 금액</strong>은 매우 커지고 있는 상황이다.</li>
+    </ul>
+    <h4>낙관적인 시장 전망</h4>
+    <ul>
+      <li>이러한 엄청난 실적 숫자들 때문에 시장을 낙관적으로 볼 수밖에 없다는 의견이다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>실적이 나쁜 것이 아니라 기대가 너무 높은 것이다. 증가율은 떨어져도 <strong>절대적인 이익 금액</strong>은 매우 커지고 있다.</div>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head">
+    <div class="kicker">COURSE 03</div>
+    <h2>글로벌 시장 동향 및 투자 전략</h2>
+    <p>미국 시장은 한국만큼의 폭발적인 성장은 아니지만 견조한 흐름을 보이며, 특히 AI 관련 반도체 기업들이 강세를 나타내고 있다. 금리 인상과 물가 상승은 여전히 시장의 주요 변수이며, 분산 투자를 통한 안정적인 자산 관리가 중요하다.</p>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.1</span>미국 시장 동향 및 AI 반도체 강세</h3>
+    <h4>미국 시장의 견조한 성장</h4>
+    <ul>
+      <li>미국 시장도 나쁘지 않았지만, 한국 시장의 워낙 좋은 실적 때문에 상대적으로 덜 부각되었다.</li>
+      <li>연초 대비 S&amp;P 500 지수는 <strong>13%~14%</strong> 정도 증가했다.</li>
+    </ul>
+    <h4>빅테크 기업 중 엔비디아와 애플의 선전</h4>
+    <ul>
+      <li>S&amp;P 500을 이긴 빅테크 기업은 <strong>엔비디아와 애플</strong>뿐이었다.</li>
+      <li>엔비디아는 많은 수익을 냈음에도 불구하고 주가 상승률은 실적에 비해 미치지 못했는데, 이는 투자자들의 높은 기대감 때문으로 분석된다.</li>
+    </ul>
+    <h4>AI 모델 발전과 반도체 기업으로의 자금 이동</h4>
+    <ul>
+      <li>미국에서 개발된 제미나이, 오픈AI 등 AI 모델의 뛰어난 성능에도 불구하고, 실제로 돈을 버는 것은 이러한 성능을 구현하는 데 필요한 <strong>반도체 회사들</strong>이다.</li>
+      <li>샌디스크는 1년 반 동안 <strong>4,000%</strong> 상승했으며, 마이크론도 9월 말에 엄청난 실적을 발표했다.</li>
+      <li>따라서 미국 시장에서도 반도체 회사로 자금이 많이 이동하고 있는 추세이다.</li>
+    </ul>
+    <h4>미국 시장 내 자금 순환매</h4>
+    <ul>
+      <li>미국 S&amp;P 500에서 반도체 회사가 차지하는 비중은 <strong>14%~15%</strong>에 불과하여, 반도체 시장 움직임이 S&amp;P 500 전체를 좌우하지는 않는다.</li>
+      <li>반도체나 하드웨어 회사가 조정을 받을 때, 소프트웨어 회사는 오히려 상승하는 등 미국 시장 내에서 자금의 <strong>순환매</strong>가 이루어지고 있는 모습이 보인다.</li>
+      <li><strong>10월 말 빅테크 회사들의 실적 발표</strong>를 반드시 확인해야 한다.</li>
+    </ul>
+    <div class="chips"><span>S&amp;P 500 연초 대비<b>13%~14%</b></span><span>S&amp;P 500 내 반도체 비중<b>14%~15%</b></span><span>샌디스크 1년 반<b>4,000%</b></span></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.2</span>엔비디아 저평가 논란과 분산 투자의 중요성</h3>
+    <h4>엔비디아의 실적 대비 저평가 논란</h4>
+    <ul>
+      <li>엔비디아는 2분기 실적이 매우 좋았음에도 불구하고 주가가 크게 오르지 않아, 요즘 미국에서는 <strong>엔비디아가 싸다</strong>는 이야기가 나오고 있다.</li>
+      <li>엔비디아는 독일과 프랑스 주식시장을 합친 것보다 시가총액이 큰 엄청난 기업이다.</li>
+      <li>2021년~2022년 급등 당시 PER이 <strong>60배~100배</strong>에 달해 고평가 논란이 있었으나, 현재는 PER이 <strong>17배</strong> 정도로 낮아졌다.</li>
+      <li>이는 한국의 삼성전자와 SK하이닉스만의 문제가 아니라, 미국에서도 실적에 비해 주가가 100% 반영되지 않고 있음을 보여준다.</li>
+    </ul>
+    <h4>분산 투자의 필요성</h4>
+    <ul>
+      <li>한국 시장이 잘 나간다고 해서 한국에만 투자하는 것이 아니라, 미국 시장에 대한 <strong>분산 투자</strong>도 게을리하지 않아야 한다.</li>
+    </ul>
+    <h4>빅테크 기업의 CAPEX 투자 확대와 한국의 수혜</h4>
+    <ul>
+      <li>2분기 빅테크 기업들의 예상보다 좋은 실적은 이들이 더 많은 투자를 할 수 있는 여력을 제공했다.</li>
+      <li>이들은 벌어들인 돈으로 데이터 센터 건설 등 인프라(CAPEX)를 확대하기 위해 메모리 반도체를 더 많이 사기로 결정했다.</li>
+      <li>내년에 빅테크 기업들의 CAPEX 투자가 크게 늘어날 것이며, 이 중 메모리가 차지하는 비중은 기존 <strong>30% 이내</strong>에서 2027년부터 <strong>50%~60%</strong>까지 증가할 것으로 예상된다.</li>
+      <li>HBM, 낸드플래시, DDR4 등을 가장 많이 수출하는 나라는 <strong>한국</strong>이므로, 한국 경제 전망을 놓치지 않아야 한다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>빅테크 CAPEX 중 메모리 비중 30% 이내 → 2027년부터 50%~60%. HBM·낸드플래시·DDR4를 가장 많이 수출하는 나라는 한국이다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.3</span>빅테크 기업의 부채 증가와 금리 인상 우려</h3>
+    <h4>빅테크 기업의 치열한 경쟁과 부채 조달</h4>
+    <ul>
+      <li>디지털 세상에서는 아직 1위 기업이 정해지지 않았기 때문에, AI 시장 1위를 차지하기 위해 빅테크 기업들이 엄청난 돈을 쏟아붓고 있다.</li>
+      <li>문제는 이 투자 자금 중 상당 부분이 번 돈뿐만 아니라 <strong>빚으로 조달</strong>되고 있다는 점이다.</li>
+      <li>내년부터는 대출이나 회사채를 통한 부채 조달이 더욱 늘어날 것으로 예상된다.</li>
+    </ul>
+    <h4>빅테크 회사채 발행 증가와 미국 국채 수요 감소</h4>
+    <ul>
+      <li>투자 등급(Investment Grade)의 채권 중 빅테크 기업들이 회사채 발행을 크게 늘리고 있다.</li>
+      <li>엔비디아처럼 매우 튼튼하고 안전한 빅테크 기업의 회사채가 인기를 끌면서, 상대적으로 <strong>미국 국채에 대한 수요를 빼앗아 가는</strong> 현상이 발생하고 있다.</li>
+      <li>빅테크 기업들의 부채 증가는 지속적으로 지켜봐야 할 요인이다.</li>
+    </ul>
+    <h4>부채 증가에 따른 대출 이자 부담 증가</h4>
+    <ul>
+      <li>빚이 많아지면 가장 신경 쓰이는 것은 <strong>대출 이자</strong>이다.</li>
+      <li>변동금리 대출을 가진 사람들은 금리 인상으로 인해 이자 부담이 크게 늘어날 수 있다.</li>
+    </ul>
+    <h4>한국 기준금리 추가 인상 가능성</h4>
+    <ul>
+      <li>한국은 이미 <strong>두 번 연속</strong> 기준금리를 인상했으며, 올해 연말이나 내년 초에 한 번 더 인상될 가능성이 있다.</li>
+      <li>이는 돈의 유입, 물가 상승, GDP 성장률 가파른 증가 등 경제 상황을 고려하여 한국은행이 <strong>선제적으로</strong> 금리를 인상하고 있기 때문이다.</li>
+      <li>따라서 이번 금융통화위원회에서 금리가 한 번 더 오를 가능성도 있어 우려된다.</li>
+    </ul>
+    <h4>미국 FOMC의 금리 인상과 시장 영향</h4>
+    <ul>
+      <li>미국 FOMC는 10월 28일에 금리를 한 번 더 인상하여 <strong>4%</strong>로 올렸다.</li>
+      <li>트럼프는 금리 인하를 기대했지만, 현재 미국의 물가 상황으로는 금리를 내릴 수 없으며 오히려 한 번 더 올려야 하는 상황이다.</li>
+      <li>올 하반기 시장에서 기업 실적이 좋음에도 불구하고, <strong>물가와 금리</strong>가 시장을 억누르는 주요 요인이 될 것으로 보인다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">CAUTION</span>빅테크의 투자 자금은 상당 부분 빚으로 조달되고, 한국 기준금리는 연말·내년 초 추가 인상 가능성이 있다. 변동금리 대출을 가진 사람들은 이자 부담이 크게 늘어날 수 있다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.4</span>고금리 시대의 투자 전략과 시장 전망</h3>
+    <h4>미국 장기 금리의 역사적 수준</h4>
+    <ul>
+      <li>미국의 10년물 국채 금리는 <strong>5.3%</strong>, 30년물 국채 금리는 <strong>5.6%</strong>를 넘어섰다가 현재는 소폭 하락했지만 여전히 5%대에 머물고 있다.</li>
+      <li>이 5%대 금리는 2000년대 초반 수준으로, <strong>20여 년 만</strong>에 온 매우 높은 금리이다.</li>
+    </ul>
+    <h4>고금리가 주식 시장에 미치는 영향</h4>
+    <ul>
+      <li>2022년에도 금리가 급속도로 올랐을 때 주가가 크게 조정받았기 때문에, 현재의 고금리 상황에 대한 우려가 크다.</li>
+      <li>금리가 올라가면 <strong>주식 프리미엄</strong>이 낮아져 주식 시장의 매력이 떨어진다.</li>
+    </ul>
+    <h4>주식 프리미엄과 이자 갭</h4>
+    <ul>
+      <li>주식 프리미엄은 '1 나누기 PER'로 계산하는데, 현재 미국 PER이 약 <strong>19배</strong>이므로 주식 프리미엄은 약 <strong>5.26%</strong>이다.</li>
+      <li>반면, 미국 10년 만기 국채 금리는 <strong>5.3%</strong>로, 주식 프리미엄과 거의 같거나 더 높다.</li>
+      <li>이를 <strong>'이자 갭'</strong>이라고 하는데, 주식 투자로 얻을 수 있는 기대 수익이 국채 금리보다 낮아지면, 위험을 감수하고 주식에 투자할 이유가 없어진다.</li>
+      <li>따라서 시장 금리 상승은 주식 시장에 부정적인 이슈이다.</li>
+    </ul>
+    <div class="chips"><span>미국 PER<b>약 19배</b></span><span>주식 프리미엄(1 ÷ PER)<b>약 5.26%</b></span><span>미국 10년 만기 국채<b>5.3%</b></span></div>
+    <h4>2022년과 2026년 시장의 차이점</h4>
+    <ul>
+      <li>2022년에는 고금리로 인해 주가가 심하게 폭락하고 코스피도 많이 떨어졌다.</li>
+      <li>그러나 2026년에는 나스닥, S&amp;P 500, 금값, 그리고 한국의 배당을 많이 주는 보험업종 등이 금리 상승에도 불구하고 안정적인 수익을 내며 의외로 버티는 모습을 보이고 있다.</li>
+    </ul>
+    <h4>분산 투자의 중요성 재강조</h4>
+    <ul>
+      <li>이러한 상황을 고려하여 <strong>분산 투자</strong>를 통해 어떻게 대응할지 고민해야 한다.</li>
+    </ul>
+    <h4>코스피 횡보 가능성 및 수급 문제</h4>
+    <ul>
+      <li>코스피가 올라가야 하지만, 횡보할 가능성도 있다는 우려가 있다.</li>
+      <li>AI 모델이나 기업 영업 실적은 코스피를 끌어올릴 힘이 있지만, 이를 끌어내리는 힘도 만만치 않다.</li>
+      <li>8월과 9월 한국 증시를 지탱했던 주요 수요는 삼성전자와 SK하이닉스의 <strong>자사주 매입</strong>이었다.</li>
+      <li>그러나 자사주 매입이 10월에 끝나면, 개인 투자자들의 자금 부족과 외국인의 지속적인 매도세로 인해 <strong>수급 불균형</strong> 문제가 발생할 수 있다.</li>
+    </ul>
+    <h4>글로벌 증시 하락 모멘텀</h4>
+    <ul>
+      <li>높은 금리, 100달러를 넘는 유가 등은 한국 증시뿐만 아니라 전 세계 증시를 하락시키려는 모멘텀으로 작용하고 있다.</li>
+      <li>따라서 시장이 크게 오르지 못하고 횡보할 가능성이 있다는 우려가 제기된다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>주식 프리미엄 약 5.26% vs 미국 10년 만기 국채 금리 5.3% — 기대 수익이 국채 금리보다 낮아지는 '이자 갭' 구간이다. 횡보 가능성까지 고려해 분산 투자로 어떻게 대응할지 고민해야 한다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.5</span>달러 환율 및 금값 동향, 그리고 변액보험 포트폴리오</h3>
+    <h4>달러 환율의 안정화 추세</h4>
+    <ul>
+      <li>달러는 급등하기는 쉽지 않을 것으로 보이며, 현재는 나쁘지 않은 시기라고 판단된다.</li>
+      <li>과거에는 원화 환율과 달러 인덱스가 함께 움직였으나, 2025년부터 서학개미와 국민연금의 해외 투자 자금 증가로 달러 수요가 급증하면서 원화 가치가 하락했다.</li>
+      <li>정치적 이슈 등 여러 요인으로 원화 가치가 낮았지만, 현재는 원화 가치가 강해지고 있다(원달러 환율 하락).</li>
+      <li>이는 일본 엔화와 미국 개입으로 아시아 통화가 강세를 보인 점, 그리고 반도체 수출 흑자로 인한 외국 자금 유입 때문이다.</li>
+      <li>연말에도 외국 자금이 계속 유입되고 원화 수요가 늘어날 것이므로, <strong>원화 강세</strong>가 지속될 것으로 예상된다.</li>
+    </ul>
+    <h4>달러 매입 시기 및 환율 전망</h4>
+    <ul>
+      <li>당분간 1,400원에서 1,500원 구간을 돌파하기는 쉽지 않아 보이며, 달러를 안정적으로 매입할 수 있는 시기일 수 있다.</li>
+      <li>연말 수출 금액 등으로 많은 외국 자금이 들어올 것이라는 기대 때문에 <strong>1,300원대</strong>도 깨질 수 있다는 전망도 있다.</li>
+    </ul>
+    <h4>금값 하락과 안전자산으로서의 역할</h4>
+    <ul>
+      <li>금값은 연초 대비 <strong>24%</strong> 하락했으며, 9월에는 <strong>4,000달러</strong> 선을 깨기도 하는 등 많이 떨어졌다.</li>
+      <li>금값이 인기가 없는 주된 이유는 금과 비교되는 미국 국채 금리가 5% 정도로 매우 높아졌기 때문이다.</li>
+      <li>그러나 한국은행과 중앙은행들이 꾸준히 금을 매입하고 있으므로, 금은 시세차익을 노리는 투기 대상이라기보다는 <strong>안전하게 자산을 지키기 위한 마지막 보루</strong>로 생각하는 것이 좋다.</li>
+      <li>포트폴리오에 일부 안전자산으로 포함하는 것이 좋은 선택이 될 수 있다.</li>
+    </ul>
+    <h4>변액보험 포트폴리오 수익률 및 분산 투자</h4>
+    <ul>
+      <li>변액보험 포트폴리오 수익률 측면에서 한국 인덱스는 여전히 좋은 성과를 보였다.</li>
+      <li>9월에는 중국 시장이 가장 좋지 않은 모습을 보였는데, 항상 강조하듯이 미국, 중국, 한국에 골고루 <strong>분산 투자</strong>하는 것이 중요하다.</li>
+      <li>10년 이상 장기적으로 안전하게 투자할 수 있는 방법을 고객들에게 안내하는 것이 가장 좋다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>구분</th><th>최근 흐름</th><th>전망 · 활용</th></tr></thead>
+      <tbody>
+        <tr><td>달러</td><td>원화 가치가 강해지는 중(원달러 환율 하락)</td><td>1,400원에서 1,500원 구간 돌파는 쉽지 않음 · 1,300원대도 깨질 수 있다는 전망 · 달러를 안정적으로 매입할 수 있는 시기일 수 있음</td></tr>
+        <tr><td>금</td><td>연초 대비 24% 하락 · 9월 4,000달러 선 깨기도</td><td>투기 대상이 아닌 자산을 지키는 마지막 보루 · 포트폴리오 일부로 편입</td></tr>
+        <tr><td>변액보험</td><td>한국 인덱스 여전히 좋은 성과 · 9월 중국 시장이 가장 부진</td><td>미국, 중국, 한국에 골고루 분산 투자 · 10년 이상 장기 투자 안내</td></tr>
+      </tbody>
+    </table>
+    <div class="note key"><span class="lb">결론</span>미국, 중국, 한국에 골고루 <strong>분산 투자</strong>하고, <strong>10년 이상</strong> 장기적으로 안전하게 투자할 수 있는 방법을 고객들에게 안내하는 것이 가장 좋다.</div>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101 교육자료</b> · 전종환 팀장 / 010-4637-3210</span><span>출처: lilys.ai 강의 요약 · 2026-10</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

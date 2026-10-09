@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10월 생명보험·손해보험 신상품 소개 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">PRODUCT STUDY · 상품 스터디</div>
+    <h1>10월 <span class="accent">생보·손보 신상품</span> 및 주요 소식</h1>
+    <p class="lead">농협·신한·흥국·AIA·삼성 생명과 롯데·DB·KB 손보의 10월 신상품·납입 방식·간편 고지 상품·달러 보험 경쟁력·비급여 암 치료비·간병인 사용일당 플랜, 그리고 유병자 시장으로 향하는 흐름을 상품별로 정리한다.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>주제 <b>10월 생보·손보 신상품</b></span><span>활용 <b>상품 제안·비교 설계</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">생명보험 신상품 및 주요 소식</div><div class="ds">농협 · 신한 · 흥국 · AIA · 삼성</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">손해보험 신상품 및 주요 소식</div><div class="ds">롯데손보 · DB손보 · KB손보</div></a></nav>
+
+
+<nav class="topnav"><ul><li><a href="#m1">01 생명보험</a></li><li><a href="#m2">02 손해보험</a></li></ul></nav>
+
+<main class="wrap">
+<div class="note key"><span class="lb">핵심 요약</span><strong>Q. 10월 생명보험사 신상품 중 가장 주목할 만한 상품은 무엇인가요?</strong><br>A. 농협생명의 <strong>NH암종신보험</strong>은 암 진단 시 사망보험금의 100%를 선지급하고, 이후 사망 시 100%를 추가 지급하여 총 200%를 보장하며, 사망보험금이 리필되는 혁신적인 구조를 가지고 있습니다.</div>
+
+<section class="module" id="m1">
+  <div class="mod-head"><div class="kicker">COURSE 01</div><h2>10월 생명보험사 신상품 및 주요 소식</h2><p>10월에는 농협생명의 혁신적인 암 종신보험, 신한라이프의 유병자 맞춤 간편보험, 흥국생명의 저렴한 간편보험, AIA생명의 경쟁력 있는 달러 보험, 그리고 삼성생명의 유병자 대상 상품 출시 등 다양한 생명보험 상품들이 주목받았다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>농협생명: NH암종신보험 출시</h3>
+    <p>농협생명은 10월에 암 치료비와 사망보험금을 동시에 준비할 수 있는 <strong>NH암종신보험</strong>을 신상품으로 출시했다.</p>
+    <h4>NH암종신보험의 특징</h4>
+    <ul>
+      <li>이 보험은 암 진단 시 사망보험금의 100%를 선지급하고, 이후 사망 시 100%를 추가 지급하여 <strong>총 200%를 보장</strong>하는 혁신적인 구조를 가지고 있다.</li>
+      <li>암 진단 후 선지급된 사망보험금 100%는 암 치료비로 활용할 수 있으며, 사망보험금은 <strong>리필</strong>되어 사라지지 않는다.</li>
+      <li>암 진단 없이 사망할 경우, 계약금액의 150%를 사망보험금으로 지급한다.</li>
+      <li>암 진단 후 즉시 사망하더라도 나머지 사망보험금 100%를 지급하여, 총 200%를 보장한다.</li>
+    </ul>
+    <h4>납입 방식: 스마트페이 납입 방식</h4>
+    <ul>
+      <li><strong>스마트페이 납입 방식</strong>은 정해진 보험료를 계속 내는 일반 납입 방식과 달리, 1납기와 2납기로 나누어 보험료를 납부하는 방식이다.</li>
+      <li>경제 활동 초반에는 보험료를 높게 내고, 이후 소득이 줄어드는 시기에는 1납기 기준 금액의 30%만 납부할 수 있도록 설계되었다.</li>
+      <li>납입 기간은 10년 또는 15년 중 선택할 수 있으며, 스마트페이형은 일반페이형보다 보험료가 비싸다.
+        <ul>
+          <li>10년 납입 시: 1납기 5년, 2납기 5년</li>
+          <li>15년 납입 시: 1납기 8년, 2납기 7년</li>
+        </ul>
+      </li>
+      <li>40대 남자 기준 보험료 예시: 스마트페이형은 16만 1,300원, 일반페이형은 11만 1,900원이다.
+        <ul>
+          <li>스마트페이형은 1납기 이후 16만 1,300원의 30%만 납부한다.</li>
+        </ul>
+      </li>
+      <li>이 상품은 3.25 간편보험으로도 운영된다.</li>
+    </ul>
+    <h4>암 종류별 보장 및 납입 면제 혜택</h4>
+    <ul>
+      <li>일반암 진단 시 주계약의 100%를 지급한다.</li>
+      <li><strong>의무부가 특약</strong>으로 유방암, 전립선암, 소액암이 포함되어 있다.
+        <ul>
+          <li>유방암, 전립선암은 일반암의 50%를 진단비로 지급한다.</li>
+          <li>소액암은 일반암의 10%를 진단비로 지급한다.</li>
+        </ul>
+      </li>
+      <li>일반암 진단 시 주계약과 의무부가 특약까지 <strong>보험료 전액 납입이 면제</strong>된다.</li>
+      <li>유방암이나 전립선암 발병 시 해당 특약 보험료만 납입 면제된다.</li>
+      <li>납입 기간 동안 암 진단이 없으면 <strong>건강 축하 보너스</strong>를 적립해준다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>암 종류</th><th>보장 구분</th><th>진단비</th></tr></thead>
+      <tbody>
+        <tr><td>일반암</td><td>주계약</td><td>주계약의 100%</td></tr>
+        <tr><td>유방암<br>전립선암</td><td>의무부가 특약</td><td>일반암의 50%</td></tr>
+        <tr><td>소액암</td><td>의무부가 특약</td><td>일반암의 10%</td></tr>
+      </tbody>
+    </table>
+    <h4>노후자금 설계 전환 특약</h4>
+    <ul>
+      <li>이 상품은 종신보험임에도 불구하고 해약환급금을 재원으로 하는 특약 덕분에 환급률이 나쁘지 않다.</li>
+      <li>스마트페이형과 일반페이형에 따라 노후자금 지급 방식이 다르다.
+        <ul>
+          <li><strong>스마트페이형 (40세, 100세 만기, 월납 100만원 가입 시)</strong>: 60세에 전환 신청하면 5년간 납입한 100만원을 전액 확정 지급하고, 나머지 35년 동안은 생존 시 남은 금액을 기준으로 지급한다.</li>
+          <li><strong>일반페이형 (40세, 100세 만기, 월납 100만원 가입 시)</strong>: 60세에 전환 신청하면 10년간 납입한 100만원을 그대로 돌려주고, 나머지 기간 동안 남은 적립금을 나누어 지급한다.</li>
+        </ul>
+      </li>
+      <li>생존 시 생활자금 지급액은 가입 기간, 가입 금액, 성별에 따라 전기연금 계산식에 맞춰 지급되므로, 정확한 금액은 콜센터 문의가 필요하다.</li>
+    </ul>
+    <p>스마트페이형과 일반페이형을 비교하면 아래와 같다(보험료는 40대 남자 기준, 노후자금은 40세 · 100세 만기 · 월납 100만원 가입 후 60세 전환 신청 기준).</p>
+    <table class="rank">
+      <thead><tr><th>비교 항목</th><th>스마트페이형</th><th>일반페이형</th></tr></thead>
+      <tbody>
+        <tr><td>납입 방식</td><td>1납기 · 2납기로 나누어 납부 (1납기 이후에는 1납기 기준 금액의 30%만 납부)</td><td>정해진 보험료를 계속 납부</td></tr>
+        <tr><td>보험료</td><td>16만 1,300원</td><td>11만 1,900원</td></tr>
+        <tr><td>노후자금</td><td>5년간 납입한 100만원 전액 확정 지급 → 나머지 35년은 생존 시 남은 금액 기준으로 지급</td><td>10년간 납입한 100만원 그대로 돌려줌 → 나머지 기간은 남은 적립금을 나누어 지급</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>신한라이프: 3105 고당지 알파 출시</h3>
+    <p>신한라이프는 기존 3105 상품에 고혈압, 당뇨, 고지혈증 보장을 추가한 <strong>3105 고당지 알파</strong>를 10월 12일에 출시했다.</p>
+    <h4>3105 고당지 알파의 특징</h4>
+    <ul>
+      <li>이 상품은 고혈압, 당뇨, 이상지질혈증, 뇌혈관 질환 및 허혈성 심장 질환을 4가지 유형으로 나누어 간편 심사를 진행한다.</li>
+      <li>각 유형에 따라 보험료가 낮아지며, 절차가 간편해진다.</li>
+      <li><strong>특이점</strong>: 당뇨만 있는 경우는 적용되지만, 고혈압만 있는 경우는 고혈압과 당뇨가 같이 있는 것과 같은 조건이 적용된다.</li>
+      <li>유병자 고객도 합리적인 보험료로 가입할 수 있다는 장점이 있다.</li>
+      <li>유병자 고객의 경우, 반드시 이 상품과 다른 상품의 보험료를 비교해볼 필요가 있다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">체크</span>고혈압만 있는 고객은 고혈압과 당뇨가 같이 있는 것과 같은 조건이 적용된다. 유병자 고객은 반드시 이 상품과 다른 상품의 보험료를 비교한 뒤 제안한다.</div>
+    <h4>추가 혜택 및 타겟 고객</h4>
+    <ul>
+      <li><strong>계약 연장 전환</strong>: 90세 만기로 계약 후 건강상 문제가 없으면 100세까지 무심사로 연장이 가능하다.</li>
+      <li><strong>패밀리 케어</strong>: 가족이 함께 가입하면 매월 최대 8%까지 보험료를 할인해준다.</li>
+      <li><strong>주요 타겟 고객</strong>
+        <ul>
+          <li>기존 315, 325, 335 등 간편 보험에 가입했으나 10년간 꾸준한 건강 관리로 입원이나 수술 병력이 없는 고객</li>
+          <li>기존에 고혈압, 당뇨, 이상지질혈증으로 인해 비싼 유병자 보험에 가입했던 고객</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="chips"><span>출시 <b>10월 12일</b></span><span>계약 연장 전환 <b>90세 → 100세 무심사</b></span><span>패밀리 케어 <b>매월 최대 8% 할인</b></span></div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.3</span>흥국생명: 3651-1 플러스 및 3855-2 플러스 출시</h3>
+    <p>흥국생명은 신한라이프의 '삼테노 고당지' 상품보다 저렴하고 가입 문턱이 낮은 <strong>3651-1 플러스</strong>와 <strong>3855-2 플러스</strong> 간편 보험을 출시했다.</p>
+    <h4>흥국생명 간편 보험의 특징</h4>
+    <ul>
+      <li>이 두 상품은 '삼테노' 상품보다 저렴하며, 가입 문턱도 더 낮다.</li>
+      <li><strong>3651-1 플러스</strong>와 <strong>3855-2 플러스</strong>는 3105 상품에 비해 고지 기간을 4년에서 2년 줄인 6년 고지, 8년 고지 상품이다.</li>
+      <li><strong>3651-1 플러스</strong>는 '1'이 투약에 대한 부분을 의미하여, 가입하기는 조금 까다롭지만 보험료는 더 저렴하다.</li>
+    </ul>
+    <h4>간편 고지 순서 및 보험료 비교</h4>
+    <ul>
+      <li>간편 고지 순서는 315, 325, 335, 345, 355, 310, 3105 순으로 다양하게 운영된다.</li>
+      <li>흥국생명의 3651과 3855는 이 사이에 위치한다.</li>
+      <li>보험료 순서를 보면, 3651이 3105 기준으로 가장 저렴하며, 일반 3105에 비해 3855가 조금 더 저렴하다.</li>
+    </ul>
+    <h4>상품별 가입 조건 및 타겟 고객</h4>
+    <ul>
+      <li><strong>3651-1 플러스</strong>: 마지막 '1'은 치료 종결 1년을 의미한다.
+        <ul>
+          <li>고혈압, 근골격계, 신경계 등 만성 질환이 있었던 분이 치료 종결 1년 경과 후에 간편 심사로 가입할 수 있다.</li>
+          <li>대장 용종 수술 이력이 있어도 간편 예외 질환에 해당하여 조건부 인수 없이 가입 가능하다.</li>
+          <li>투약이나 통원이 1년 전에만 있었으면 가입 가능하다.</li>
+        </ul>
+      </li>
+      <li><strong>3855-2 플러스</strong>: '5'는 고혈압, 당뇨는 있지만 중증 질환이 없는 경증 유병자를 위한 상품이다.
+        <ul>
+          <li>'삼테노' 가입 가능 고객은 3855로 가입 가능한지 반드시 확인할 필요가 있다.</li>
+          <li>흥국생명 다사랑 삼테노와 비교해도 보험료가 더 저렴하다.</li>
+          <li>현재 고혈압, 당뇨가 있는 경우 3105 고당지보다 38552 플러스로 가입하면 보험료를 더 낮출 수 있으며, 고지 기간이 8년으로 10년보다 짧아 가입 허들도 낮다.</li>
+        </ul>
+      </li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>비교 항목</th><th>3651-1 플러스</th><th>3855-2 플러스</th></tr></thead>
+      <tbody>
+        <tr><td>고지 기간</td><td>6년 고지</td><td>8년 고지</td></tr>
+        <tr><td>주요 대상</td><td>고혈압 · 근골격계 · 신경계 등 만성 질환이 있었던 분 (치료 종결 1년 경과 후)</td><td>고혈압 · 당뇨는 있지만 중증 질환이 없는 경증 유병자</td></tr>
+        <tr><td>보험료</td><td>3105 기준 가장 저렴 (가입은 조금 까다로움)</td><td>일반 3105보다 조금 더 저렴 · 흥국생명 다사랑 삼테노와 비교해도 더 저렴</td></tr>
+      </tbody>
+    </table>
+    <div class="note key"><span class="lb">KEY POINT</span>'삼테노' 가입 가능 고객은 3855로 가입 가능한지 반드시 확인한다. 현재 고혈압·당뇨가 있다면 3105 고당지보다 3855-2 플러스가 보험료가 더 낮고, 고지 기간도 8년으로 10년보다 짧아 가입 허들이 낮다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.4</span>AIA생명: 달러 보험의 경쟁력 강화</h3>
+    <p>AIA생명은 달러 보험 시장에서 강력한 경쟁력을 보이며, 특히 GA 채널을 통해 시장 확대를 적극적으로 추진하고 있다.</p>
+    <h4>AIA생명 달러 보험의 강점</h4>
+    <ul>
+      <li>AIA생명은 달러 상품에서 가장 좋은 조건을 제공하고 있어, 많은 영업 가족들이 AIA생명 코드를 신청하고 있다.</li>
+      <li><strong>월납 연금</strong>: 5년 납 기준 10년 시점 해약 환급률이 148.1%로, 타사(메트라이프 포함)의 130%대보다 훨씬 높다.</li>
+      <li><strong>일시납 연금</strong>: 10년 시점 확정 해약 환급률이 163%로, 메트라이프의 150%대보다 높다.</li>
+      <li>이러한 높은 해약 환급률 경쟁력은 AIA생명 달러 상품을 따라올 회사가 없게 만든다.</li>
+    </ul>
+    <h4>달러 종신보험의 경쟁력</h4>
+    <ul>
+      <li><strong>단기납 달러 종신</strong>: 124.8%의 환급률로 메트라이프와 동일한 수준이다.</li>
+      <li><strong>상속 종신</strong>: AIA생명이 메트라이프보다 훨씬 더 좋은 조건을 제공한다.
+        <ul>
+          <li><strong>DBR (보장 배수)</strong>: AIA생명의 보장 배수가 메트라이프 생명보다 높다.</li>
+          <li>40세 가입 기준으로 메트라이프에서 30세에 가입해야 나오는 DBR 값이 AIA생명에서는 40세 가입 시에도 나온다.</li>
+        </ul>
+      </li>
+      <li>현재 달러 종신보험 시장에서도 AIA생명이 가장 좋은 상품을 제공하고 있다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>상품</th><th>AIA생명 vs 타사</th></tr></thead>
+      <tbody>
+        <tr><td>월납 연금</td><td>5년 납 기준 10년 시점 해약 환급률 <strong>148.1%</strong> — 타사(메트라이프 포함) 130%대</td></tr>
+        <tr><td>일시납 연금</td><td>10년 시점 확정 해약 환급률 <strong>163%</strong> — 메트라이프 150%대</td></tr>
+        <tr><td>단기납<br>달러 종신</td><td>환급률 <strong>124.8%</strong> — 메트라이프와 동일한 수준</td></tr>
+        <tr><td>상속 종신</td><td>보장 배수(DBR)가 메트라이프보다 높음 — 메트라이프에서 30세에 가입해야 나오는 DBR 값이 AIA생명에서는 40세 가입 시에도 나옴</td></tr>
+      </tbody>
+    </table>
+    <h4>달러 보험 가입 적기</h4>
+    <ul>
+      <li>현재 환율이 1년 기준으로 가장 낮은 상황이므로, 지금이 달러 보험 가입의 적기이다.</li>
+      <li>낮은 환율에 달러 보험에 가입하면, 나중에 원화로 환산했을 때 환산 가치가 오를 가능성이 높기 때문이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.5</span>삼성생명: 안패스플랜 종료 및 골든종신 간편형 출시</h3>
+    <p>삼성생명은 10월에 특정 상품의 종료와 함께 유병자 시장을 겨냥한 <strong>골든종신 간편형</strong>을 출시했다.</p>
+    <h4>안패스플랜 종료</h4>
+    <ul>
+      <li><strong>안패스플랜</strong>과 <strong>대장용질환 패스플랜</strong>이 10월 31일부로 종료된다.</li>
+      <li>뇌심질환 때문에 보험 가입이 어려웠던 기존 고객들에게는 10월 말까지 이 상품을 제안해볼 것을 권장한다.</li>
+    </ul>
+    <div class="note warn"><span class="lb">마감</span>안패스플랜 · 대장용질환 패스플랜은 <strong>10월 31일부로 종료</strong>된다. 뇌심질환 때문에 가입이 어려웠던 기존 고객에게는 10월 말까지 제안해 본다.</div>
+    <h4>골든종신 간편형 출시</h4>
+    <ul>
+      <li>10월 14일 <strong>골든종신 간편형</strong>이 출시된다.</li>
+      <li><strong>골든종신보험의 특징</strong>
+        <ul>
+          <li>납입 기간은 7년, 10년, 15년, 20년 중 선택 가능하며, 거치 기간은 10년이다.</li>
+          <li>7년 납입 시 3년, 10년 납입 시 2년을 더 거치해야 한다.</li>
+          <li>거치 기간 이후부터는 납입한 보험료의 100%를 인출할 수 있으며, 매년 10%씩 인출하거나 원하는 시점에 목돈으로 인출도 가능하다.</li>
+          <li>남은 사망보험금 100%는 가족에게 남겨진다.</li>
+        </ul>
+      </li>
+      <li><strong>간편형 출시의 중요성</strong>
+        <ul>
+          <li>현재 보험 가입자 10명 중 3명이 유병자 보험에 가입하고 있을 정도로 유병자 시장이 크다.</li>
+          <li>유병자 상품이 없으면 전체 보험 시장의 30%를 놓치게 되므로, 유병자 상품 출시는 필수적이다.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.6</span>10월 생명보험 시장의 전반적인 흐름</h3>
+    <p>10월 생명보험 시장은 <strong>유병자 시장</strong>에 대한 포커싱이 더욱 강화되는 추세이다.</p>
+    <ul>
+      <li>대한민국의 중위 연령대가 이미 40세를 넘었고, 인구의 많은 부분을 차지하는 연령대가 점점 높아지고 있기 때문이다.</li>
+      <li>이러한 인구 구조 변화로 인해 유병자 고객을 위한 상품 개발이 계속해서 이루어질 것으로 예상된다.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head"><div class="kicker">COURSE 02</div><h2>10월 손해보험사 신상품 및 주요 소식</h2><p>10월에는 롯데손해보험의 비급여 암 치료비 보장 확대, DB손해보험의 저렴하고 확장성 높은 통합보험, KB손해보험의 간병인 사용일당 보장 강화 등 손해보험사들의 다양한 신상품 소식이 있었다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>롯데손해보험: 비급여 암 치료비 40억 보장 상품 출시</h3>
+    <p>롯데손해보험은 타사 대비 압도적인 보장 금액을 자랑하는 <strong>비급여 암 치료비 40억</strong> 보장 상품을 출시했다.</p>
+    <h4>비급여 암 치료비 보장 확대</h4>
+    <ul>
+      <li>타사에는 10억짜리 상품이 있었으나, 롯데손해보험은 20년 기준으로 최대 40억까지 보장한다.</li>
+      <li>매년 2억씩 보장이 리셋되는 구조이다.</li>
+    </ul>
+    <h4>치료별 보장 금액 증액</h4>
+    <ul>
+      <li>전체 리필 금액이 커진 만큼, 개별 치료 보장 금액도 커졌다.</li>
+      <li><strong>주요 치료별 보장 금액</strong>은 아래와 같다.</li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>치료</th><th>보장 금액</th></tr></thead>
+      <tbody>
+        <tr><td>다빈치 레버아이 암 로봇수술</td><td>최대 4천만 원 (매회 보장)</td></tr>
+        <tr><td>항암 양성자 방사선 치료</td><td>최대 8천만 원 (매년 보장)</td></tr>
+        <tr><td>표적 항암제 허가 치료</td><td>최대 8천만 원</td></tr>
+        <tr><td>특정 면역 항암제 허가 치료</td><td>최대 1억 4천만 원 (매년 보장)</td></tr>
+      </tbody>
+    </table>
+    <h4>연간 리필 구조 및 연령별 보장</h4>
+    <ul>
+      <li>매년 2억이 리필되는데, 이 중 1억은 암 비급여 통합 치료비, 나머지 1억은 상급종합암 비급여 통합 치료비이다.</li>
+      <li>암 치료는 주로 상급종합병원에서 이루어지므로, 사실상 2억이 리필된다고 생각하면 된다.</li>
+      <li><strong>연령별 보장</strong>
+        <ul>
+          <li>65세까지는 매년 2억씩 보장된다.</li>
+          <li>65세 이후에는 암 비급여 통합 치료비 8천만 원, 상급종합암 비급여 통합 치료비 2천만 원으로 총 1억까지 리필된다.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4>타사 합산 미적용</h4>
+    <ul>
+      <li>이 상품은 타사 합산을 보지 않으므로, 20년 최대 40억 보장이 가능하다는 장점이 있다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>타사에는 10억짜리 상품이 있었으나, 롯데손해보험은 매년 2억씩 리셋되어 20년 최대 40억까지 보장하고 타사 합산도 보지 않는다. 65세 이후에는 암 비급여 통합 치료비 8천만 원 + 상급종합암 비급여 통합 치료비 2천만 원으로 총 1억까지 리필된다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>DB손해보험: '많이 앤또' 통합보험 출시</h3>
+    <p>DB손해보험은 보험료가 저렴하고 업셀링(추가 판매)이 가능한 <strong>'많이 앤또' 통합보험</strong>을 출시했다.</p>
+    <h4>'많이 앤또' 통합보험의 특징</h4>
+    <ul>
+      <li>보험료가 가볍고 저렴하며, 최저 보험료는 40세 이하 7,000원, 40세 이상 10,000원이다.</li>
+      <li>간편 가입하더라도 유병자 고객도 감액 기간 없이 바로 보장된다.</li>
+      <li>인수 범위가 넓어 중증 간편부터 건강 고지까지 모두 가능하며, 305부터 385까지 다양한 유형의 고객이 가입할 수 있다.</li>
+      <li>기존에 가입한 보험 금액이 있어도 상관없이 가입 가능하다.</li>
+      <li>이 상품은 영업 활동을 위한 상품으로, 다른 상품에 쉽게 붙여서 판매할 수 있다.</li>
+    </ul>
+    <div class="chips"><span>최저 보험료 40세 이하 <b>7,000원</b></span><span>최저 보험료 40세 이상 <b>10,000원</b></span><span>인수 범위 <b>305 ~ 385</b></span></div>
+    <h4>세일즈 플랜 및 업셀링 가능성</h4>
+    <ul>
+      <li>월 7,820원으로 암 34종을 보장할 수 있어, 한 달 커피값 정도로 암 보장이 가능하다.</li>
+      <li>가볍게 보장을 확장할 수 있는 상품으로, 고객에게 쉽게 접근할 수 있다.</li>
+      <li>예전에 암 진단비나 비급여 통합 치료를 가입하지 않았던 고객에게도 통합암 전염 플러스 비급여 통합 치료까지 모두 보장하는 업셀링이 가능한 상품이다.</li>
+      <li>간편 고객에게도 감액 기간 없이 가입 즉시 보장되며, 10년 후에는 2배로 체증되는 기능이 있어 유병자 고객에게도 부담 없이 제안할 수 있다.</li>
+    </ul>
+    <div class="note good"><span class="lb">세일즈 포인트</span>월 7,820원, 한 달 커피값 정도로 암 34종을 보장한다. 암 진단비나 비급여 통합 치료를 가입하지 않았던 고객에게도 업셀링할 수 있고, 간편 고객도 감액 기간 없이 가입 즉시 보장되며 10년 후에는 2배로 체증되어 유병자 고객에게도 부담 없이 제안할 수 있다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.3</span>KB손해보험: 간병인 사용일당 보장 강화</h3>
+    <p>KB손해보험은 10월에 <strong>360일 간병인 사용일당 20만 원</strong> 상품을 새로 출시하며, 간병인 사용일당 보장을 강화했다.</p>
+    <h4>새로운 간병인 사용일당 상품의 특징</h4>
+    <ul>
+      <li>최대 365일 동안 20만 원씩 일당을 받을 수 있다.</li>
+      <li>20만 원은 많은 금액이며, 365일 동안 계속 받을 수 있다.</li>
+      <li>365일 이후 180일간은 면책 기간이 적용된다.</li>
+      <li>6시간 이상 간병인을 사용하면 100% 지급된다.</li>
+      <li>상해 질병 입원비뿐만 아니라 입원 치료비도 포함된다.</li>
+    </ul>
+    <h4>간병인 사용일당 플랜 응용</h4>
+    <ul>
+      <li>기존 간병인 사용일당(180일짜리 20만 원)과 신규 간병인 사용일당(365일짜리 20만 원)을 각각 10만 원씩 적용하여 보장을 강화할 수 있다.</li>
+      <li><strong>플랜 예시</strong>
+        <ul>
+          <li>기존 180일짜리 20만 원 상품에서 10만 원을 받고, 신규 365일 담보로 10만 원을 가입시키면 총 보장 금액은 20만 원이 된다.</li>
+          <li>1일부터 180일까지는 20만 원이 지급된다.</li>
+          <li>181일부터 365일까지는 신규 365일 담보에서 10만 원이 지급된다.</li>
+          <li>366일부터 541일까지는 기존 간병인 사용일당에서 10만 원이 지급된다.</li>
+          <li>이 플랜을 통해 1일부터 541일까지 연속으로 간병인 사용일당을 받을 수 있다.</li>
+        </ul>
+      </li>
+    </ul>
+    <table class="rank">
+      <thead><tr><th>기간</th><th>지급 담보</th><th>일당</th></tr></thead>
+      <tbody>
+        <tr><td>1일 ~ 180일</td><td>기존 180일 담보 10만 원 + 신규 365일 담보 10만 원</td><td>20만 원</td></tr>
+        <tr><td>181일 ~ 365일</td><td>신규 365일 담보</td><td>10만 원</td></tr>
+        <tr><td>366일 ~ 541일</td><td>기존 간병인 사용일당</td><td>10만 원</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.4</span>10월 손해보험 시장의 전반적인 흐름</h3>
+    <p>10월은 손해보험사들도 다양한 신상품을 출시하며 시장 경쟁을 이어갔다.</p>
+    <ul>
+      <li>10월은 이번 주가 지나면 더 이상 휴일이 없어 영업일이 많으므로, 영업 가족들은 남은 기간 동안 최선을 다해 풍성한 수확을 거두기를 바란다.</li>
+      <li>다음 달에는 더 좋은 소식으로 찾아올 예정이다.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101 교육자료</b> · 전종환 팀장 / 010-4637-3210</span><span>출처: lilys.ai 강의 요약 · 2026-10</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>

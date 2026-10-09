@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>통합 치료비 지급형 건강종신보험 | 교육자료</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  /* 101-DASH(101_SYSTEM) 공통 토큰과 정렬 — 변경 금지 */
+  --bg:#F2F4F6; --paper:#FFFFFF; --line:#E5E8EB; --line-soft:#EEF1F4;
+  --ink:#191F28; --ink-2:#333D4B; --ink-3:#4E5968; --sub:#6B7684; --mute:#8B95A1;
+  --navy:#0F1E3D; --navy-2:#16294F;
+  --blue:#3182F6; --blue-deep:#1B64DA; --sky:#E8F3FF; --sky-2:#F0F6FF;
+  --amber:#B76E00; --amber-bg:#FFF7E6; --amber-line:#FFD591;
+  --green:#0E8A5F; --green-bg:#E9F8F1; --green-line:#A7E3C7;
+  --red:#D6323B; --red-bg:#FDECEE; --red-line:#F5B5BA;
+  --radius:20px; --radius-s:12px;
+  --shadow:0 2px 8px rgba(0,0,0,.04),0 12px 32px -20px rgba(25,31,40,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+strong{font-weight:700;color:var(--ink)}
+/* HERO */
+.hero{background:var(--navy);background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#1E3A73 100%);color:#fff;padding:72px 24px 96px}
+.hero-inner{max-width:880px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:#8FC0FF;background:rgba(49,130,246,.16);border:1px solid rgba(143,192,255,.35);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:40px;font-weight:800;line-height:1.25;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 .accent{color:#8FC0FF}
+.hero .lead{font-size:17px;color:#C9D6EA;line-height:1.7;max-width:760px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.hero .meta span{font-size:13px;color:#DCE6F5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:999px}
+.hero .meta b{color:#fff;font-weight:700}
+/* PIPELINE */
+.pipeline{max-width:880px;margin:-52px auto 40px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;position:relative;z-index:2}
+.pipeline a{display:block;background:var(--paper);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);border:1px solid var(--line);transition:transform .15s,box-shadow .15s}
+.pipeline a:hover{transform:translateY(-3px);box-shadow:0 4px 12px rgba(0,0,0,.05),0 20px 40px -22px rgba(25,31,40,.28)}
+.pipeline .no{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.pipeline .t{font-size:16px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-.02em}
+.pipeline .ds{font-size:12.5px;color:var(--sub);line-height:1.5}
+/* TOPNAV */
+.topnav{position:sticky;top:0;z-index:20;background:rgba(242,244,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topnav ul{max-width:880px;margin:0 auto;padding:0 24px;display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.topnav ul::-webkit-scrollbar{display:none}
+.topnav a{display:block;padding:14px 12px;font-size:13.5px;font-weight:600;color:var(--sub);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.topnav a:hover{color:var(--ink)}
+.topnav a.active{color:var(--blue);border-bottom-color:var(--blue)}
+/* MODULES */
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px}
+.module{margin-bottom:64px;scroll-margin-top:70px}
+.mod-head{margin-bottom:22px}
+.mod-head .kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);margin-bottom:8px}
+.mod-head h2{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1.3;margin-bottom:10px}
+.mod-head p{font-size:15.5px;color:var(--ink-3);line-height:1.7}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:20px;font-weight:800;letter-spacing:-.02em;line-height:1.35;margin-bottom:18px;display:flex;align-items:baseline;gap:10px}
+.card h3 .idx{font-size:12px;font-weight:800;color:var(--blue);background:var(--sky);padding:3px 9px;border-radius:6px;letter-spacing:.02em;flex-shrink:0}
+.card h4{font-size:15.5px;font-weight:800;color:var(--ink);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--blue);line-height:1.4}
+.card h4:first-of-type{margin-top:0}
+.card ul{list-style:none;padding-left:0}
+.card > ul > li, .card h4 + ul > li, .card .body > ul > li{position:relative;padding-left:16px;font-size:15px;color:var(--ink-2);margin-bottom:8px;line-height:1.7}
+.card ul > li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.card ul ul{margin:8px 0 4px 2px}
+.card ul ul > li{padding-left:16px;font-size:14px;color:var(--ink-3);margin-bottom:5px}
+.card ul ul > li::before{width:5px;height:5px;background:#B0BEC9;top:11px}
+.card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+/* FIGURE */
+figure.shot{margin:18px 0 22px;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line);background:#F7F9FB}
+figure.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+figure.shot figcaption{font-size:12.5px;color:var(--sub);padding:9px 14px;border-top:1px solid var(--line-soft);background:#fff}
+/* SCRIPT */
+.script{background:var(--sky-2);border:1px solid #CFE2FF;border-radius:var(--radius-s);padding:18px 20px;margin:14px 0 18px;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.script .lb{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue-deep);margin-bottom:8px}
+.script p{margin-bottom:6px;font-size:14.5px}.script p:last-child{margin-bottom:0}
+.script em{font-style:normal;color:var(--sub);font-size:13px}
+/* NOTES */
+.note{border-radius:var(--radius-s);padding:16px 18px;margin:16px 0;font-size:14.5px;line-height:1.7;border:1px solid}
+.note .lb{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:6px}
+.note.key{background:var(--amber-bg);border-color:var(--amber-line);color:#5C3A00}.note.key .lb{color:var(--amber)}
+.note.good{background:var(--green-bg);border-color:var(--green-line);color:#0B4B35}.note.good .lb{color:var(--green)}
+.note.warn{background:var(--red-bg);border-color:var(--red-line);color:#6E1A1F}.note.warn .lb{color:var(--red)}
+/* RANK TABLE */
+table.rank{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;background:#fff;border-radius:var(--radius-s);overflow:hidden;border:1px solid var(--line)}
+table.rank th{background:#F7F9FB;color:var(--sub);font-weight:700;font-size:12.5px;text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+table.rank td{padding:11px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);vertical-align:top}
+table.rank tr:last-child td{border-bottom:0}
+table.rank td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.chips span{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--sky);border:1px solid #CFE2FF;padding:6px 12px;border-radius:999px}
+.chips span b{color:var(--ink);font-weight:800;margin-left:4px}
+/* FOOTER */
+footer{max-width:880px;margin:0 auto;padding:28px 24px 60px;border-top:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--sub);font-weight:700}
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(15,30,61,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:32px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .x{position:absolute;top:18px;right:22px;color:#fff;font-size:28px;line-height:1;background:none;border:0;cursor:pointer;opacity:.8}
+@media (max-width:640px){.hero h1{font-size:30px}.card{padding:26px 22px}.mod-head h2{font-size:24px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">PRODUCT STUDY · 상품 스터디</div>
+    <h1><span class="accent">통합 치료비</span> 지급형 건강종신보험</h1>
+    <p class="lead">종신보험이 다시 주목받는 배경과 암 치료·3대 질병 치료·통합 치료로 나뉘는 치료비 지급형 종신보험의 차이를 짚고, 통합 10억 한도를 20년마다 리셋하는 통합 치료비 지급형 건강종신보험의 구조와 현장 제안 포인트를 정리한다.</p>
+    <div class="meta"><span>출처 <b>lilys.ai 강의 요약</b></span><span>주제 <b>치료비 지급형 종신보험</b></span><span>활용 <b>종신보험 상담·치료비 보장 제안</b></span></div>
+  </div>
+</header>
+
+<nav class="pipeline"><a href="#m1"><div class="no">COURSE 01</div><div class="t">종신보험 시장의 변화와 새로운 트렌드</div><div class="ds">재부상 배경 · GA 1200% 룰 · 분급제 · 연금형 · 진단형 · 치료비형</div></a><a href="#m2"><div class="no">COURSE 02</div><div class="t">치료비 지급형 세 가지 유형</div><div class="ds">암 치료 · 3대 질병 치료 · 주계약 연동 · 연금 전환 3배</div></a><a href="#m3"><div class="no">COURSE 03</div><div class="t">통합 치료비 지급형의 혁신</div><div class="ds">통합 10억 · 마이너스 통장 · 20년 리셋 · 치매 · 목적 자금</div></a><a href="#m4"><div class="no">COURSE 04</div><div class="t">결론 및 제안</div><div class="ds">종신보험 본질 + 치료비 트렌드 · 현장 제안</div></a></nav>
+
+
+<nav class="topnav"><ul><li><a href="#m1">01 시장 변화</a></li><li><a href="#m2">02 치료비 지급형 유형</a></li><li><a href="#m3">03 통합 치료비 지급형</a></li><li><a href="#m4">04 결론 · 제안</a></li></ul></nav>
+
+<main class="wrap">
+<div class="note good"><span class="lb">핵심 요약</span><strong>Q.</strong> 최근 주목받는 <strong>통합치료비 지급형 건강종신보험</strong>의 특징은?<br><strong>A.</strong> 사망 보장과 함께 암, 뇌혈관, 허혈성 심장질환, 치매 등 3대 질병 및 치매 치료비를 최대 10억 한도 내에서 보장하며, 20년마다 한도가 <strong>리셋</strong>되어 질병 발생 시 치료비 부담을 해소하고, 미발생 시에는 쌓인 자금을 목적 자금으로 활용할 수 있습니다. 이는 종신보험의 본질적 기능과 최신 치료비 트렌드를 결합한 상품입니다.</div>
+
+<section class="module" id="m1">
+  <div class="mod-head"><div class="kicker">COURSE 01</div><h2>종신보험 시장의 변화와 새로운 트렌드</h2><p>최근 종신보험 시장은 다양한 이유로 다시 주목받고 있으며, 특히 건강 관련 보장을 강화한 상품들이 새로운 트렌드를 이끌고 있다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">1.1</span>종신보험 재부상의 배경</h3>
+    <h4>종신보험의 새로운 관심</h4>
+    <ul>
+      <li>최근 종신보험은 여러 이유로 다시 주목받고 있으며, 시장에서 부상하고 있다.</li>
+      <li><strong>사망원 유동화 이슈</strong>나 <strong>보험금 청구권 신탁 이슈</strong>만으로도 종신보험이 새롭게 관심을 받고 있다.</li>
+    </ul>
+    <h4>법인대리점(GA) 채널의 영향</h4>
+    <ul>
+      <li>보험업계의 중요한 채널인 법인대리점(GA)에서 <strong>1200% 룰</strong>과 <strong>분급제 수수료 체계</strong>가 도입되면서 종신보험에 대한 주목도가 높아졌다.</li>
+      <li>이는 종신보험이 컨설턴트의 소득에 크게 기여하기 때문에, 많은 컨설턴트에게 영향을 미치기 때문이다.</li>
+      <li>따라서 종신보험을 새롭게 살펴보고, 연구하며, 마케팅 컨셉을 정리하고 화법 연습을 하는 붐이 서서히 일어나고 있어 매우 긍정적이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">1.2</span>주목받는 종신보험 상품 유형</h3>
+    <h4>연금형 종신보험</h4>
+    <ul>
+      <li><strong>3화모 유동화 이슈</strong>와 연계되어 많이 주목받는 상품이다.</li>
+      <li>종신보험에 연금 기능이 있다는 점은 예전이나 지금이나 동일하며, <strong>3화모 유동화 폐지</strong> 이후 나온 전형적인 상품 중 하나이다.</li>
+      <li>연금적 기능을 강조한 상품들은 노후 대비 목적으로 적합하며, 사망 보장과 연금 재원을 함께 고려할 수 있다.</li>
+    </ul>
+    <h4>진단보험금 지급형 종신보험</h4>
+    <ul>
+      <li>10월경 A사에서 진단보험금 지급형 종신보험이 새로 나올 예정이며, 이러한 상품을 내놓는 회사들이 늘어나고 있다.</li>
+    </ul>
+    <h4>치료비 지급형 종신보험</h4>
+    <ul>
+      <li>진단보험금 지급형 트렌드가 계속된다면 치료비 지급형 종신보험도 많이 출시될 것으로 예상된다.</li>
+      <li>특히 <strong>A사, K사, S사</strong> 같은 회사들이 치료비 지급형 종신보험으로 방향을 잡고 있다.</li>
+      <li>2026년 하반기와 2027년 상반기 종신보험 트렌드는 진단보험금 지급형과 치료비 지급형 종신보험 쪽으로 무게를 두는 추세이다.</li>
+    </ul>
+    <div class="note key"><span class="lb">트렌드 전망</span>2026년 하반기 ~ 2027년 상반기 종신보험의 무게 중심은 <strong>진단보험금 지급형</strong>과 <strong>치료비 지급형</strong>이다. 치료비 지급형은 A사·K사·S사가 방향을 잡고 있다.</div>
+  </div>
+</section>
+
+<section class="module" id="m2">
+  <div class="mod-head"><div class="kicker">COURSE 02</div><h2>치료비 지급형 종신보험의 종류와 특징</h2><p>치료비 지급형 종신보험은 크게 세 가지 유형으로 나뉘며, 각각의 상품 구조와 보장 방식에 차이가 있다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">2.1</span>치료비 지급형 종신보험의 세 가지 유형</h3>
+    <h4>세 가지 유형</h4>
+    <ul>
+      <li>치료비 지급형 종신보험은 크게 세 종류로 나뉜다.</li>
+      <li>첫 번째는 <strong>암 치료 보험</strong>, 두 번째는 <strong>3대 질병 치료 보험</strong>, 세 번째는 최근에 나온 <strong>통합 치료 보험</strong>이다.</li>
+    </ul>
+    <div class="chips"><span>첫 번째 <b>암 치료 보험</b></span><span>두 번째 <b>3대 질병 치료 보험</b></span><span>세 번째 <b>통합 치료 보험</b></span></div>
+    <h4>통합 치료 보험의 특징</h4>
+    <ul>
+      <li>통합 치료 보험은 좋은 개념들을 하나로 합쳐 놓은 것 같다.</li>
+      <li>업계에서 독특하고 유일한 구조를 갖고 있으며, 아직까지는 치료 분야에서는 3대 질병 치료 보험에 가깝고, 상품 구조적인 측면에서는 암 치료 보험에 가깝다고 표현할 수 있다.</li>
+    </ul>
+    <div class="note key"><span class="lb">KEY POINT</span>통합 치료 보험은 <strong>치료 분야</strong>로는 3대 질병 치료 보험에, <strong>상품 구조</strong>로는 암 치료 보험에 가깝다. 좋은 개념들을 하나로 합친, 업계에서 독특하고 유일한 구조다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.2</span>암 치료 보험의 구조와 특징</h3>
+    <h4>보장 개시 시점</h4>
+    <ul>
+      <li>암 치료 보험은 보험 가입 후 암 진단을 받고 치료 행위가 발생하면 치료비를 지급하는 구조이다.</li>
+      <li>통합 치료 보험은 완납 후가 아니라, 보험 가입 후 바로 보장 효력이 발생한다는 측면에서 암 치료 보험의 구조적인 모습도 같이 가지고 있다.</li>
+      <li>하지만 암 치료 보험은 <strong>암만 보장</strong>한다는 점이 특징이다.</li>
+    </ul>
+    <h4>사망보험금과 치료보험금 연동</h4>
+    <ul>
+      <li>S사 상품을 기준으로 보면, 가입하고 10년이 지나면 사망보험이 <strong>체증</strong>된다.</li>
+      <li>예를 들어, 12년 차에 사망보험이 1억 2천만 원이 되었을 때 암에 걸려 천만 원의 치료보험금을 받으면, 사망보험금은 1억 3천만 원이 되는 구조이다.</li>
+      <li>이는 치료보험금과 사망보험금을 같이 고려하여 사망보험금을 더 키워주는 전략이다.</li>
+    </ul>
+    <div class="chips"><span>S사 · 12년 차 사망보험 <b>1억 2천만 원</b></span><span>암 치료보험금 <b>천만 원</b></span><span>사망보험금 <b>1억 3천만 원</b></span></div>
+    <h4>치료보험금 지급 기준</h4>
+    <ul>
+      <li>치료보험금은 <strong>주계약의 10%</strong>에 연동되어 지급된다.</li>
+      <li>즉, 주계약 1억 원을 가입해야 연간 치료보험금 천만 원이 지급되는 구조이며, 치료 행위에 따라 달라진다.</li>
+      <li>이러한 구조가 암 치료 정기보험의 특징이다.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">2.3</span>3대 질병 치료 보험의 구조와 특징</h3>
+    <h4>보장 범위 및 개시 시점</h4>
+    <ul>
+      <li>3대 질병 치료 보험은 암, 뇌혈관 질환, 허혈성 심질환을 대상으로 하는 치료 정기보험이다.</li>
+      <li>통합 치료 보험은 3대 질병 측면에서 3대 질병 치료 보험과 가장 가깝다고 볼 수 있다.</li>
+      <li>이 상품은 <strong>납입 완료 시점</strong>을 기준으로 치료 보험금을 지급한다.</li>
+      <li>완납 이전에는 암, 뇌혈관, 허혈성 진단을 받으면 <strong>납입 면제</strong>만 되며, 치료 보험금은 완납 이후에만 가능하다.</li>
+    </ul>
+    <h4>주계약 연동 및 연금 전환 옵션</h4>
+    <ul>
+      <li>치료 보험금은 주계약에 연동되어 지급된다.</li>
+      <li>주계약이 1억 원이고 30%짜리 상품이라면 연간 3천만 원씩 치료 보험금을 지급한다.</li>
+      <li>이 상품의 핵심 특징은 <strong>연금 전환 신청</strong> 시, 3대 질병 연금 전환 특약이 있어 연금액이 커지는 옵션을 제공한다는 점이다.</li>
+      <li>연금 전환 후 암, 뇌혈관, 허혈성 진단을 받으면 받던 연금액의 2배를 10년 동안 확정적으로 더 얹어주어 총 3배가 된다.</li>
+      <li>이는 노후에 질병 치료와 관련된 불안감을 해소하고 안정적인 보장 급부를 연금 지원으로 제공하는 장치이다.</li>
+    </ul>
+    <div class="note key"><span class="lb">연금 전환 옵션</span>연금 전환 신청 시 3대 질병 연금 전환 특약으로 연금액이 커지는 옵션이 있다. 연금 전환 후 암·뇌혈관·허혈성 진단을 받으면 받던 연금액의 <strong>2배를 10년 동안 확정</strong>으로 더 얹어 <strong>총 3배</strong>가 된다.</div>
+  </div>
+</section>
+
+<section class="module" id="m3">
+  <div class="mod-head"><div class="kicker">COURSE 03</div><h2>통합 치료비 지급형 건강종신보험의 혁신적인 특징</h2><p>통합 치료비 지급형 건강종신보험은 사망 보장과 치료 보험금, 해약환급금을 고루 갖추면서, 치료비 보장의 한도를 통합하고 주기적으로 리셋하는 혁신적인 개념을 도입했다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">3.1</span>통합 치료비 지급형의 핵심 개념</h3>
+    <h4>사망 보장, 치료 보험금, 해약환급금의 균형</h4>
+    <ul>
+      <li>치료비 지급형 종신보험은 사망 보장과 치료 보험금, 그리고 해약환급금을 고루 갖추고 있다.</li>
+    </ul>
+    <h4>통합 10억 한도와 마이너스 통장 개념</h4>
+    <ul>
+      <li>오늘 주목해야 할 점은 치료 보험금 <strong>통합 10억</strong>에 주계약 1억 기준이다.</li>
+      <li>통합 10억은 <strong>마이너스 통장 개념</strong>으로 이해할 수 있으며, 10억에서 치료 보험금을 사용한 만큼 차감되는 방식이다.</li>
+    </ul>
+    <h4>통합 보장의 기원과 리셋 개념</h4>
+    <ul>
+      <li>통합 개념은 원래 생명보험이 아닌 손해보험의 특약에서 시작되었다.</li>
+      <li>예를 들어, 암, 비급여 하이클래스 통합 보장, 순환계 통합 보장, 간폐신장 통합 보장 등 각각의 치료 행위별로 회당 보장 금액과 연간 한도가 정해져 있으며, 이를 다 합쳐서 10억 또는 36억까지 보장한다.</li>
+      <li>요즘 얘기하는 통합 보장은 10년 만에 사용했던 한도를 다시 원래대로 회복시켜주고, 리필해주고, <strong>리셋</strong>해주는 개념이다.</li>
+      <li>이 개념이 종신보험에 연동되어 종신보험의 주요 핵심 기능으로서 치료 보험의 리셋 개념까지 가져온 것이다.</li>
+    </ul>
+    <div class="note key"><span class="lb">핵심 개념</span>통합 10억(주계약 1억 기준)은 <strong>마이너스 통장</strong>처럼 치료 보험금을 쓴 만큼 차감되고, 사용한 한도는 다시 원래대로 <strong>리셋</strong>된다. 손해보험 특약에서 시작된 통합·리셋 개념을 종신보험에 가져온 것이다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.2</span>통합 치료비 지급형의 장점 및 수요층</h3>
+    <h4>치료비 미발생 시 자금 활용 가능성</h4>
+    <ul>
+      <li>특약으로만 가입되어 있으면 치료 보험금이 지급되지 않을 경우 사실상 건질 것이 아무것도 없다.</li>
+      <li>하지만 종신보험으로 나온 치료 보험금 지급형 상품은 치료 보험금이 발생하지 않았다면, 거기에 쌓여있는 자금을 <strong>목적 자금</strong>으로도 활용할 수 있다.</li>
+    </ul>
+    <h4>두 가지 걱정 해소</h4>
+    <ul>
+      <li>이 상품은 암, 뇌혈관 질환 등이 걸렸을 때 어떻게 할 것인가에 대한 걱정과, 걸리지 않았을 때 어떻게 할 것인가에 대한 걱정, 이 두 가지를 균형 있게 가져가고 싶어 하는 수요층에게 적합하다.</li>
+      <li>만약 합리적인 보험료와 보장의 가치만을 강조하여 저렴하게 보장 위주로만 가려고 한다면, 통합 보장의 특약 위주로만 가는 선택지도 괜찮다.</li>
+    </ul>
+    <h4>다용도, 다목적 건강보험의 필요성</h4>
+    <ul>
+      <li>치료비 통합 지급형 건강보험은 요즘 시대에 딱 맞는 아주 좋은 상품이다.</li>
+      <li>상속세 재원 마련, 비과세 활용, 목적 자금 활용, 사망보험금 필요 등 종신보험을 가입해야 할 이유는 충분히 많다.</li>
+      <li>종신보험은 납입 기간이 보통 10년, 20년으로 길기 때문에, 납입 기간 중 암 같은 질병에 걸릴까 봐 걱정하는 심리적 불안감이나 경제적 문제를 해소할 수 있다.</li>
+    </ul>
+    <div class="chips"><span>상속세 재원 마련</span><span>비과세 활용</span><span>목적 자금 활용</span><span>사망보험금 필요</span></div>
+    <h4>미발생 시 보험료 활용</h4>
+    <ul>
+      <li>만약 예상과 달리 질병이 발생하지 않으면, 낸 보험료가 아깝다고 생각할 수 있지만, 이 상품은 쌓인 자금을 활용할 수 있다.</li>
+      <li>이 상품은 종신보험의 본질적인 기능에 충실하면서도, 요즘 트렌드에 맞는 치료비에 집중했다는 측면에서 고객들에게 효능을 느끼게 할 수 있을 것으로 기대된다.</li>
+    </ul>
+    <div class="note good"><span class="lb">세일즈 포인트</span>걸렸을 때는 <strong>치료 보험금</strong>, 걸리지 않았을 때는 쌓인 자금을 <strong>목적 자금</strong>으로. 두 가지 걱정을 균형 있게 가져가고 싶은 고객에게 맞는 상품이다. 합리적인 보험료로 저렴하게 보장 위주로만 원한다면 통합 보장의 특약 위주로 가는 선택지도 괜찮다.</div>
+  </div>
+
+  <div class="card">
+    <h3><span class="idx">3.3</span>통합 치료비 지급형 건강종신보험의 세부 보장</h3>
+    <h4>통합 보장 범위</h4>
+    <ul>
+      <li>암, 뇌혈관, 허혈성 심장질환, 그리고 <strong>치매</strong>로 진단받았을 때도 치료받으면 통합 보장을 해준다.</li>
+      <li>치료 보험금은 <strong>10억 한도 내</strong>에서 지급된다.</li>
+    </ul>
+    <h4>보장 개시 시점</h4>
+    <ul>
+      <li>보험 가입 즉시 보장 효과가 발생한다는 측면에서 암 치료 보험과 같은 구조이다.</li>
+    </ul>
+    <h4>특정 질병 별도 보장</h4>
+    <ul>
+      <li>암, 특정 허혈성, 특정 뇌혈관으로 진단받으면 별도로 보장을 해준다.</li>
+    </ul>
+    <h4>치료비 한도 리셋 주기</h4>
+    <ul>
+      <li>통합 치료비 지급형 종신보험은 <strong>20년 기준</strong>으로 치료비 한도가 리셋되는 상품으로 나왔다.</li>
+      <li>특약으로만 개발된 통합 치료 보장은 10억을 10년 동안 리셋해주는 방식이다.</li>
+      <li>하지만 종신보험의 통합 치료비 지급형은 10억을 20년 단위로 리셋해주는 것이 특징이다.</li>
+      <li>이는 동종 유형의 치료비 지급형 건강보험과는 조금 다른 기준을 갖고 있다.</li>
+    </ul>
+    <div class="chips"><span>특약형 통합 치료 보장 <b>10억 · 10년 리셋</b></span><span>종신보험 통합 치료비 지급형 <b>10억 · 20년 리셋</b></span></div>
+    <h4>치료비 지급형 세 가지 유형 비교</h4>
+    <table class="rank">
+      <thead><tr><th>치료 보험 유형</th><th>보장 대상</th><th>보장 개시 · 치료 보험금</th></tr></thead>
+      <tbody>
+        <tr><td>암 치료</td><td>암만 보장</td><td>가입 후 바로 보장 효력<br>주계약의 10% 연동 (주계약 1억 원 → 연간 천만 원)</td></tr>
+        <tr><td>3대 질병<br>치료</td><td>암, 뇌혈관 질환, 허혈성 심질환</td><td>납입 완료 이후 지급 (완납 이전 진단 시 납입 면제만)<br>주계약 연동 (주계약 1억 원, 30%짜리 상품 → 연간 3천만 원)</td></tr>
+        <tr><td>통합 치료</td><td>암, 뇌혈관, 허혈성 심장질환, 치매</td><td>가입 즉시 보장 효과<br>통합 10억 한도 (주계약 1억 기준)<br>20년 단위 리셋</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="module" id="m4">
+  <div class="mod-head"><div class="kicker">COURSE 04</div><h2>결론 및 제안</h2><p>최근 주목받는 통합 치료비 지급형 종신보험은 종신보험의 본질적 기능과 최신 치료비 트렌드를 결합한 상품으로, 고객에게 효과적인 제안이 될 수 있다.</p></div>
+
+  <div class="card">
+    <h3><span class="idx">4.1</span>정리와 현장 제안</h3>
+    <h4>통합 치료비 지급형 종신보험의 중요성</h4>
+    <ul>
+      <li>최근 업계에서 유행하는 치료비 지급형 종신 상품들 중에서도 가장 핫하게 나온 <strong>통합 치료비 지급형 종신 상품</strong>에 대해 알아보았다.</li>
+    </ul>
+    <h4>현장 제안의 가치</h4>
+    <ul>
+      <li>이 상품을 잘 기억하고, 필요하다면 현장에서 고객에게 제안하는 것이 좋다.</li>
+    </ul>
+    <h4>긍정적인 성과 기대</h4>
+    <ul>
+      <li>좋은 성과가 있기를 기대하며, 이 내용을 마친다.</li>
+    </ul>
+    <div class="note key"><span class="lb">마무리</span>통합 치료비 지급형 건강종신보험 = 사망 보장 + 암·뇌혈관·허혈성 심장질환·치매 치료비 <strong>통합 10억 한도</strong>(주계약 1억 기준) + <strong>가입 즉시</strong> 보장 + <strong>20년 단위 리셋</strong>. 치료비가 발생하지 않으면 쌓인 자금을 목적 자금으로 활용할 수 있다. 잘 기억해 두었다가 필요한 고객에게 현장에서 제안한다.</div>
+  </div>
+</section>
+
+</main>
+
+<footer><span><b>TEAM 101 교육자료</b> · 전종환 팀장 / 010-4637-3210</span><span>출처: lilys.ai 강의 요약 · 2026-10</span></footer>
+
+<div class="lightbox" id="lb"><button class="x" aria-label="닫기">×</button><img alt=""></div>
+<script>
+// topnav active — 수정 금지
+(function(){
+  const links=[...document.querySelectorAll('.topnav a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if(!secs.length) return;
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-20% 0px -70% 0px'});
+  secs.forEach(s=>io.observe(s));
+})();
+// lightbox — 이미지가 있는 문서에서 삭제 금지
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('figure.shot img').forEach(i=>i.addEventListener('click',()=>{im.src=i.src;lb.classList.add('on');}));
+  const off=()=>lb.classList.remove('on');
+  lb.addEventListener('click',off);lb.querySelector('.x').addEventListener('click',off);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')off();});
+})();
+</script>
+</body>
+</html>
